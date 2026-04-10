@@ -1,1 +1,1174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Play Summit Games | Objectiu Pedraforca 2.506</title>
+  <meta name="description" content="Summit Games Series. Juegos de cartas inspirados en la alta montaña. Descubre Objectiu Pedraforca 2.506." />
+  <style>
+    :root {
+      --bg: #18351f;
+      --bg-2: #304a2e;
+      --text: #f7f5ef;
+      --muted: rgba(247, 245, 239, 0.82);
+      --line: rgba(255,255,255,0.18);
+      --panel: rgba(10, 14, 16, 0.28);
+      --panel-strong: rgba(10, 14, 16, 0.42);
+      --accent: #d97706;
+      --accent-2: #f59e0b;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+      --maxw: 1180px;
+      --transition: background 900ms ease, color 300ms ease, border-color 300ms ease;
+    }
 
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255,255,255,0.06), transparent 30%),
+        linear-gradient(180deg, #244729 0%, #374d2f 20%, #5b4837 40%, #4e4e4e 62%, #45647c 82%, #f2f5f8 100%);
+      background-attachment: fixed;
+      transition: var(--transition);
+      overflow-x: hidden;
+    }
+
+    body[data-theme="valley"] {
+      --text: #f7f5ef;
+      --muted: rgba(247, 245, 239, 0.82);
+      --line: rgba(255,255,255,0.18);
+      --panel: rgba(10, 14, 16, 0.22);
+      --panel-strong: rgba(10, 14, 16, 0.38);
+      --accent: #d97706;
+      --accent-2: #f59e0b;
+    }
+
+    body[data-theme="forest"] {
+      --text: #f7f5ef;
+      --muted: rgba(247, 245, 239, 0.84);
+      --line: rgba(255,255,255,0.16);
+      --panel: rgba(12, 18, 14, 0.24);
+      --panel-strong: rgba(12, 18, 14, 0.4);
+      --accent: #f59e0b;
+      --accent-2: #fbbf24;
+    }
+
+    body[data-theme="earth"] {
+      --text: #f9f6f2;
+      --muted: rgba(249, 246, 242, 0.84);
+      --line: rgba(255,255,255,0.15);
+      --panel: rgba(18, 12, 10, 0.24);
+      --panel-strong: rgba(18, 12, 10, 0.42);
+      --accent: #f59e0b;
+      --accent-2: #fb923c;
+    }
+
+    body[data-theme="rock"] {
+      --text: #f3f4f6;
+      --muted: rgba(243, 244, 246, 0.8);
+      --line: rgba(255,255,255,0.15);
+      --panel: rgba(18, 18, 20, 0.28);
+      --panel-strong: rgba(18, 18, 20, 0.44);
+      --accent: #f59e0b;
+      --accent-2: #fbbf24;
+    }
+
+    body[data-theme="glacier"] {
+      --text: #f8fbff;
+      --muted: rgba(248, 251, 255, 0.82);
+      --line: rgba(255,255,255,0.2);
+      --panel: rgba(8, 17, 24, 0.26);
+      --panel-strong: rgba(8, 17, 24, 0.4);
+      --accent: #f59e0b;
+      --accent-2: #fde68a;
+    }
+
+    body[data-theme="summit"] {
+      --text: #18212a;
+      --muted: rgba(24, 33, 42, 0.76);
+      --line: rgba(24, 33, 42, 0.15);
+      --panel: rgba(255, 255, 255, 0.56);
+      --panel-strong: rgba(255, 255, 255, 0.76);
+      --accent: #b45309;
+      --accent-2: #d97706;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(180deg, rgba(6,8,10,0.52), rgba(6,8,10,0.16));
+      border-bottom: 1px solid var(--line);
+    }
+
+    body[data-theme="summit"] .topbar {
+      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.42));
+    }
+
+    .topbar__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand__eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    .brand__title {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .topbar__actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .lang-btn {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-btn.active {
+      background: rgba(255,255,255,0.16);
+    }
+
+    body[data-theme="summit"] .lang-btn.active {
+      background: rgba(24,33,42,0.1);
+    }
+
+    .mini-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      color: white;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .altitude-indicator {
+      position: fixed;
+      left: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 900;
+      width: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      pointer-events: none;
+    }
+
+    .altitude-indicator__line {
+      position: relative;
+      width: 2px;
+      height: 46vh;
+      max-height: 420px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.18);
+      overflow: hidden;
+    }
+
+    body[data-theme="summit"] .altitude-indicator__line {
+      background: rgba(24,33,42,0.18);
+    }
+
+    .altitude-indicator__progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      transition: height 240ms ease;
+    }
+
+    .altitude-indicator__dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.12);
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      bottom: 0%;
+      transition: bottom 240ms ease;
+    }
+
+    body[data-theme="summit"] .altitude-indicator__dot {
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(180, 83, 9, 0.12);
+    }
+
+    .altitude-indicator__label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.88;
+      font-weight: 700;
+    }
+
+    .altitude-indicator__value {
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    main {
+      position: relative;
+      z-index: 2;
+    }
+
+    .panel {
+      min-height: 100vh;
+      padding: 110px 32px 52px 120px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    body[data-theme="summit"] .panel {
+      border-top: 1px solid rgba(24,33,42,0.06);
+    }
+
+    .panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.18));
+      pointer-events: none;
+    }
+
+    body[data-theme="summit"] .panel::before {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.16));
+    }
+
+    .panel__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 42px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel--single .panel__inner {
+      grid-template-columns: 1fr;
+    }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 800;
+      margin-bottom: 16px;
+      opacity: 0.84;
+    }
+
+    h1, h2 {
+      margin: 0 0 20px 0;
+      line-height: 0.94;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    h1 {
+      font-size: clamp(3.3rem, 9vw, 7rem);
+      max-width: 10ch;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 6vw, 4.7rem);
+      max-width: 12ch;
+    }
+
+    .lead {
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      line-height: 1.65;
+      color: var(--muted);
+      max-width: 58ch;
+      margin-bottom: 28px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      transition: transform 180ms ease, opacity 180ms ease, background 180ms ease, border-color 180ms ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn--primary {
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      color: white;
+      box-shadow: 0 14px 36px rgba(0,0,0,0.24);
+    }
+
+    .btn--ghost {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    body[data-theme="summit"] .btn--ghost {
+      background: rgba(24,33,42,0.05);
+    }
+
+    .card,
+    .stats,
+    .steps,
+    .feature-grid,
+    .buy-panel {
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .card {
+      padding: 28px;
+    }
+
+    .product-card {
+      padding: 34px;
+    }
+
+    .product-card__title {
+      margin: 0 0 12px 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    }
+
+    .product-card__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.92rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      overflow: hidden;
+    }
+
+    .stat {
+      padding: 22px 18px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    body[data-theme="summit"] .stat {
+      background: rgba(24,33,42,0.03);
+    }
+
+    .stat__value {
+      font-size: 1.65rem;
+      font-weight: 900;
+      margin-bottom: 6px;
+    }
+
+    .stat__label {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .feature-grid {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .feature-item {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      min-height: 180px;
+    }
+
+    body[data-theme="summit"] .feature-item {
+      background: rgba(24,33,42,0.04);
+    }
+
+    .feature-item h3 {
+      margin: 0 0 12px 0;
+      font-size: 1.12rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .feature-item p,
+    .feature-item li,
+    .product-card p,
+    .buy-panel p,
+    .steps p {
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .steps {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .step {
+      border-radius: 22px;
+      padding: 24px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    body[data-theme="summit"] .step {
+      background: rgba(24,33,42,0.04);
+    }
+
+    .step__num {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      color: white;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .buy-panel {
+      padding: 34px;
+    }
+
+    .buy-panel__price {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1;
+      margin: 10px 0 16px;
+    }
+
+    .paypal-placeholder {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px dashed var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    body[data-theme="summit"] .paypal-placeholder {
+      background: rgba(24,33,42,0.04);
+    }
+
+    .section-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .section-links a {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      background: rgba(255,255,255,0.05);
+    }
+
+    body[data-theme="summit"] .section-links a {
+      background: rgba(24,33,42,0.05);
+    }
+
+    .summit-tagline {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .footer {
+      padding: 32px 24px 40px 120px;
+      border-top: 1px solid var(--line);
+      position: relative;
+      z-index: 3;
+    }
+
+    .footer__inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    body[data-lang="es"] .lang-es,
+    body[data-lang="cat"] .lang-cat {
+      display: block;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .spacer-top {
+      padding-top: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .panel {
+        padding: 112px 24px 52px 100px;
+      }
+
+      .panel__inner {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar__inner {
+        padding: 14px 16px;
+      }
+
+      .brand__eyebrow {
+        display: none;
+      }
+
+      .brand__title {
+        font-size: 0.95rem;
+      }
+
+      .panel {
+        padding: 102px 18px 38px 18px;
+      }
+
+      .panel__inner {
+        gap: 22px;
+      }
+
+      .altitude-indicator {
+        left: auto;
+        right: 14px;
+        top: 86px;
+        transform: none;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 12px;
+        border-radius: 999px;
+        background: var(--panel-strong);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--line);
+      }
+
+      .altitude-indicator__line,
+      .altitude-indicator__label {
+        display: none;
+      }
+
+      .altitude-indicator__dot {
+        display: none;
+      }
+
+      .footer {
+        padding: 28px 18px 36px;
+      }
+
+      .topbar__actions {
+        gap: 8px;
+      }
+
+      .mini-cta {
+        padding: 9px 14px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body data-lang="es" data-theme="valley">
+  <header class="topbar">
+    <div class="topbar__inner">
+      <div class="brand">
+        <span class="brand__eyebrow">Summit Games Series</span>
+        <span class="brand__title">Play Summit Games</span>
+      </div>
+      <div class="topbar__actions">
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang-target="es">ES</button>
+          <button class="lang-btn" data-lang-target="cat">CAT</button>
+        </div>
+        <a class="mini-cta lang lang-es" href="#buy">Comprar</a>
+        <a class="mini-cta lang lang-cat" href="#buy">Comprar</a>
+      </div>
+    </div>
+  </header>
+
+  <aside class="altitude-indicator" aria-hidden="true">
+    <div class="altitude-indicator__label">Ascensión</div>
+    <div class="altitude-indicator__line">
+      <div class="altitude-indicator__progress" id="altitudeProgress"></div>
+      <div class="altitude-indicator__dot" id="altitudeDot"></div>
+    </div>
+    <div class="altitude-indicator__value" id="altitudeValue">0 m</div>
+  </aside>
+
+  <main>
+    <section class="panel panel--single" id="hero" data-altitude="0" data-theme="valley">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Valle base · 0 m</div>
+          <div class="eyebrow lang lang-cat">Vall base · 0 m</div>
+
+          <h1 class="lang lang-es">Summit Games Series</h1>
+          <h1 class="lang lang-cat">Summit Games Series</h1>
+
+          <p class="lead lang lang-es">
+            Juegos de cartas inspirados en la alta montaña. Una colección creada para vivir la tensión, la estrategia,
+            el clima y la emoción de una ascensión real desde tu mesa.
+          </p>
+          <p class="lead lang lang-cat">
+            Jocs de cartes inspirats en l’alta muntanya. Una col·lecció creada per viure la tensió, l’estratègia,
+            el clima i l’emoció d’una ascensió real des de la teva taula.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn--primary lang lang-es" href="#product">Iniciar ascensión</a>
+            <a class="btn btn--primary lang lang-cat" href="#product">Iniciar ascensió</a>
+
+            <a class="btn btn--ghost lang lang-es" href="#how">Ver cómo se juega</a>
+            <a class="btn btn--ghost lang lang-cat" href="#how">Veure com es juga</a>
+          </div>
+
+          <div class="section-links spacer-top">
+            <a href="#product" class="lang lang-es">Objectiu Pedraforca 2.506</a>
+            <a href="#feature-1" class="lang lang-es">Características</a>
+            <a href="#how" class="lang lang-es">Cómo se juega</a>
+            <a href="#buy" class="lang lang-es">Comprar</a>
+
+            <a href="#product" class="lang lang-cat">Objectiu Pedraforca 2.506</a>
+            <a href="#feature-1" class="lang lang-cat">Característiques</a>
+            <a href="#how" class="lang lang-cat">Com es juga</a>
+            <a href="#buy" class="lang lang-cat">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="about" data-altitude="420" data-theme="forest">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Media montaña · 420 m</div>
+          <div class="eyebrow lang lang-cat">Mitja muntanya · 420 m</div>
+
+          <h2 class="lang lang-es">Qué es Summit Games</h2>
+          <h2 class="lang lang-cat">Què és Summit Games</h2>
+
+          <p class="lead lang lang-es">
+            Summit Games es una línea de juegos de cartas tematizados en el mundo del alpinismo y las grandes cumbres.
+            Cada título propone una montaña concreta, su paisaje, sus riesgos, su ritmo de ascensión y su propia identidad.
+          </p>
+          <p class="lead lang lang-cat">
+            Summit Games és una línia de jocs de cartes tematitzats en el món de l’alpinisme i les grans cimeres.
+            Cada títol proposa una muntanya concreta, el seu paisatge, els seus riscos, el seu ritme d’ascensió i la seva pròpia identitat.
+          </p>
+
+          <p class="lead lang lang-es">
+            La colección está pensada para crecer con nuevas series como Pirineos, Alpes o Himalaya, y abrir en el futuro
+            la puerta a Expedition Series, donde varios mazos se combinarán para crear expediciones más amplias.
+          </p>
+          <p class="lead lang lang-cat">
+            La col·lecció està pensada per créixer amb noves sèries com Pirineus, Alps o Himàlaia, i obrir en el futur
+            la porta a Expedition Series, on diversos mazos es combinaran per crear expedicions més àmplies.
+          </p>
+        </div>
+
+        <div class="stats" aria-label="Datos clave">
+          <div class="stat">
+            <div class="stat__value lang lang-es">Alta montaña</div>
+            <div class="stat__value lang lang-cat">Alta muntanya</div>
+            <div class="stat__label lang lang-es">Temática editorial coherente, visual y narrativa.</div>
+            <div class="stat__label lang lang-cat">Temàtica editorial coherent, visual i narrativa.</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value lang lang-es">Sistema expandible</div>
+            <div class="stat__value lang lang-cat">Sistema expandible</div>
+            <div class="stat__label lang lang-es">Series futuras compatibles dentro del universo Summit.</div>
+            <div class="stat__label lang lang-cat">Sèries futures compatibles dins l’univers Summit.</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value lang lang-es">Diseño en evolución</div>
+            <div class="stat__value lang lang-cat">Disseny en evolució</div>
+            <div class="stat__label lang lang-es">Base sólida para nuevos juegos, eventos y comunidad.</div>
+            <div class="stat__label lang lang-cat">Base sòlida per a nous jocs, esdeveniments i comunitat.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="product" data-altitude="980" data-theme="earth">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Pared inicial · 980 m</div>
+          <div class="eyebrow lang lang-cat">Paret inicial · 980 m</div>
+
+          <h2 class="lang lang-es">Producto actual</h2>
+          <h2 class="lang lang-cat">Producte actual</h2>
+
+          <p class="lead lang lang-es">
+            El primer ascenso de la colección te lleva a una de las montañas más icónicas de Catalunya: el Pedraforca.
+            Un juego de cartas de montaña, tensión y gestión de recursos, con personalidad propia y una ambientación muy marcada.
+          </p>
+          <p class="lead lang lang-cat">
+            El primer ascens de la col·lecció et porta a una de les muntanyes més icòniques de Catalunya: el Pedraforca.
+            Un joc de cartes de muntanya, tensió i gestió de recursos, amb personalitat pròpia i una ambientació molt marcada.
+          </p>
+        </div>
+
+        <div class="card product-card">
+          <div class="product-card__title">Objectiu Pedraforca 2.506</div>
+          <p class="lang lang-es">Ascenso estratégico ambientado en la montaña más simbólica del Berguedà.</p>
+          <p class="lang lang-cat">Ascens estratègic ambientat a la muntanya més simbòlica del Berguedà.</p>
+
+          <div class="product-card__meta">
+            <span class="chip lang lang-es">1–4 jugadores</span>
+            <span class="chip lang lang-cat">1–4 jugadors</span>
+            <span class="chip lang lang-es">20–40 min</span>
+            <span class="chip lang lang-cat">20–40 min</span>
+            <span class="chip lang lang-es">Competitivo y cooperativo</span>
+            <span class="chip lang lang-cat">Competitiu i cooperatiu</span>
+          </div>
+
+          <p class="lang lang-es">
+            Ideal como juego principal o como puerta de entrada a una colección que crecerá montaña a montaña.
+          </p>
+          <p class="lang lang-cat">
+            Ideal com a joc principal o com a porta d’entrada a una col·lecció que creixerà muntanya a muntanya.
+          </p>
+
+          <div class="actions">
+            <a class="btn btn--primary lang lang-es" href="#buy">Reservar / comprar</a>
+            <a class="btn btn--primary lang lang-cat" href="#buy">Reservar / comprar</a>
+            <a class="btn btn--ghost lang lang-es" href="#how">Ver reglas generales</a>
+            <a class="btn btn--ghost lang lang-cat" href="#how">Veure regles generals</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="feature-1" data-altitude="1500" data-theme="rock">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Zona técnica · 1.500 m</div>
+          <div class="eyebrow lang lang-cat">Zona tècnica · 1.500 m</div>
+
+          <h2 class="lang lang-es">Características 1</h2>
+          <h2 class="lang lang-cat">Característiques 1</h2>
+
+          <p class="lead lang lang-es">
+            No se trata solo de avanzar. Cada turno obliga a decidir cómo administrar la energía, cuándo arriesgar y cuándo protegerte.
+            El ritmo de ascensión importa tanto como la capacidad de resistir la montaña.
+          </p>
+          <p class="lead lang lang-cat">
+            No es tracta només d’avançar. Cada torn obliga a decidir com administrar l’energia, quan arriscar i quan protegir-te.
+            El ritme d’ascensió importa tant com la capacitat de resistir la muntanya.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-item">
+            <h3 class="lang lang-es">Gestión de energía</h3>
+            <h3 class="lang lang-cat">Gestió d’energia</h3>
+            <p class="lang lang-es">Toda ascensión exige controlar esfuerzo, recuperación y momento de ataque.</p>
+            <p class="lang lang-cat">Tota ascensió exigeix controlar esforç, recuperació i moment d’atac.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Clima cambiante</h3>
+            <h3 class="lang lang-cat">Clima canviant</h3>
+            <p class="lang lang-es">La montaña cambia la partida y obliga a adaptar la estrategia en tiempo real.</p>
+            <p class="lang lang-cat">La muntanya canvia la partida i obliga a adaptar l’estratègia en temps real.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Altitud progresiva</h3>
+            <h3 class="lang lang-cat">Altitud progressiva</h3>
+            <p class="lang lang-es">La presión aumenta a medida que te acercas a la cima y las decisiones pesan más.</p>
+            <p class="lang lang-cat">La pressió augmenta a mesura que t’acostes al cim i les decisions pesen més.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Sensación de expedición</h3>
+            <h3 class="lang lang-cat">Sensació d’expedició</h3>
+            <p class="lang lang-es">La partida se vive como una ruta completa, con preparación, tensión y desenlace final.</p>
+            <p class="lang lang-cat">La partida es viu com una ruta completa, amb preparació, tensió i desenllaç final.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="feature-2" data-altitude="1950" data-theme="rock">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Alta roca · 1.950 m</div>
+          <div class="eyebrow lang lang-cat">Alta roca · 1.950 m</div>
+
+          <h2 class="lang lang-es">Características 2</h2>
+          <h2 class="lang lang-cat">Característiques 2</h2>
+
+          <p class="lead lang lang-es">
+            Objectiu Pedraforca mezcla juego competitivo y cooperativo. Puedes luchar por llegar antes que nadie o compartir el reto,
+            ayudando a la cordada a superar el clima y los imprevistos de la ruta.
+          </p>
+          <p class="lead lang lang-cat">
+            Objectiu Pedraforca barreja joc competitiu i cooperatiu. Pots lluitar per arribar abans que ningú o compartir el repte,
+            ajudant la cordada a superar el clima i els imprevistos de la ruta.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-item">
+            <h3 class="lang lang-es">Modo competitivo</h3>
+            <h3 class="lang lang-cat">Mode competitiu</h3>
+            <p class="lang lang-es">Carrera por la cima con lectura táctica del momento exacto para atacar.</p>
+            <p class="lang lang-cat">Cursa cap al cim amb lectura tàctica del moment exacte per atacar.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Modo cooperativo</h3>
+            <h3 class="lang lang-cat">Mode cooperatiu</h3>
+            <p class="lang lang-es">La expedición se convierte en esfuerzo compartido y gestión colectiva del riesgo.</p>
+            <p class="lang lang-cat">L’expedició es converteix en esforç compartit i gestió col·lectiva del risc.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Riesgo y protección</h3>
+            <h3 class="lang lang-cat">Risc i protecció</h3>
+            <p class="lang lang-es">El material, los escudos y la previsión marcan la diferencia en los momentos críticos.</p>
+            <p class="lang lang-cat">El material, els escuts i la previsió marquen la diferència en els moments crítics.</p>
+          </article>
+          <article class="feature-item">
+            <h3 class="lang lang-es">Rejugabilidad</h3>
+            <h3 class="lang lang-cat">Rejugabilitat</h3>
+            <p class="lang lang-es">Cada ascensión cambia por el orden de cartas, el clima y las decisiones de los jugadores.</p>
+            <p class="lang lang-cat">Cada ascens canvia per l’ordre de cartes, el clima i les decisions dels jugadors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="feature-3" data-altitude="2280" data-theme="glacier">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Glaciar final · 2.280 m</div>
+          <div class="eyebrow lang lang-cat">Glacera final · 2.280 m</div>
+
+          <h2 class="lang lang-es">Características 3</h2>
+          <h2 class="lang lang-cat">Característiques 3</h2>
+
+          <p class="lead lang lang-es">
+            Más allá del juego, Objectiu Pedraforca conecta con el territorio, el imaginario de montaña y la cultura excursionista.
+            Está pensado para convertirse en una pieza de colección dentro de un universo editorial propio.
+          </p>
+          <p class="lead lang lang-cat">
+            Més enllà del joc, Objectiu Pedraforca connecta amb el territori, l’imaginari de muntanya i la cultura excursionista.
+            Està pensat per convertir-se en una peça de col·lecció dins d’un univers editorial propi.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat__value lang lang-es">Montaña real</div>
+            <div class="stat__value lang lang-cat">Muntanya real</div>
+            <div class="stat__label lang lang-es">Inspiración visual y temática ligada al Pedraforca y su entorno.</div>
+            <div class="stat__label lang lang-cat">Inspiració visual i temàtica lligada al Pedraforca i el seu entorn.</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value lang lang-es">Coleccionable</div>
+            <div class="stat__value lang lang-cat">Col·leccionable</div>
+            <div class="stat__label lang lang-es">Primera cima de una serie diseñada para crecer con nuevos títulos.</div>
+            <div class="stat__label lang lang-cat">Primer cim d’una sèrie dissenyada per créixer amb nous títols.</div>
+          </div>
+          <div class="stat">
+            <div class="stat__value lang lang-es">Muy tematizado</div>
+            <div class="stat__value lang lang-cat">Molt tematitzat</div>
+            <div class="stat__label lang lang-es">Una web, una marca y una experiencia coherentes con la alta montaña.</div>
+            <div class="stat__label lang lang-cat">Una web, una marca i una experiència coherents amb l’alta muntanya.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel panel--single" id="how" data-altitude="2460" data-theme="glacier">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Ataque a cima · 2.460 m</div>
+          <div class="eyebrow lang lang-cat">Atac a cim · 2.460 m</div>
+
+          <h2 class="lang lang-es">Cómo se juega a Objectiu Pedraforca</h2>
+          <h2 class="lang lang-cat">Com es juga a Objectiu Pedraforca</h2>
+
+          <p class="lead lang lang-es">
+            En cada partida asciendes por la montaña administrando cartas, energía, clima y oportunidad. Puedes jugar en modo competitivo
+            para coronar antes que los demás, o en modo cooperativo para intentar que la expedición complete el ascenso.
+          </p>
+          <p class="lead lang lang-cat">
+            En cada partida ascendeixes per la muntanya administrant cartes, energia, clima i oportunitat. Pots jugar en mode competitiu
+            per coronar abans que la resta, o en mode cooperatiu per intentar que l’expedició completi l’ascens.
+          </p>
+
+          <div class="steps">
+            <article class="step">
+              <div class="step__num">1</div>
+              <h3 class="lang lang-es">Revela la montaña</h3>
+              <h3 class="lang lang-cat">Revela la muntanya</h3>
+              <p class="lang lang-es">Clima, evento o situación inicial que condiciona la ronda y obliga a planificar.</p>
+              <p class="lang lang-cat">Clima, esdeveniment o situació inicial que condiciona la ronda i obliga a planificar.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">2</div>
+              <h3 class="lang lang-es">Gestiona tu turno</h3>
+              <h3 class="lang lang-cat">Gestiona el teu torn</h3>
+              <p class="lang lang-es">Juega avance, material, protección u observación según lo que exija la ascensión.</p>
+              <p class="lang lang-cat">Juga avanç, material, protecció o observació segons el que exigeixi l’ascensió.</p>
+            </article>
+            <article class="step">
+              <div class="step__num">3</div>
+              <h3 class="lang lang-es">Resuelve y asciende</h3>
+              <h3 class="lang lang-cat">Resol i ascendeix</h3>
+              <p class="lang lang-es">Aplica energía, altitud y efectos de la montaña hasta preparar la siguiente ronda.</p>
+              <p class="lang lang-cat">Aplica energia, altitud i efectes de la muntanya fins preparar la ronda següent.</p>
+            </article>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--primary lang lang-es" href="#buy">Alcanzar la cima</a>
+            <a class="btn btn--primary lang lang-cat" href="#buy">Arribar al cim</a>
+            <a class="btn btn--ghost lang lang-es" href="#hero">Volver al inicio</a>
+            <a class="btn btn--ghost lang lang-cat" href="#hero">Tornar a l’inici</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="buy" data-altitude="2506" data-theme="summit">
+      <div class="panel__inner">
+        <div>
+          <div class="eyebrow lang lang-es">Cima · 2.506 m</div>
+          <div class="eyebrow lang lang-cat">Cim · 2.506 m</div>
+
+          <div class="summit-tagline lang lang-es">CTA final de conversión</div>
+          <div class="summit-tagline lang lang-cat">CTA final de conversió</div>
+
+          <h2 class="lang lang-es">Haz cima con la primera expedición</h2>
+          <h2 class="lang lang-cat">Fes cim amb la primera expedició</h2>
+
+          <p class="lead lang lang-es">
+            Objectiu Pedraforca 2.506 es la primera montaña de Summit Games Series. Compra tu copia, inicia la colección
+            y acompaña el nacimiento de una línea de juegos de montaña diseñada para crecer con nuevas cumbres.
+          </p>
+          <p class="lead lang lang-cat">
+            Objectiu Pedraforca 2.506 és la primera muntanya de Summit Games Series. Compra la teva còpia, inicia la col·lecció
+            i acompanya el naixement d’una línia de jocs de muntanya dissenyada per créixer amb nous cims.
+          </p>
+        </div>
+
+        <div class="buy-panel">
+          <div class="eyebrow lang lang-es">Compra segura</div>
+          <div class="eyebrow lang lang-cat">Compra segura</div>
+
+          <div class="buy-panel__price">29 €</div>
+
+          <p class="lang lang-es">Pago seguro con PayPal. Sustituye el bloque inferior por tu botón real cuando lo generes en tu cuenta.</p>
+          <p class="lang lang-cat">Pagament segur amb PayPal. Substitueix el bloc inferior pel teu botó real quan el generis al teu compte.</p>
+
+          <div class="paypal-placeholder">
+            <strong class="lang lang-es">Aquí irá tu botón de PayPal</strong>
+            <strong class="lang lang-cat">Aquí anirà el teu botó de PayPal</strong>
+            <p class="spacer-top lang lang-es">
+              En PayPal crea un botón de “Comprar ahora” y pega aquí el código HTML proporcionado.
+            </p>
+            <p class="spacer-top lang lang-cat">
+              A PayPal crea un botó de “Comprar ara” i enganxa aquí el codi HTML proporcionat.
+            </p>
+          </div>
+
+          <div class="actions">
+            <a class="btn btn--primary lang lang-es" href="mailto:info@playsummitgames.es">Contactar</a>
+            <a class="btn btn--primary lang lang-cat" href="mailto:info@playsummitgames.es">Contactar</a>
+            <a class="btn btn--ghost lang lang-es" href="#product">Revisar el juego</a>
+            <a class="btn btn--ghost lang lang-cat" href="#product">Revisar el joc</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <strong>Play Summit Games</strong> · <span class="lang lang-es">Diseño web inicial para GitHub Pages</span><span class="lang lang-cat">Disseny web inicial per a GitHub Pages</span>
+      </div>
+      <div>
+        <span class="lang lang-es">Preparada para español / catalán · PayPal · dominio propio</span>
+        <span class="lang lang-cat">Preparada per a espanyol / català · PayPal · domini propi</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const panels = document.querySelectorAll('.panel');
+    const altitudeValue = document.getElementById('altitudeValue');
+    const altitudeProgress = document.getElementById('altitudeProgress');
+    const altitudeDot = document.getElementById('altitudeDot');
+    const maxAltitude = 2506;
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetLang = btn.dataset.langTarget;
+        body.setAttribute('data-lang', targetLang);
+        langButtons.forEach((b) => b.classList.toggle('active', b === btn));
+        document.documentElement.setAttribute('lang', targetLang === 'cat' ? 'ca' : 'es');
+      });
+    });
+
+    function updateScene() {
+      const viewportMiddle = window.scrollY + (window.innerHeight * 0.5);
+      let activePanel = panels[0];
+
+      panels.forEach((panel) => {
+        const top = panel.offsetTop;
+        if (viewportMiddle >= top) activePanel = panel;
+      });
+
+      const altitude = Number(activePanel.dataset.altitude || 0);
+      const theme = activePanel.dataset.theme || 'valley';
+      body.setAttribute('data-theme', theme);
+      altitudeValue.textContent = `${altitude.toLocaleString('es-ES')} m`;
+
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = docHeight > 0 ? window.scrollY / docHeight : 0;
+      const progress = Math.max(0, Math.min(100, ratio * 100));
+      altitudeProgress.style.height = `${progress}%`;
+      altitudeDot.style.bottom = `${progress}%`;
+    }
+
+    updateScene();
+    window.addEventListener('scroll', updateScene, { passive: true });
+    window.addEventListener('resize', updateScene);
+  </script>
+</body>
+</html>
