@@ -4,210 +4,377 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Play Summit Games | Juegos diseñados en los Pirineos</title>
-  <meta name="description" content="Play Summit Games. Juegos de montaña diseñados en los Pirineos. Descubre Objetivo Monte Perdido 3.355 m y Objectiu Pedraforca 2.506 m." />
+  <meta name="description" content="Summit Series: juegos de cartas inspirados en la alta montaña. Descubre Objetivo Monte Perdido 3.355 m y Objectiu Pedraforca 2.506 m." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="lang-es">
-  <div class="altitude-indicator">
-    <span class="altitude-label" data-es="Ascenso" data-cat="Ascens">Ascenso</span>
-    <span class="altitude-value" id="altitudeValue">0 m</span>
-  </div>
+<body>
+  <aside class="altitude-ruler">
+    <div class="altitude-ruler-inner">
+      <div class="ruler-title">Ascenso</div>
+
+      <a href="#inicio" class="altitude-stop active" data-target="inicio">
+        <span class="altitude-stop-meter">0 m</span>
+        <span class="altitude-stop-label">Fondo del valle</span>
+      </a>
+
+      <a href="#productos" class="altitude-stop" data-target="productos">
+        <span class="altitude-stop-meter">1.450 m</span>
+        <span class="altitude-stop-label">Campamento base</span>
+      </a>
+
+      <a href="#caracteristicas-1" class="altitude-stop" data-target="caracteristicas-1">
+        <span class="altitude-stop-meter">1.850 m</span>
+        <span class="altitude-stop-label">Primera cordada</span>
+      </a>
+
+      <a href="#modos" class="altitude-stop" data-target="modos">
+        <span class="altitude-stop-meter">2.200 m</span>
+        <span class="altitude-stop-label">Refugio guardado</span>
+      </a>
+
+      <a href="#valores" class="altitude-stop" data-target="valores">
+        <span class="altitude-stop-meter">2.506 m</span>
+        <span class="altitude-stop-label">Zona técnica</span>
+      </a>
+
+      <a href="#reglas" class="altitude-stop" data-target="reglas">
+        <span class="altitude-stop-meter">3.000 m</span>
+        <span class="altitude-stop-label">Ataque a la cima</span>
+      </a>
+
+      <a href="#compra" class="altitude-stop" data-target="compra">
+        <span class="altitude-stop-meter">3.355 m</span>
+        <span class="altitude-stop-label">Cima</span>
+      </a>
+    </div>
+  </aside>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
-        <div class="brand-text">
-          <strong>Play Summit Games</strong>
-          <span data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">
-            Juegos diseñados en los Pirineos
-          </span>
+        <div class="brand-copy">
+          <div class="brand-name">Play Summit Games</div>
+          <div class="brand-subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </a>
 
       <nav class="main-nav">
-        <a href="#inicio" data-es="Inicio" data-cat="Inici">Inicio</a>
-        <a href="#summit-games" data-es="Summit Games" data-cat="Summit Games">Summit Games</a>
-        <a href="#productos" data-es="Productos" data-cat="Productes">Productos</a>
-        <a href="#vision" data-es="Visión" data-cat="Visió">Visión</a>
-        <a href="#contacto" data-es="Contacto" data-cat="Contacte">Contacto</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Juegos</a>
+        <a href="#caracteristicas-1">Summit Series</a>
+        <a href="#reglas">Cómo se juega</a>
+        <a href="#compra">Compra</a>
       </nav>
-
-      <div class="lang-switch">
-        <button type="button" class="lang-btn active" data-lang="es">ES</button>
-        <button type="button" class="lang-btn" data-lang="cat">CAT</button>
-      </div>
     </div>
   </header>
 
   <main>
-    <section id="inicio" class="panel panel-valley" data-altitude="0">
-      <div class="container panel-content hero-grid">
+    <section id="inicio" class="section section-valley" data-section>
+      <div class="container section-inner hero-layout">
         <div class="hero-copy">
-          <p class="eyebrow" data-es="Fondo del valle · 0 m" data-cat="Fons de la vall · 0 m">Fondo del valle · 0 m</p>
-          <h1 data-es="Juegos de montaña con alma de expedición" data-cat="Jocs de muntanya amb ànima d’expedició">
-            Juegos de montaña con alma de expedición
-          </h1>
-          <p class="lead"
-             data-es="Play Summit Games crea juegos inspirados en la experiencia real de la montaña: progresión, meteorología, esfuerzo, cooperación, riesgo, refugios, fauna, paisaje y cultura alpina."
-             data-cat="Play Summit Games crea jocs inspirats en l’experiència real de la muntanya: progressió, meteorologia, esforç, cooperació, risc, refugis, fauna, paisatge i cultura alpina.">
-            Play Summit Games crea juegos inspirados en la experiencia real de la montaña: progresión, meteorología, esfuerzo, cooperación, riesgo, refugios, fauna, paisaje y cultura alpina.
+          <p class="section-kicker">Fondo del valle · 0 m</p>
+          <h1>Summit Series</h1>
+          <p class="hero-lead">
+            Juegos de cartas inspirados en la alta montaña.
+          </p>
+          <p>
+            Una colección creada para vivir la tensión, la estrategia, el clima variable
+            y la emoción de una ascensión real.
+          </p>
+          <p>
+            Cada partida combina progresión en altitud, toma de decisiones, gestión del
+            riesgo, energía, meteorología y espíritu de expedición, con una ambientación
+            basada en montañas y territorios reales.
           </p>
 
-          <div class="cta-row">
-            <a href="#productos" class="btn btn-primary" data-es="Descubrir juegos" data-cat="Descobrir jocs">Descubrir juegos</a>
-            <a href="#summit-games" class="btn btn-secondary" data-es="Qué es Summit Games" data-cat="Què és Summit Games">Qué es Summit Games</a>
+          <div class="button-row">
+            <a href="#productos" class="button button-primary">Descubrir juegos</a>
+            <a href="#reglas" class="button button-secondary">Ver reglas básicas</a>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="chapter-list">
-            <h2 data-es="Ruta de ascenso" data-cat="Ruta d’ascens">Ruta de ascenso</h2>
-            <ol>
-              <li data-es="Fondo del valle · Presentación" data-cat="Fons de la vall · Presentació">Fondo del valle · Presentación</li>
-              <li data-es="Campamento base · Línea Summit Games" data-cat="Campament base · Línia Summit Games">Campamento base · Línea Summit Games</li>
-              <li data-es="Media montaña · Juegos actuales" data-cat="Mitja muntanya · Jocs actuals">Media montaña · Juegos actuales</li>
-              <li data-es="Alta montaña · Experiencia y valores" data-cat="Alta muntanya · Experiència i valors">Alta montaña · Experiencia y valores</li>
-              <li data-es="Cumbre · Próximos pasos" data-cat="Cim · Propers passos">Cumbre · Próximos pasos</li>
-            </ol>
+        <div class="hero-panel">
+          <div class="hero-panel-card">
+            <h2>Una colección para ascender jugando</h2>
+            <ul class="clean-list">
+              <li>Inspirada en la experiencia real de la montaña</li>
+              <li>Ediciones temáticas con identidad territorial propia</li>
+              <li>Modos competitivo, cooperativo y solitario</li>
+              <li>Escalable en complejidad y profundidad de partida</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="summit-games" class="panel panel-basecamp" data-altitude="1450">
-      <div class="container panel-content two-col">
-        <div>
-          <p class="eyebrow" data-es="Campamento base · 1.450 m" data-cat="Campament base · 1.450 m">Campamento base · 1.450 m</p>
-          <h2 data-es="Qué es Play Summit Games" data-cat="Què és Play Summit Games">Qué es Play Summit Games</h2>
-          <p
-            data-es="Una línea de juegos ambientados en grandes montañas y territorios reales, donde cada partida conecta estrategia, emoción y cultura de montaña."
-            data-cat="Una línia de jocs ambientats en grans muntanyes i territoris reals, on cada partida connecta estratègia, emoció i cultura de muntanya.">
-            Una línea de juegos ambientados en grandes montañas y territorios reales, donde cada partida conecta estrategia, emoción y cultura de montaña.
-          </p>
-          <p
-            data-es="No son sólo juegos de mesa: son experiencias narrativas inspiradas en parques naturales, cumbres icónicas, alpinistas históricos, flora, fauna, meteorología y buenas prácticas en el medio natural."
-            data-cat="No són només jocs de taula: són experiències narratives inspirades en parcs naturals, cims icònics, alpinistes històrics, flora, fauna, meteorologia i bones pràctiques al medi natural.">
-            No son sólo juegos de mesa: son experiencias narrativas inspiradas en parques naturales, cumbres icónicas, alpinistas históricos, flora, fauna, meteorología y buenas prácticas en el medio natural.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <h3 data-es="Temática real" data-cat="Temàtica real">Temática real</h3>
-            <p data-es="Montañas, refugios, paisajes y cultura alpina auténticos." data-cat="Muntanyes, refugis, paisatges i cultura alpina autèntics.">
-              Montañas, refugios, paisajes y cultura alpina auténticos.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3 data-es="Tensión de ascensión" data-cat="Tensió d’ascensió">Tensión de ascensión</h3>
-            <p data-es="Energía, clima, riesgo y gestión del momento." data-cat="Energia, clima, risc i gestió del moment.">
-              Energía, clima, riesgo y gestión del momento.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3 data-es="Modo cooperativo y competitivo" data-cat="Mode cooperatiu i competitiu">Modo cooperativo y competitivo</h3>
-            <p data-es="Puedes competir por la cima o colaborar para alcanzarla juntos." data-cat="Pots competir pel cim o col·laborar per assolir-lo plegats.">
-              Puedes competir por la cima o colaborar para alcanzarla juntos.
-            </p>
-          </article>
-          <article class="feature-card">
-            <h3 data-es="Identidad pirenaica" data-cat="Identitat pirinenca">Identidad pirenaica</h3>
-            <p data-es="Diseñados desde los Pirineos y conectados con su territorio." data-cat="Dissenyats des dels Pirineus i connectats amb el seu territori.">
-              Diseñados desde los Pirineos y conectados con su territorio.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="productos" class="panel panel-midmountain" data-altitude="2500">
-      <div class="container panel-content">
-        <p class="eyebrow" data-es="Media montaña · 2.500 m" data-cat="Mitja muntanya · 2.500 m">Media montaña · 2.500 m</p>
-        <h2 data-es="Juegos actuales" data-cat="Jocs actuals">Juegos actuales</h2>
+    <section id="productos" class="section section-basecamp" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Campamento base · 1.450 m</p>
+        <h2>Dos primeras ascensiones de la colección</h2>
+        <p class="section-intro">
+          Summit Series arranca con dos juegos ambientados en dos grandes montañas del Pirineo:
+          Monte Perdido y Pedraforca.
+        </p>
 
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-topline">
-              <span class="product-altitude">3.355 m</span>
-              <span class="product-tag" data-es="Edición en español" data-cat="Edició en castellà">Edición en español</span>
-            </div>
-            <h3>Objetivo Monte Perdido 3.355 m</h3>
-            <p
-              data-es="Una ascensión lúdica al macizo de Monte Perdido, con gestión de energía, meteorología, eventos y espíritu de expedición."
-              data-cat="Una ascensió lúdica al massís del Mont Perdut, amb gestió d’energia, meteorologia, esdeveniments i esperit d’expedició.">
-              Una ascensión lúdica al macizo de Monte Perdido, con gestión de energía, meteorología, eventos y espíritu de expedición.
+            <div class="product-altitude">3.355 m</div>
+            <h3>Objetivo Monte Perdido 3.355</h3>
+            <p class="product-subtitle">Ambientación específica Monte Perdido</p>
+
+            <ul class="feature-list">
+              <li><strong>Jugadores:</strong> 1–4</li>
+              <li><strong>Duración:</strong> 20–40 minutos</li>
+              <li><strong>Modos:</strong> competitivo, cooperativo y solitario</li>
+              <li><strong>Mecánicas:</strong> gestión de mano y colección de mazo</li>
+            </ul>
+
+            <p>
+              Una ascensión lúdica al Monte Perdido con clima, energía, eventos,
+              decisiones tácticas y sensación de expedición.
             </p>
-            <a href="objetivo-monte-perdido.html" class="btn btn-primary" data-es="Entrar en la página del juego" data-cat="Entrar a la pàgina del joc">
-              Entrar en la página del juego
-            </a>
+
+            <div class="button-row">
+              <a href="objetivo-monte-perdido.html" class="button button-primary">Ver landing del juego</a>
+            </div>
           </article>
 
           <article class="product-card">
-            <div class="product-topline">
-              <span class="product-altitude">2.506 m</span>
-              <span class="product-tag" data-es="Edició en català" data-cat="Edició en català">Edició en català</span>
-            </div>
-            <h3>Objectiu Pedraforca 2.506 m</h3>
-            <p
-              data-es="Un juego inspirado en la montaña más emblemática de Catalunya, entre estrategia, territorio, cultura excursionista y emoción de cima."
-              data-cat="Un joc inspirat en la muntanya més emblemàtica de Catalunya, entre estratègia, territori, cultura excursionista i emoció de cim.">
-              Un juego inspirado en la montaña más emblemática de Catalunya, entre estrategia, territorio, cultura excursionista y emoción de cima.
+            <div class="product-altitude">2.506 m</div>
+            <h3>Objectiu Pedraforca 2.506</h3>
+            <p class="product-subtitle">Ambientación específica Pedraforca</p>
+
+            <ul class="feature-list">
+              <li><strong>Jugadores:</strong> 1–4</li>
+              <li><strong>Duración:</strong> 20–40 minutos</li>
+              <li><strong>Modos:</strong> competitivo, cooperativo y solitario</li>
+              <li><strong>Mecánicas:</strong> gestión de mano y colección de mazo</li>
+            </ul>
+
+            <p>
+              Un juego de ascensión inspirado en la montaña más emblemática de Catalunya,
+              con identidad territorial, cultura excursionista y emoción de cima.
             </p>
-            <a href="objectiu-pedraforca.html" class="btn btn-primary" data-es="Entrar en la página del juego" data-cat="Entrar a la pàgina del joc">
-              Entrar en la página del juego
-            </a>
+
+            <div class="button-row">
+              <a href="objectiu-pedraforca.html" class="button button-primary">Ver landing del juego</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="vision" class="panel panel-highmountain" data-altitude="3000">
-      <div class="container panel-content two-col">
-        <div>
-          <p class="eyebrow" data-es="Alta montaña · 3.000 m" data-cat="Alta muntanya · 3.000 m">Alta montaña · 3.000 m</p>
-          <h2 data-es="Más que jugar: vivir la montaña" data-cat="Més que jugar: viure la muntanya">Más que jugar: vivir la montaña</h2>
-          <p
-            data-es="Cada juego está planteado para transmitir sensaciones reales de progresión, cansancio, meteorología cambiante, toma de decisiones, prudencia y compañerismo."
-            data-cat="Cada joc està plantejat per transmetre sensacions reals de progressió, cansament, meteorologia canviant, presa de decisions, prudència i companyonia.">
-            Cada juego está planteado para transmitir sensaciones reales de progresión, cansancio, meteorología cambiante, toma de decisiones, prudencia y compañerismo.
-          </p>
-          <p
-            data-es="Play Summit Games nace con vocación de crecer en nuevas montañas, nuevas ediciones y nuevos territorios."
-            data-cat="Play Summit Games neix amb vocació de créixer en noves muntanyes, noves edicions i nous territoris.">
-            Play Summit Games nace con vocación de crecer en nuevas montañas, nuevas ediciones y nuevos territorios.
-          </p>
-        </div>
+    <section id="caracteristicas-1" class="section section-first-rope" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Primera cordada · 1.850 m</p>
+        <h2>Características comunes de Summit Series</h2>
 
-        <div class="stats-card">
-          <div class="stat-item">
-            <strong>2</strong>
-            <span data-es="juegos presentados" data-cat="jocs presentats">juegos presentados</span>
-          </div>
-          <div class="stat-item">
-            <strong data-es="2 idiomas" data-cat="2 idiomes">2 idiomas</strong>
-            <span data-es="castellano y catalán" data-cat="castellà i català">castellano y catalán</span>
-          </div>
-          <div class="stat-item">
-            <strong data-es="100% montaña" data-cat="100% muntanya">100% montaña</strong>
-            <span data-es="tema, mecánica y territorio" data-cat="tema, mecànica i territori">tema, mecánica y territorio</span>
-          </div>
+        <div class="info-grid cols-3">
+          <article class="info-card">
+            <h3>Gestión de energía</h3>
+            <p>Subir no es suficiente: hay que dosificar el esfuerzo y saber cuándo reservar fuerzas.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Clima cambiante</h3>
+            <p>La meteorología modifica el ritmo de partida y obliga a adaptarse en cada ascensión.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Altitud progresiva</h3>
+            <p>El avance hacia la cima se vive por cotas, con sensación real de aproximación a la cumbre.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Sensación de expedición</h3>
+            <p>El juego transmite progresión, tensión, prudencia, desgaste y momentos clave de ataque.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Riesgo y protección</h3>
+            <p>Clima, eventos y decisiones exigen prepararse bien y protegerse en el momento adecuado.</p>
+          </article>
+
+          <article class="info-card">
+            <h3>Rejugabilidad</h3>
+            <p>La variabilidad de cartas, modos y decisiones hace que cada partida tenga un recorrido distinto.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="panel panel-summit" data-altitude="3355">
-      <div class="container panel-content summit-box">
-        <p class="eyebrow" data-es="Cumbre · 3.355 m" data-cat="Cim · 3.355 m">Cumbre · 3.355 m</p>
-        <h2 data-es="La cima es sólo el comienzo" data-cat="El cim és només el començament">La cima es sólo el comienzo</h2>
-        <p
-          data-es="Descubre la línea de juegos y acompaña el nacimiento de Play Summit Games."
-          data-cat="Descobreix la línia de jocs i acompanya el naixement de Play Summit Games.">
-          Descubre la línea de juegos y acompaña el nacimiento de Play Summit Games.
+    <section id="modos" class="section section-refuge" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Refugio guardado · 2.200 m</p>
+        <h2>Estilos de ascensión y modos de juego</h2>
+        <p class="section-intro">
+          Summit Series puede jugarse con distintos estilos de partida según el modo elegido
+          y el nivel de complejidad que se quiera añadir mediante reglas y componentes.
         </p>
-        <div class="cta-row center">
-          <a href="objetivo-monte-perdido.html" class="btn btn-primary">Objetivo Monte Perdido</a>
-          <a href="objectiu-pedraforca.html" class="btn btn-secondary">Objectiu Pedraforca</a>
+
+        <div class="modes-grid">
+          <article class="mode-column">
+            <h3>Modo competitivo</h3>
+            <div class="mode-card">
+              <h4>Sprint running</h4>
+              <p>Partida rápida, directa y más ligera, centrada en la velocidad de ascensión.</p>
+            </div>
+            <div class="mode-card">
+              <h4>Cross running</h4>
+              <p>Mayor interacción, más decisiones tácticas y equilibrio entre ritmo y gestión.</p>
+            </div>
+            <div class="mode-card">
+              <h4>Sky running</h4>
+              <p>Versión más completa y exigente, con más tensión, riesgo y profundidad de juego.</p>
+            </div>
+          </article>
+
+          <article class="mode-column">
+            <h3>Modo cooperativo</h3>
+            <div class="mode-card">
+              <h4>Solo</h4>
+              <p>Experiencia individual para superar la montaña y optimizar tu propia ascensión.</p>
+            </div>
+            <div class="mode-card">
+              <h4>Estilo Alpino</h4>
+              <p>Cooperativo ágil, con pocos apoyos y fuerte gestión de recursos y decisiones clave.</p>
+            </div>
+            <div class="mode-card">
+              <h4>Estilo Clásico</h4>
+              <p>Cooperativo más completo, con más herramientas, reglas y construcción de expedición.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="valores" class="section section-technical" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Zona técnica · 2.506 m</p>
+        <h2>Puntos fuertes de cada juego Summit Series</h2>
+
+        <div class="info-grid cols-2">
+          <article class="info-card">
+            <h3>Identidad territorial</h3>
+            <p>
+              Las cartas y la ambientación conectan con paisajes, refugios, fuentes y elementos
+              reconocibles de cada montaña y su territorio.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Sensibilización ambiental</h3>
+            <p>
+              La fauna, la flora y el clima variable ayudan a acercar al jugador a la realidad
+              natural de cada entorno.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Difusión de buenas prácticas en la montaña</h3>
+            <p>
+              Prevención, preparación, conocimiento del clima, elección de material,
+              adecuación de la ruta a las capacidades técnicas, gestión de energía y observación del medio.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Transmisión de valores</h3>
+            <p>
+              Cooperación, ética en la montaña, compartir, esperar, apoyar, aconsejar
+              y tomar decisiones responsables.
+            </p>
+          </article>
+
+          <article class="info-card">
+            <h3>Divulgación del patrimonio cultural</h3>
+            <p>
+              Cada juego puede vehicular relatos, referencias, cultura excursionista
+              y memoria de las montañas representadas.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="reglas" class="section section-summit-attack" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Ataque a la cima · 3.000 m</p>
+        <h2>Información básica de las reglas del juego</h2>
+
+        <div class="rules-grid">
+          <article class="rule-card">
+            <div class="rule-number">1</div>
+            <h3>Objetivo</h3>
+            <p>Alcanzar la cima antes que los demás, o lograrla juntos en el modo cooperativo.</p>
+          </article>
+
+          <article class="rule-card">
+            <div class="rule-number">2</div>
+            <h3>Tu mano de cartas</h3>
+            <p>Gestionas cartas de avance, clima, equipo, protección, eventos y otros apoyos de ascensión.</p>
+          </article>
+
+          <article class="rule-card">
+            <div class="rule-number">3</div>
+            <h3>Energía y progreso</h3>
+            <p>Avanzar consume recursos, exige cálculo y obliga a decidir cuándo arriesgar y cuándo resistir.</p>
+          </article>
+
+          <article class="rule-card">
+            <div class="rule-number">4</div>
+            <h3>Clima y montaña</h3>
+            <p>El tiempo puede frenar, complicar o transformar la estrategia de una ronda a otra.</p>
+          </article>
+
+          <article class="rule-card">
+            <div class="rule-number">5</div>
+            <h3>Distintos estilos de partida</h3>
+            <p>La experiencia cambia según el modo elegido y el nivel de complejidad añadido.</p>
+          </article>
+
+          <article class="rule-card">
+            <div class="rule-number">6</div>
+            <h3>Sensación real de ascensión</h3>
+            <p>La partida reproduce la tensión de planificar, progresar y atacar la cima en el momento oportuno.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="compra" class="section section-top" data-section>
+      <div class="container section-inner">
+        <p class="section-kicker">Cima · 3.355 m</p>
+        <h2>Dos cimas, dos experiencias de juego</h2>
+        <p class="section-intro">
+          Descubre la primera cordada de Summit Series y elige tu montaña.
+        </p>
+
+        <div class="product-grid">
+          <article class="product-card product-card-light">
+            <div class="product-altitude">Objetivo Monte Perdido 3.355</div>
+            <h3>Ascensión a una gran cumbre pirenaica</h3>
+            <p>
+              Una experiencia de montaña con energía, clima y gestión táctica
+              en torno al macizo de Monte Perdido.
+            </p>
+            <div class="button-row">
+              <a href="objetivo-monte-perdido.html" class="button button-primary">Ver juego</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card-light">
+            <div class="product-altitude">Objectiu Pedraforca 2.506</div>
+            <h3>La montaña más emblemática de Catalunya</h3>
+            <p>
+              Una edición con fuerte identidad territorial, cultural y excursionista
+              inspirada en el Pedraforca.
+            </p>
+            <div class="button-row">
+              <a href="objectiu-pedraforca.html" class="button button-primary">Ver juego</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -218,23 +385,27 @@
       <div class="footer-brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
         <div>
-          <strong>Play Summit Games</strong>
-          <p data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">
-            Juegos diseñados en los Pirineos
-          </p>
+          <div class="footer-brand-name">Play Summit Games</div>
+          <div class="footer-brand-subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </div>
 
       <div class="footer-links">
-        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="instagram-link">
-          <span class="instagram-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-              <circle cx="12" cy="12" r="4"></circle>
-              <circle cx="17.5" cy="6.5" r="1"></circle>
-            </svg>
-          </span>
+        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
           <span>@playsummitgames</span>
+        </a>
+
+        <a href="mailto:info@playsummitgames.es" class="footer-link-icon" aria-label="Correo electrónico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16v12H4z"></path>
+            <path d="M4 7l8 6 8-6"></path>
+          </svg>
+          <span>info@playsummitgames.es</span>
         </a>
       </div>
     </div>
