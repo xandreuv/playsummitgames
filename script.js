@@ -1,53 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const langButtons = document.querySelectorAll('.lang-btn');
-  const translatableElements = document.querySelectorAll('[data-es][data-cat]');
-  const altitudeValue = document.getElementById('altitudeValue');
-  const sections = document.querySelectorAll('[data-altitude]');
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("[data-section]");
+  const stops = document.querySelectorAll(".altitude-stop");
 
-  function setLanguage(lang) {
-    document.body.classList.remove('lang-es', 'lang-cat');
-    document.body.classList.add(`lang-${lang}`);
+  function updateActiveStop() {
+    if (!sections.length || !stops.length) return;
 
-    translatableElements.forEach((el) => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) {
-        el.textContent = text;
-      }
-    });
-
-    langButtons.forEach((btn) => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
-    });
-
-    localStorage.setItem('psg-language', lang);
-  }
-
-  langButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      setLanguage(btn.dataset.lang);
-    });
-  });
-
-  const savedLang = localStorage.getItem('psg-language') || 'es';
-  setLanguage(savedLang);
-
-  function updateAltitudeIndicator() {
-    if (!altitudeValue || sections.length === 0) return;
-
-    let currentSection = sections[0];
+    let activeId = sections[0].id;
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
-      if (rect.top <= window.innerHeight * 0.45) {
-        currentSection = section;
+      if (rect.top <= window.innerHeight * 0.42) {
+        activeId = section.id;
       }
     });
 
-    const altitude = currentSection.dataset.altitude || '0';
-    altitudeValue.textContent = `${altitude} m`;
+    stops.forEach((stop) => {
+      stop.classList.toggle("active", stop.dataset.target === activeId);
+    });
   }
 
-  updateAltitudeIndicator();
-  window.addEventListener('scroll', updateAltitudeIndicator);
-  window.addEventListener('resize', updateAltitudeIndicator);
+  updateActiveStop();
+  window.addEventListener("scroll", updateActiveStop);
+  window.addEventListener("resize", updateActiveStop);
 });
