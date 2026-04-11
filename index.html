@@ -3,1139 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Play Summit Games</title>
-  <meta name="description" content="Play Summit Games · Juegos diseñados en los Pirineos. Juegos de cartas inspirados en la alta montaña." />
-  <style>
-    :root{
-      --header:#1f4b3a;
-      --valley:#295f46;
-      --basecamp:#537b55;
-      --rope:#7d7a58;
-      --hut:#8f8062;
-      --technical:#9b8e7a;
-      --summitpush:#cfd8df;
-      --summit:#f4f5f6;
-      --footer:#e8eaec;
-
-      --text-dark:#132018;
-      --text-light:#f6f3eb;
-      --accent:#e97a1f;
-      --accent-2:#ffb25a;
-      --card-bg:rgba(255,255,255,0.10);
-      --card-border:rgba(255,255,255,0.18);
-      --shadow:0 12px 36px rgba(0,0,0,0.18);
-      --maxw:1220px;
-      --radius:22px;
-    }
-
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color:var(--text-light);
-      background:var(--header);
-      overflow-x:hidden;
-    }
-
-    a{
-      color:inherit;
-      text-decoration:none;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    .site-header{
-      position:sticky;
-      top:0;
-      z-index:50;
-      background:rgba(31,75,58,0.92);
-      backdrop-filter:blur(8px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
-
-    .header-inner{
-      width:min(calc(100% - 40px), var(--maxw));
-      margin:0 auto;
-      min-height:90px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:14px 0;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      min-width:0;
-    }
-
-    .brand-logo{
-      width:190px;
-      max-width:42vw;
-      height:auto;
-      object-fit:contain;
-      filter:drop-shadow(0 6px 14px rgba(0,0,0,0.25));
-    }
-
-    .brand-text{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      min-width:0;
-    }
-
-    .brand-subtitle{
-      font-size:0.95rem;
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-      color:#f4e5cf;
-      opacity:0.95;
-      white-space:nowrap;
-    }
-
-    .header-actions{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-
-    .lang-toggle{
-      display:flex;
-      align-items:center;
-      gap:8px;
-      background:rgba(255,255,255,0.08);
-      border:1px solid rgba(255,255,255,0.12);
-      padding:6px;
-      border-radius:999px;
-    }
-
-    .lang-btn{
-      border:0;
-      background:transparent;
-      color:rgba(255,255,255,0.78);
-      font-weight:700;
-      font-size:0.92rem;
-      padding:8px 12px;
-      border-radius:999px;
-      cursor:pointer;
-      transition:.2s ease;
-      display:flex;
-      align-items:center;
-      gap:8px;
-    }
-
-    .lang-btn.active{
-      background:rgba(255,255,255,0.18);
-      color:#fff;
-    }
-
-    .lang-icon{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:20px;
-      height:20px;
-      border-radius:50%;
-      font-size:0.72rem;
-      font-weight:800;
-      background:rgba(255,255,255,0.16);
-    }
-
-    .top-link{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.12);
-      background:rgba(255,255,255,0.08);
-      transition:.2s ease;
-      font-weight:600;
-    }
-
-    .top-link:hover,
-    .lang-btn:hover{
-      transform:translateY(-1px);
-    }
-
-    .page{
-      position:relative;
-    }
-
-    .altitude-rail{
-      position:fixed;
-      left:18px;
-      top:120px;
-      width:84px;
-      z-index:40;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:14px;
-      pointer-events:none;
-    }
-
-    .altitude-rail .line{
-      position:relative;
-      width:4px;
-      height:64vh;
-      border-radius:999px;
-      background:rgba(255,255,255,0.20);
-      overflow:hidden;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,0.08);
-    }
-
-    .altitude-rail .progress{
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:100%;
-      height:0%;
-      background:linear-gradient(to top, var(--accent), #ffe3b8);
-      transition:height .35s ease;
-    }
-
-    .altitude-label{
-      writing-mode:vertical-rl;
-      transform:rotate(180deg);
-      letter-spacing:0.14em;
-      font-size:0.78rem;
-      text-transform:uppercase;
-      color:rgba(255,255,255,0.82);
-      font-weight:700;
-    }
-
-    .altitude-current{
-      min-width:66px;
-      text-align:center;
-      padding:8px 10px;
-      border-radius:999px;
-      background:rgba(0,0,0,0.20);
-      border:1px solid rgba(255,255,255,0.12);
-      font-weight:800;
-      font-size:0.9rem;
-      color:#fff;
-      box-shadow:var(--shadow);
-    }
-
-    .section{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      position:relative;
-      scroll-margin-top:100px;
-    }
-
-    .section-inner{
-      width:min(calc(100% - 120px), var(--maxw));
-      margin:0 auto;
-      padding:90px 26px 90px 72px;
-    }
-
-    .section-grid{
-      display:grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap:34px;
-      align-items:center;
-    }
-
-    .section-grid.single{
-      grid-template-columns:1fr;
-    }
-
-    .eyebrow{
-      display:inline-block;
-      font-size:0.86rem;
-      font-weight:800;
-      letter-spacing:0.14em;
-      text-transform:uppercase;
-      opacity:0.88;
-      margin-bottom:14px;
-    }
-
-    h1,h2,h3{
-      margin:0 0 18px 0;
-      line-height:1.02;
-    }
-
-    h1{
-      font-size:clamp(2.5rem, 5vw, 5rem);
-      max-width:12ch;
-    }
-
-    h2{
-      font-size:clamp(2rem, 4vw, 3.5rem);
-      max-width:14ch;
-    }
-
-    h3{
-      font-size:1.25rem;
-    }
-
-    p{
-      margin:0 0 16px 0;
-      line-height:1.65;
-      font-size:1.06rem;
-      max-width:66ch;
-    }
-
-    .lead{
-      font-size:1.15rem;
-      opacity:0.98;
-    }
-
-    .muted{
-      opacity:0.88;
-    }
-
-    .chips{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:22px;
-    }
-
-    .chip{
-      padding:10px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,0.14);
-      background:rgba(255,255,255,0.10);
-      font-size:0.95rem;
-      font-weight:700;
-    }
-
-    .cards-2,
-    .cards-3{
-      display:grid;
-      gap:18px;
-      margin-top:22px;
-    }
-
-    .cards-2{grid-template-columns:repeat(2, minmax(0,1fr))}
-    .cards-3{grid-template-columns:repeat(3, minmax(0,1fr))}
-
-    .card{
-      background:var(--card-bg);
-      border:1px solid var(--card-border);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:24px;
-      backdrop-filter:blur(4px);
-    }
-
-    .card h3{
-      margin-bottom:10px;
-    }
-
-    .meta{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:12px 0 14px;
-    }
-
-    .meta span{
-      font-size:0.88rem;
-      font-weight:800;
-      letter-spacing:0.02em;
-      border-radius:999px;
-      padding:8px 12px;
-      background:rgba(0,0,0,0.16);
-      border:1px solid rgba(255,255,255,0.10);
-    }
-
-    .feature-list,
-    .rule-list{
-      display:grid;
-      gap:12px;
-      margin-top:18px;
-    }
-
-    .feature-item,
-    .rule-item{
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.10);
-    }
-
-    .feature-item strong,
-    .rule-item strong{
-      display:block;
-      margin-bottom:6px;
-      font-size:1rem;
-    }
-
-    .modes-grid{
-      display:grid;
-      grid-template-columns:repeat(2, minmax(0,1fr));
-      gap:22px;
-      margin-top:24px;
-    }
-
-    .mode-box{
-      background:rgba(255,255,255,0.10);
-      border:1px solid rgba(255,255,255,0.12);
-      border-radius:22px;
-      padding:24px;
-      box-shadow:var(--shadow);
-    }
-
-    .mode-tag{
-      display:inline-block;
-      margin-bottom:12px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(0,0,0,0.16);
-      font-size:0.84rem;
-      font-weight:800;
-      letter-spacing:0.08em;
-      text-transform:uppercase;
-    }
-
-    .style-pill{
-      display:inline-block;
-      margin:6px 8px 0 0;
-      padding:10px 12px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.12);
-      font-size:0.92rem;
-      font-weight:700;
-    }
-
-    .cta-wrap{
-      margin-top:26px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:14px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      min-width:180px;
-      padding:14px 18px;
-      border-radius:999px;
-      font-weight:800;
-      letter-spacing:0.01em;
-      transition:.2s ease;
-    }
-
-    .btn-primary{
-      background:var(--accent);
-      color:#fff;
-      box-shadow:0 10px 24px rgba(233,122,31,0.32);
-    }
-
-    .btn-secondary{
-      background:rgba(255,255,255,0.12);
-      border:1px solid rgba(255,255,255,0.14);
-      color:#fff;
-    }
-
-    .btn:hover{
-      transform:translateY(-2px);
-    }
-
-    .visual-panel{
-      min-height:420px;
-      border-radius:28px;
-      background:
-        radial-gradient(circle at 50% 18%, rgba(255,214,151,0.7) 0%, rgba(255,214,151,0) 26%),
-        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.12));
-      border:1px solid rgba(255,255,255,0.12);
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .mountains{
-      position:absolute;
-      inset:auto 0 0 0;
-      height:72%;
-    }
-
-    .mountains svg{
-      width:100%;
-      height:100%;
-    }
-
-    .section[data-theme="dark"] .card,
-    .section[data-theme="dark"] .mode-box,
-    .section[data-theme="dark"] .feature-item,
-    .section[data-theme="dark"] .rule-item{
-      background:rgba(255,255,255,0.08);
-    }
-
-    .section-light{
-      color:var(--text-dark);
-    }
-
-    .section-light .card,
-    .section-light .mode-box,
-    .section-light .feature-item,
-    .section-light .rule-item{
-      background:rgba(255,255,255,0.62);
-      border:1px solid rgba(19,32,24,0.10);
-      box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    }
-
-    .section-light .chip,
-    .section-light .meta span,
-    .section-light .mode-tag,
-    .section-light .style-pill{
-      background:rgba(19,32,24,0.08);
-      border-color:rgba(19,32,24,0.10);
-      color:var(--text-dark);
-    }
-
-    .section-light .btn-secondary{
-      background:rgba(19,32,24,0.08);
-      border-color:rgba(19,32,24,0.16);
-      color:var(--text-dark);
-    }
-
-    .footer{
-      background:var(--footer);
-      color:var(--text-dark);
-      padding:44px 0 38px;
-      border-top:1px solid rgba(19,32,24,0.08);
-    }
-
-    .footer-inner{
-      width:min(calc(100% - 40px), var(--maxw));
-      margin:0 auto;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-      align-items:center;
-      gap:22px;
-    }
-
-    .footer-brand{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    .footer-logo{
-      width:160px;
-      height:auto;
-    }
-
-    .footer-subtitle{
-      font-weight:700;
-      opacity:0.8;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      font-size:0.9rem;
-    }
-
-    .footer-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-      align-items:center;
-    }
-
-    .footer-link{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#fff;
-      border:1px solid rgba(19,32,24,0.10);
-      font-weight:700;
-    }
-
-    .footer-note{
-      width:100%;
-      margin-top:8px;
-      font-size:0.92rem;
-      opacity:0.74;
-    }
-
-    .sr-only{
-      position:absolute;
-      width:1px;
-      height:1px;
-      padding:0;
-      margin:-1px;
-      overflow:hidden;
-      clip:rect(0,0,0,0);
-      white-space:nowrap;
-      border:0;
-    }
-
-    .section-hero{background:var(--valley)}
-    .section-products{background:var(--basecamp)}
-    .section-features1{background:var(--rope)}
-    .section-features2{background:var(--hut)}
-    .section-features3{background:var(--technical)}
-    .section-rules{background:var(--summitpush)}
-    .section-cta{background:var(--summit)}
-    
-    @media (max-width: 1100px){
-      .section-inner{
-        width:min(calc(100% - 52px), var(--maxw));
-        padding:84px 12px 84px 54px;
-      }
-      .section-grid,
-      .cards-3,
-      .modes-grid{
-        grid-template-columns:1fr;
-      }
-      .cards-2{
-        grid-template-columns:1fr;
-      }
-    }
-
-    @media (max-width: 860px){
-      .altitude-rail{
-        left:auto;
-        right:10px;
-        top:auto;
-        bottom:18px;
-        width:auto;
-        flex-direction:row;
-        gap:10px;
-      }
-      .altitude-rail .line{
-        width:120px;
-        height:6px;
-      }
-      .altitude-rail .progress{
-        height:100%;
-        width:0%;
-        transition:width .35s ease;
-      }
-      .altitude-label{
-        writing-mode:horizontal-tb;
-        transform:none;
-      }
-      .header-inner{
-        flex-direction:column;
-        align-items:flex-start;
-      }
-      .header-actions{
-        width:100%;
-        justify-content:space-between;
-      }
-      .brand{
-        width:100%;
-        justify-content:space-between;
-      }
-      .brand-subtitle{
-        white-space:normal;
-      }
-      .section-inner{
-        width:min(calc(100% - 28px), var(--maxw));
-        padding:72px 6px 110px 6px;
-      }
-      h1{
-        max-width:10ch;
-      }
-      .brand-logo{
-        width:156px;
-      }
-    }
-
-    @media (max-width: 560px){
-      .top-link span.label{
-        display:none;
-      }
-      .meta{
-        gap:8px;
-      }
-      .btn{
-        width:100%;
-      }
-      .footer-inner{
-        align-items:flex-start;
-      }
-      .footer-links{
-        width:100%;
-      }
-      .footer-link{
-        width:100%;
-        justify-content:center;
-      }
-    }
-  </style>
+  <title>Play Summit Games | Juegos diseñados en los Pirineos</title>
+  <meta name="description" content="Play Summit Games. Juegos de montaña diseñados en los Pirineos. Descubre Objetivo Monte Perdido 3.355 m y Objectiu Pedraforca 2.506 m." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="lang-es">
+  <div class="altitude-indicator">
+    <span class="altitude-label" data-es="Ascenso" data-cat="Ascens">Ascenso</span>
+    <span class="altitude-value" id="altitudeValue">0 m</span>
+  </div>
+
   <header class="site-header">
-    <div class="header-inner">
-      <a href="#inicio" class="brand" aria-label="Play Summit Games">
-        <img class="brand-logo" src="assets/logo-play-summit-games.png" alt="Play Summit Games" />
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
         <div class="brand-text">
-          <span class="brand-subtitle" data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">Juegos diseñados en los Pirineos</span>
+          <strong>Play Summit Games</strong>
+          <span data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">
+            Juegos diseñados en los Pirineos
+          </span>
         </div>
       </a>
 
-      <div class="header-actions">
-        <div class="lang-toggle" aria-label="Selector de idioma">
-          <button class="lang-btn active" data-lang="es" type="button">
-            <span class="lang-icon">ES</span>
-            <span>Español</span>
-          </button>
-          <button class="lang-btn" data-lang="cat" type="button">
-            <span class="lang-icon">CAT</span>
-            <span>Català</span>
-          </button>
-        </div>
+      <nav class="main-nav">
+        <a href="#inicio" data-es="Inicio" data-cat="Inici">Inicio</a>
+        <a href="#summit-games" data-es="Summit Games" data-cat="Summit Games">Summit Games</a>
+        <a href="#productos" data-es="Productos" data-cat="Productes">Productos</a>
+        <a href="#vision" data-es="Visión" data-cat="Visió">Visión</a>
+        <a href="#contacto" data-es="Contacto" data-cat="Contacte">Contacto</a>
+      </nav>
 
-        <a class="top-link" href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Play Summit Games">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-          </svg>
-          <span class="label">@playsummitgames</span>
-        </a>
+      <div class="lang-switch">
+        <button type="button" class="lang-btn active" data-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-lang="cat">CAT</button>
       </div>
     </div>
   </header>
 
-  <aside class="altitude-rail" aria-hidden="true">
-    <div class="altitude-label" data-es="Altitud" data-cat="Altitud">Altitud</div>
-    <div class="line">
-      <div class="progress" id="altitudeProgress"></div>
-    </div>
-    <div class="altitude-current" id="altitudeCurrent">0 m</div>
-  </aside>
+  <main>
+    <section id="inicio" class="panel panel-valley" data-altitude="0">
+      <div class="container panel-content hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-es="Fondo del valle · 0 m" data-cat="Fons de la vall · 0 m">Fondo del valle · 0 m</p>
+          <h1 data-es="Juegos de montaña con alma de expedición" data-cat="Jocs de muntanya amb ànima d’expedició">
+            Juegos de montaña con alma de expedición
+          </h1>
+          <p class="lead"
+             data-es="Play Summit Games crea juegos inspirados en la experiencia real de la montaña: progresión, meteorología, esfuerzo, cooperación, riesgo, refugios, fauna, paisaje y cultura alpina."
+             data-cat="Play Summit Games crea jocs inspirats en l’experiència real de la muntanya: progressió, meteorologia, esforç, cooperació, risc, refugis, fauna, paisatge i cultura alpina.">
+            Play Summit Games crea juegos inspirados en la experiencia real de la montaña: progresión, meteorología, esfuerzo, cooperación, riesgo, refugios, fauna, paisaje y cultura alpina.
+          </p>
 
-  <main class="page">
-    <section class="section section-hero" id="inicio" data-altitude="0">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div>
-            <div class="eyebrow" data-es="Fondo del valle · 0 m" data-cat="Fons de la vall · 0 m">Fondo del valle · 0 m</div>
-            <h1 data-es="Summit Series: juegos de cartas inspirados en la alta montaña" data-cat="Summit Series: jocs de cartes inspirats en l’alta muntanya">
-              Summit Series: juegos de cartas inspirados en la alta montaña
-            </h1>
-            <p class="lead" data-es="Una colección creada para vivir la tensión, la estrategia, el clima variable y la emoción de una ascensión real." data-cat="Una col·lecció creada per viure la tensió, l’estratègia, el clima variable i l’emoció d’una ascensió real.">
-              Una colección creada para vivir la tensión, la estrategia, el clima variable y la emoción de una ascensión real.
-            </p>
-            <p class="muted" data-es="Play Summit Games nace en los Pirineos para transformar la experiencia de la montaña en juegos accesibles, tensos y rejugables. Cada partida propone avanzar, protegerse, gestionar la energía y decidir cuándo arriesgar para llegar más alto." data-cat="Play Summit Games neix als Pirineus per transformar l’experiència de la muntanya en jocs accessibles, tensos i rejugables. Cada partida proposa avançar, protegir-se, gestionar l’energia i decidir quan arriscar per arribar més amunt.">
-              Play Summit Games nace en los Pirineos para transformar la experiencia de la montaña en juegos accesibles, tensos y rejugables. Cada partida propone avanzar, protegerse, gestionar la energía y decidir cuándo arriesgar para llegar más alto.
-            </p>
-            <div class="chips">
-              <span class="chip" data-es="Alta montaña" data-cat="Alta muntanya">Alta montaña</span>
-              <span class="chip" data-es="Estrategia" data-cat="Estratègia">Estrategia</span>
-              <span class="chip" data-es="Clima y riesgo" data-cat="Clima i risc">Clima y riesgo</span>
-              <span class="chip" data-es="Ediciones Pirineos" data-cat="Edicions Pirineus">Ediciones Pirineos</span>
-            </div>
-            <div class="cta-wrap">
-              <a href="#productos" class="btn btn-primary" data-es="Descubrir juegos" data-cat="Descobrir jocs">Descubrir juegos</a>
-              <a href="#cima" class="btn btn-secondary" data-es="Ir a la cima" data-cat="Anar al cim">Ir a la cima</a>
-            </div>
+          <div class="cta-row">
+            <a href="#productos" class="btn btn-primary" data-es="Descubrir juegos" data-cat="Descobrir jocs">Descubrir juegos</a>
+            <a href="#summit-games" class="btn btn-secondary" data-es="Qué es Summit Games" data-cat="Què és Summit Games">Qué es Summit Games</a>
           </div>
+        </div>
 
-          <div class="visual-panel" aria-hidden="true">
-            <div class="mountains">
-              <svg viewBox="0 0 900 560" preserveAspectRatio="none">
-                <polygon points="0,560 210,270 380,560" fill="rgba(17,33,26,0.85)"></polygon>
-                <polygon points="180,560 430,170 700,560" fill="rgba(21,42,32,0.92)"></polygon>
-                <polygon points="490,560 720,250 900,560" fill="rgba(28,49,37,0.88)"></polygon>
-                <polygon points="372,240 430,170 500,315 450,280 414,330" fill="#f0ede7"></polygon>
-                <polygon points="670,300 720,250 770,340 730,320 705,350" fill="#ece8e2"></polygon>
-              </svg>
-            </div>
+        <div class="hero-card">
+          <div class="chapter-list">
+            <h2 data-es="Ruta de ascenso" data-cat="Ruta d’ascens">Ruta de ascenso</h2>
+            <ol>
+              <li data-es="Fondo del valle · Presentación" data-cat="Fons de la vall · Presentació">Fondo del valle · Presentación</li>
+              <li data-es="Campamento base · Línea Summit Games" data-cat="Campament base · Línia Summit Games">Campamento base · Línea Summit Games</li>
+              <li data-es="Media montaña · Juegos actuales" data-cat="Mitja muntanya · Jocs actuals">Media montaña · Juegos actuales</li>
+              <li data-es="Alta montaña · Experiencia y valores" data-cat="Alta muntanya · Experiència i valors">Alta montaña · Experiencia y valores</li>
+              <li data-es="Cumbre · Próximos pasos" data-cat="Cim · Propers passos">Cumbre · Próximos pasos</li>
+            </ol>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-products" id="productos" data-altitude="1450">
-      <div class="section-inner">
-        <div class="section-grid single">
-          <div>
-            <div class="eyebrow" data-es="Campamento base · 1.450 m" data-cat="Campament base · 1.450 m">Campamento base · 1.450 m</div>
-            <h2 data-es="Dos ascensiones para empezar la colección" data-cat="Dues ascensions per començar la col·lecció">
-              Dos ascensiones para empezar la colección
-            </h2>
-            <p class="lead" data-es="Los dos primeros títulos de Summit Series trasladan el espíritu de la montaña a partidas de 20 a 40 minutos, con decisiones tácticas, progresión en altitud y varios estilos de juego." data-cat="Els dos primers títols de Summit Series traslladen l’esperit de la muntanya a partides de 20 a 40 minuts, amb decisions tàctiques, progressió en altitud i diversos estils de joc.">
-              Los dos primeros títulos de Summit Series trasladan el espíritu de la montaña a partidas de 20 a 40 minutos, con decisiones tácticas, progresión en altitud y varios estilos de juego.
+    <section id="summit-games" class="panel panel-basecamp" data-altitude="1450">
+      <div class="container panel-content two-col">
+        <div>
+          <p class="eyebrow" data-es="Campamento base · 1.450 m" data-cat="Campament base · 1.450 m">Campamento base · 1.450 m</p>
+          <h2 data-es="Qué es Play Summit Games" data-cat="Què és Play Summit Games">Qué es Play Summit Games</h2>
+          <p
+            data-es="Una línea de juegos ambientados en grandes montañas y territorios reales, donde cada partida conecta estrategia, emoción y cultura de montaña."
+            data-cat="Una línia de jocs ambientats en grans muntanyes i territoris reals, on cada partida connecta estratègia, emoció i cultura de muntanya.">
+            Una línea de juegos ambientados en grandes montañas y territorios reales, donde cada partida conecta estrategia, emoción y cultura de montaña.
+          </p>
+          <p
+            data-es="No son sólo juegos de mesa: son experiencias narrativas inspiradas en parques naturales, cumbres icónicas, alpinistas históricos, flora, fauna, meteorología y buenas prácticas en el medio natural."
+            data-cat="No són només jocs de taula: són experiències narratives inspirades en parcs naturals, cims icònics, alpinistes històrics, flora, fauna, meteorologia i bones pràctiques al medi natural.">
+            No son sólo juegos de mesa: son experiencias narrativas inspiradas en parques naturales, cumbres icónicas, alpinistas históricos, flora, fauna, meteorología y buenas prácticas en el medio natural.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3 data-es="Temática real" data-cat="Temàtica real">Temática real</h3>
+            <p data-es="Montañas, refugios, paisajes y cultura alpina auténticos." data-cat="Muntanyes, refugis, paisatges i cultura alpina autèntics.">
+              Montañas, refugios, paisajes y cultura alpina auténticos.
             </p>
-          </div>
-
-          <div class="cards-2">
-            <article class="card">
-              <div class="eyebrow" data-es="Summit Series" data-cat="Summit Series">Summit Series</div>
-              <h3>Objetivo Monte Perdido 3.355</h3>
-              <div class="meta">
-                <span data-es="1–4 jugadores" data-cat="1–4 jugadors">1–4 jugadores</span>
-                <span data-es="20–40 minutos" data-cat="20–40 minuts">20–40 minutos</span>
-                <span data-es="Competitivo · Cooperativo · Solitario" data-cat="Competitiu · Cooperatiu · Solitari">Competitivo · Cooperativo · Solitario</span>
-              </div>
-              <p data-es="Juego de cartas ambientado en la ascensión al Monte Perdido, con gestión de mano, construcción y circulación de mazo, clima cambiante y decisiones constantes sobre energía, ritmo y protección." data-cat="Joc de cartes ambientat en l’ascensió al Monte Perdido, amb gestió de mà, construcció i circulació de mall, clima canviant i decisions constants sobre energia, ritme i protecció.">
-                Juego de cartas ambientado en la ascensión al Monte Perdido, con gestión de mano, construcción y circulación de mazo, clima cambiante y decisiones constantes sobre energía, ritmo y protección.
-              </p>
-              <div class="chips">
-                <span class="chip" data-es="Monte Perdido" data-cat="Monte Perdido">Monte Perdido</span>
-                <span class="chip" data-es="Gestión de mano" data-cat="Gestió de mà">Gestión de mano</span>
-                <span class="chip" data-es="Colección de mazo" data-cat="Col·lecció de mall">Colección de mazo</span>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="eyebrow" data-es="Summit Series" data-cat="Summit Series">Summit Series</div>
-              <h3>Objectiu Pedraforca 2.506</h3>
-              <div class="meta">
-                <span data-es="1–4 jugadores" data-cat="1–4 jugadors">1–4 jugadores</span>
-                <span data-es="20–40 minutos" data-cat="20–40 minuts">20–40 minutos</span>
-                <span data-es="Competitivo · Cooperativo · Solitario" data-cat="Competitiu · Cooperatiu · Solitari">Competitivo · Cooperativo · Solitario</span>
-              </div>
-              <p data-es="Juego de cartas ambientado en el Pedraforca, con identidad pirenaica, progresión de altitud, gestión del esfuerzo y una experiencia diseñada para recordar paisajes, refugios, clima y cultura de montaña." data-cat="Joc de cartes ambientat al Pedraforca, amb identitat pirinenca, progressió d’altitud, gestió de l’esforç i una experiència dissenyada per recordar paisatges, refugis, clima i cultura de muntanya.">
-                Juego de cartas ambientado en el Pedraforca, con identidad pirenaica, progresión de altitud, gestión del esfuerzo y una experiencia diseñada para recordar paisajes, refugios, clima y cultura de montaña.
-              </p>
-              <div class="chips">
-                <span class="chip" data-es="Pedraforca" data-cat="Pedraforca">Pedraforca</span>
-                <span class="chip" data-es="Gestión de mano" data-cat="Gestió de mà">Gestión de mano</span>
-                <span class="chip" data-es="Colección de mazo" data-cat="Col·lecció de mall">Colección de mazo</span>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-features1" id="caracteristicas-1" data-altitude="1850">
-      <div class="section-inner">
-        <div class="section-grid single">
-          <div>
-            <div class="eyebrow" data-es="Primera cordada · 1.850 m" data-cat="Primera cordada · 1.850 m">Primera cordada · 1.850 m</div>
-            <h2 data-es="Características comunes de Summit Series" data-cat="Característiques comunes de Summit Series">
-              Características comunes de Summit Series
-            </h2>
-            <div class="cards-3">
-              <div class="card">
-                <h3 data-es="Gestión de energía" data-cat="Gestió d’energia">Gestión de energía</h3>
-                <p data-es="El esfuerzo no es infinito. Avanzar, resistir y recuperarse forman parte de la decisión táctica en cada turno." data-cat="L’esforç no és infinit. Avançar, resistir i recuperar-se formen part de la decisió tàctica en cada torn.">
-                  El esfuerzo no es infinito. Avanzar, resistir y recuperarse forman parte de la decisión táctica en cada turno.
-                </p>
-              </div>
-              <div class="card">
-                <h3 data-es="Clima cambiante" data-cat="Clima canviant">Clima cambiante</h3>
-                <p data-es="La meteorología modifica el ritmo de la ascensión y obliga a adaptarse, protegerse o cambiar el plan." data-cat="La meteorologia modifica el ritme de l’ascensió i obliga a adaptar-se, protegir-se o canviar el pla.">
-                  La meteorología modifica el ritmo de la ascensión y obliga a adaptarse, protegerse o cambiar el plan.
-                </p>
-              </div>
-              <div class="card">
-                <h3 data-es="Altitud progresiva" data-cat="Altitud progressiva">Altitud progresiva</h3>
-                <p data-es="La partida se siente como una subida real: del valle al ataque final, con tramos y cotas reconocibles." data-cat="La partida se percep com una pujada real: de la vall a l’atac final, amb trams i cotes reconeixibles.">
-                  La partida se siente como una subida real: del valle al ataque final, con tramos y cotas reconocibles.
-                </p>
-              </div>
-              <div class="card">
-                <h3 data-es="Sensación de expedición" data-cat="Sensació d’expedició">Sensación de expedición</h3>
-                <p data-es="No sólo importa avanzar. También importa gestionar el momento, el entorno y la preparación para alcanzar la cima." data-cat="No només importa avançar. També importa gestionar el moment, l’entorn i la preparació per assolir el cim.">
-                  No sólo importa avanzar. También importa gestionar el momento, el entorno y la preparación para alcanzar la cima.
-                </p>
-              </div>
-              <div class="card">
-                <h3 data-es="Riesgo y protección" data-cat="Risc i protecció">Riesgo y protección</h3>
-                <p data-es="El juego propone asumir riesgos, prevenir problemas y elegir bien cuándo gastar recursos y cuándo reservarlos." data-cat="El joc proposa assumir riscos, prevenir problemes i triar bé quan gastar recursos i quan reservar-los.">
-                  El juego propone asumir riesgos, prevenir problemas y elegir bien cuándo gastar recursos y cuándo reservarlos.
-                </p>
-              </div>
-              <div class="card">
-                <h3 data-es="Rejugabilidad" data-cat="Rejugabilitat">Rejugabilidad</h3>
-                <p data-es="Cada combinación de cartas, clima, modos y decisiones genera partidas distintas, con retos que cambian de una expedición a otra." data-cat="Cada combinació de cartes, clima, modes i decisions genera partides diferents, amb reptes que canvien d’una expedició a una altra.">
-                  Cada combinación de cartas, clima, modos y decisiones genera partidas distintas, con retos que cambian de una expedición a otra.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-features2" id="modos" data-altitude="2200">
-      <div class="section-inner">
-        <div class="section-grid single">
-          <div>
-            <div class="eyebrow" data-es="Refugio guardado · 2.200 m" data-cat="Refugi guardat · 2.200 m">Refugio guardado · 2.200 m</div>
-            <h2 data-es="Estilos de ascensión y modos de juego" data-cat="Estils d’ascensió i modes de joc">
-              Estilos de ascensión y modos de juego
-            </h2>
-            <p class="lead" data-es="Summit Series permite modular la experiencia según el tipo de partida y el nivel de complejidad que se quiera jugar, añadiendo reglas y componentes progresivamente." data-cat="Summit Series permet modular l’experiència segons el tipus de partida i el nivell de complexitat que es vulgui jugar, afegint regles i components progressivament.">
-              Summit Series permite modular la experiencia según el tipo de partida y el nivel de complejidad que se quiera jugar, añadiendo reglas y componentes progresivamente.
+          </article>
+          <article class="feature-card">
+            <h3 data-es="Tensión de ascensión" data-cat="Tensió d’ascensió">Tensión de ascensión</h3>
+            <p data-es="Energía, clima, riesgo y gestión del momento." data-cat="Energia, clima, risc i gestió del moment.">
+              Energía, clima, riesgo y gestión del momento.
             </p>
-
-            <div class="modes-grid">
-              <div class="mode-box">
-                <span class="mode-tag" data-es="Modo competitivo" data-cat="Mode competitiu">Modo competitivo</span>
-                <h3 data-es="Tres estilos de ascensión" data-cat="Tres estils d’ascensió">Tres estilos de ascensión</h3>
-                <p data-es="Para partidas de carrera, presión táctica y gestión del ritmo frente a otros alpinistas." data-cat="Per a partides de cursa, pressió tàctica i gestió del ritme davant d’altres alpinistes.">
-                  Para partidas de carrera, presión táctica y gestión del ritmo frente a otros alpinistas.
-                </p>
-                <span class="style-pill">Sprint running</span>
-                <span class="style-pill">Cross running</span>
-                <span class="style-pill">Sky running</span>
-              </div>
-
-              <div class="mode-box">
-                <span class="mode-tag" data-es="Modo cooperativo" data-cat="Mode cooperatiu">Modo cooperativo</span>
-                <h3 data-es="Tres estilos de expedición" data-cat="Tres estils d’expedició">Tres estilos de expedición</h3>
-                <p data-es="Para ascender en solitario o en equipo, compartiendo decisiones, apoyo y gestión del riesgo." data-cat="Per ascendir en solitari o en equip, compartint decisions, suport i gestió del risc.">
-                  Para ascender en solitario o en equipo, compartiendo decisiones, apoyo y gestión del riesgo.
-                </p>
-                <span class="style-pill">Solo</span>
-                <span class="style-pill" data-es="Estilo Alpino" data-cat="Estil Alpí">Estilo Alpino</span>
-                <span class="style-pill" data-es="Estilo Clásico" data-cat="Estil Clàssic">Estilo Clásico</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-features3" id="valores" data-altitude="2506">
-      <div class="section-inner">
-        <div class="section-grid single">
-          <div>
-            <div class="eyebrow" data-es="Zona técnica · 2.506 m" data-cat="Zona tècnica · 2.506 m">Zona técnica · 2.506 m</div>
-            <h2 data-es="Puntos fuertes de Summit Series" data-cat="Punts forts de Summit Series">
-              Puntos fuertes de Summit Series
-            </h2>
-
-            <div class="feature-list">
-              <div class="feature-item">
-                <strong data-es="Identidad territorial" data-cat="Identitat territorial">Identidad territorial</strong>
-                <span data-es="Cartas temáticas, paisajes, refugios, fuentes y referencias concretas a cada montaña y su entorno." data-cat="Cartes temàtiques, paisatges, refugis, fonts i referències concretes a cada muntanya i al seu entorn.">
-                  Cartas temáticas, paisajes, refugios, fuentes y referencias concretas a cada montaña y su entorno.
-                </span>
-              </div>
-
-              <div class="feature-item">
-                <strong data-es="Sensibilización ambiental" data-cat="Sensibilització ambiental">Sensibilización ambiental</strong>
-                <span data-es="Fauna, flora y clima variable ayudan a reconocer la fragilidad y riqueza del medio natural." data-cat="Fauna, flora i clima variable ajuden a reconèixer la fragilitat i la riquesa del medi natural.">
-                  Fauna, flora y clima variable ayudan a reconocer la fragilidad y riqueza del medio natural.
-                </span>
-              </div>
-
-              <div class="feature-item">
-                <strong data-es="Buenas prácticas en la montaña" data-cat="Bones pràctiques a la muntanya">Buenas prácticas en la montaña</strong>
-                <span data-es="Prevención, preparación, previsión meteorológica, material adecuado, ruta adaptada a capacidades y gestión del esfuerzo." data-cat="Prevenció, preparació, previsió meteorològica, material adequat, ruta adaptada a les capacitats i gestió de l’esforç.">
-                  Prevención, preparación, previsión meteorológica, material adecuado, ruta adaptada a capacidades y gestión del esfuerzo.
-                </span>
-              </div>
-
-              <div class="feature-item">
-                <strong data-es="Transmisión de valores" data-cat="Transmissió de valors">Transmisión de valores</strong>
-                <span data-es="Cooperación, ética en la montaña, esperar, compartir, ayudar, acompañar y aconsejar forman parte de la experiencia de juego." data-cat="Cooperació, ètica a la muntanya, esperar, compartir, ajudar, acompanyar i aconsellar formen part de l’experiència de joc.">
-                  Cooperación, ética en la montaña, esperar, compartir, ayudar, acompañar y aconsejar forman parte de la experiencia de juego.
-                </span>
-              </div>
-
-              <div class="feature-item">
-                <strong data-es="Divulgación del patrimonio cultural" data-cat="Divulgació del patrimoni cultural">Divulgación del patrimonio cultural</strong>
-                <span data-es="Cada edición puede incorporar historia local, cultura excursionista, topónimos y referencias del territorio." data-cat="Cada edició pot incorporar història local, cultura excursionista, topònims i referències del territori.">
-                  Cada edición puede incorporar historia local, cultura excursionista, topónimos y referencias del territorio.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-rules section-light" id="como-se-juega" data-altitude="3000">
-      <div class="section-inner">
-        <div class="section-grid">
-          <div>
-            <div class="eyebrow" data-es="Ataque a la cima · 3.000 m" data-cat="Atac al cim · 3.000 m">Ataque a la cima · 3.000 m</div>
-            <h2 data-es="Cómo se juega" data-cat="Com es juga">Cómo se juega</h2>
-            <p class="lead" data-es="El objetivo es sencillo: gestionar tu expedición mejor que nadie y alcanzar la cima antes, o lograrla en equipo en los modos cooperativos." data-cat="L’objectiu és senzill: gestionar la teva expedició millor que ningú i assolir el cim abans, o aconseguir-lo en equip en els modes cooperatius.">
-              El objetivo es sencillo: gestionar tu expedición mejor que nadie y alcanzar la cima antes, o lograrla en equipo en los modos cooperativos.
+          </article>
+          <article class="feature-card">
+            <h3 data-es="Modo cooperativo y competitivo" data-cat="Mode cooperatiu i competitiu">Modo cooperativo y competitivo</h3>
+            <p data-es="Puedes competir por la cima o colaborar para alcanzarla juntos." data-cat="Pots competir pel cim o col·laborar per assolir-lo plegats.">
+              Puedes competir por la cima o colaborar para alcanzarla juntos.
             </p>
-            <div class="rule-list">
-              <div class="rule-item">
-                <strong data-es="1. Revela condiciones" data-cat="1. Revela condicions">1. Revela condiciones</strong>
-                <span data-es="El clima y los eventos pueden alterar la estrategia de la ronda." data-cat="El clima i els esdeveniments poden alterar l’estratègia de la ronda.">
-                  El clima y los eventos pueden alterar la estrategia de la ronda.
-                </span>
-              </div>
-              <div class="rule-item">
-                <strong data-es="2. Juega tus cartas" data-cat="2. Juga les teves cartes">2. Juega tus cartas</strong>
-                <span data-es="Avanza, protégte, recupera energía o prepara tu siguiente movimiento." data-cat="Avança, protegeix-te, recupera energia o prepara el teu moviment següent.">
-                  Avanza, protégte, recupera energía o prepara tu siguiente movimiento.
-                </span>
-              </div>
-              <div class="rule-item">
-                <strong data-es="3. Gestiona el esfuerzo" data-cat="3. Gestiona l’esforç">3. Gestiona el esfuerzo</strong>
-                <span data-es="Subir demasiado deprisa puede costarte recursos; esperar puede darte opciones mejores." data-cat="Pujar massa de pressa et pot costar recursos; esperar et pot donar opcions millors.">
-                  Subir demasiado deprisa puede costarte recursos; esperar puede darte opciones mejores.
-                </span>
-              </div>
-              <div class="rule-item">
-                <strong data-es="4. Adáptate al terreno" data-cat="4. Adapta’t al terreny">4. Adáptate al terreno</strong>
-                <span data-es="La altitud, el clima y la protección disponible marcan el ritmo de cada partida." data-cat="L’altitud, el clima i la protecció disponible marquen el ritme de cada partida.">
-                  La altitud, el clima y la protección disponible marcan el ritmo de cada partida.
-                </span>
-              </div>
-            </div>
-          </div>
+          </article>
+          <article class="feature-card">
+            <h3 data-es="Identidad pirenaica" data-cat="Identitat pirinenca">Identidad pirenaica</h3>
+            <p data-es="Diseñados desde los Pirineos y conectados con su territorio." data-cat="Dissenyats des dels Pirineus i connectats amb el seu territori.">
+              Diseñados desde los Pirineos y conectados con su territorio.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-          <div>
-            <div class="card">
-              <h3 data-es="Experiencia de juego" data-cat="Experiència de joc">Experiencia de juego</h3>
-              <p data-es="Rápida de aprender, tensa de jugar y suficientemente profunda para volver a la montaña una y otra vez." data-cat="Ràpida d’aprendre, tensa de jugar i prou profunda per tornar a la muntanya una vegada i una altra.">
-                Rápida de aprender, tensa de jugar y suficientemente profunda para volver a la montaña una y otra vez.
-              </p>
-              <div class="chips">
-                <span class="chip" data-es="Partidas ágiles" data-cat="Partides àgils">Partidas ágiles</span>
-                <span class="chip" data-es="Decisiones tácticas" data-cat="Decisions tàctiques">Decisiones tácticas</span>
-                <span class="chip" data-es="Escalada temática" data-cat="Escalada temàtica">Escalada temática</span>
-              </div>
+    <section id="productos" class="panel panel-midmountain" data-altitude="2500">
+      <div class="container panel-content">
+        <p class="eyebrow" data-es="Media montaña · 2.500 m" data-cat="Mitja muntanya · 2.500 m">Media montaña · 2.500 m</p>
+        <h2 data-es="Juegos actuales" data-cat="Jocs actuals">Juegos actuales</h2>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-topline">
+              <span class="product-altitude">3.355 m</span>
+              <span class="product-tag" data-es="Edición en español" data-cat="Edició en castellà">Edición en español</span>
             </div>
+            <h3>Objetivo Monte Perdido 3.355 m</h3>
+            <p
+              data-es="Una ascensión lúdica al macizo de Monte Perdido, con gestión de energía, meteorología, eventos y espíritu de expedición."
+              data-cat="Una ascensió lúdica al massís del Mont Perdut, amb gestió d’energia, meteorologia, esdeveniments i esperit d’expedició.">
+              Una ascensión lúdica al macizo de Monte Perdido, con gestión de energía, meteorología, eventos y espíritu de expedición.
+            </p>
+            <a href="objetivo-monte-perdido.html" class="btn btn-primary" data-es="Entrar en la página del juego" data-cat="Entrar a la pàgina del joc">
+              Entrar en la página del juego
+            </a>
+          </article>
+
+          <article class="product-card">
+            <div class="product-topline">
+              <span class="product-altitude">2.506 m</span>
+              <span class="product-tag" data-es="Edició en català" data-cat="Edició en català">Edició en català</span>
+            </div>
+            <h3>Objectiu Pedraforca 2.506 m</h3>
+            <p
+              data-es="Un juego inspirado en la montaña más emblemática de Catalunya, entre estrategia, territorio, cultura excursionista y emoción de cima."
+              data-cat="Un joc inspirat en la muntanya més emblemàtica de Catalunya, entre estratègia, territori, cultura excursionista i emoció de cim.">
+              Un juego inspirado en la montaña más emblemática de Catalunya, entre estrategia, territorio, cultura excursionista y emoción de cima.
+            </p>
+            <a href="objectiu-pedraforca.html" class="btn btn-primary" data-es="Entrar en la página del juego" data-cat="Entrar a la pàgina del joc">
+              Entrar en la página del juego
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="vision" class="panel panel-highmountain" data-altitude="3000">
+      <div class="container panel-content two-col">
+        <div>
+          <p class="eyebrow" data-es="Alta montaña · 3.000 m" data-cat="Alta muntanya · 3.000 m">Alta montaña · 3.000 m</p>
+          <h2 data-es="Más que jugar: vivir la montaña" data-cat="Més que jugar: viure la muntanya">Más que jugar: vivir la montaña</h2>
+          <p
+            data-es="Cada juego está planteado para transmitir sensaciones reales de progresión, cansancio, meteorología cambiante, toma de decisiones, prudencia y compañerismo."
+            data-cat="Cada joc està plantejat per transmetre sensacions reals de progressió, cansament, meteorologia canviant, presa de decisions, prudència i companyonia.">
+            Cada juego está planteado para transmitir sensaciones reales de progresión, cansancio, meteorología cambiante, toma de decisiones, prudencia y compañerismo.
+          </p>
+          <p
+            data-es="Play Summit Games nace con vocación de crecer en nuevas montañas, nuevas ediciones y nuevos territorios."
+            data-cat="Play Summit Games neix amb vocació de créixer en noves muntanyes, noves edicions i nous territoris.">
+            Play Summit Games nace con vocación de crecer en nuevas montañas, nuevas ediciones y nuevos territorios.
+          </p>
+        </div>
+
+        <div class="stats-card">
+          <div class="stat-item">
+            <strong>2</strong>
+            <span data-es="juegos presentados" data-cat="jocs presentats">juegos presentados</span>
+          </div>
+          <div class="stat-item">
+            <strong data-es="2 idiomas" data-cat="2 idiomes">2 idiomas</strong>
+            <span data-es="castellano y catalán" data-cat="castellà i català">castellano y catalán</span>
+          </div>
+          <div class="stat-item">
+            <strong data-es="100% montaña" data-cat="100% muntanya">100% montaña</strong>
+            <span data-es="tema, mecánica y territorio" data-cat="tema, mecànica i territori">tema, mecánica y territorio</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-cta section-light" id="cima" data-altitude="3355">
-      <div class="section-inner">
-        <div class="section-grid single">
-          <div>
-            <div class="eyebrow" data-es="Cima · 3.355 m" data-cat="Cim · 3.355 m">Cima · 3.355 m</div>
-            <h2 data-es="Elige tu próxima ascensión" data-cat="Tria la teva pròxima ascensió">
-              Elige tu próxima ascensión
-            </h2>
-            <p class="lead" data-es="Dos montañas, dos ambientaciones y una misma filosofía: vivir la montaña en formato juego." data-cat="Dues muntanyes, dues ambientacions i una mateixa filosofia: viure la muntanya en format joc.">
-              Dos montañas, dos ambientaciones y una misma filosofía: vivir la montaña en formato juego.
-            </p>
-
-            <div class="cards-2">
-              <article class="card">
-                <h3>Objetivo Monte Perdido 3.355</h3>
-                <p data-es="Ideal para quienes buscan una ascensión pirenaica icónica, con identidad de alta montaña y tensión hasta el último tramo." data-cat="Ideal per a qui busca una ascensió pirinenca icònica, amb identitat d’alta muntanya i tensió fins a l’últim tram.">
-                  Ideal para quienes buscan una ascensión pirenaica icónica, con identidad de alta montaña y tensión hasta el último tramo.
-                </p>
-                <div class="cta-wrap">
-                  <a href="mailto:info@playsummitgames.es?subject=Inter%C3%A9s%20en%20Objetivo%20Monte%20Perdido%203.355" class="btn btn-primary" data-es="Quiero este juego" data-cat="Vull aquest joc">Quiero este juego</a>
-                </div>
-              </article>
-
-              <article class="card">
-                <h3>Objectiu Pedraforca 2.506</h3>
-                <p data-es="Ideal para quienes quieren una experiencia ligada al paisaje, cultura y simbolismo de una de las montañas más emblemáticas de Catalunya." data-cat="Ideal per a qui vol una experiència lligada al paisatge, la cultura i el simbolisme d’una de les muntanyes més emblemàtiques de Catalunya.">
-                  Ideal para quienes quieren una experiencia ligada al paisaje, cultura y simbolismo de una de las montañas más emblemáticas de Catalunya.
-                </p>
-                <div class="cta-wrap">
-                  <a href="mailto:info@playsummitgames.es?subject=Inter%C3%A8s%20en%20Objectiu%20Pedraforca%202.506" class="btn btn-primary" data-es="Quiero este juego" data-cat="Vull aquest joc">Quiero este juego</a>
-                </div>
-              </article>
-            </div>
-          </div>
+    <section id="contacto" class="panel panel-summit" data-altitude="3355">
+      <div class="container panel-content summit-box">
+        <p class="eyebrow" data-es="Cumbre · 3.355 m" data-cat="Cim · 3.355 m">Cumbre · 3.355 m</p>
+        <h2 data-es="La cima es sólo el comienzo" data-cat="El cim és només el començament">La cima es sólo el comienzo</h2>
+        <p
+          data-es="Descubre la línea de juegos y acompaña el nacimiento de Play Summit Games."
+          data-cat="Descobreix la línia de jocs i acompanya el naixement de Play Summit Games.">
+          Descubre la línea de juegos y acompaña el nacimiento de Play Summit Games.
+        </p>
+        <div class="cta-row center">
+          <a href="objetivo-monte-perdido.html" class="btn btn-primary">Objetivo Monte Perdido</a>
+          <a href="objectiu-pedraforca.html" class="btn btn-secondary">Objectiu Pedraforca</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
+  <footer class="site-footer">
+    <div class="container footer-inner">
       <div class="footer-brand">
-        <img class="footer-logo" src="assets/logo-play-summit-games.png" alt="Play Summit Games" />
-        <div class="footer-subtitle" data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">
-          Juegos diseñados en los Pirineos
+        <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
+        <div>
+          <strong>Play Summit Games</strong>
+          <p data-es="Juegos diseñados en los Pirineos" data-cat="Jocs dissenyats als Pirineus">
+            Juegos diseñados en los Pirineos
+          </p>
         </div>
       </div>
 
       <div class="footer-links">
-        <a class="footer-link" href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Play Summit Games">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/>
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
-            <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-          </svg>
-          @playsummitgames
+        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="instagram-link">
+          <span class="instagram-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </span>
+          <span>@playsummitgames</span>
         </a>
-
-        <a class="footer-link" href="mailto:info@playsummitgames.es" aria-label="Correo Play Summit Games">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="2"/>
-            <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2"/>
-          </svg>
-          info@playsummitgames.es
-        </a>
-      </div>
-
-      <div class="footer-note" data-es="Play Summit Games · Summit Series · Juegos de cartas inspirados en la alta montaña." data-cat="Play Summit Games · Summit Series · Jocs de cartes inspirats en l’alta muntanya.">
-        Play Summit Games · Summit Series · Juegos de cartas inspirados en la alta montaña.
       </div>
     </div>
   </footer>
 
-  <script>
-    const langButtons = document.querySelectorAll('.lang-btn');
-    let currentLang = 'es';
-
-    function applyLanguage(lang){
-      currentLang = lang;
-      document.documentElement.lang = lang === 'cat' ? 'ca' : 'es';
-
-      document.querySelectorAll('[data-es]').forEach(el => {
-        const value = lang === 'cat' ? el.dataset.cat : el.dataset.es;
-        if (value) el.textContent = value;
-      });
-
-      langButtons.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
-      });
-    }
-
-    langButtons.forEach(btn => {
-      btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
-    });
-
-    const sections = [...document.querySelectorAll('.section[data-altitude]')];
-    const altitudeCurrent = document.getElementById('altitudeCurrent');
-    const altitudeProgress = document.getElementById('altitudeProgress');
-
-    function updateAltitudeRail(){
-      const viewportCenter = window.scrollY + window.innerHeight * 0.45;
-
-      let activeSection = sections[0];
-      sections.forEach(section => {
-        if (section.offsetTop <= viewportCenter) activeSection = section;
-      });
-
-      const altitude = Number(activeSection.dataset.altitude || 0);
-      altitudeCurrent.textContent = `${altitude.toLocaleString('es-ES')} m`;
-
-      const maxAltitude = 3355;
-      const pct = Math.max(0, Math.min(100, (altitude / maxAltitude) * 100));
-
-      if (window.innerWidth <= 860){
-        altitudeProgress.style.width = `${pct}%`;
-        altitudeProgress.style.height = '100%';
-      } else {
-        altitudeProgress.style.height = `${pct}%`;
-        altitudeProgress.style.width = '100%';
-      }
-    }
-
-    window.addEventListener('scroll', updateAltitudeRail, { passive:true });
-    window.addEventListener('resize', updateAltitudeRail);
-    window.addEventListener('load', () => {
-      applyLanguage('es');
-      updateAltitudeRail();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
