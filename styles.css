@@ -129,9 +129,9 @@ a {
 /* REGLA LATERAL ESTRECHA + BRÚJULA */
 .altitude-ruler {
   position: fixed;
-  left: 14px;
-  top: 142px;
-  width: 138px;
+  left: 12px;
+  top: 160px;
+  width: 76px;
   z-index: 700;
   pointer-events: none;
 }
@@ -140,7 +140,6 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
 }
 
 .altitude-ruler-inner {
@@ -151,29 +150,30 @@ a {
 
 .ruler-title {
   position: absolute;
-  top: 28px;
-  left: -2px;
+  left: -16px;
+  top: 156px;
   transform: rotate(-90deg);
   transform-origin: left top;
-  font-size: 0.68rem;
+  font-size: 0.6rem;
   font-weight: 900;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   color: #1b2026;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.84);
   border: 1px solid rgba(24, 33, 40, 0.12);
   border-radius: 999px;
-  padding: 4px 9px;
+  padding: 4px 8px;
   line-height: 1;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
 }
 
 .ruler-track {
   position: absolute;
   left: 34px;
-  top: 52px;
+  top: 34px;
   width: 4px;
-  height: 248px;
+  height: 266px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.42);
   box-shadow: inset 0 0 0 1px rgba(24, 33, 40, 0.08);
@@ -193,7 +193,7 @@ a {
 
 .ruler-dot {
   position: absolute;
-  left: 28px;
+  left: 26px;
   bottom: 54px;
   width: 16px;
   height: 16px;
@@ -205,7 +205,7 @@ a {
 
 .altitude-current {
   position: absolute;
-  left: 0;
+  left: -2px;
   bottom: 0;
   min-width: 72px;
   text-align: center;
@@ -229,9 +229,196 @@ a {
   display: none;
 }
 
+.header-compass {
+  width: 82px;
+  height: 82px;
+  flex: 0 0 auto;
+  pointer-events: none;
+}
 
+.header-compass .compass-ring {
+  width: 82px;
+  height: 82px;
+}
+
+.header-compass .compass-outer-ring {
+  border-width: 2px;
+}
+
+.header-compass .compass-inner-rim {
+  inset: 7px;
+  border-width: 1.5px;
+}
+
+.header-compass .compass-ticks {
+  inset: 5px;
+  -webkit-mask: radial-gradient(circle, transparent 0 30px, #000 30px 36px, transparent 36px);
+  mask: radial-gradient(circle, transparent 0 30px, #000 30px 36px, transparent 36px);
+}
+
+.header-compass .compass-cardinal {
+  font-size: 0.44rem;
+}
+
+.header-compass .compass-n,
+.header-compass .compass-e,
+.header-compass .compass-s,
+.header-compass .compass-w {
+  font-size: 0.62rem;
+}
+
+.header-compass .compass-n {
+  top: 1px;
+}
+
+.header-compass .compass-e {
+  right: 1px;
+}
+
+.header-compass .compass-s {
+  bottom: 1px;
+}
+
+.header-compass .compass-w {
+  left: 1px;
+}
+
+.header-compass .compass-ne,
+.header-compass .compass-se {
+  right: 8px;
+}
+
+.header-compass .compass-nw,
+.header-compass .compass-sw {
+  left: 8px;
+}
+
+.header-compass .compass-ne,
+.header-compass .compass-nw {
+  top: 9px;
+}
+
+.header-compass .compass-se,
+.header-compass .compass-sw {
+  bottom: 9px;
+}
+
+.header-compass .compass-face {
+  inset: 8px;
+}
+
+.header-compass .band-yellow {
+  height: 18px;
+}
+
+.header-compass .band-orange {
+  top: 18px;
+  height: 16px;
+}
+
+.header-compass .band-red {
+  top: 34px;
+  height: 14px;
+}
+
+.header-compass .band-lightblue {
+  bottom: 16px;
+  height: 16px;
+}
+
+.header-compass .band-blue {
+  height: 16px;
+}
+
+.header-compass .ring-a {
+  width: 50px;
+  height: 50px;
+}
+
+.header-compass .ring-b {
+  width: 38px;
+  height: 38px;
+}
+
+.header-compass .ring-c {
+  width: 28px;
+  height: 28px;
+}
+
+.header-compass .ring-d {
+  width: 18px;
+  height: 18px;
+}
+
+.header-compass .spokes-1::before,
+.header-compass .spokes-1::after,
+.header-compass .spokes-2::before,
+.header-compass .spokes-2::after {
+  height: 94px;
+  width: 1.5px;
+}
+
+.header-compass .mountain-left {
+  left: -1px;
+  width: 24px;
+  height: 34px;
+}
+
+.header-compass .mountain-center {
+  left: 19px;
+  width: 34px;
+  height: 42px;
+}
+
+.header-compass .mountain-right {
+  right: -1px;
+  width: 28px;
+  height: 36px;
+}
+
+.header-compass .mountain-front-left {
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+
+.header-compass .mountain-front-right {
+  right: 12px;
+  width: 18px;
+  height: 20px;
+}
+
+.header-compass .compass-center-band {
+  top: 33px;
+  height: 11px;
+}
+
+.header-compass .compass-center-band span {
+  font-size: 0.28rem;
+  letter-spacing: 0.07em;
+}
+
+.header-compass .compass-needle {
+  top: 11px;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-bottom-width: 24px;
+}
+
+.header-compass .compass-needle-tail {
+  bottom: 12px;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  border-top-width: 18px;
+}
+
+.header-compass .compass-center-cap {
+  width: 10px;
+  height: 10px;
+}
 /* BRÚJULA SUMMIT GAMES REFINADA */
 .summit-compass {
+  display: none;
   width: 132px;
   height: 132px;
   pointer-events: none;
@@ -913,10 +1100,7 @@ p {
 }
 
 @media (max-width: 1160px) {
-  .altitude-ruler {
-    display: none;
-  }
-
+ 
   .container {
     width: min(calc(100% - 84px), var(--container));
   }
@@ -963,9 +1147,14 @@ p {
   }
 
   .brand-logo {
-    width: 116px;
-    height: 116px;
-  }
+  width: 108px;
+  height: 108px;
+}
+
+.header-compass {
+  width: 68px;
+  height: 68px;
+}
 
   .footer-logo {
     width: 112px;
