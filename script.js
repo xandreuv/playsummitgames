@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const stops = document.querySelectorAll(".altitude-stop");
   const currentAltitude = document.querySelector(".altitude-current-value");
   const rulerFill = document.querySelector(".ruler-fill");
+  const compassNeedleWrap = document.getElementById("compassNeedleWrap");
 
   function updateActiveStop() {
     if (!sections.length || !stops.length) return;
@@ -10,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeId = sections[0].id;
     let activeIndex = 0;
     let activeMeter = "ALT 0 m";
+    let activeBearing = 0;
 
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
@@ -29,6 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
           const rawValue = meterEl.textContent.trim();
           activeMeter = `ALT ${rawValue}`;
         }
+
+        const bearing = parseFloat(stop.dataset.bearing || "0");
+        activeBearing = Number.isFinite(bearing) ? bearing : 0;
       }
     });
 
@@ -43,6 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const minFillHeight = 14;
       const fillHeight = minFillHeight + (maxFillHeight - minFillHeight) * progressRatio;
       rulerFill.style.height = `${fillHeight}px`;
+    }
+
+    if (compassNeedleWrap) {
+      compassNeedleWrap.style.transform = `rotate(${activeBearing}deg)`;
     }
   }
 
