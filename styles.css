@@ -125,13 +125,22 @@ a {
 }
 
 /* REGLA LATERAL NUEVA, MÁS ESTRECHA Y TIPO V2 */
+
+/* REGLA LATERAL ESTRECHA + BRÚJULA */
 .altitude-ruler {
   position: fixed;
-  left: 22px;
-  top: 160px;
-  width: 72px;
+  left: 18px;
+  top: 146px;
+  width: 120px;
   z-index: 700;
   pointer-events: none;
+}
+
+.altitude-ruler-with-compass {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
 }
 
 .altitude-ruler-inner {
@@ -151,7 +160,7 @@ a {
   letter-spacing: 0.16em;
   color: #1b2026;
   text-transform: uppercase;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(24, 33, 40, 0.12);
   border-radius: 999px;
   padding: 4px 9px;
@@ -208,7 +217,7 @@ a {
   font-size: 0.92rem;
   font-weight: 900;
   color: #1b2026;
-  background: rgba(255, 255, 255, 0.86);
+  background: rgba(255, 255, 255, 0.88);
   border: 1px solid rgba(24, 33, 40, 0.12);
   border-radius: 999px;
   padding: 5px 10px;
