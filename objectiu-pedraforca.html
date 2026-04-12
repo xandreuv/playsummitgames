@@ -10,36 +10,34 @@
 <body>
   <aside class="altitude-ruler">
     <div class="altitude-ruler-inner">
-      <div class="ruler-title">Pedraforca</div>
+      <div class="ruler-title">Ascensión</div>
+      <div class="thermo-wrap">
+        <div class="thermo-track"></div>
+        <div class="thermo-bulb"></div>
+      </div>
 
-      <a href="#inicio" class="altitude-stop active" data-target="inicio">
+      <div class="altitude-current">
+        <div class="altitude-stop-meter">0 m</div>
+        <div class="altitude-label-current">Altitud actual</div>
+      </div>
+
+      <a href="#inicio" class="altitude-stop active" data-target="inicio" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">0 m</span>
-        <span class="altitude-stop-label">Fondo del valle</span>
       </a>
-
-      <a href="#juego" class="altitude-stop" data-target="juego">
+      <a href="#juego" class="altitude-stop" data-target="juego" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">1.450 m</span>
-        <span class="altitude-stop-label">Campamento base</span>
       </a>
-
-      <a href="#territorio" class="altitude-stop" data-target="territorio">
+      <a href="#territorio" class="altitude-stop" data-target="territorio" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">1.850 m</span>
-        <span class="altitude-stop-label">Primera cordada</span>
       </a>
-
-      <a href="#cultura" class="altitude-stop" data-target="cultura">
+      <a href="#cultura" class="altitude-stop" data-target="cultura" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">2.200 m</span>
-        <span class="altitude-stop-label">Refugio guardado</span>
       </a>
-
-      <a href="#reglas" class="altitude-stop" data-target="reglas">
+      <a href="#reglas" class="altitude-stop" data-target="reglas" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">2.450 m</span>
-        <span class="altitude-stop-label">Zona técnica</span>
       </a>
-
-      <a href="#cima" class="altitude-stop" data-target="cima">
+      <a href="#cima" class="altitude-stop" data-target="cima" aria-hidden="true" tabindex="-1" style="display:none;">
         <span class="altitude-stop-meter">2.506 m</span>
-        <span class="altitude-stop-label">Cima</span>
       </a>
     </div>
   </aside>
@@ -49,7 +47,6 @@
       <a href="index.html" class="brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
         <div class="brand-copy">
-          <div class="brand-name">Play Summit Games</div>
           <div class="brand-subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </a>
@@ -177,7 +174,6 @@
       <div class="footer-brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
         <div>
-          <div class="footer-brand-name">Play Summit Games</div>
           <div class="footer-brand-subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </div>
