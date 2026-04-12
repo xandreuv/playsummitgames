@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("[data-section]");
   const stops = document.querySelectorAll(".altitude-stop");
+  const currentAltitude = document.querySelector(".altitude-current .altitude-stop-meter");
 
   function updateActiveStop() {
     if (!sections.length || !stops.length) return;
@@ -14,9 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
+    let activeMeter = null;
+
     stops.forEach((stop) => {
-      stop.classList.toggle("active", stop.dataset.target === activeId);
+      const isActive = stop.dataset.target === activeId;
+      stop.classList.toggle("active", isActive);
+
+      if (isActive) {
+        const meterEl = stop.querySelector(".altitude-stop-meter");
+        if (meterEl) {
+          activeMeter = meterEl.textContent.trim();
+        }
+      }
     });
+
+    if (currentAltitude && activeMeter) {
+      currentAltitude.textContent = activeMeter;
+    }
   }
 
   updateActiveStop();
