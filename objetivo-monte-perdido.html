@@ -7,7 +7,7 @@
   <meta name="description" content="Landing page de Objetivo Monte Perdido 3.355, juego de cartas de Summit Series." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="monte">
   
 <aside class="altitude-ruler">
   <div class="altitude-ruler-inner">
@@ -47,17 +47,26 @@
       <a href="index.html" class="brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
         <div class="brand-copy">
-          <div class="brand-subtitle">Juegos diseñados en los Pirineos</div>
+          <div class="brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </a>
 
       <nav class="main-nav">
-        <a href="index.html">Inicio</a>
-        <a href="#juego">El juego</a>
-        <a href="#territorio">Territorio</a>
-        <a href="#reglas">Reglas</a>
-        <a href="#cima">Cima</a>
+        <a href="index.html" data-i18n="nav.home">Inicio</a>
+        <a href="#juego" data-i18n="nav.game">El juego</a>
+        <a href="#territorio" data-i18n="nav.territory">Territorio</a>
+        <a href="#reglas" data-i18n="nav.rules">Reglas</a>
+        <a href="#cima" data-i18n="nav.summit">Cima</a>
       </nav>
+
+      <div class="language-switch" aria-label="Selector de idioma">
+        <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true">
+          <span data-i18n="lang.es">ES</span>
+        </button>
+        <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false">
+          <span data-i18n="lang.cat">CAT</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -65,31 +74,31 @@
     <section id="inicio" class="section section-valley" data-section>
       <div class="container section-inner hero-layout">
         <div class="hero-copy">
-          <div class="breadcrumb"><a href="index.html">← Volver a Play Summit Games</a></div>
-          <p class="section-kicker">Fondo del valle · 0 m</p>
-          <h1 class="page-hero-title">Objetivo Monte Perdido 3.355</h1>
-          <p class="hero-lead">
+          <div class="breadcrumb"><a href="index.html" data-i18n="hero.back">← Volver a Play Summit Games</a></div>
+          <p class="section-kicker" data-i18n="hero.kicker">Fondo del valle · 0 m</p>
+          <h1 class="page-hero-title" data-i18n="hero.title">Objetivo Monte Perdido 3.355</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
             Una ascensión lúdica a una de las grandes cumbres del Pirineo.
           </p>
-          <p>
+          <p data-i18n="hero.p1">
             Gestión de energía, clima cambiante, progresión en altitud, riesgo,
             protección y tensión estratégica en una experiencia de montaña inspirada
             en el Monte Perdido.
           </p>
           <div class="button-row">
-            <a href="#juego" class="button button-primary">Descubrir el juego</a>
-            <a href="index.html#productos" class="button button-secondary">Volver a la colección</a>
+            <a href="#juego" class="button button-primary" data-i18n="hero.cta1">Descubrir el juego</a>
+            <a href="index.html#productos" class="button button-secondary" data-i18n="hero.cta2">Volver a la colección</a>
           </div>
         </div>
 
         <div class="hero-panel">
           <div class="hero-panel-card">
-            <h2>Datos básicos</h2>
+            <h2 data-i18n="hero.panel.title">Datos básicos</h2>
             <ul class="clean-list">
-              <li>1–4 jugadores</li>
-              <li>20–40 minutos</li>
-              <li>Modo competitivo, cooperativo y solitario</li>
-              <li>Gestión de mano y colección de mazo</li>
+              <li data-i18n="hero.panel.li1">1–4 jugadores</li>
+              <li data-i18n="hero.panel.li2">20–40 minutos</li>
+              <li data-i18n="hero.panel.li3">Modo competitivo, cooperativo y solitario</li>
+              <li data-i18n="hero.panel.li4">Gestión de mano y colección de mazo</li>
             </ul>
           </div>
         </div>
@@ -98,9 +107,9 @@
 
     <section id="juego" class="section section-basecamp" data-section>
       <div class="container section-inner">
-        <p class="section-kicker">Campamento base · 1.450 m</p>
-        <h2>Una montaña real convertida en experiencia de juego</h2>
-        <p class="section-intro">
+        <p class="section-kicker" data-i18n="game.kicker">Campamento base · 1.450 m</p>
+        <h2 data-i18n="game.title">Una montaña real convertida en experiencia de juego</h2>
+        <p class="section-intro" data-i18n="game.text">
           Objetivo Monte Perdido traslada a la mesa la emoción de una ascensión:
           avanzar, dosificar recursos, adaptarse al clima y escoger el momento
           adecuado para atacar la cima.
@@ -110,20 +119,20 @@
 
     <section id="experiencia" class="section section-first-rope" data-section>
       <div class="container section-inner">
-        <p class="section-kicker">Primera cordada · 2.200 m</p>
-        <h2>Qué se siente al jugar</h2>
+        <p class="section-kicker" data-i18n="exp.kicker">Primera cordada · 2.200 m</p>
+        <h2 data-i18n="exp.title">Qué se siente al jugar</h2>
         <div class="info-grid cols-3">
           <article class="info-card">
-            <h3>Progresión real</h3>
-            <p>La partida da sensación de ganar altura y acercarse a la cumbre por fases.</p>
+            <h3 data-i18n="exp.c1.title">Progresión real</h3>
+            <p data-i18n="exp.c1.text">La partida da sensación de ganar altura y acercarse a la cumbre por fases.</p>
           </article>
           <article class="info-card">
-            <h3>Decisión táctica</h3>
-            <p>No siempre conviene avanzar más: a veces lo decisivo es protegerse y esperar.</p>
+            <h3 data-i18n="exp.c2.title">Decisión táctica</h3>
+            <p data-i18n="exp.c2.text">No siempre conviene avanzar más: a veces lo decisivo es protegerse y esperar.</p>
           </article>
           <article class="info-card">
-            <h3>Expedición</h3>
-            <p>La experiencia transmite tensión, esfuerzo y planificación de alta montaña.</p>
+            <h3 data-i18n="exp.c3.title">Expedición</h3>
+            <p data-i18n="exp.c3.text">La experiencia transmite tensión, esfuerzo y planificación de alta montaña.</p>
           </article>
         </div>
       </div>
@@ -131,16 +140,16 @@
 
     <section id="territorio" class="section section-technical" data-section>
       <div class="container section-inner">
-        <p class="section-kicker">Zona técnica · 2.800 m</p>
-        <h2>Territorio, paisaje y cultura de montaña</h2>
+        <p class="section-kicker" data-i18n="territory.kicker">Zona técnica · 2.800 m</p>
+        <h2 data-i18n="territory.title">Territorio, paisaje y cultura de montaña</h2>
         <div class="info-grid cols-2">
           <article class="info-card">
-            <h3>Identidad del macizo</h3>
-            <p>El juego puede desarrollarse después con paisajes, refugios y referencias del entorno de Monte Perdido.</p>
+            <h3 data-i18n="territory.c1.title">Identidad del macizo</h3>
+            <p data-i18n="territory.c1.text">El juego puede desarrollarse después con paisajes, refugios y referencias del entorno de Monte Perdido.</p>
           </article>
           <article class="info-card">
-            <h3>Divulgación</h3>
-            <p>La temática facilita hablar de buenas prácticas, preparación y respeto por la montaña.</p>
+            <h3 data-i18n="territory.c2.title">Divulgación</h3>
+            <p data-i18n="territory.c2.text">La temática facilita hablar de buenas prácticas, preparación y respeto por la montaña.</p>
           </article>
         </div>
       </div>
@@ -148,9 +157,9 @@
 
     <section id="reglas" class="section section-summit-attack" data-section>
       <div class="container section-inner">
-        <p class="section-kicker">Ataque a la cima · 3.000 m</p>
-        <h2>Base preparada para ampliar contenido</h2>
-        <p class="section-intro">
+        <p class="section-kicker" data-i18n="rules.kicker">Ataque a la cima · 3.000 m</p>
+        <h2 data-i18n="rules.title">Base preparada para ampliar contenido</h2>
+        <p class="section-intro" data-i18n="rules.text">
           Esta landing ya queda lista para añadir más adelante capítulos concretos:
           componentes, cartas, modos de juego, reglas detalladas, imágenes y compra.
         </p>
@@ -159,13 +168,13 @@
 
     <section id="cima" class="section section-top" data-section>
       <div class="container section-inner">
-        <p class="section-kicker">Cima · 3.355 m</p>
-        <h2>Objetivo Monte Perdido 3.355</h2>
-        <p class="section-intro">
+        <p class="section-kicker" data-i18n="summit.kicker">Cima · 3.355 m</p>
+        <h2 data-i18n="summit.title">Objetivo Monte Perdido 3.355</h2>
+        <p class="section-intro" data-i18n="summit.text">
           Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.
         </p>
         <div class="button-row">
-          <a href="index.html" class="button button-primary">Volver a la landing principal</a>
+          <a href="index.html" class="button button-primary" data-i18n="summit.cta">Volver a la landing principal</a>
         </div>
       </div>
     </section>
@@ -176,26 +185,26 @@
       <div class="footer-brand">
         <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
         <div>
-          <div class="footer-brand-subtitle">Juegos diseñados en los Pirineos</div>
+          <div class="footer-brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
         </div>
       </div>
 
       <div class="footer-links">
-        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon">
+        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" data-i18n-aria="footer.instagram.aria" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <rect x="3" y="3" width="18" height="18" rx="5"></rect>
             <circle cx="12" cy="12" r="4"></circle>
             <circle cx="17.5" cy="6.5" r="1"></circle>
           </svg>
-          <span>@playsummitgames</span>
+          <span data-i18n="footer.instagram">@playsummitgames</span>
         </a>
 
-        <a href="mailto:info@playsummitgames.es" class="footer-link-icon">
+        <a href="mailto:info@playsummitgames.es" class="footer-link-icon" data-i18n-aria="footer.email.aria" aria-label="Correo electrónico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 6h16v12H4z"></path>
             <path d="M4 7l8 6 8-6"></path>
           </svg>
-          <span>info@playsummitgames.es</span>
+          <span data-i18n="footer.email">info@playsummitgames.es</span>
         </a>
       </div>
     </div>
