@@ -1194,6 +1194,10 @@ p {
   height: 68px;
 }
 
+  .language-switch {
+    margin-top: 4px;
+  }
+  
   .footer-logo {
     width: 112px;
     height: 112px;
