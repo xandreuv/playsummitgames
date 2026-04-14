@@ -86,8 +86,8 @@ a {
 }
 
 .brand-logo {
-  width: 148px;
-  height: 148px;
+  width: 176px;
+  height: 176px;
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -1085,8 +1085,8 @@ p {
 }
 
 .footer-logo {
-  width: 138px;
-  height: 138px;
+  width: 176px;
+  height: 176px;
   object-fit: contain;
 }
 
@@ -1261,8 +1261,8 @@ p {
   }
 
   .brand-logo {
-    width: 108px;
-    height: 108px;
+    width: 132px;
+    height: 132px;
   }
 
   .header-compass {
@@ -1271,8 +1271,8 @@ p {
   }
 
   .footer-logo {
-    width: 112px;
-    height: 112px;
+    width: 132px;
+    height: 132px;
   }
 
   .brand-subtitle,
