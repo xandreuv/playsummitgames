@@ -1232,7 +1232,8 @@ p {
 
 @media (max-width: 860px) {
   .site-header {
-    position: relative;
+    position: sticky;
+    top: 0;
   }
 
   .header-inner {
@@ -1247,17 +1248,84 @@ p {
     gap: 16px;
   }
 
-  .section {
-    min-height: auto;
-    padding: 72px 0;
-  }
-
   .container {
     width: min(calc(100% - 40px), var(--container));
   }
 
   .altitude-ruler {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    top: 118px;
+    width: auto;
+    height: 64px;
+    z-index: 850;
+    pointer-events: none;
+  }
+
+  .altitude-ruler-inner {
+    width: 100%;
+    height: 64px;
+    border-radius: 18px;
+    background: rgba(19, 28, 33, 0.78);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+  }
+
+  .ruler-title {
+    left: 16px;
+    top: 11px;
+    transform: none;
+    transform-origin: center;
+    font-size: 0.56rem;
+    letter-spacing: 0.12em;
+    padding: 4px 8px;
+    line-height: 1;
+  }
+
+  .ruler-track {
+    left: 16px;
+    right: 90px;
+    top: 39px;
+    width: auto;
+    height: 4px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.34);
+  }
+
+  .ruler-fill {
+    left: 16px;
+    top: 39px;
+    bottom: auto;
+    width: 18px;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #7e1717 0%, #d14a4a 100%);
+    box-shadow: 0 0 10px rgba(161, 40, 40, 0.18);
+  }
+
+  .ruler-dot {
     display: none;
+  }
+
+  .altitude-current {
+    left: auto;
+    right: 12px;
+    bottom: auto;
+    top: 14px;
+    min-width: auto;
+    padding: 0;
+  }
+
+  .altitude-current-value {
+    font-size: 0.78rem;
+    padding: 6px 10px;
+  }
+
+  .section {
+    min-height: auto;
+    padding: 138px 0 72px;
   }
 
   .brand-logo {
@@ -1278,6 +1346,10 @@ p {
   .brand-subtitle,
   .footer-brand-subtitle {
     font-size: 1.02rem;
+  }
+
+  .language-switch {
+    margin-top: 4px;
   }
 }
 
