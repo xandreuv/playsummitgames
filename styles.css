@@ -1135,12 +1135,84 @@ p {
   .container {
     width: min(calc(100% - 184px), var(--container));
   }
+
+  .altitude-ruler {
+    left: 8px;
+    width: 68px;
+  }
+
+  .altitude-ruler-inner {
+    width: 64px;
+  }
+
+  .ruler-title {
+    left: -6px;
+  }
+
+  .ruler-track,
+  .ruler-fill {
+    left: 30px;
+  }
+
+  .ruler-dot {
+    left: 22px;
+  }
+
+  .altitude-current {
+    min-width: 64px;
+  }
 }
 
 @media (max-width: 1160px) {
- 
   .container {
-    width: min(calc(100% - 84px), var(--container));
+    width: min(calc(100% - 56px), var(--container));
+  }
+
+  .altitude-ruler {
+    left: 4px;
+    top: 150px;
+    width: 56px;
+  }
+
+  .altitude-ruler-inner {
+    width: 52px;
+    height: 320px;
+  }
+
+  .ruler-title {
+    left: -2px;
+    top: 138px;
+    font-size: 0.54rem;
+    letter-spacing: 0.1em;
+    padding: 4px 7px;
+  }
+
+  .ruler-track {
+    left: 24px;
+    top: 30px;
+    height: 236px;
+  }
+
+  .ruler-fill {
+    left: 24px;
+    bottom: 54px;
+  }
+
+  .ruler-dot {
+    left: 16px;
+    bottom: 48px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .altitude-current {
+    left: -4px;
+    min-width: 60px;
+  }
+
+  .altitude-current-value {
+    font-size: 0.8rem;
+    padding: 5px 8px;
   }
 
   .hero-layout,
@@ -1184,20 +1256,20 @@ p {
     width: min(calc(100% - 40px), var(--container));
   }
 
-  .brand-logo {
-  width: 108px;
-  height: 108px;
-}
-
-.header-compass {
-  width: 68px;
-  height: 68px;
-}
-
-  .language-switch {
-    margin-top: 4px;
+  .altitude-ruler {
+    display: none;
   }
-  
+
+  .brand-logo {
+    width: 108px;
+    height: 108px;
+  }
+
+  .header-compass {
+    width: 68px;
+    height: 68px;
+  }
+
   .footer-logo {
     width: 112px;
     height: 112px;
