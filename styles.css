@@ -188,7 +188,7 @@ a {
 
 .ruler-title {
   position: absolute;
-  left: -16px;
+  left: -8px;
   top: 156px;
   transform: rotate(-90deg);
   transform-origin: left top;
