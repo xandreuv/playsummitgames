@@ -8,206 +8,159 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body data-page="pedraforca">
-  
+
 <aside class="altitude-ruler">
   <div class="altitude-ruler-inner">
     <div class="ruler-title">ALTITUD</div>
-
     <div class="ruler-track"></div>
     <div class="ruler-fill"></div>
     <div class="ruler-dot"></div>
-
     <div class="altitude-current">
       <div class="altitude-current-value">ALT 0 m</div>
     </div>
 
-    <a href="#inicio" class="altitude-stop active" data-target="inicio">
-      <span class="altitude-stop-meter">0 m</span>
-    </a>
-    <a href="#juego" class="altitude-stop" data-target="juego">
-      <span class="altitude-stop-meter">1.450 m</span>
-    </a>
-    <a href="#territorio" class="altitude-stop" data-target="territorio">
-      <span class="altitude-stop-meter">1.850 m</span>
-    </a>
-    <a href="#cultura" class="altitude-stop" data-target="cultura">
-      <span class="altitude-stop-meter">2.200 m</span>
-    </a>
-    <a href="#reglas" class="altitude-stop" data-target="reglas">
-      <span class="altitude-stop-meter">2.450 m</span>
-    </a>
-    <a href="#cima" class="altitude-stop" data-target="cima">
-      <span class="altitude-stop-meter">2.506 m</span>
-    </a>
+    <a href="#inicio" class="altitude-stop active" data-target="inicio"><span class="altitude-stop-meter">0 m</span></a>
+    <a href="#juego" class="altitude-stop" data-target="juego"><span class="altitude-stop-meter">1.450 m</span></a>
+    <a href="#territorio" class="altitude-stop" data-target="territorio"><span class="altitude-stop-meter">1.850 m</span></a>
+    <a href="#cultura" class="altitude-stop" data-target="cultura"><span class="altitude-stop-meter">2.200 m</span></a>
+    <a href="#reglas" class="altitude-stop" data-target="reglas"><span class="altitude-stop-meter">2.450 m</span></a>
+    <a href="#cima" class="altitude-stop" data-target="cima"><span class="altitude-stop-meter">2.506 m</span></a>
   </div>
 </aside>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
-        <div class="brand-copy">
-          <div class="brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
+      <div class="brand-copy">
+        <div class="brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
+      </div>
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html" data-i18n="nav.home">Inicio</a>
+      <a href="#juego" data-i18n="nav.game">El juego</a>
+      <a href="#territorio" data-i18n="nav.territory">Territorio</a>
+      <a href="#reglas" data-i18n="nav.rules">Reglas</a>
+      <a href="#cima" data-i18n="nav.summit">Cima</a>
+    </nav>
+
+    <div class="language-switch" aria-label="Selector de idioma">
+      <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true"><span data-i18n="lang.es">ES</span></button>
+      <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false"><span data-i18n="lang.cat">CAT</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="section section-valley" data-section>
+    <div class="container section-inner hero-layout">
+      <div class="hero-copy">
+        <div class="breadcrumb"><a href="index.html" data-i18n="hero.back">← Volver a Play Summit Games</a></div>
+        <p class="section-kicker" data-i18n="hero.kicker">Fondo del valle · 0 m</p>
+        <h1 class="page-hero-title" data-i18n="hero.title">Objectiu Pedraforca 2.506</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.</p>
+        <p data-i18n="hero.p1">Un juego de cartas de Summit Series con gestión de energía, clima cambiante, progresión en altitud, identidad territorial y cultura excursionista.</p>
+        <div class="button-row">
+          <a href="#juego" class="button button-primary" data-i18n="hero.cta1">Descubrir el juego</a>
+          <a href="index.html#productos" class="button button-secondary" data-i18n="hero.cta2">Volver a la colección</a>
         </div>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-panel-card">
+          <h2 data-i18n="hero.panel.title">Datos básicos</h2>
+          <ul class="clean-list">
+            <li data-i18n="hero.panel.li1">1–4 jugadores</li>
+            <li data-i18n="hero.panel.li2">20–40 minutos</li>
+            <li data-i18n="hero.panel.li3">Modo competitivo, cooperativo y solitario</li>
+            <li data-i18n="hero.panel.li4">Gestión de mano y colección de mazo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="juego" class="section section-basecamp" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker" data-i18n="game.kicker">Campamento base · 1.450 m</p>
+      <h2 data-i18n="game.title">Pedraforca convertido en experiencia de juego</h2>
+      <p class="section-intro" data-i18n="game.text">Objectiu Pedraforca traslada a la mesa la emoción de una ascensión emblemática, combinando estrategia, tensión de montaña y fuerte conexión con el territorio.</p>
+    </div>
+  </section>
+
+  <section id="territorio" class="section section-first-rope" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker" data-i18n="territory.kicker">Primera cordada · 1.850 m</p>
+      <h2 data-i18n="territory.title">Territorio e identidad</h2>
+      <div class="info-grid cols-3">
+        <article class="info-card"><h3 data-i18n="territory.c1.title">Montaña icónica</h3><p data-i18n="territory.c1.text">El Pedraforca aporta una fuerza visual y simbólica excepcional dentro del juego.</p></article>
+        <article class="info-card"><h3 data-i18n="territory.c2.title">Cultura excursionista</h3><p data-i18n="territory.c2.text">La propuesta conecta con valores y memoria de la montaña catalana.</p></article>
+        <article class="info-card"><h3 data-i18n="territory.c3.title">Experiencia compartida</h3><p data-i18n="territory.c3.text">Favorece conversaciones, recuerdos y vivencias ligadas a la excursión y la cima.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cultura" class="section section-refuge" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker" data-i18n="culture.kicker">Refugio guardado · 2.200 m</p>
+      <h2 data-i18n="culture.title">Divulgación y valores</h2>
+      <div class="info-grid cols-2">
+        <article class="info-card"><h3 data-i18n="culture.c1.title">Buenas prácticas</h3><p data-i18n="culture.c1.text">El juego permite introducir ideas de prevención, preparación y respeto por la montaña.</p></article>
+        <article class="info-card"><h3 data-i18n="culture.c2.title">Patrimonio cultural</h3><p data-i18n="culture.c2.text">La temática facilita incorporar paisaje, historia, referencias locales y valor territorial.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="reglas" class="section section-summit-attack" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker" data-i18n="rules.kicker">Zona técnica · 2.450 m</p>
+      <h2 data-i18n="rules.title">Base preparada para ampliar contenido</h2>
+      <p class="section-intro" data-i18n="rules.text">Esta landing ya queda lista para añadir después cartas, componentes, reglas detalladas, imágenes, apoyos y llamada a compra.</p>
+    </div>
+  </section>
+
+  <section id="cima" class="section section-top" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker" data-i18n="summit.kicker">Cima · 2.506 m</p>
+      <h2 data-i18n="summit.title">Objectiu Pedraforca 2.506</h2>
+      <p class="section-intro" data-i18n="summit.text">Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.</p>
+      <div class="button-row">
+        <a href="index.html" class="button button-primary" data-i18n="summit.cta">Volver a la landing principal</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
+      <div><div class="footer-brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div></div>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" data-i18n-aria="footer.instagram.aria" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
+        <span data-i18n="footer.instagram">@playsummitgames</span>
       </a>
 
-      <nav class="main-nav">
-        <a href="index.html" data-i18n="nav.home">Inicio</a>
-        <a href="#juego" data-i18n="nav.game">El juego</a>
-        <a href="#territorio" data-i18n="nav.territory">Territorio</a>
-        <a href="#reglas" data-i18n="nav.rules">Reglas</a>
-        <a href="#cima" data-i18n="nav.summit">Cima</a>
-      </nav>
-
-      <div class="language-switch" aria-label="Selector de idioma">
-        <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true">
-          <span data-i18n="lang.es">ES</span>
-        </button>
-        <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false">
-          <span data-i18n="lang.cat">CAT</span>
-        </button>
-      </div>
+      <a href="mailto:info@playsummitgames.es" class="footer-link-icon" data-i18n-aria="footer.email.aria" aria-label="Correo electrónico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16v12H4z"></path>
+          <path d="M4 7l8 6 8-6"></path>
+        </svg>
+        <span data-i18n="footer.email">info@playsummitgames.es</span>
+      </a>
     </div>
-  </header>
+  </div>
+</footer>
 
-  <main>
-    <section id="inicio" class="section section-valley" data-section>
-      <div class="container section-inner hero-layout">
-        <div class="hero-copy">
-          <div class="breadcrumb"><a href="index.html" data-i18n="hero.back">← Volver a Play Summit Games</a></div>
-          <p class="section-kicker" data-i18n="hero.kicker">Fondo del valle · 0 m</p>
-          <h1 class="page-hero-title" data-i18n="hero.title">Objectiu Pedraforca 2.506</h1>
-          <p class="hero-lead" data-i18n="hero.lead">
-            Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.
-          </p>
-          <p data-i18n="hero.p1">
-            Un juego de cartas de Summit Series con gestión de energía, clima cambiante,
-            progresión en altitud, identidad territorial y cultura excursionista.
-          </p>
-          <div class="button-row">
-            <a href="#juego" class="button button-primary" data-i18n="hero.cta1">Descubrir el juego</a>
-            <a href="index.html#productos" class="button button-secondary" data-i18n="hero.cta2">Volver a la colección</a>
-          </div>
-        </div>
-
-        <div class="hero-panel">
-          <div class="hero-panel-card">
-            <h2 data-i18n="hero.panel.title">Datos básicos</h2>
-            <ul class="clean-list">
-              <li data-i18n="hero.panel.li1">1–4 jugadores</li>
-              <li data-i18n="hero.panel.li2">20–40 minutos</li>
-              <li data-i18n="hero.panel.li3">Modo competitivo, cooperativo y solitario</li>
-              <li data-i18n="hero.panel.li4">Gestión de mano y colección de mazo</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="juego" class="section section-basecamp" data-section>
-      <div class="container section-inner">
-        <p class="section-kicker" data-i18n="game.kicker">Campamento base · 1.450 m</p>
-        <h2 data-i18n="game.title">Pedraforca convertido en experiencia de juego</h2>
-        <p class="section-intro" data-i18n="game.text">
-          Objectiu Pedraforca traslada a la mesa la emoción de una ascensión emblemática,
-          combinando estrategia, tensión de montaña y fuerte conexión con el territorio.
-        </p>
-      </div>
-    </section>
-
-    <section id="territorio" class="section section-first-rope" data-section>
-      <div class="container section-inner">
-        <p class="section-kicker" data-i18n="territory.kicker">Primera cordada · 1.850 m</p>
-        <h2 data-i18n="territory.title">Territorio e identidad</h2>
-        <div class="info-grid cols-3">
-          <article class="info-card">
-            <h3 data-i18n="territory.c1.title">Montaña icónica</h3>
-            <p data-i18n="territory.c1.text">El Pedraforca aporta una fuerza visual y simbólica excepcional dentro del juego.</p>
-          </article>
-          <article class="info-card">
-            <h3 data-i18n="territory.c2.title">Cultura excursionista</h3>
-            <p data-i18n="territory.c2.text">La propuesta conecta con valores y memoria de la montaña catalana.</p>
-          </article>
-          <article class="info-card">
-            <h3 data-i18n="territory.c3.title">Experiencia compartida</h3>
-            <p data-i18n="territory.c3.text">Favorece conversaciones, recuerdos y vivencias ligadas a la excursión y la cima.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="cultura" class="section section-refuge" data-section>
-      <div class="container section-inner">
-        <p class="section-kicker" data-i18n="culture.kicker">Refugio guardado · 2.200 m</p>
-        <h2 data-i18n="culture.title">Divulgación y valores</h2>
-        <div class="info-grid cols-2">
-          <article class="info-card">
-            <h3 data-i18n="culture.c1.title">Buenas prácticas</h3>
-            <p data-i18n="culture.c1.text">El juego permite introducir ideas de prevención, preparación y respeto por la montaña.</p>
-          </article>
-          <article class="info-card">
-            <h3 data-i18n="culture.c2.title">Patrimonio cultural</h3>
-            <p data-i18n="culture.c2.text">La temática facilita incorporar paisaje, historia, referencias locales y valor territorial.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="reglas" class="section section-summit-attack" data-section>
-      <div class="container section-inner">
-        <p class="section-kicker" data-i18n="rules.kicker">Zona técnica · 2.450 m</p>
-        <h2 data-i18n="rules.title">Base preparada para ampliar contenido</h2>
-        <p class="section-intro" data-i18n="rules.text">
-          Esta landing ya queda lista para añadir después cartas, componentes,
-          reglas detalladas, imágenes, apoyos y llamada a compra.
-        </p>
-      </div>
-    </section>
-
-    <section id="cima" class="section section-top" data-section>
-      <div class="container section-inner">
-        <p class="section-kicker" data-i18n="summit.kicker">Cima · 2.506 m</p>
-        <h2 data-i18n="summit.title">Objectiu Pedraforca 2.506</h2>
-        <p class="section-intro" data-i18n="summit.text">
-          Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.
-        </p>
-        <div class="button-row">
-          <a href="index.html" class="button button-primary" data-i18n="summit.cta">Volver a la landing principal</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
-        <div>
-          <div class="footer-brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
-        </div>
-      </div>
-
-      <div class="footer-links">
-        <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" data-i18n-aria="footer.instagram.aria" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-            <circle cx="12" cy="12" r="4"></circle>
-            <circle cx="17.5" cy="6.5" r="1"></circle>
-          </svg>
-          <span data-i18n="footer.instagram">@playsummitgames</span>
-        </a>
-
-        <a href="mailto:info@playsummitgames.es" class="footer-link-icon" data-i18n-aria="footer.email.aria" aria-label="Correo electrónico">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 6h16v12H4z"></path>
-            <path d="M4 7l8 6 8-6"></path>
-          </svg>
-          <span data-i18n="footer.email">info@playsummitgames.es</span>
-        </a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="translations-pedraforca.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
