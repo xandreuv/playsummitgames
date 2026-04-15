@@ -1375,15 +1375,6 @@ body[data-page="pedraforca"] .altitude-ruler-pedraforca .altitude-stop-meter {
   white-space: nowrap;
 }
 
-body[data-page="pedraforca"] .site-header-compact {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-}
-
-body[data-page="pedraforca"] .header-inner-compact {
-  min-height: 74px;
-  gap: 1rem;
-}
 
 body[data-page="pedraforca"] .brand {
   gap: 0.9rem;
@@ -1404,15 +1395,6 @@ body[data-page="pedraforca"] .main-nav {
 
 body[data-page="pedraforca"] .main-nav a {
   font-size: 0.95rem;
-}
-
-body[data-page="pedraforca"] .site-footer-compact {
-  padding-top: 1.2rem;
-  padding-bottom: 1.2rem;
-}
-
-body[data-page="pedraforca"] .footer-inner-compact {
-  gap: 1rem;
 }
 
 body[data-page="pedraforca"] .footer-logo {
@@ -1501,10 +1483,6 @@ body[data-page="pedraforca"] .brand {
     padding-bottom: 4.25rem;
   }
 
-  body[data-page="pedraforca"] .header-inner-compact {
-    min-height: 66px;
-  }
-
   body[data-page="pedraforca"] .header-compass {
     width: 40px;
     height: 40px;
@@ -1512,11 +1490,7 @@ body[data-page="pedraforca"] .brand {
 }
 
 @media (max-width: 640px) {
-  body[data-page="pedraforca"] .site-header-compact {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-  }
-
+  
   body[data-page="pedraforca"] .brand-logo {
     height: 48px;
   }
@@ -1528,5 +1502,108 @@ body[data-page="pedraforca"] .brand {
   body[data-page="pedraforca"] .header-compass {
     width: 36px;
     height: 36px;
+  }
+}
+
+/* =========================================
+   BRÚJULA HEADER - MONTE PERDIDO / PEDRAFORCA
+   ========================================= */
+
+body[data-page="monte"] .brand,
+body[data-page="pedraforca"] .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+body[data-page="monte"] .header-compass,
+body[data-page="pedraforca"] .header-compass {
+  width: clamp(44px, 4.2vw, 60px);
+  height: clamp(44px, 4.2vw, 60px);
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body[data-page="monte"] .compass-svg,
+body[data-page="pedraforca"] .compass-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+body[data-page="monte"] .compass-ring,
+body[data-page="monte"] .compass-inner-ring,
+body[data-page="monte"] .compass-mark,
+body[data-page="monte"] .compass-mark.light,
+body[data-page="pedraforca"] .compass-ring,
+body[data-page="pedraforca"] .compass-inner-ring,
+body[data-page="pedraforca"] .compass-mark,
+body[data-page="pedraforca"] .compass-mark.light {
+  fill: none;
+  stroke: currentColor;
+}
+
+body[data-page="monte"] .compass-ring,
+body[data-page="pedraforca"] .compass-ring {
+  stroke-width: 3;
+  opacity: 0.92;
+}
+
+body[data-page="monte"] .compass-inner-ring,
+body[data-page="pedraforca"] .compass-inner-ring {
+  stroke-width: 1.7;
+  opacity: 0.55;
+}
+
+body[data-page="monte"] .compass-mark,
+body[data-page="pedraforca"] .compass-mark {
+  stroke-width: 2;
+  opacity: 0.9;
+}
+
+body[data-page="monte"] .compass-mark.light,
+body[data-page="pedraforca"] .compass-mark.light {
+  stroke-width: 1.5;
+  opacity: 0.45;
+}
+
+body[data-page="monte"] .compass-needle-main,
+body[data-page="pedraforca"] .compass-needle-main {
+  fill: currentColor;
+  opacity: 0.88;
+}
+
+body[data-page="monte"] .compass-needle-cross,
+body[data-page="pedraforca"] .compass-needle-cross {
+  fill: currentColor;
+  opacity: 0.3;
+}
+
+body[data-page="monte"] .compass-center,
+body[data-page="pedraforca"] .compass-center {
+  fill: currentColor;
+}
+
+body[data-page="monte"] .compass-letter,
+body[data-page="pedraforca"] .compass-letter {
+  fill: currentColor;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body[data-page="monte"] .compass-needle-rotor,
+body[data-page="pedraforca"] .compass-needle-rotor {
+  transform-origin: 60px 60px;
+  transition: transform 0.55s ease;
+}
+
+@media (max-width: 640px) {
+  body[data-page="monte"] .header-compass,
+  body[data-page="pedraforca"] .header-compass {
+    width: 38px;
+    height: 38px;
   }
 }
