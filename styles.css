@@ -1294,3 +1294,48 @@ p {
     width: min(calc(100% - 28px), var(--container));
   }
 }
+
+/* ==============================
+   MONTE PERDIDO - AJUSTES V2.5
+   ============================== */
+
+body[data-page="monte"] .section-rich .section-inner {
+  min-height: 115svh;
+  padding-top: clamp(7rem, 10vw, 9rem);
+  padding-bottom: clamp(5rem, 8vw, 7rem);
+}
+
+body[data-page="monte"] .section-standard .section-inner {
+  min-height: 95svh;
+  padding-top: clamp(6rem, 9vw, 8rem);
+  padding-bottom: clamp(4rem, 7vw, 6rem);
+}
+
+body[data-page="monte"] .section-compact .section-inner {
+  min-height: 82svh;
+  padding-top: clamp(5.5rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 6vw, 5.5rem);
+}
+
+body[data-page="monte"] .section-block {
+  max-width: 860px;
+  margin-top: 2rem;
+}
+
+body[data-page="monte"] .altitude-ruler-monte .ruler-title {
+  letter-spacing: 0.18em;
+}
+
+body[data-page="monte"] .altitude-ruler-monte .altitude-stop-meter {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  body[data-page="monte"] .section-rich .section-inner,
+  body[data-page="monte"] .section-standard .section-inner,
+  body[data-page="monte"] .section-compact .section-inner {
+    min-height: auto;
+    padding-top: 6.5rem;
+    padding-bottom: 4.5rem;
+  }
+}
