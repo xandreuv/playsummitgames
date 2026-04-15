@@ -20,60 +20,80 @@
       <div class="altitude-current-value">ALT 1215 m</div>
     </div>
 
-    <a href="#saldes" class="altitude-stop active" data-target="saldes">
-      <span class="altitude-stop-meter">1.215 m</span>
-    </a>
-    <a href="#gosol" class="altitude-stop" data-target="gosol">
-      <span class="altitude-stop-meter">1.500 m</span>
-    </a>
-    <a href="#estasen" class="altitude-stop" data-target="estasen">
-      <span class="altitude-stop-meter">1.675 m</span>
-    </a>
-    <a href="#tartera" class="altitude-stop" data-target="tartera">
-      <span class="altitude-stop-meter">2.050 m</span>
-    </a>
-    <a href="#canal-verdet" class="altitude-stop" data-target="canal-verdet">
-      <span class="altitude-stop-meter">2.330 m</span>
-    </a>
-    <a href="#cresta" class="altitude-stop" data-target="cresta">
-      <span class="altitude-stop-meter">2.450 m</span>
-    </a>
-    <a href="#cumbre" class="altitude-stop" data-target="cumbre">
-      <span class="altitude-stop-meter">2.506 m</span>
-    </a>
+    <a href="#saldes" class="altitude-stop active" data-target="saldes" data-bearing="0">
+  <span class="altitude-stop-meter">1.215 m</span>
+</a>
+<a href="#gosol" class="altitude-stop" data-target="gosol" data-bearing="40">
+  <span class="altitude-stop-meter">1.500 m</span>
+</a>
+<a href="#estasen" class="altitude-stop" data-target="estasen" data-bearing="80">
+  <span class="altitude-stop-meter">1.675 m</span>
+</a>
+<a href="#tartera" class="altitude-stop" data-target="tartera" data-bearing="125">
+  <span class="altitude-stop-meter">2.050 m</span>
+</a>
+<a href="#canal-verdet" class="altitude-stop" data-target="canal-verdet" data-bearing="175">
+  <span class="altitude-stop-meter">2.330 m</span>
+</a>
+<a href="#cresta" class="altitude-stop" data-target="cresta" data-bearing="225">
+  <span class="altitude-stop-meter">2.450 m</span>
+</a>
+<a href="#cumbre" class="altitude-stop" data-target="cumbre" data-bearing="270">
+  <span class="altitude-stop-meter">2.506 m</span>
+</a>
   </div>
 </aside>
 
 <header class="site-header">
   <div class="container header-inner">
- <a href="index.html" class="brand">
-  <div class="header-compass" aria-hidden="true">
-    <svg viewBox="0 0 120 120" class="compass-svg" role="img" aria-label="Brújula decorativa">
-      <circle cx="60" cy="60" r="48" class="compass-ring"></circle>
-      <circle cx="60" cy="60" r="36" class="compass-inner-ring"></circle>
+    <a href="index.html" class="brand">
+  <div class="header-compass">
+    <div class="compass-ring">
+      <div class="compass-outer-ring"></div>
+      <div class="compass-ticks"></div>
+      <div class="compass-inner-rim"></div>
 
-      <line x1="60" y1="10" x2="60" y2="28" class="compass-mark"></line>
-      <line x1="60" y1="92" x2="60" y2="110" class="compass-mark"></line>
-      <line x1="10" y1="60" x2="28" y2="60" class="compass-mark"></line>
-      <line x1="92" y1="60" x2="110" y2="60" class="compass-mark"></line>
+      <div class="compass-cardinal compass-n">N</div>
+      <div class="compass-cardinal compass-ne">NE</div>
+      <div class="compass-cardinal compass-e">E</div>
+      <div class="compass-cardinal compass-se">SE</div>
+      <div class="compass-cardinal compass-s">S</div>
+      <div class="compass-cardinal compass-sw">SW</div>
+      <div class="compass-cardinal compass-w">W</div>
+      <div class="compass-cardinal compass-nw">NW</div>
 
-      <line x1="25" y1="25" x2="36" y2="36" class="compass-mark light"></line>
-      <line x1="84" y1="84" x2="95" y2="95" class="compass-mark light"></line>
-      <line x1="84" y1="36" x2="95" y2="25" class="compass-mark light"></line>
-      <line x1="25" y1="95" x2="36" y2="84" class="compass-mark light"></line>
+      <div class="compass-face">
+        <div class="compass-band band-yellow"></div>
+        <div class="compass-band band-orange"></div>
+        <div class="compass-band band-red"></div>
+        <div class="compass-band band-lightblue"></div>
+        <div class="compass-band band-blue"></div>
 
-      <g class="compass-needle-rotor">
-        <polygon points="60,20 68,60 60,100 52,60" class="compass-needle-main"></polygon>
-        <polygon points="20,60 60,52 100,60 60,68" class="compass-needle-cross"></polygon>
-      </g>
+        <div class="compass-rings-grid ring-a"></div>
+        <div class="compass-rings-grid ring-b"></div>
+        <div class="compass-rings-grid ring-c"></div>
+        <div class="compass-rings-grid ring-d"></div>
 
-      <circle cx="60" cy="60" r="6" class="compass-center"></circle>
+        <div class="compass-spokes spokes-1"></div>
+        <div class="compass-spokes spokes-2"></div>
 
-      <text x="60" y="16" text-anchor="middle" class="compass-letter">N</text>
-      <text x="60" y="118" text-anchor="middle" class="compass-letter">S</text>
-      <text x="10" y="64" text-anchor="middle" class="compass-letter">W</text>
-      <text x="110" y="64" text-anchor="middle" class="compass-letter">E</text>
-    </svg>
+        <div class="compass-mountain mountain-left"></div>
+        <div class="compass-mountain mountain-center"></div>
+        <div class="compass-mountain mountain-right"></div>
+        <div class="compass-mountain mountain-front-left"></div>
+        <div class="compass-mountain mountain-front-right"></div>
+
+        <div class="compass-center-band">
+          <span>SUMMIT GAMES</span>
+        </div>
+      </div>
+
+      <div class="compass-needle-wrap" id="compassNeedleWrap">
+        <div class="compass-needle"></div>
+        <div class="compass-needle-tail"></div>
+        <div class="compass-center-cap"></div>
+      </div>
+    </div>
   </div>
 
   <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
