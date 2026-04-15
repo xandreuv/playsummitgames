@@ -9,28 +9,66 @@
 </head>
 <body data-page="pedraforca">
 
-<aside class="altitude-ruler">
+<aside class="altitude-ruler altitude-ruler-pedraforca">
   <div class="altitude-ruler-inner">
-    <div class="ruler-title">ALTITUD</div>
+    <div class="ruler-title">PROGRESIÓN</div>
     <div class="ruler-track"></div>
     <div class="ruler-fill"></div>
     <div class="ruler-dot"></div>
+
     <div class="altitude-current">
-      <div class="altitude-current-value">ALT 0 m</div>
+      <div class="altitude-current-value">ALT 1215 m</div>
     </div>
 
-    <a href="#inicio" class="altitude-stop active" data-target="inicio"><span class="altitude-stop-meter">0 m</span></a>
-    <a href="#juego" class="altitude-stop" data-target="juego"><span class="altitude-stop-meter">1.450 m</span></a>
-    <a href="#territorio" class="altitude-stop" data-target="territorio"><span class="altitude-stop-meter">1.850 m</span></a>
-    <a href="#cultura" class="altitude-stop" data-target="cultura"><span class="altitude-stop-meter">2.200 m</span></a>
-    <a href="#reglas" class="altitude-stop" data-target="reglas"><span class="altitude-stop-meter">2.450 m</span></a>
-    <a href="#cima" class="altitude-stop" data-target="cima"><span class="altitude-stop-meter">2.506 m</span></a>
+    <a href="#saldes" class="altitude-stop active" data-target="saldes">
+      <span class="altitude-stop-meter">1.215 m</span>
+    </a>
+    <a href="#gosol" class="altitude-stop" data-target="gosol">
+      <span class="altitude-stop-meter">1.500 m</span>
+    </a>
+    <a href="#estasen" class="altitude-stop" data-target="estasen">
+      <span class="altitude-stop-meter">1.675 m</span>
+    </a>
+    <a href="#tartera" class="altitude-stop" data-target="tartera">
+      <span class="altitude-stop-meter">2.050 m</span>
+    </a>
+    <a href="#canal-verdet" class="altitude-stop" data-target="canal-verdet">
+      <span class="altitude-stop-meter">2.330 m</span>
+    </a>
+    <a href="#cresta" class="altitude-stop" data-target="cresta">
+      <span class="altitude-stop-meter">2.450 m</span>
+    </a>
+    <a href="#cumbre" class="altitude-stop" data-target="cumbre">
+      <span class="altitude-stop-meter">2.506 m</span>
+    </a>
   </div>
 </aside>
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="site-header site-header-compact">
+  <div class="container header-inner header-inner-compact">
     <a href="index.html" class="brand">
+      <div class="header-compass" aria-hidden="true">
+        <svg viewBox="0 0 120 120" class="compass-svg" role="img" aria-label="Brújula decorativa">
+          <circle cx="60" cy="60" r="48" class="compass-ring"></circle>
+          <circle cx="60" cy="60" r="36" class="compass-inner-ring"></circle>
+          <line x1="60" y1="10" x2="60" y2="28" class="compass-mark"></line>
+          <line x1="60" y1="92" x2="60" y2="110" class="compass-mark"></line>
+          <line x1="10" y1="60" x2="28" y2="60" class="compass-mark"></line>
+          <line x1="92" y1="60" x2="110" y2="60" class="compass-mark"></line>
+          <line x1="25" y1="25" x2="36" y2="36" class="compass-mark light"></line>
+          <line x1="84" y1="84" x2="95" y2="95" class="compass-mark light"></line>
+          <line x1="84" y1="36" x2="95" y2="25" class="compass-mark light"></line>
+          <line x1="25" y1="95" x2="36" y2="84" class="compass-mark light"></line>
+          <polygon points="60,20 68,60 60,100 52,60" class="compass-needle-main"></polygon>
+          <polygon points="20,60 60,52 100,60 60,68" class="compass-needle-cross"></polygon>
+          <circle cx="60" cy="60" r="6" class="compass-center"></circle>
+          <text x="60" y="16" text-anchor="middle" class="compass-letter">N</text>
+          <text x="60" y="118" text-anchor="middle" class="compass-letter">S</text>
+          <text x="10" y="64" text-anchor="middle" class="compass-letter">W</text>
+          <text x="110" y="64" text-anchor="middle" class="compass-letter">E</text>
+        </svg>
+      </div>
+
       <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
       <div class="brand-copy">
         <div class="brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
@@ -39,10 +77,11 @@
 
     <nav class="main-nav">
       <a href="index.html" data-i18n="nav.home">Inicio</a>
-      <a href="#juego" data-i18n="nav.game">El juego</a>
-      <a href="#territorio" data-i18n="nav.territory">Territorio</a>
-      <a href="#reglas" data-i18n="nav.rules">Reglas</a>
-      <a href="#cima" data-i18n="nav.summit">Cima</a>
+      <a href="#gosol">Alpinistas</a>
+      <a href="#estasen">Clima y eventos</a>
+      <a href="#tartera">Energía</a>
+      <a href="#canal-verdet">Reglas</a>
+      <a href="#cumbre">Compra</a>
     </nav>
 
     <div class="language-switch" aria-label="Selector de idioma">
@@ -53,87 +92,299 @@
 </header>
 
 <main>
-  <section id="inicio" class="section section-valley" data-section>
+  <section id="saldes" class="section section-valley section-rich" data-section>
     <div class="container section-inner hero-layout">
       <div class="hero-copy">
         <div class="breadcrumb"><a href="index.html" data-i18n="hero.back">← Volver a Play Summit Games</a></div>
-        <p class="section-kicker" data-i18n="hero.kicker">Fondo del valle · 0 m</p>
-        <h1 class="page-hero-title" data-i18n="hero.title">Objectiu Pedraforca 2.506</h1>
-        <p class="hero-lead" data-i18n="hero.lead">Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.</p>
-        <p data-i18n="hero.p1">Un juego de cartas de Summit Series con gestión de energía, clima cambiante, progresión en altitud, identidad territorial y cultura excursionista.</p>
+        <p class="section-kicker">Saldes · 1.215 m</p>
+        <h1 class="page-hero-title">Objectiu Pedraforca 2.506</h1>
+        <p class="hero-lead">Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.</p>
+        <p>
+          Objectiu Pedraforca traslada a la mesa la tensión de una ascensión real: progresión en altitud,
+          gestión de energía, clima cambiante, riesgo, protección y decisiones tácticas constantes.
+        </p>
+        <p>
+          Es un juego de cartas con fuerte identidad territorial, pensado para convertir la experiencia
+          de montaña en una partida intensa, rejugable y profundamente ligada al imaginario excursionista catalán.
+        </p>
+
         <div class="button-row">
-          <a href="#juego" class="button button-primary" data-i18n="hero.cta1">Descubrir el juego</a>
-          <a href="index.html#productos" class="button button-secondary" data-i18n="hero.cta2">Volver a la colección</a>
+          <a href="#gosol" class="button button-primary">Descubrir el juego</a>
+          <a href="#cumbre" class="button button-secondary">Ir a compra</a>
         </div>
       </div>
 
       <div class="hero-panel">
         <div class="hero-panel-card">
-          <h2 data-i18n="hero.panel.title">Datos básicos</h2>
+          <h2>Datos básicos</h2>
           <ul class="clean-list">
-            <li data-i18n="hero.panel.li1">1–4 jugadores</li>
-            <li data-i18n="hero.panel.li2">20–40 minutos</li>
-            <li data-i18n="hero.panel.li3">Modo competitivo, cooperativo y solitario</li>
-            <li data-i18n="hero.panel.li4">Gestión de mano y colección de mazo</li>
+            <li>1–4 jugadores</li>
+            <li>20–40 minutos</li>
+            <li>Modo competitivo, cooperativo y solitario</li>
+            <li>Gestión de mano, energía, clima y progresión en altitud</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel-card">
+          <h2>Contenido de la caja</h2>
+          <ul class="clean-list">
+            <li>2 barajas temáticas de juego</li>
+            <li>Tablero de ascensión al Pedraforca</li>
+            <li>Fichas de alpinista y marcadores</li>
+            <li>Cartas de alpinistas, clima, eventos, equipación, escudos y lesiones</li>
+            <li>Instrucciones de juego</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="juego" class="section section-basecamp" data-section>
+  <section id="gosol" class="section section-basecamp section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="game.kicker">Campamento base · 1.450 m</p>
-      <h2 data-i18n="game.title">Pedraforca convertido en experiencia de juego</h2>
-      <p class="section-intro" data-i18n="game.text">Objectiu Pedraforca traslada a la mesa la emoción de una ascensión emblemática, combinando estrategia, tensión de montaña y fuerte conexión con el territorio.</p>
-    </div>
-  </section>
+      <p class="section-kicker">Gósol · 1.500 m</p>
+      <h2>Seis alpinistas, seis estilos de ascensión</h2>
+      <p class="section-intro">
+        El juego incluye 6 cartas de alpinistas específicos con propiedades asimétricas. Cada personaje
+        cambia la manera de afrontar la partida y te empuja hacia una estrategia distinta.
+      </p>
 
-  <section id="territorio" class="section section-first-rope" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker" data-i18n="territory.kicker">Primera cordada · 1.850 m</p>
-      <h2 data-i18n="territory.title">Territorio e identidad</h2>
       <div class="info-grid cols-3">
-        <article class="info-card"><h3 data-i18n="territory.c1.title">Montaña icónica</h3><p data-i18n="territory.c1.text">El Pedraforca aporta una fuerza visual y simbólica excepcional dentro del juego.</p></article>
-        <article class="info-card"><h3 data-i18n="territory.c2.title">Cultura excursionista</h3><p data-i18n="territory.c2.text">La propuesta conecta con valores y memoria de la montaña catalana.</p></article>
-        <article class="info-card"><h3 data-i18n="territory.c3.title">Experiencia compartida</h3><p data-i18n="territory.c3.text">Favorece conversaciones, recuerdos y vivencias ligadas a la excursión y la cima.</p></article>
+        <article class="info-card">
+          <h3>Perfiles asimétricos</h3>
+          <p>
+            Cada alpinista aporta una identidad jugable propia: no todos avanzan igual, ni resisten igual,
+            ni gestionan el riesgo del mismo modo.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Ventajas concretas</h3>
+          <p>
+            Algunos destacan en eficiencia energética, otros en capacidad de reacción, otros en protección,
+            recuperación o adaptación a la montaña.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Más rejugabilidad</h3>
+          <p>
+            Cambiar de personaje cambia el ritmo y las decisiones de la partida. La montaña es la misma,
+            pero cada expedición se vive de forma distinta.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-block">
+        <p>
+          Esta asimetría hace que el juego no se reduzca a una carrera lineal: obliga a leer mejor tu mano,
+          tu posición y el momento exacto de asumir o evitar riesgos.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="cultura" class="section section-refuge" data-section>
+  <section id="estasen" class="section section-first-rope section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="culture.kicker">Refugio guardado · 2.200 m</p>
-      <h2 data-i18n="culture.title">Divulgación y valores</h2>
+      <p class="section-kicker">Refugio Lluís Estasen · 1.675 m</p>
+      <h2>Clima variable, eventos y formas de contrarrestarlos</h2>
+      <p class="section-intro">
+        La montaña nunca permanece estable. El clima afecta a todos los jugadores y los eventos introducen
+        bloqueos, dificultades o penalizaciones que exigen una respuesta táctica inmediata.
+      </p>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Cartas de clima</h3>
+          <p>
+            Modifican las condiciones generales de la ascensión y obligan a adaptar el plan de juego turno a turno.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Cartas de evento</h3>
+          <p>
+            Representan incidencias, pasos delicados, problemas de ruta o situaciones de montaña que frenan,
+            bloquean o ponen en peligro tu progresión.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Equipación y escudos</h3>
+          <p>
+            Puedes contrarrestar amenazas con cartas de equipación de uso táctico o con escudos, que son
+            equipaciones permanentes capaces de protegerte durante más tiempo.
+          </p>
+        </article>
+      </div>
+
       <div class="info-grid cols-2">
-        <article class="info-card"><h3 data-i18n="culture.c1.title">Buenas prácticas</h3><p data-i18n="culture.c1.text">El juego permite introducir ideas de prevención, preparación y respeto por la montaña.</p></article>
-        <article class="info-card"><h3 data-i18n="culture.c2.title">Patrimonio cultural</h3><p data-i18n="culture.c2.text">La temática facilita incorporar paisaje, historia, referencias locales y valor territorial.</p></article>
+        <article class="info-card">
+          <h3>Prepararse importa</h3>
+          <p>
+            No siempre conviene gastar recursos al primer problema. Parte de la estrategia está en prever qué
+            riesgo puede escalar y qué cartas debes reservar.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Leer el entorno</h3>
+          <p>
+            El juego recompensa la capacidad de interpretar el momento: cuándo avanzar, cuándo protegerse y
+            cuándo esperar para no quedar expuesto más arriba.
+          </p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="reglas" class="section section-summit-attack" data-section>
+  <section id="tartera" class="section section-technical section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="rules.kicker">Zona técnica · 2.450 m</p>
-      <h2 data-i18n="rules.title">Base preparada para ampliar contenido</h2>
-      <p class="section-intro" data-i18n="rules.text">Esta landing ya queda lista para añadir después cartas, componentes, reglas detalladas, imágenes, apoyos y llamada a compra.</p>
+      <p class="section-kicker">Tartera · 2.050 m</p>
+      <h2>Energía, desgaste y gestión del riesgo</h2>
+      <p class="section-intro">
+        La energía es uno de los núcleos del juego. Avanzar, resistir, protegerse o recuperarse tiene coste,
+        y una mala gestión puede hacer que la ascensión se derrumbe en el peor momento.
+      </p>
+
+      <div class="info-grid cols-2">
+        <article class="info-card">
+          <h3>Cómo se gana y se pierde energía</h3>
+          <p>
+            La energía fluctúa por el esfuerzo de avance, por determinados climas y eventos, por cartas jugadas
+            y por decisiones tácticas que asumen mayor o menor desgaste.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Riesgo acumulativo</h3>
+          <p>
+            Forzar demasiado puede darte una ventaja temporal, pero aumenta la probabilidad de entrar en crisis
+            cuando más caro resulta recuperarse.
+          </p>
+        </article>
+      </div>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Primera vez a 0 energía</h3>
+          <p>
+            Recibes una primera carta de lesión. Sigues en partida, pero tu situación empeora y la ascensión
+            deja de ser limpia.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Segunda vez a 0 energía</h3>
+          <p>
+            Recibes una segunda carta de lesión y además pierdes cartas de mano, reflejando un deterioro mucho
+            mayor de control y capacidad de respuesta.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Tercera vez a 0 energía</h3>
+          <p>
+            Se produce un accidente grave y ese alpinista ya no puede continuar la ascensión. La gestión de la
+            energía pasa a ser decisiva para seguir vivo en la partida.
+          </p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="cima" class="section section-top" data-section>
+  <section id="canal-verdet" class="section section-summit-attack section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="summit.kicker">Cima · 2.506 m</p>
-      <h2 data-i18n="summit.title">Objectiu Pedraforca 2.506</h2>
-      <p class="section-intro" data-i18n="summit.text">Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.</p>
+      <p class="section-kicker">Canal Verdet · 2.330 m</p>
+      <h2>Reglas básicas y mecánicas del juego</h2>
+      <p class="section-intro">
+        Aquí se ordena el corazón del sistema: secuencia de turno, revelado de clima y eventos, gestión de mano,
+        avance en altitud, resolución de efectos y reposición de cartas.
+      </p>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Secuencia de juego</h3>
+          <p>
+            La partida combina información visible y decisiones tácticas permanentes: aparece el entorno, se
+            resuelven amenazas y cada jugador decide cómo responder.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Mecánicas principales</h3>
+          <p>
+            Gestión de energía, gestión de mano, progresión vertical, control del riesgo, protección con material
+            y adaptación al estado cambiante de la montaña.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Curva de tensión</h3>
+          <p>
+            Cuanto más arriba estás, más pesa cada error. El juego concentra cada vez más tensión hasta el tramo final.
+          </p>
+        </article>
+      </div>
+
       <div class="button-row">
-        <a href="index.html" class="button button-primary" data-i18n="summit.cta">Volver a la landing principal</a>
+        <a href="assets/instruccions-objectiu-pedraforca.pdf" class="button button-primary" target="_blank" rel="noopener noreferrer">
+          Descargar instrucciones en PDF
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="cresta" class="section section-top section-standard" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker">Ataque a cumbre · Cresta · 2.450 m</p>
+      <h2>Cómo se gana la partida</h2>
+
+      <div class="info-grid cols-2">
+        <article class="info-card">
+          <h3>Modo competitivo</h3>
+          <p>
+            Gana quien culmina la ascensión cumpliendo antes las condiciones de victoria o quien resuelve mejor
+            el tramo final con una gestión superior del riesgo, la energía y el momento de ataque.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Modo cooperativo</h3>
+          <p>
+            Los jugadores forman una expedición compartida. La victoria depende de alcanzar juntos el objetivo
+            común y resistir colectivamente las crisis de la montaña.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-block">
+        <p>
+          La cresta final resume el alma del juego: precipitarse puede dejarte sin recursos, pero demorarte
+          demasiado también puede condenar la expedición o entregar la ventaja al rival.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cumbre" class="section section-top section-compact" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker">Cumbre · 2.506 m</p>
+      <h2>Consigue Objectiu Pedraforca 2.506</h2>
+      <p class="section-intro">
+        Un juego de montaña diseñado en los Pirineos, inspirado en el imaginario del Pedraforca y pensado para
+        combinar tensión estratégica, identidad territorial y cultura excursionista.
+      </p>
+
+      <div class="button-row">
+        <a href="#" class="button button-primary">Comprar juego</a>
+        <a href="index.html#productos" class="button button-secondary">Ver otros juegos</a>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
+<footer class="site-footer site-footer-compact">
+  <div class="container footer-inner footer-inner-compact">
     <div class="footer-brand">
       <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
       <div><div class="footer-brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div></div>
