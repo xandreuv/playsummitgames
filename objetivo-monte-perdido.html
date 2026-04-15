@@ -9,22 +9,38 @@
 </head>
 <body data-page="monte">
 
-<aside class="altitude-ruler">
+<aside class="altitude-ruler altitude-ruler-monte">
   <div class="altitude-ruler-inner">
-    <div class="ruler-title">ALTITUD</div>
+    <div class="ruler-title">PROGRESIÓN</div>
     <div class="ruler-track"></div>
     <div class="ruler-fill"></div>
     <div class="ruler-dot"></div>
+
     <div class="altitude-current">
       <div class="altitude-current-value">ALT 0 m</div>
     </div>
 
-    <a href="#inicio" class="altitude-stop active" data-target="inicio"><span class="altitude-stop-meter">0 m</span></a>
-    <a href="#juego" class="altitude-stop" data-target="juego"><span class="altitude-stop-meter">1.450 m</span></a>
-    <a href="#experiencia" class="altitude-stop" data-target="experiencia"><span class="altitude-stop-meter">2.200 m</span></a>
-    <a href="#territorio" class="altitude-stop" data-target="territorio"><span class="altitude-stop-meter">2.800 m</span></a>
-    <a href="#reglas" class="altitude-stop" data-target="reglas"><span class="altitude-stop-meter">3.000 m</span></a>
-    <a href="#cima" class="altitude-stop" data-target="cima"><span class="altitude-stop-meter">3.355 m</span></a>
+    <a href="#broto" class="altitude-stop active" data-target="broto">
+      <span class="altitude-stop-meter">0 m</span>
+    </a>
+    <a href="#cola-caballo" class="altitude-stop" data-target="cola-caballo">
+      <span class="altitude-stop-meter">1.755 m</span>
+    </a>
+    <a href="#clavijas" class="altitude-stop" data-target="clavijas">
+      <span class="altitude-stop-meter">1.825 m</span>
+    </a>
+    <a href="#goriz" class="altitude-stop" data-target="goriz">
+      <span class="altitude-stop-meter">2.200 m</span>
+    </a>
+    <a href="#lago-helado" class="altitude-stop" data-target="lago-helado">
+      <span class="altitude-stop-meter">2.990 m</span>
+    </a>
+    <a href="#escupidera" class="altitude-stop" data-target="escupidera">
+      <span class="altitude-stop-meter">3.200 m</span>
+    </a>
+    <a href="#cumbre" class="altitude-stop" data-target="cumbre">
+      <span class="altitude-stop-meter">3.355 m</span>
+    </a>
   </div>
 </aside>
 
@@ -33,134 +49,353 @@
     <a href="index.html" class="brand">
       <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
       <div class="brand-copy">
-        <div class="brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div>
+        <div class="brand-subtitle">Juegos diseñados en los Pirineos</div>
       </div>
     </a>
 
     <nav class="main-nav">
-      <a href="index.html" data-i18n="nav.home">Inicio</a>
-      <a href="#juego" data-i18n="nav.game">El juego</a>
-      <a href="#territorio" data-i18n="nav.territory">Territorio</a>
-      <a href="#reglas" data-i18n="nav.rules">Reglas</a>
-      <a href="#cima" data-i18n="nav.summit">Cima</a>
+      <a href="index.html">Inicio</a>
+      <a href="#cola-caballo">Alpinistas</a>
+      <a href="#clavijas">Clima y eventos</a>
+      <a href="#goriz">Energía</a>
+      <a href="#lago-helado">Reglas</a>
+      <a href="#cumbre">Compra</a>
     </nav>
 
     <div class="language-switch" aria-label="Selector de idioma">
-      <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true"><span data-i18n="lang.es">ES</span></button>
-      <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false"><span data-i18n="lang.cat">CAT</span></button>
+      <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true">ES</button>
+      <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false">CAT</button>
     </div>
   </div>
 </header>
 
 <main>
-  <section id="inicio" class="section section-valley" data-section>
+
+  <section id="broto" class="section section-valley section-rich" data-section>
     <div class="container section-inner hero-layout">
       <div class="hero-copy">
-        <div class="breadcrumb"><a href="index.html" data-i18n="hero.back">← Volver a Play Summit Games</a></div>
-        <p class="section-kicker" data-i18n="hero.kicker">Fondo del valle · 0 m</p>
-        <h1 class="page-hero-title" data-i18n="hero.title">Objetivo Monte Perdido 3.355</h1>
-        <p class="hero-lead" data-i18n="hero.lead">Una ascensión lúdica a una de las grandes cumbres del Pirineo.</p>
-        <p data-i18n="hero.p1">Gestión de energía, clima cambiante, progresión en altitud, riesgo, protección y tensión estratégica en una experiencia de montaña inspirada en el Monte Perdido.</p>
+        <div class="breadcrumb"><a href="index.html">← Volver a Play Summit Games</a></div>
+        <p class="section-kicker">Broto · 0 m</p>
+        <h1 class="page-hero-title">Objetivo Monte Perdido 3.355</h1>
+        <p class="hero-lead">Una ascensión lúdica al gran macizo calcáreo del Pirineo.</p>
+        <p>
+          Avanza por altitud, adapta tu estrategia al clima cambiante, protege tu expedición y gestiona
+          la energía para alcanzar una de las cumbres más emblemáticas del Pirineo.
+        </p>
+        <p>
+          Objetivo Monte Perdido convierte la experiencia de montaña en una partida tensa y temática:
+          progresión, desgaste, riesgo, material, lesiones y decisiones constantes entre atacar o resistir.
+        </p>
+
         <div class="button-row">
-          <a href="#juego" class="button button-primary" data-i18n="hero.cta1">Descubrir el juego</a>
-          <a href="index.html#productos" class="button button-secondary" data-i18n="hero.cta2">Volver a la colección</a>
+          <a href="#cola-caballo" class="button button-primary">Descubrir el juego</a>
+          <a href="#cumbre" class="button button-secondary">Ir a la compra</a>
         </div>
       </div>
 
       <div class="hero-panel">
         <div class="hero-panel-card">
-          <h2 data-i18n="hero.panel.title">Datos básicos</h2>
+          <h2>Datos básicos</h2>
           <ul class="clean-list">
-            <li data-i18n="hero.panel.li1">1–4 jugadores</li>
-            <li data-i18n="hero.panel.li2">20–40 minutos</li>
-            <li data-i18n="hero.panel.li3">Modo competitivo, cooperativo y solitario</li>
-            <li data-i18n="hero.panel.li4">Gestión de mano y colección de mazo</li>
+            <li>1–4 jugadores</li>
+            <li>20–40 minutos</li>
+            <li>Modo competitivo, cooperativo y solitario</li>
+            <li>Gestión de mano, energía, riesgo y progresión en altitud</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel-card">
+          <h2>Contenido de la caja</h2>
+          <ul class="clean-list">
+            <li>2 barajas temáticas de juego</li>
+            <li>Tablero de ascensión al Monte Perdido</li>
+            <li>Fichas de alpinista y marcadores</li>
+            <li>Cartas de alpinistas, clima, eventos, equipación, escudos y lesiones</li>
+            <li>Instrucciones de juego</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="juego" class="section section-basecamp" data-section>
+  <section id="cola-caballo" class="section section-basecamp section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="game.kicker">Campamento base · 1.450 m</p>
-      <h2 data-i18n="game.title">Una montaña real convertida en experiencia de juego</h2>
-      <p class="section-intro" data-i18n="game.text">Objetivo Monte Perdido traslada a la mesa la emoción de una ascensión: avanzar, dosificar recursos, adaptarse al clima y escoger el momento adecuado para atacar la cima.</p>
-    </div>
-  </section>
+      <p class="section-kicker">Cascada Cola de Caballo · 1.755 m</p>
+      <h2>Seis alpinistas, seis formas de ascender</h2>
+      <p class="section-intro">
+        El juego incluye 6 cartas de alpinistas específicos, cada una con propiedades asimétricas que cambian
+        la forma de jugar: resistencia, eficiencia energética, reacción al clima, capacidad de protección,
+        recuperación o especialización táctica.
+      </p>
 
-  <section id="experiencia" class="section section-first-rope" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker" data-i18n="exp.kicker">Primera cordada · 2.200 m</p>
-      <h2 data-i18n="exp.title">Qué se siente al jugar</h2>
       <div class="info-grid cols-3">
-        <article class="info-card"><h3 data-i18n="exp.c1.title">Progresión real</h3><p data-i18n="exp.c1.text">La partida da sensación de ganar altura y acercarse a la cumbre por fases.</p></article>
-        <article class="info-card"><h3 data-i18n="exp.c2.title">Decisión táctica</h3><p data-i18n="exp.c2.text">No siempre conviene avanzar más: a veces lo decisivo es protegerse y esperar.</p></article>
-        <article class="info-card"><h3 data-i18n="exp.c3.title">Expedición</h3><p data-i18n="exp.c3.text">La experiencia transmite tensión, esfuerzo y planificación de alta montaña.</p></article>
+        <article class="info-card">
+          <h3>Perfiles asimétricos</h3>
+          <p>
+            Cada alpinista no es sólo una ilustración: condiciona tu estilo de partida y tus decisiones
+            desde el primer turno.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Ventajas propias</h3>
+          <p>
+            Algunos personajes destacan en avance, otros en ahorro de energía, otros en soportar mejor
+            incidentes o en responder al entorno.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Partidas variables</h3>
+          <p>
+            Cambiar de alpinista cambia también la experiencia. La montaña es la misma, pero la expedición
+            nunca se afronta igual.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-block">
+        <p>
+          Esta asimetría aporta rejugabilidad y refuerza la sensación de expedición real: no todos los perfiles
+          están preparados para resolver la ascensión de la misma manera ni en el mismo momento.
+        </p>
       </div>
     </div>
   </section>
 
-  <section id="territorio" class="section section-technical" data-section>
+  <section id="clavijas" class="section section-first-rope section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="territory.kicker">Zona técnica · 2.800 m</p>
-      <h2 data-i18n="territory.title">Territorio, paisaje y cultura de montaña</h2>
+      <p class="section-kicker">Clavijas · 1.825 m</p>
+      <h2>Clima variable, eventos y cómo contrarrestarlos</h2>
+      <p class="section-intro">
+        La montaña cambia turno a turno. El clima afecta a todos los jugadores y los eventos introducen
+        bloqueos, riesgos o penalizaciones que obligan a reaccionar con el material adecuado.
+      </p>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Cartas de clima</h3>
+          <p>
+            Representan condiciones favorables o adversas que modifican el ritmo de ascensión, la eficiencia
+            del avance o la seguridad de la expedición.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Cartas de evento</h3>
+          <p>
+            Introducen obstáculos concretos: problemas en ruta, incidentes, pasos delicados o situaciones
+            que frenan tu progresión si no los resuelves.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Equipación y escudos</h3>
+          <p>
+            Puedes responder con cartas de equipación de uso táctico o con escudos, que son equipaciones
+            permanentes y te ofrecen protección continuada frente a ciertos riesgos.
+          </p>
+        </article>
+      </div>
+
       <div class="info-grid cols-2">
-        <article class="info-card"><h3 data-i18n="territory.c1.title">Identidad del macizo</h3><p data-i18n="territory.c1.text">El juego puede desarrollarse después con paisajes, refugios y referencias del entorno de Monte Perdido.</p></article>
-        <article class="info-card"><h3 data-i18n="territory.c2.title">Divulgación</h3><p data-i18n="territory.c2.text">La temática facilita hablar de buenas prácticas, preparación y respeto por la montaña.</p></article>
+        <article class="info-card">
+          <h3>Leer la montaña</h3>
+          <p>
+            No siempre gana quien más avanza, sino quien interpreta mejor cuándo protegerse, cuándo gastar
+            recursos y cuándo reservar cartas para un problema mayor.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Contrarrestar bien importa</h3>
+          <p>
+            Parte de la estrategia está en construir una mano útil y anticipar qué amenaza merece respuesta
+            inmediata y cuál puede esperar un turno más.
+          </p>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="reglas" class="section section-summit-attack" data-section>
+  <section id="goriz" class="section section-technical section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="rules.kicker">Ataque a la cima · 3.000 m</p>
-      <h2 data-i18n="rules.title">Base preparada para ampliar contenido</h2>
-      <p class="section-intro" data-i18n="rules.text">Esta landing ya queda lista para añadir más adelante capítulos concretos: componentes, cartas, modos de juego, reglas detalladas, imágenes y compra.</p>
+      <p class="section-kicker">Refugio de Góriz · 2.200 m</p>
+      <h2>Energía, desgaste y gestión real del riesgo</h2>
+      <p class="section-intro">
+        La energía es uno de los ejes del juego. Avanzar, resistir, protegerse o recuperarse tiene coste, y
+        una mala gestión puede arruinar la ascensión en el momento decisivo.
+      </p>
+
+      <div class="info-grid cols-2">
+        <article class="info-card">
+          <h3>Cómo se gana y se pierde energía</h3>
+          <p>
+            La energía fluctúa durante la partida por el esfuerzo de avance, por determinados climas, eventos,
+            cartas jugadas y por decisiones tácticas del propio jugador.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Riesgo acumulativo</h3>
+          <p>
+            Forzar demasiado la expedición puede darte ventaja a corto plazo, pero te deja mucho más expuesto
+            en la parte alta de la montaña.
+          </p>
+        </article>
+      </div>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Primera vez a 0 energía</h3>
+          <p>
+            El alpinista recibe una primera carta de lesión. La ascensión continúa, pero ya no lo haces en
+            las mismas condiciones.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Segunda vez a 0 energía</h3>
+          <p>
+            Recibes una segunda carta de lesión y además pierdes cartas de mano, reflejando deterioro físico,
+            pérdida de control y empeoramiento de la situación.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Tercera vez a 0 energía</h3>
+          <p>
+            Se produce un accidente grave y ese alpinista no puede continuar la ascensión. La gestión del
+            riesgo deja de ser teórica y pasa a decidir la partida.
+          </p>
+        </article>
+      </div>
     </div>
   </section>
 
-  <section id="cima" class="section section-top" data-section>
+  <section id="lago-helado" class="section section-summit-attack section-rich" data-section>
     <div class="container section-inner">
-      <p class="section-kicker" data-i18n="summit.kicker">Cima · 3.355 m</p>
-      <h2 data-i18n="summit.title">Objetivo Monte Perdido 3.355</h2>
-      <p class="section-intro" data-i18n="summit.text">Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.</p>
+      <p class="section-kicker">Lago Helado · 2.990 m</p>
+      <h2>Reglas básicas y núcleo mecánico del juego</h2>
+      <p class="section-intro">
+        Aquí se concentra la lógica del sistema: orden de turno, revelado de clima y eventos, gestión de mano,
+        avance en altitud, resolución de efectos y reposición.
+      </p>
+
+      <div class="info-grid cols-3">
+        <article class="info-card">
+          <h3>Secuencia de turno</h3>
+          <p>
+            La partida alterna información abierta y decisiones tácticas: aparece el entorno, se resuelven
+            amenazas y cada jugador decide cómo responder.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Mecánicas principales</h3>
+          <p>
+            Gestión de energía, gestión de mano, progresión por altitud, control del riesgo, protección mediante
+            material y adaptación al estado cambiante de la montaña.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Curva de tensión</h3>
+          <p>
+            La dificultad no es lineal. A medida que asciendes, cada error pesa más y cada recurso guardado
+            puede convertirse en decisivo.
+          </p>
+        </article>
+      </div>
+
       <div class="button-row">
-        <a href="index.html" class="button button-primary" data-i18n="summit.cta">Volver a la landing principal</a>
+        <a href="assets/instrucciones-objetivo-monte-perdido.pdf" class="button button-primary" target="_blank" rel="noopener noreferrer">
+          Descargar instrucciones en PDF
+        </a>
       </div>
     </div>
   </section>
+
+  <section id="escupidera" class="section section-top section-standard" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker">Ataque a cumbre · Escupidera · 3.200 m</p>
+      <h2>Cómo se gana la partida</h2>
+
+      <div class="info-grid cols-2">
+        <article class="info-card">
+          <h3>Modo competitivo</h3>
+          <p>
+            Gana quien culmina la ascensión cumpliendo las condiciones de victoria antes que los demás, o quien
+            demuestra mejor rendimiento estratégico en la resolución final de la partida.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <h3>Modo cooperativo</h3>
+          <p>
+            Los jugadores forman una expedición. La victoria depende de alcanzar juntos el objetivo común y
+            gestionar de forma colectiva los riesgos, recursos y crisis de la montaña.
+          </p>
+        </article>
+      </div>
+
+      <div class="section-block">
+        <p>
+          El tramo final exige leer bien el momento de atacar la cima: precipitarse puede dejarte sin energía;
+          esperar demasiado puede dar ventaja al rival o hacer fracasar a toda la expedición.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cumbre" class="section section-top section-compact" data-section>
+    <div class="container section-inner">
+      <p class="section-kicker">Cumbre · 3.355 m</p>
+      <h2>Consigue Objetivo Monte Perdido 3.355</h2>
+      <p class="section-intro">
+        Un juego de cartas de montaña diseñado en los Pirineos, con identidad territorial, tensión estratégica
+        y una experiencia de ascensión pensada para jugarse una y otra vez.
+      </p>
+
+      <div class="button-row">
+        <a href="#" class="button button-primary">Comprar juego</a>
+        <a href="index.html#productos" class="button button-secondary">Ver otros juegos</a>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
-      <div><div class="footer-brand-subtitle" data-i18n="brand.subtitle">Juegos diseñados en los Pirineos</div></div>
+      <div>
+        <div class="footer-brand-subtitle">Juegos diseñados en los Pirineos</div>
+      </div>
     </div>
 
     <div class="footer-links">
-      <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" data-i18n-aria="footer.instagram.aria" aria-label="Instagram">
+      <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="5"></rect>
           <circle cx="12" cy="12" r="4"></circle>
           <circle cx="17.5" cy="6.5" r="1"></circle>
         </svg>
-        <span data-i18n="footer.instagram">@playsummitgames</span>
+        <span>@playsummitgames</span>
       </a>
 
-      <a href="mailto:info@playsummitgames.es" class="footer-link-icon" data-i18n-aria="footer.email.aria" aria-label="Correo electrónico">
+      <a href="mailto:info@playsummitgames.es" class="footer-link-icon" aria-label="Correo electrónico">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 6h16v12H4z"></path>
           <path d="M4 7l8 6 8-6"></path>
         </svg>
-        <span data-i18n="footer.email">info@playsummitgames.es</span>
+        <span>info@playsummitgames.es</span>
       </a>
     </div>
   </div>
 </footer>
 
-<script src="translations-monte.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
