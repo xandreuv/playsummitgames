@@ -45,14 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
       currentAltitude.textContent = activeMeter;
     }
 
-  if (rulerFill) {
-  const totalSections = Math.max(sections.length - 1, 1);
-  const progressRatio = activeIndex / totalSections;
-  const maxFillHeight = 248;
-  const minFillHeight = 14;
-  const fillHeight = minFillHeight + (maxFillHeight - minFillHeight) * progressRatio;
-  rulerFill.style.height = `${fillHeight}px`;
-}
+    if (rulerFill) {
+      const totalSections = Math.max(sections.length - 1, 1);
+      const progressRatio = activeIndex / totalSections;
+      const maxFillHeight = 248;
+      const minFillHeight = 14;
+      const fillHeight = minFillHeight + (maxFillHeight - minFillHeight) * progressRatio;
+      rulerFill.style.height = `${fillHeight}px`;
+    }
 
     if (compassNeedleWrap) {
       compassNeedleWrap.style.transform = `rotate(${activeBearing}deg)`;
