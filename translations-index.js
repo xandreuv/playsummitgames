@@ -3,11 +3,12 @@ window.PSG_TRANSLATIONS = {
     es: {
       title: "Play Summit Games | Juegos diseñados en los Pirineos",
       description:
-        "Summit Series: juegos de cartas inspirados en la alta montaña. Descubre una colección editorial y visual diseñada en los Pirineos.",
+        "Summit Games: juegos de cartas inspirados en la alta montaña. Descubre Objetivo Monte Perdido 3.355 y Objetivo Pedraforca 2.506.",
       strings: {
         "brand.subtitle": "Juegos diseñados en los Pirineos",
         "lang.es": "ES",
         "lang.cat": "CAT",
+
         "nav.home": "Inicio",
         "nav.games": "Juegos",
         "nav.series": "Summit Series",
@@ -15,113 +16,121 @@ window.PSG_TRANSLATIONS = {
         "nav.buy": "Compra",
 
         "hero.kicker": "Fondo del valle · 0 m",
-        "hero.title": "Summit Series",
+        "hero.title": "Summit Games",
         "hero.lead": "Juegos de cartas inspirados en la alta montaña.",
-        "hero.p1":
-          "Una colección de juegos de ascensión con identidad pirenaica, tensión táctica y una dirección visual editorial más cercana a una marca de montaña.",
-        "hero.badge1": "1–4 jugadores",
-        "hero.badge2": "20–40 min",
-        "hero.badge3": "Competitivo · Cooperativo · Solo",
+        "hero.text":
+          "Una colección creada para vivir la tensión, la estrategia, la climatología variable y la emoción de una ascensión real.",
         "hero.cta1": "Descubrir juegos",
-        "hero.cta2": "Explorar la colección",
+        "hero.cta2": "Cómo se juega",
 
-        "collection.kicker": "Campamento base · 1.200 m",
-        "collection.title": "Una colección editorial de juegos de montaña",
-        "collection.intro":
-          "Summit Series no se presenta como un juego aislado, sino como una línea con lenguaje visual propio, ambientación territorial y una identidad inspirada en la cultura de la ascensión.",
-        "collection.quote":
-          "Menos texto. Más presencia visual. Más sensación de marca, colección y producto acabado.",
+        "hero.stage.board": "Mapa de ascensión",
+        "hero.card1": "Ventana climática",
+        "hero.card2": "Quebrantahuesos",
+        "hero.card3": "Guía de cordada",
+        "hero.box": "Mockup editorial de caja",
 
-        "products.kicker": "Primera cordada · 1.850 m",
-        "products.title": "Dos primeras ascensiones de la colección",
-        "products.intro":
-          "Dos montañas, dos identidades visuales y una misma filosofía de ascensión.",
+        "games.kicker": "Campamento base · 1.450 m",
+        "games.title": "Dos primeras cumbres de la colección",
+        "games.intro":
+          "Objetivo Monte Perdido 3.355 y Objetivo Pedraforca 2.506 son las dos primeras ascensiones de Summit Games.",
+        "games.players": "1–4 jugadores",
+        "games.time": "20–40 minutos",
+        "games.age": "+10 años",
+        "games.modes": "Competitivo · Cooperativo · Solitario",
+        "games.mode1": "Competitivo",
+        "games.mode2": "Cooperativo",
 
-        "products.mp.subtitle": "Ambientación específica Monte Perdido",
-        "products.mp.li1": "Jugadores: 1–4",
-        "products.mp.li2": "Duración: 20–40 minutos",
-        "products.mp.li3": "Modos: competitivo, cooperativo y solitario",
-        "products.mp.text":
-          "Una ascensión lúdica a una gran cumbre pirenaica, con clima, energía, ritmo de expedición y una presencia visual de producto más sólida.",
-        "products.mp.cta": "Ver landing del juego",
+        "games.mp.text":
+          "Una ascensión lúdica al Monte Perdido con clima, energía, gestión táctica y sensación de expedición.",
+        "games.mp.cta": "Ver landing del juego",
 
-        "products.pf.subtitle": "Ambientación específica Pedraforca",
-        "products.pf.li1": "Jugadores: 1–4",
-        "products.pf.li2": "Duración: 20–40 minutos",
-        "products.pf.li3": "Modos: competitivo, cooperativo y solitario",
-        "products.pf.text":
-          "Una edición con fuerte identidad catalana y excursionista, concebida como juego y también como pieza visual de marca territorial.",
-        "products.pf.cta": "Ver landing del juego",
+        "games.pf.text":
+          "Una edición inspirada en el Pedraforca, con identidad territorial, cultura excursionista y emoción de cima.",
+        "games.pf.cta": "Ver landing del juego",
 
-        "features.kicker": "Refugio guardado · 2.300 m",
-        "features.title": "Qué define visual y jugablemente a Summit Series",
-        "features.c1.title": "Gestión de energía",
-        "features.c1.text":
-          "Subir no es suficiente: hay que dosificar el esfuerzo y saber cuándo reservar fuerzas.",
-        "features.c2.title": "Clima cambiante",
-        "features.c2.text":
-          "La meteorología modifica el ritmo de partida y obliga a adaptarse en cada ascensión.",
-        "features.c3.title": "Altitud progresiva",
-        "features.c3.text":
-          "El avance hacia la cima se vive por cotas, con sensación real de aproximación a la cumbre.",
+        "series.kicker": "Primera cordada · 1.850 m",
+        "series.title": "Características comunes de Summit Series",
+        "series.intro":
+          "Cartas, recursos y decisiones que convierten cada partida en una ascensión distinta.",
+        "series.c1.title": "Gestión de energía, riesgo y recursos",
+        "series.c1.text":
+          "Subir exige dosificar esfuerzos, administrar recursos y decidir cuándo arriesgar.",
+        "series.c2.title": "Clima cambiante y altitud progresiva",
+        "series.c2.text":
+          "La meteorología y la progresión por cotas marcan el ritmo real de la ascensión.",
+        "series.c3.title": "Expedición, eventos y personajes",
+        "series.c3.text":
+          "Eventos, personajes asimétricos y gran rejugabilidad permiten partidas memorables y combinables a medida.",
 
-        "modes.kicker": "Zona técnica · 2.650 m",
-        "modes.title": "Una experiencia flexible en modos y profundidad",
-        "modes.intro":
-          "La colección puede entrar por una lectura ligera y visual, o abrirse a una experiencia más táctica y completa.",
-        "modes.comp.title": "Modo competitivo",
-        "modes.comp.c1.title": "Sprint running",
-        "modes.comp.c1.text":
-          "Partida rápida, directa y más ligera, centrada en la velocidad de ascensión.",
-        "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text":
-          "Mayor interacción, más decisiones tácticas y equilibrio entre ritmo y gestión.",
-        "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text":
-          "Versión más completa y exigente, con más tensión, riesgo y profundidad de juego.",
-        "modes.coop.title": "Modo cooperativo",
-        "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text":
-          "Experiencia individual para superar la montaña y optimizar tu propia ascensión.",
-        "modes.coop.c2.title": "Estilo Alpino",
-        "modes.coop.c2.text":
-          "Cooperativo ágil, con pocos apoyos y fuerte gestión de recursos y decisiones clave.",
-        "modes.coop.c3.title": "Estilo Clásico",
-        "modes.coop.c3.text":
-          "Cooperativo más completo, con más herramientas, reglas y construcción de expedición.",
+        "series.gallery": "Espacios preparados para imágenes",
+        "series.g1": "Banner del juego / paisaje",
+        "series.g2": "Cartas / mockup",
+        "series.g3": "Alpinista / cordada",
+        "series.g4": "Caja / producto",
 
-        "values.kicker": "Ataque a la cima · 3.050 m",
-        "values.title": "Un universo de montaña que también comunica territorio",
-        "values.c1.title": "Identidad territorial",
-        "values.c1.text":
-          "Las cartas y la ambientación conectan con paisajes, refugios, fuentes y elementos reconocibles de cada montaña y su territorio.",
-        "values.c2.title": "Sensibilización ambiental",
-        "values.c2.text":
-          "La fauna, la flora y el clima variable ayudan a acercar al jugador a la realidad natural de cada entorno.",
-        "values.c3.title": "Difusión de buenas prácticas en la montaña",
-        "values.c3.text":
-          "Prevención, preparación, conocimiento del clima, elección de material, adecuación de la ruta a las capacidades técnicas, gestión de energía y observación del medio.",
-        "values.c4.title": "Transmisión de valores",
-        "values.c4.text":
-          "Cooperación, ética en la montaña, compartir, esperar, apoyar, aconsejar y tomar decisiones responsables.",
-        "values.c5.title": "Divulgación del patrimonio cultural",
-        "values.c5.text":
-          "Cada juego puede vehicular relatos, referencias, cultura excursionista y memoria de las montañas representadas.",
+        "exp.kicker": "Refugio · 2.200 m",
+        "exp.title": "Estilos de ascensión y modos de juego",
+        "exp.intro":
+          "Todas las Summit Series comparten dos grandes modos de juego y distintos niveles de complejidad.",
+        "exp.e1.eyebrow": "Modo competitivo",
+        "exp.e1.title": "Sprint running · Cross running · Sky running",
+        "exp.e1.text":
+          "Tres estilos de ascensión competitiva, desde el más ágil hasta el más completo y exigente.",
+        "exp.e2.eyebrow": "Modo cooperativo",
+        "exp.e2.title": "Solo · Estilo Alpino · Estilo Clásico",
+        "exp.e2.text":
+          "Tres formas de colaborar y superar la montaña según el nivel de profundidad que quieras añadir.",
+        "exp.e3.eyebrow": "Complejidad progresiva",
+        "exp.e3.title": "Más reglas, más componentes, más montaña",
+        "exp.e3.text":
+          "La experiencia crece a medida que añades nuevas capas de juego y decisión.",
 
-        "buy.kicker": "Cima · 3.355 m",
-        "buy.title": "Dos cimas, dos experiencias de juego",
-        "buy.intro":
-          "Descubre la primera cordada de Summit Series y elige tu montaña.",
-        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
-        "buy.mp.title": "Ascensión a una gran cumbre pirenaica",
-        "buy.mp.text":
-          "Una experiencia de montaña con energía, clima y gestión táctica en torno al macizo de Monte Perdido.",
-        "buy.mp.cta": "Ver juego",
-        "buy.pf.alt": "Objectiu Pedraforca 2.506",
-        "buy.pf.title": "La montaña más emblemática de Catalunya",
-        "buy.pf.text":
-          "Una edición con fuerte identidad territorial, cultural y excursionista inspirada en el Pedraforca.",
-        "buy.pf.cta": "Ver juego",
+        "exp.showcase.kicker": "Huecos visuales temáticos",
+        "exp.showcase.title": "Espacios para banners, mockups, cartas y paisaje",
+        "exp.showcase.text":
+          "Zonas reservadas para reforzar la tematización de alpinismo, ascensión y conocimiento del juego.",
+
+        "how.kicker": "Zona técnica · 2.506 m",
+        "how.title": "Lo que transmite cada juego Summit Series",
+        "how.intro":
+          "Cada edición combina juego, territorio, divulgación y valores de montaña.",
+        "how.s1.title": "Identidad territorial",
+        "how.s1.text":
+          "Montañas, paisajes, cultura y elementos propios de cada zona.",
+        "how.s2.title": "Sensibilización ambiental",
+        "how.s2.text":
+          "Fauna, flora y entorno natural presentes dentro de la experiencia de juego.",
+        "how.s3.title": "Buenas prácticas en la montaña",
+        "how.s3.text":
+          "Prevención, preparación, previsión meteorológica, material adecuado, ruta según capacidades y gestión de energía.",
+        "how.s4.title": "Valores y patrimonio cultural",
+        "how.s4.text":
+          "Transmisión de valores de montaña y divulgación cultural de cada territorio.",
+
+        "rules.kicker": "Ataque a la cima · 3.000 m",
+        "rules.title": "Información básica de reglas y mecánicas",
+        "rules.intro":
+          "Gestión de mano, colección de mazo y progresión táctica hacia la cima.",
+        "rules.r1.title": "Gestión de mano",
+        "rules.r1.text":
+          "Juega cartas de avance, clima, equipo, evento o apoyo en el momento oportuno.",
+        "rules.r2.title": "Colección de mazo",
+        "rules.r2.text":
+          "Cada partida puede ampliarse en profundidad con nuevas cartas, reglas y combinaciones.",
+        "rules.r3.title": "Ritmo de ascensión",
+        "rules.r3.text":
+          "La montaña obliga a adaptarse, ahorrar energía y atacar la cima en el instante correcto.",
+        "rules.cta1": "Ver Monte Perdido",
+        "rules.cta2": "Ver Pedraforca",
+
+        "cta.kicker": "Cima · 3.355 m",
+        "cta.title": "Compra diferenciada de los dos juegos",
+        "cta.text":
+          "Espacio para enlazar la compra de cada juego y mostrar las dos cajas como producto final.",
+        "cta.buy1": "Comprar Monte Perdido",
+        "cta.buy2": "Comprar Pedraforca",
+        "cta.box1": "Posición imagen caja Monte Perdido",
+        "cta.box2": "Posición imagen caja Pedraforca",
 
         "footer.instagram": "@playsummitgames",
         "footer.email": "info@playsummitgames.es",
@@ -133,11 +142,12 @@ window.PSG_TRANSLATIONS = {
     cat: {
       title: "Play Summit Games | Jocs dissenyats als Pirineus",
       description:
-        "Summit Series: jocs de cartes inspirats en l'alta muntanya. Descobreix una col·lecció editorial i visual dissenyada als Pirineus.",
+        "Summit Games: jocs de cartes inspirats en l'alta muntanya. Descobreix Objetivo Monte Perdido 3.355 i Objectiu Pedraforca 2.506.",
       strings: {
         "brand.subtitle": "Jocs dissenyats als Pirineus",
         "lang.es": "ES",
         "lang.cat": "CAT",
+
         "nav.home": "Inici",
         "nav.games": "Jocs",
         "nav.series": "Summit Series",
@@ -145,113 +155,121 @@ window.PSG_TRANSLATIONS = {
         "nav.buy": "Compra",
 
         "hero.kicker": "Fons de la vall · 0 m",
-        "hero.title": "Summit Series",
+        "hero.title": "Summit Games",
         "hero.lead": "Jocs de cartes inspirats en l'alta muntanya.",
-        "hero.p1":
-          "Una col·lecció de jocs d'ascensió amb identitat pirinenca, tensió tàctica i una direcció visual editorial més propera a una marca de muntanya.",
-        "hero.badge1": "1–4 jugadors",
-        "hero.badge2": "20–40 min",
-        "hero.badge3": "Competitiu · Cooperatiu · Solo",
+        "hero.text":
+          "Una col·lecció creada per viure la tensió, l'estratègia, la climatologia variable i l'emoció d'una ascensió real.",
         "hero.cta1": "Descobrir jocs",
-        "hero.cta2": "Explorar la col·lecció",
+        "hero.cta2": "Com es juga",
 
-        "collection.kicker": "Campament base · 1.200 m",
-        "collection.title": "Una col·lecció editorial de jocs de muntanya",
-        "collection.intro":
-          "Summit Series no es presenta com un joc aïllat, sinó com una línia amb llenguatge visual propi, ambientació territorial i una identitat inspirada en la cultura de l'ascensió.",
-        "collection.quote":
-          "Menys text. Més presència visual. Més sensació de marca, col·lecció i producte acabat.",
+        "hero.stage.board": "Mapa d'ascensió",
+        "hero.card1": "Finestra climàtica",
+        "hero.card2": "Trencalòs",
+        "hero.card3": "Guia de cordada",
+        "hero.box": "Mockup editorial de caixa",
 
-        "products.kicker": "Primera cordada · 1.850 m",
-        "products.title": "Dues primeres ascensions de la col·lecció",
-        "products.intro":
-          "Dues muntanyes, dues identitats visuals i una mateixa filosofia d'ascensió.",
+        "games.kicker": "Campament base · 1.450 m",
+        "games.title": "Dues primeres cimeres de la col·lecció",
+        "games.intro":
+          "Objetivo Monte Perdido 3.355 i Objectiu Pedraforca 2.506 són les dues primeres ascensions de Summit Games.",
+        "games.players": "1–4 jugadors",
+        "games.time": "20–40 minuts",
+        "games.age": "+10 anys",
+        "games.modes": "Competitiu · Cooperatiu · Solitari",
+        "games.mode1": "Competitiu",
+        "games.mode2": "Cooperatiu",
 
-        "products.mp.subtitle": "Ambientació específica Monte Perdido",
-        "products.mp.li1": "Jugadors: 1–4",
-        "products.mp.li2": "Durada: 20–40 minuts",
-        "products.mp.li3": "Modes: competitiu, cooperatiu i solitari",
-        "products.mp.text":
-          "Una ascensió lúdica a un gran cim pirinenc, amb clima, energia, ritme d'expedició i una presència visual de producte més sòlida.",
-        "products.mp.cta": "Veure landing del joc",
+        "games.mp.text":
+          "Una ascensió lúdica al Monte Perdido amb clima, energia, gestió tàctica i sensació d'expedició.",
+        "games.mp.cta": "Veure landing del joc",
 
-        "products.pf.subtitle": "Ambientació específica Pedraforca",
-        "products.pf.li1": "Jugadors: 1–4",
-        "products.pf.li2": "Durada: 20–40 minuts",
-        "products.pf.li3": "Modes: competitiu, cooperatiu i solitari",
-        "products.pf.text":
-          "Una edició amb forta identitat catalana i excursionista, concebuda com a joc i també com a peça visual de marca territorial.",
-        "products.pf.cta": "Veure landing del joc",
+        "games.pf.text":
+          "Una edició inspirada en el Pedraforca, amb identitat territorial, cultura excursionista i emoció de cim.",
+        "games.pf.cta": "Veure landing del joc",
 
-        "features.kicker": "Refugi guardat · 2.300 m",
-        "features.title": "Què defineix visualment i jugablement Summit Series",
-        "features.c1.title": "Gestió d'energia",
-        "features.c1.text":
-          "Pujar no és suficient: cal dosificar l'esforç i saber quan reservar forces.",
-        "features.c2.title": "Clima canviant",
-        "features.c2.text":
-          "La meteorologia modifica el ritme de la partida i obliga a adaptar-se en cada ascensió.",
-        "features.c3.title": "Altitud progressiva",
-        "features.c3.text":
-          "L'avanç cap al cim es viu per cotes, amb sensació real d'aproximació al cim.",
+        "series.kicker": "Primera cordada · 1.850 m",
+        "series.title": "Característiques comunes de Summit Series",
+        "series.intro":
+          "Cartes, recursos i decisions que converteixen cada partida en una ascensió diferent.",
+        "series.c1.title": "Gestió d'energia, risc i recursos",
+        "series.c1.text":
+          "Pujar exigeix dosificar esforços, administrar recursos i decidir quan arriscar.",
+        "series.c2.title": "Clima canviant i altitud progressiva",
+        "series.c2.text":
+          "La meteorologia i la progressió per cotes marquen el ritme real de l'ascensió.",
+        "series.c3.title": "Expedició, esdeveniments i personatges",
+        "series.c3.text":
+          "Esdeveniments, personatges asimètrics i gran rejugabilitat permeten partides memorables i combinables a mida.",
 
-        "modes.kicker": "Zona tècnica · 2.650 m",
-        "modes.title": "Una experiència flexible en modes i profunditat",
-        "modes.intro":
-          "La col·lecció pot entrar per una lectura lleugera i visual, o obrir-se a una experiència més tàctica i completa.",
-        "modes.comp.title": "Mode competitiu",
-        "modes.comp.c1.title": "Sprint running",
-        "modes.comp.c1.text":
-          "Partida ràpida, directa i més lleugera, centrada en la velocitat d'ascensió.",
-        "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text":
-          "Més interacció, més decisions tàctiques i equilibri entre ritme i gestió.",
-        "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text":
-          "Versió més completa i exigent, amb més tensió, risc i profunditat de joc.",
-        "modes.coop.title": "Mode cooperatiu",
-        "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text":
-          "Experiència individual per superar la muntanya i optimitzar la teva pròpia ascensió.",
-        "modes.coop.c2.title": "Estil Alpí",
-        "modes.coop.c2.text":
-          "Cooperatiu àgil, amb pocs suports i forta gestió de recursos i decisions clau.",
-        "modes.coop.c3.title": "Estil Clàssic",
-        "modes.coop.c3.text":
-          "Cooperatiu més complet, amb més eines, regles i construcció d'expedició.",
+        "series.gallery": "Espais preparats per a imatges",
+        "series.g1": "Banner del joc / paisatge",
+        "series.g2": "Cartes / mockup",
+        "series.g3": "Alpinista / cordada",
+        "series.g4": "Caixa / producte",
 
-        "values.kicker": "Atac al cim · 3.050 m",
-        "values.title": "Un univers de muntanya que també comunica territori",
-        "values.c1.title": "Identitat territorial",
-        "values.c1.text":
-          "Les cartes i l'ambientació connecten amb paisatges, refugis, fonts i elements recognoscibles de cada muntanya i el seu territori.",
-        "values.c2.title": "Sensibilització ambiental",
-        "values.c2.text":
-          "La fauna, la flora i el clima variable ajuden a apropar el jugador a la realitat natural de cada entorn.",
-        "values.c3.title": "Difusió de bones pràctiques a la muntanya",
-        "values.c3.text":
-          "Prevenció, preparació, coneixement del clima, elecció de material, adequació de la ruta a les capacitats tècniques, gestió de l'energia i observació del medi.",
-        "values.c4.title": "Transmissió de valors",
-        "values.c4.text":
-          "Cooperació, ètica a la muntanya, compartir, esperar, donar suport, aconsellar i prendre decisions responsables.",
-        "values.c5.title": "Divulgació del patrimoni cultural",
-        "values.c5.text":
-          "Cada joc pot vehicular relats, referències, cultura excursionista i memòria de les muntanyes representades.",
+        "exp.kicker": "Refugi · 2.200 m",
+        "exp.title": "Estils d'ascensió i modes de joc",
+        "exp.intro":
+          "Totes les Summit Series comparteixen dos grans modes de joc i diferents nivells de complexitat.",
+        "exp.e1.eyebrow": "Mode competitiu",
+        "exp.e1.title": "Sprint running · Cross running · Sky running",
+        "exp.e1.text":
+          "Tres estils d'ascensió competitiva, des del més àgil fins al més complet i exigent.",
+        "exp.e2.eyebrow": "Mode cooperatiu",
+        "exp.e2.title": "Solo · Estil Alpí · Estil Clàssic",
+        "exp.e2.text":
+          "Tres maneres de col·laborar i superar la muntanya segons el nivell de profunditat que vulguis afegir.",
+        "exp.e3.eyebrow": "Complexitat progressiva",
+        "exp.e3.title": "Més regles, més components, més muntanya",
+        "exp.e3.text":
+          "L'experiència creix a mesura que afegeixes noves capes de joc i decisió.",
 
-        "buy.kicker": "Cim · 3.355 m",
-        "buy.title": "Dos cims, dues experiències de joc",
-        "buy.intro":
-          "Descobreix la primera cordada de Summit Series i tria la teva muntanya.",
-        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
-        "buy.mp.title": "Ascensió a un gran cim pirinenc",
-        "buy.mp.text":
-          "Una experiència de muntanya amb energia, clima i gestió tàctica al voltant del massís de Monte Perdido.",
-        "buy.mp.cta": "Veure joc",
-        "buy.pf.alt": "Objectiu Pedraforca 2.506",
-        "buy.pf.title": "La muntanya més emblemàtica de Catalunya",
-        "buy.pf.text":
-          "Una edició amb forta identitat territorial, cultural i excursionista inspirada en el Pedraforca.",
-        "buy.pf.cta": "Veure joc",
+        "exp.showcase.kicker": "Espais visuals temàtics",
+        "exp.showcase.title": "Espais per a banners, mockups, cartes i paisatge",
+        "exp.showcase.text":
+          "Zones reservades per reforçar la tematització d'alpinisme, ascensió i coneixement del joc.",
+
+        "how.kicker": "Zona tècnica · 2.506 m",
+        "how.title": "El que transmet cada joc Summit Series",
+        "how.intro":
+          "Cada edició combina joc, territori, divulgació i valors de muntanya.",
+        "how.s1.title": "Identitat territorial",
+        "how.s1.text":
+          "Muntanyes, paisatges, cultura i elements propis de cada zona.",
+        "how.s2.title": "Sensibilització ambiental",
+        "how.s2.text":
+          "Fauna, flora i entorn natural presents dins de l'experiència de joc.",
+        "how.s3.title": "Bones pràctiques a la muntanya",
+        "how.s3.text":
+          "Prevenció, preparació, previsió meteorològica, material adequat, ruta segons capacitats i gestió de l'energia.",
+        "how.s4.title": "Valors i patrimoni cultural",
+        "how.s4.text":
+          "Transmissió de valors de muntanya i divulgació cultural de cada territori.",
+
+        "rules.kicker": "Atac al cim · 3.000 m",
+        "rules.title": "Informació bàsica de regles i mecàniques",
+        "rules.intro":
+          "Gestió de mà, col·lecció de mazo i progressió tàctica cap al cim.",
+        "rules.r1.title": "Gestió de mà",
+        "rules.r1.text":
+          "Juga cartes d'avanç, clima, equip, esdeveniment o suport en el moment oportú.",
+        "rules.r2.title": "Col·lecció de mazo",
+        "rules.r2.text":
+          "Cada partida es pot ampliar en profunditat amb noves cartes, regles i combinacions.",
+        "rules.r3.title": "Ritme d'ascensió",
+        "rules.r3.text":
+          "La muntanya obliga a adaptar-se, estalviar energia i atacar el cim en l'instant correcte.",
+        "rules.cta1": "Veure Monte Perdido",
+        "rules.cta2": "Veure Pedraforca",
+
+        "cta.kicker": "Cim · 3.355 m",
+        "cta.title": "Compra diferenciada dels dos jocs",
+        "cta.text":
+          "Espai per enllaçar la compra de cada joc i mostrar les dues caixes com a producte final.",
+        "cta.buy1": "Comprar Monte Perdido",
+        "cta.buy2": "Comprar Pedraforca",
+        "cta.box1": "Posició imatge caixa Monte Perdido",
+        "cta.box2": "Posició imatge caixa Pedraforca",
 
         "footer.instagram": "@playsummitgames",
         "footer.email": "info@playsummitgames.es",
