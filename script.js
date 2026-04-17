@@ -105,6 +105,23 @@ document.addEventListener("DOMContentLoaded", () => {
     applyTranslations(normalized);
   }
 
+  function revealOnScroll() {
+    const revealTargets = document.querySelectorAll(
+      ".hero-stage-card, .premium-card, .step-card, .floating-mockup, .metric-card"
+    );
+
+    if (!revealTargets.length) return;
+
+    revealTargets.forEach((element) => {
+      const rect = element.getBoundingClientRect();
+      const inView = rect.top <= window.innerHeight * 0.88;
+
+      if (inView) {
+        element.classList.add("is-visible");
+      }
+    });
+  }
+
   switchButtons.forEach((button) => {
     button.addEventListener("click", () => {
       setLanguage(button.dataset.lang);
@@ -113,7 +130,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   applyTranslations(getLanguage());
   updateActiveStop();
+  revealOnScroll();
 
-  window.addEventListener("scroll", updateActiveStop);
-  window.addEventListener("resize", updateActiveStop);
+  window.addEventListener("scroll", () => {
+    updateActiveStop();
+    revealOnScroll();
+  });
+
+  window.addEventListener("resize", () => {
+    updateActiveStop();
+    revealOnScroll();
+  });
 });
