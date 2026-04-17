@@ -1674,3 +1674,50 @@ p {
     width: 100%;
   }
 }
+
+
+/* V3.1 content/layout adjustments */
+.section-heading.stacked { margin-bottom: 24px; }
+.hero-copy { max-width: 660px; }
+.hero-metrics { display:none; }
+.premium-grid.two-col { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.with-slot { position: relative; }
+.slot-chip {
+  position: absolute; left: 18px; bottom: 16px; z-index: 6; padding: 8px 10px; border-radius: 999px;
+  font-size: 0.68rem; font-weight: 900; letter-spacing: 0.08em; color: #182128;
+  background: rgba(255,255,255,0.88); border: 1px solid rgba(24,33,40,0.08);
+}
+.slot-label {
+  position: absolute; left: 18px; top: 18px; z-index: 6; padding: 8px 10px; border-radius: 999px;
+  font-size: 0.68rem; font-weight: 900; letter-spacing: 0.08em; color: #ffffff;
+  background: rgba(15,24,29,0.52); border: 1px solid rgba(255,255,255,0.18);
+}
+.slot-label.dark { color:#182128; background: rgba(255,255,255,0.84); border-color: rgba(24,33,40,0.08); }
+.card-ribbon {
+  position:absolute; left:18px; bottom:18px; right:18px; z-index:4; text-align:center; padding:10px 12px;
+  border-radius:999px; background: rgba(255,255,255,0.14); border:1px dashed rgba(255,255,255,0.24);
+  font-size:0.72rem; font-weight:900; letter-spacing:0.1em; color:rgba(255,255,255,0.92);
+}
+.banner-step { display:flex; align-items:center; justify-content:center; background: rgba(255,255,255,0.16); }
+.slot-banner {
+  width:100%; min-height: 180px; border-radius: 18px; display:flex; align-items:center; justify-content:center;
+  border:1px dashed rgba(24,33,40,0.18); background: linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.46));
+  color:#182128; font-size:0.84rem; font-weight:900; letter-spacing:0.12em; text-align:center; padding:18px;
+}
+.buy-grid { margin-top: 24px; }
+.buy-card { display:flex; flex-direction:column; }
+.buy-visual {
+  min-height: 260px; border-radius: 22px; position:relative; overflow:hidden; margin-bottom: 18px;
+  background: linear-gradient(180deg, rgba(225,228,232,0.86), rgba(243,245,247,0.96)); border: 1px solid rgba(24,33,40,0.08);
+}
+.buy-visual::before {
+  content:""; position:absolute; inset:0; background-image: repeating-radial-gradient(circle at 50% 50%, rgba(24,33,40,0.05) 0 1px, transparent 1px 18px); opacity:0.45;
+}
+.buy-visual-monte { background: linear-gradient(180deg, rgba(214,222,230,0.92), rgba(244,246,248,0.98)); }
+.buy-visual-pedra { background: linear-gradient(180deg, rgba(228,225,219,0.92), rgba(247,246,244,0.98)); }
+.value-strip { margin-bottom: 24px; }
+.rules-brief { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.cta-actions.split { margin-top: 24px; }
+@media (max-width:1240px) {
+  .premium-grid.two-col, .rules-brief { grid-template-columns:1fr; }
+}
