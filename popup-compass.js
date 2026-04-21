@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const DEFAULT_STATE = {
     left: 24,
     top: 148,
-    width: 220,
-    height: 282,
-    collapsed: false
+    width: 240,
+    height: 320,
+    collapsed: false,
+    closed: false
   };
 
   const savedState = loadState();
@@ -23,17 +24,24 @@ document.addEventListener("DOMContentLoaded", () => {
   popup.innerHTML = `
     <div class="floating-compass-popup__header">
       <div class="floating-compass-popup__title">Brújula</div>
+
       <div class="floating-compass-popup__actions">
         <button type="button" class="floating-compass-popup__button" data-action="reset" aria-label="Recolocar brújula">↺</button>
         <button type="button" class="floating-compass-popup__button" data-action="toggle" aria-label="Mostrar u ocultar brújula">−</button>
+        <button type="button" class="floating-compass-popup__button floating-compass-popup__button--close" data-action="close" aria-label="Cerrar brújula">×</button>
       </div>
     </div>
+
     <div class="floating-compass-popup__body">
       <div class="floating-compass-popup__meta">
         <span class="floating-compass-popup__alt">ALT 0 m</span>
       </div>
+
       <div class="floating-compass-popup__compass-wrap"></div>
-      <div class="floating-compass-popup__hint">Arrastra la ventana y cambia su tamaño desde la esquina inferior derecha.</div>
+
+      <div class="floating-compass-popup__hint">
+        Arrastra la ventana, cambia su tamaño desde la esquina inferior derecha o ciérrala con ×.
+      </div>
     </div>
   `;
 
@@ -44,16 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
   const popupCompassWrap = popup.querySelector(".floating-compass-popup__compass-wrap");
   const toggleButton = popup.querySelector('[data-action="toggle"]');
   const resetButton = popup.querySelector('[data-action="reset"]');
+  const closeButton = popup.querySelector('[data-action="close"]');
 
   const clonedCompass = headerCompass.cloneNode(true);
   const popupNeedleWrap = clonedCompass.querySelector("#compassNeedleWrap");
+
   if (popupNeedleWrap) {
     popupNeedleWrap.id = "popupCompassNeedleWrap";
   }
+
   popupCompassWrap.appendChild(clonedCompass);
 
   applyState(savedState);
   updateCollapsedState(savedState.collapsed);
+
+  if (savedState.closed) {
+    popup.style.display = "none";
+  }
+
   updateCompassFromScroll();
   bindDragging();
   bindResizingPersistence();
@@ -65,14 +81,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   resetButton.addEventListener("click", () => {
-    applyState({ ...DEFAULT_STATE });
+    popup.style.display = "";
+    applyState({ ...DEFAULT_STATE, closed: false });
     updateCollapsedState(false);
     persistState();
+  });
+
+  closeButton.addEventListener("click", () => {
+    popup.style.display = "none";
+    persistState(true);
   });
 
   window.addEventListener("scroll", updateCompassFromScroll, { passive: true });
   window.addEventListener("resize", () => {
     keepPopupInViewport();
+    updateCompassScale();
     updateCompassFromScroll();
     persistState();
   });
@@ -108,6 +131,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function updateCompassScale() {
+    if (!clonedCompass || popup.classList.contains("is-collapsed")) return;
+
+    const bodyStyles = window.getComputedStyle(popupBody);
+    const wrapStyles = window.getComputedStyle(popupCompassWrap);
+
+    const availableWidth =
+      popup.clientWidth -
+      parseFloat(bodyStyles.paddingLeft) -
+      parseFloat(bodyStyles.paddingRight) -
+      parseFloat(wrapStyles.paddingLeft || 0) -
+      parseFloat(wrapStyles.paddingRight || 0);
+
+    const metaHeight = popup.querySelector(".floating-compass-popup__meta")?.offsetHeight || 0;
+    const hintHeight = popup.querySelector(".floating-compass-popup__hint")?.offsetHeight || 0;
+    const gap = 24;
+    const availableHeight =
+      popup.clientHeight -
+      popup.querySelector(".floating-compass-popup__header").offsetHeight -
+      parseFloat(bodyStyles.paddingTop) -
+      parseFloat(bodyStyles.paddingBottom) -
+      metaHeight -
+      hintHeight -
+      gap;
+
+    const size = Math.max(120, Math.min(availableWidth, availableHeight, 320));
+
+    clonedCompass.style.width = `${size}px`;
+    clonedCompass.style.height = `${size}px`;
+  }
+
   function bindDragging() {
     const dragHandle = popup.querySelector(".floating-compass-popup__header");
     let startX = 0;
@@ -134,12 +188,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     dragHandle.addEventListener("pointerdown", (event) => {
       if (event.target.closest("button")) return;
+      if (popup.style.display === "none") return;
+
       dragging = true;
       popup.classList.add("is-dragging");
       startX = event.clientX;
       startY = event.clientY;
       startLeft = popup.offsetLeft;
       startTop = popup.offsetTop;
+
       window.addEventListener("pointermove", onPointerMove);
       window.addEventListener("pointerup", onPointerUp);
     });
@@ -149,9 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let resizeFrame = null;
 
     const observer = new ResizeObserver(() => {
+      if (popup.style.display === "none") return;
+
       if (resizeFrame) cancelAnimationFrame(resizeFrame);
       resizeFrame = requestAnimationFrame(() => {
         keepPopupInViewport();
+        updateCompassScale();
         persistState();
       });
     });
@@ -160,12 +220,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function applyState(state) {
-    const nextWidth = clamp(state.width, 180, Math.min(420, window.innerWidth - 16));
-    const nextHeight = clamp(state.height, 210, Math.min(520, window.innerHeight - 16));
+    const maxWidth = Math.max(180, Math.min(460, window.innerWidth - 16));
+    const maxHeight = Math.max(220, Math.min(560, window.innerHeight - 16));
+
+    const nextWidth = clamp(state.width, 200, maxWidth);
+    const nextHeight = clamp(state.height, 250, maxHeight);
 
     popup.style.width = `${nextWidth}px`;
     popup.style.height = `${nextHeight}px`;
     setPosition(state.left, state.top);
+    updateCompassScale();
   }
 
   function updateCollapsedState(collapsed) {
@@ -173,7 +237,10 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleButton.textContent = collapsed ? "+" : "−";
     toggleButton.setAttribute("aria-label", collapsed ? "Mostrar brújula" : "Ocultar brújula");
     popupBody.hidden = collapsed;
-    persistState();
+
+    if (!collapsed) {
+      updateCompassScale();
+    }
   }
 
   function setPosition(left, top) {
@@ -190,13 +257,14 @@ document.addEventListener("DOMContentLoaded", () => {
     setPosition(popup.offsetLeft, popup.offsetTop);
   }
 
-  function persistState() {
+  function persistState(forceClosed = null) {
     const state = {
-      left: popup.offsetLeft,
-      top: popup.offsetTop,
-      width: popup.offsetWidth,
-      height: popup.offsetHeight,
-      collapsed: popup.classList.contains("is-collapsed")
+      left: popup.offsetLeft || DEFAULT_STATE.left,
+      top: popup.offsetTop || DEFAULT_STATE.top,
+      width: popup.offsetWidth || DEFAULT_STATE.width,
+      height: popup.offsetHeight || DEFAULT_STATE.height,
+      collapsed: popup.classList.contains("is-collapsed"),
+      closed: forceClosed !== null ? forceClosed : popup.style.display === "none"
     };
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
@@ -221,8 +289,8 @@ document.addEventListener("DOMContentLoaded", () => {
         position: fixed;
         left: 24px;
         top: 148px;
-        width: 220px;
-        height: 282px;
+        width: 240px;
+        height: 320px;
         z-index: 1400;
         display: flex;
         flex-direction: column;
@@ -234,8 +302,8 @@ document.addEventListener("DOMContentLoaded", () => {
         box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
         backdrop-filter: blur(14px);
         color: #ffffff;
-        min-width: 180px;
-        min-height: 210px;
+        min-width: 200px;
+        min-height: 250px;
       }
 
       .floating-compass-popup.is-dragging {
@@ -251,6 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
         padding: 12px 14px 10px;
         border-bottom: 1px solid rgba(255,255,255,0.08);
         cursor: grab;
+        flex: 0 0 auto;
       }
 
       .floating-compass-popup__title {
@@ -281,26 +350,38 @@ document.addEventListener("DOMContentLoaded", () => {
         font: inherit;
         font-weight: 900;
         line-height: 1;
+        flex: 0 0 auto;
       }
 
       .floating-compass-popup__button:hover {
         background: rgba(255,255,255,0.14);
       }
 
+      .floating-compass-popup__button--close {
+        background: rgba(143, 35, 35, 0.32);
+        border-color: rgba(255,255,255,0.18);
+      }
+
+      .floating-compass-popup__button--close:hover {
+        background: rgba(143, 35, 35, 0.52);
+      }
+
       .floating-compass-popup__body {
-        flex: 1;
+        flex: 1 1 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         gap: 12px;
         padding: 12px 14px 16px;
+        min-height: 0;
       }
 
       .floating-compass-popup__meta {
         width: 100%;
         display: flex;
         justify-content: center;
+        flex: 0 0 auto;
       }
 
       .floating-compass-popup__alt {
@@ -318,47 +399,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       .floating-compass-popup__compass-wrap {
-        flex: 1;
+        flex: 1 1 auto;
         width: 100%;
-        min-height: 0;
+        min-height: 120px;
         display: flex;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
       }
 
       .floating-compass-popup__compass-wrap .compass-ring {
-        width: min(100%, 178px);
-        aspect-ratio: 1 / 1;
-        height: auto;
+        position: relative;
+        flex: 0 0 auto;
+        transform-origin: center center;
       }
-
-      .floating-compass-popup__compass-wrap .compass-outer-ring,
-      .floating-compass-popup__compass-wrap .compass-ticks,
-      .floating-compass-popup__compass-wrap .compass-spokes,
-      .floating-compass-popup__compass-wrap .compass-needle-wrap,
-      .floating-compass-popup__compass-wrap .compass-cardinal,
-      .floating-compass-popup__compass-wrap .compass-face,
-      .floating-compass-popup__compass-wrap .compass-inner-rim {
-        inset: auto;
-      }
-
-      .floating-compass-popup__compass-wrap .compass-outer-ring { inset: 0; }
-      .floating-compass-popup__compass-wrap .compass-ticks { inset: 5px; }
-      .floating-compass-popup__compass-wrap .compass-inner-rim { inset: 7px; }
-      .floating-compass-popup__compass-wrap .compass-face { inset: 8px; }
-      .floating-compass-popup__compass-wrap .compass-spokes,
-      .floating-compass-popup__compass-wrap .compass-needle-wrap { inset: 0; }
 
       .floating-compass-popup__hint {
         font-size: 0.72rem;
         line-height: 1.35;
         text-align: center;
         color: rgba(255,255,255,0.72);
+        flex: 0 0 auto;
       }
 
       .floating-compass-popup.is-collapsed {
         width: 200px !important;
         height: auto !important;
+        min-height: 0;
         resize: none;
       }
 
@@ -370,8 +437,8 @@ document.addEventListener("DOMContentLoaded", () => {
         .floating-compass-popup {
           left: 12px;
           top: 12px;
-          width: 188px;
-          height: 244px;
+          width: 210px;
+          height: 280px;
         }
 
         .floating-compass-popup__hint {
