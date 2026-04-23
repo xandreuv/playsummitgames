@@ -1881,3 +1881,188 @@ p {
 @media (max-width:1240px) {
   .premium-grid.two-col, .rules-brief { grid-template-columns:1fr; }
 }
+
+/* Banda panorámica continua entre sección 2 y 3 */
+.summit-panorama-band {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  background: linear-gradient(180deg, #476452 0%, #5d6650 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(24, 33, 40, 0.12);
+}
+
+.summit-panorama-band::before,
+.summit-panorama-band::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(8vw, 120px);
+  z-index: 4;
+  pointer-events: none;
+}
+
+.summit-panorama-band::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(71, 100, 82, 0.92) 0%, rgba(71, 100, 82, 0) 100%);
+}
+
+.summit-panorama-band::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(93, 102, 80, 0.92) 0%, rgba(93, 102, 80, 0) 100%);
+}
+
+.summit-panorama-viewport {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.summit-panorama-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: summitPanoramaScroll 80s linear infinite;
+}
+
+.summit-panorama-item {
+  position: relative;
+  flex: 0 0 auto;
+  width: max(2200px, 160vw);
+}
+
+.summit-panorama-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 180px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.summit-panorama-hotspot {
+  position: absolute;
+  z-index: 5;
+  display: block;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Hotspots invisibles sobre las montañas */
+.hotspot-monte {
+  left: 45.8%;
+  top: 15%;
+  width: 9.2%;
+  height: 52%;
+}
+
+.hotspot-pedra {
+  left: 77.8%;
+  top: 18%;
+  width: 8.8%;
+  height: 52%;
+}
+
+/* Opcional: ligera ayuda visual solo al pasar el ratón */
+.summit-panorama-hotspot:hover,
+.summit-panorama-hotspot:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.28);
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes summitPanoramaScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .summit-panorama-track {
+    animation: none;
+  }
+}
+
+@media (max-width: 1180px) {
+  .summit-panorama-item {
+    width: max(1900px, 190vw);
+  }
+
+  .hotspot-monte {
+    left: 45.6%;
+    width: 9.6%;
+  }
+
+  .hotspot-pedra {
+    left: 77.6%;
+    width: 9.2%;
+  }
+}
+
+@media (max-width: 860px) {
+  .summit-panorama-band::before,
+  .summit-panorama-band::after {
+    width: 44px;
+  }
+
+  .summit-panorama-track {
+    animation-duration: 60s;
+  }
+
+  .summit-panorama-item {
+    width: max(1700px, 260vw);
+  }
+
+  .summit-panorama-image {
+    min-height: 132px;
+  }
+
+  .hotspot-monte {
+    left: 45.2%;
+    top: 12%;
+    width: 10.2%;
+    height: 58%;
+  }
+
+  .hotspot-pedra {
+    left: 77.2%;
+    top: 14%;
+    width: 9.8%;
+    height: 58%;
+  }
+}
+
+@media (max-width: 560px) {
+  .summit-panorama-item {
+    width: max(1500px, 320vw);
+  }
+
+  .summit-panorama-image {
+    min-height: 112px;
+  }
+
+  .summit-panorama-track {
+    animation-duration: 52s;
+  }
+}
