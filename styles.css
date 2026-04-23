@@ -507,9 +507,111 @@ a {
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
-  opacity: 0.16;
+  opacity: 0.18;
   mix-blend-mode: screen;
 }
+
+/* Variante para fondos beige intermedios */
+.topo-lines.topo-lines-beige {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.11;
+  mix-blend-mode: multiply;
+}
+
+/* Variante para fondos gris claro / blanco final */
+.topo-lines.topo-lines-light {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0.008)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+
+/* Textura de curvas de nivel por tipo de fondo */
+.section-hero .topo-lines,
+.section-valley .topo-lines,
+.section-games .topo-lines,
+.section-basecamp .topo-lines,
+.section-series .topo-lines,
+.section-first-rope .topo-lines {
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
+.section-experience .topo-lines,
+.section-refuge .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.11;
+  mix-blend-mode: multiply;
+}
+
+.section-how .topo-lines,
+.section-technical .topo-lines,
+.section-cta .topo-lines,
+.section-summit-attack .topo-lines,
+.section-top .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0.008)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+
+/* Fallback para landings Monte Perdido y Pedraforca */
+body[data-page="monte"] main > section.section:nth-of-type(1) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(2) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(3) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(1) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(2) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(3) .topo-lines {
+  opacity: 0.18;
+  mix-blend-mode: screen;
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(4) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(4) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.11;
+  mix-blend-mode: multiply;
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(5) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(6) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(7) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(5) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(6) .topo-lines,
+body[data-page="pedraforca"] main > section.section:nth-of-type(7) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0.008)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+
 
 .contour-grid {
   background:
