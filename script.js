@@ -142,3 +142,46 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll();
   });
 });
+ 
+const panoramaScroll = document.getElementById("summitPanoramaScroll");
+
+  if (panoramaScroll) {
+    let isPointerDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+
+    panoramaScroll.addEventListener("wheel", (event) => {
+      const hasHorizontalOverflow = panoramaScroll.scrollWidth > panoramaScroll.clientWidth;
+      if (!hasHorizontalOverflow) return;
+
+      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        event.preventDefault();
+        panoramaScroll.scrollLeft += event.deltaY;
+      }
+    }, { passive: false });
+
+    panoramaScroll.addEventListener("mousedown", (event) => {
+      isPointerDown = true;
+      panoramaScroll.classList.add("is-dragging");
+      startX = event.pageX - panoramaScroll.offsetLeft;
+      startScrollLeft = panoramaScroll.scrollLeft;
+    });
+
+    window.addEventListener("mouseup", () => {
+      isPointerDown = false;
+      panoramaScroll.classList.remove("is-dragging");
+    });
+
+    panoramaScroll.addEventListener("mouseleave", () => {
+      isPointerDown = false;
+      panoramaScroll.classList.remove("is-dragging");
+    });
+
+    panoramaScroll.addEventListener("mousemove", (event) => {
+      if (!isPointerDown) return;
+      event.preventDefault();
+      const x = event.pageX - panoramaScroll.offsetLeft;
+      const walk = (x - startX) * 1.15;
+      panoramaScroll.scrollLeft = startScrollLeft - walk;
+    });
+  }
