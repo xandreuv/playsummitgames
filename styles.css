@@ -532,33 +532,92 @@ a {
     radial-gradient(circle at 15% 72%, rgba(255,255,255,0.08), transparent 20%);
 }
 
-.section-hero {
+/* Landing principal */
+.section-hero,
+.section-valley {
   background:
     linear-gradient(180deg, rgba(10, 20, 18, 0.56) 0%, rgba(10, 20, 18, 0.18) 38%, rgba(10, 20, 18, 0.08) 100%),
     linear-gradient(180deg, #102920 0%, #1b3a30 100%);
 }
 
-.section-games {
-  background: linear-gradient(180deg, #29493c 0%, #405a49 100%);
+.section-games,
+.section-basecamp {
+  background: linear-gradient(180deg, #29493c 0%, #476452 100%);
 }
 
-.section-series {
-  background: linear-gradient(180deg, #54624c 0%, #676a55 100%);
+.section-series,
+.section-first-rope {
+  background: linear-gradient(180deg, #5d6650 0%, #77735f 100%);
 }
 
-.section-experience {
-  background: linear-gradient(180deg, #756d5f 0%, #86807a 100%);
+/* AQUÍ METEMOS EL BEIGE INTERMEDIO */
+.section-experience,
+.section-refuge {
+  background: linear-gradient(180deg, #8f8678 0%, #b6a992 100%);
 }
 
-.section-how {
-  background: linear-gradient(180deg, #b8c0c8 0%, #d2d9e0 100%);
+.section-how,
+.section-technical {
+  background: linear-gradient(180deg, #c8c5bc 0%, #dde0e3 100%);
   color: var(--text-dark);
 }
 
-.section-cta {
-  background: linear-gradient(180deg, #edf1f5 0%, #f7f9fb 100%);
+.section-cta,
+.section-summit-attack {
+  background: linear-gradient(180deg, #e6eaee 0%, #f3f5f7 100%);
   color: var(--text-dark);
 }
+
+.section-top {
+  background: linear-gradient(180deg, #f2f4f6 0%, #fbfcfd 100%);
+  color: var(--text-dark);
+}
+
+/* Fallback for páginas con 7 secciones aunque hayan cambiado clases o nombres */
+body[data-page="monte"] main > section.section:nth-of-type(1),
+body[data-page="pedraforca"] main > section.section:nth-of-type(1) {
+  background:
+    linear-gradient(180deg, rgba(10, 20, 18, 0.56) 0%, rgba(10, 20, 18, 0.18) 38%, rgba(10, 20, 18, 0.08) 100%),
+    linear-gradient(180deg, #102920 0%, #1b3a30 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(2),
+body[data-page="pedraforca"] main > section.section:nth-of-type(2) {
+  background: linear-gradient(180deg, #29493c 0%, #476452 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(3),
+body[data-page="pedraforca"] main > section.section:nth-of-type(3) {
+  background: linear-gradient(180deg, #5d6650 0%, #77735f 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(4),
+body[data-page="pedraforca"] main > section.section:nth-of-type(4) {
+  background: linear-gradient(180deg, #8f8678 0%, #b6a992 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(5),
+body[data-page="pedraforca"] main > section.section:nth-of-type(5) {
+  background: linear-gradient(180deg, #c8c5bc 0%, #dde0e3 100%);
+  color: var(--text-dark);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(6),
+body[data-page="pedraforca"] main > section.section:nth-of-type(6) {
+  background: linear-gradient(180deg, #e6eaee 0%, #f3f5f7 100%);
+  color: var(--text-dark);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(7),
+body[data-page="pedraforca"] main > section.section:nth-of-type(7) {
+  background: linear-gradient(180deg, #f2f4f6 0%, #fbfcfd 100%);
+  color: var(--text-dark);
+}
+
 
 h1, h2, h3, h4 {
   margin-top: 0;
