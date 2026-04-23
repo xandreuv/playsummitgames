@@ -502,14 +502,13 @@ a {
 
 .topo-lines {
   background:
-    radial-gradient(circle at 18% 22%, rgba(255,255,255,0.08), transparent 28%),
-    radial-gradient(circle at 82% 28%, rgba(255,255,255,0.06), transparent 28%),
-    repeating-radial-gradient(
-      circle at 50% 50%,
-      rgba(255,255,255,0.04) 0 1px,
-      transparent 1px 16px
-    );
-  opacity: 0.9;
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.16;
+  mix-blend-mode: screen;
 }
 
 .contour-grid {
