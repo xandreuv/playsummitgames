@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const stops = document.querySelectorAll(".altitude-stop");
   const currentAltitude = document.querySelector(".altitude-current-value");
   const rulerFill = document.querySelector(".ruler-fill");
-  const compassNeedleWrap = document.getElementById("compassNeedleWrap");
   const metaDescription = document.querySelector('meta[name="description"]');
   const pageKey = document.body.dataset.page;
   const htmlEl = document.documentElement;
   const switchButtons = document.querySelectorAll(".lang-switch-button");
   const translations = window.PSG_TRANSLATIONS || {};
+  const panoramaScroll = document.getElementById("summitPanoramaScroll");
 
   function updateActiveStop() {
     if (!sections.length || !stops.length) return;
@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeId = sections[0].id;
     let activeIndex = 0;
     let activeMeter = "ALT 0 m";
-    let activeBearing = 0;
 
     sections.forEach((section, index) => {
       const rect = section.getBoundingClientRect();
@@ -35,9 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (meterEl) {
           activeMeter = `ALT ${meterEl.textContent.trim()}`;
         }
-
-        const bearing = parseFloat(stop.dataset.bearing || "0");
-        activeBearing = Number.isFinite(bearing) ? bearing : 0;
       }
     });
 
@@ -52,10 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const minFillHeight = 14;
       const fillHeight = minFillHeight + (maxFillHeight - minFillHeight) * progressRatio;
       rulerFill.style.height = `${fillHeight}px`;
-    }
-
-    if (compassNeedleWrap) {
-      compassNeedleWrap.style.transform = `rotate(${activeBearing}deg)`;
     }
   }
 
@@ -72,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const strings = current.strings || {};
 
     document.title = current.title;
+
     if (metaDescription) {
       metaDescription.setAttribute("content", current.description);
     }
@@ -122,43 +115,40 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  switchButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setLanguage(button.dataset.lang);
+  function initLanguageSwitch() {
+    if (!switchButtons.length) return;
+
+    switchButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+      });
     });
-  });
 
-  applyTranslations(getLanguage());
-  updateActiveStop();
-  revealOnScroll();
+    applyTranslations(getLanguage());
+  }
 
-  window.addEventListener("scroll", () => {
-    updateActiveStop();
-    revealOnScroll();
-  });
+  function initPanoramaScroll() {
+    if (!panoramaScroll) return;
 
-  window.addEventListener("resize", () => {
-    updateActiveStop();
-    revealOnScroll();
-  });
-});
- 
-const panoramaScroll = document.getElementById("summitPanoramaScroll");
-
-  if (panoramaScroll) {
     let isPointerDown = false;
     let startX = 0;
     let startScrollLeft = 0;
 
-    panoramaScroll.addEventListener("wheel", (event) => {
-      const hasHorizontalOverflow = panoramaScroll.scrollWidth > panoramaScroll.clientWidth;
-      if (!hasHorizontalOverflow) return;
+    panoramaScroll.addEventListener(
+      "wheel",
+      (event) => {
+        const hasHorizontalOverflow =
+          panoramaScroll.scrollWidth > panoramaScroll.clientWidth;
 
-      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-        event.preventDefault();
-        panoramaScroll.scrollLeft += event.deltaY;
-      }
-    }, { passive: false });
+        if (!hasHorizontalOverflow) return;
+
+        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+          event.preventDefault();
+          panoramaScroll.scrollLeft += event.deltaY;
+        }
+      },
+      { passive: false }
+    );
 
     panoramaScroll.addEventListener("mousedown", (event) => {
       isPointerDown = true;
@@ -184,4 +174,22 @@ const panoramaScroll = document.getElementById("summitPanoramaScroll");
       const walk = (x - startX) * 1.15;
       panoramaScroll.scrollLeft = startScrollLeft - walk;
     });
+
+    panoramaScroll.addEventListener("touchstart", () => {
+      panoramaScroll.classList.remove("is-dragging");
+    }, { passive: true });
   }
+
+  function onScrollOrResize() {
+    updateActiveStop();
+    revealOnScroll();
+  }
+
+  initLanguageSwitch();
+  initPanoramaScroll();
+  updateActiveStop();
+  revealOnScroll();
+
+  window.addEventListener("scroll", onScrollOrResize);
+  window.addEventListener("resize", onScrollOrResize);
+});
