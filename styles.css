@@ -663,7 +663,7 @@ body[data-page="monte"] main > section.section:nth-of-type(4) .topo-lines {
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
-  opacity: 0.13;
+  opacity: 0.14;
   mix-blend-mode: multiply;
 }
 
@@ -678,7 +678,7 @@ body[data-page="monte"] main > section.section:nth-of-type(6) .topo-lines {
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
-  opacity: 0.10;
+  opacity: 0.18;
   mix-blend-mode: multiply;
 }
 
@@ -691,7 +691,7 @@ body[data-page="monte"] main > section.section:nth-of-type(7) .topo-lines {
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
-  opacity: 0.08;
+  opacity: 0.14;
   mix-blend-mode: multiply;
 }
 
