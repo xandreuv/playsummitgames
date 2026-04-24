@@ -507,7 +507,7 @@ a {
   background-repeat: no-repeat, repeat;
   background-position: center center, center center;
   background-size: cover, cover;
-  opacity: 0.18;
+  opacity: 0.16;
   mix-blend-mode: screen;
 }
 
@@ -633,44 +633,156 @@ body[data-page="pedraforca"] main > section.section:nth-of-type(7) .topo-lines {
     radial-gradient(circle at 15% 72%, rgba(255,255,255,0.08), transparent 20%);
 }
 
+/* Textura real de curvas de nivel:
+   activa en landing principal y también en Monte Perdido.
+   Pedraforca mantiene el comportamiento general salvo que luego quieras copiarlo también allí. */
+
+/* Verdes oscuros */
+body[data-page="index"] .section-hero .topo-lines,
+body[data-page="index"] .section-games .topo-lines,
+body[data-page="index"] .section-series .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(1) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(2) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(3) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.16;
+  mix-blend-mode: screen;
+}
+
+/* Beige intermedio */
+body[data-page="index"] .section-experience .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(4) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.13;
+  mix-blend-mode: multiply;
+}
+
+/* Gris claro */
+body[data-page="index"] .section-how .topo-lines,
+body[data-page="index"] .section-cta .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(5) .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(6) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.018), rgba(0,0,0,0.01)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.10;
+  mix-blend-mode: multiply;
+}
+
+/* Blanco final */
+body[data-page="index"] .section-top .topo-lines,
+body[data-page="monte"] main > section.section:nth-of-type(7) .topo-lines {
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.015), rgba(0,0,0,0.006)),
+    url("assets/textura-curvas-nivel.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+}
+
 /* Landing principal */
+
+/* Landing principal + compatibilidad con clases antiguas */
 .section-hero,
 .section-valley {
   background:
-    linear-gradient(180deg, rgba(10, 20, 18, 0.56) 0%, rgba(10, 20, 18, 0.18) 38%, rgba(10, 20, 18, 0.08) 100%),
-    linear-gradient(180deg, #102920 0%, #1b3a30 100%);
+    linear-gradient(180deg, rgba(10, 20, 18, 0.58) 0%, rgba(10, 20, 18, 0.18) 38%, rgba(10, 20, 18, 0.08) 100%),
+    linear-gradient(180deg, #102920 0%, #19382d 100%);
 }
 
 .section-games,
 .section-basecamp {
-  background: linear-gradient(180deg, #29493c 0%, #476452 100%);
+  background: linear-gradient(180deg, #27483a 0%, #47624f 100%);
 }
 
 .section-series,
 .section-first-rope {
-  background: linear-gradient(180deg, #5d6650 0%, #77735f 100%);
+  background: linear-gradient(180deg, #626a52 0%, #817763 100%);
 }
 
-/* AQUÍ METEMOS EL BEIGE INTERMEDIO */
+/* Beige intermedio claro y cálido */
 .section-experience,
 .section-refuge {
-  background: linear-gradient(180deg, #8f8678 0%, #b6a992 100%);
+  background: linear-gradient(180deg, #9b8d76 0%, #c4b59a 100%);
 }
 
+/* Gris cálido claro */
 .section-how,
 .section-technical {
-  background: linear-gradient(180deg, #c8c5bc 0%, #dde0e3 100%);
+  background: linear-gradient(180deg, #c7c2b8 0%, #d9dde0 100%);
   color: var(--text-dark);
 }
 
+/* Gris muy claro, todavía no blanco */
 .section-cta,
 .section-summit-attack {
-  background: linear-gradient(180deg, #e6eaee 0%, #f3f5f7 100%);
+  background: linear-gradient(180deg, #e2e6ea 0%, #eef1f3 100%);
   color: var(--text-dark);
 }
 
+/* Blanco final real, claramente distinto de la sección anterior */
 .section-top {
-  background: linear-gradient(180deg, #f2f4f6 0%, #fbfcfd 100%);
+  background: linear-gradient(180deg, #f6f7f8 0%, #ffffff 100%);
+  color: var(--text-dark);
+}
+
+/* Fallback por orden de sección para Monte Perdido y Pedraforca */
+body[data-page="monte"] main > section.section:nth-of-type(1),
+body[data-page="pedraforca"] main > section.section:nth-of-type(1) {
+  background:
+    linear-gradient(180deg, rgba(10, 20, 18, 0.58) 0%, rgba(10, 20, 18, 0.18) 38%, rgba(10, 20, 18, 0.08) 100%),
+    linear-gradient(180deg, #102920 0%, #19382d 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(2),
+body[data-page="pedraforca"] main > section.section:nth-of-type(2) {
+  background: linear-gradient(180deg, #27483a 0%, #47624f 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(3),
+body[data-page="pedraforca"] main > section.section:nth-of-type(3) {
+  background: linear-gradient(180deg, #626a52 0%, #817763 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(4),
+body[data-page="pedraforca"] main > section.section:nth-of-type(4) {
+  background: linear-gradient(180deg, #9b8d76 0%, #c4b59a 100%);
+  color: var(--text-light);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(5),
+body[data-page="pedraforca"] main > section.section:nth-of-type(5) {
+  background: linear-gradient(180deg, #c7c2b8 0%, #d9dde0 100%);
+  color: var(--text-dark);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(6),
+body[data-page="pedraforca"] main > section.section:nth-of-type(6) {
+  background: linear-gradient(180deg, #e2e6ea 0%, #eef1f3 100%);
+  color: var(--text-dark);
+}
+
+body[data-page="monte"] main > section.section:nth-of-type(7),
+body[data-page="pedraforca"] main > section.section:nth-of-type(7) {
+  background: linear-gradient(180deg, #f6f7f8 0%, #ffffff 100%);
   color: var(--text-dark);
 }
 
