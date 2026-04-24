@@ -1055,27 +1055,34 @@ p {
 
 /* BLOQUE INMERSIVO */
 .immersive-block {
-  margin-top: 100px;
-  height: 400px;
-  background: url('../assets/refugio-gameplay.webp') center/cover no-repeat;
+  margin-top: 120px;
+  min-height: 520px;
+  background: url('assets/refugio-gameplay.webp') center/cover no-repeat;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .immersive-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
+  background: linear-gradient(90deg, rgba(0,0,0,0.8), transparent);
 }
 
 .immersive-text {
-  margin-left: 10%;
-  max-width: 400px;
+  position: relative;
+  z-index: 2;
+  margin-left: 8%;
+  max-width: 420px;
 }
 
 .immersive-text h3 {
-  font-size: 32px;
+  font-family: Georgia, serif;
+  font-size: 42px;
+}
+
+.immersive-text span {
+  color: #d4a85a;
 }
 
 /* CONTENIDOS */
@@ -1085,21 +1092,20 @@ p {
 }
 
 .content-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
-  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.content-item {
+  width: 120px;
+  text-align: center;
 }
 
 .content-item img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.content-item span {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 
@@ -1676,6 +1682,20 @@ p {
   .showcase-strip {
     grid-template-columns: repeat(4, minmax(120px, 1fr));
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title-main {
+    font-size: 40px;
+  }
+
+  .cards-row {
+    height: 120px;
   }
 }
 
