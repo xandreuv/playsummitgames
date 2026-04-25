@@ -99,9 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function revealOnScroll() {
-    const revealTargets = document.querySelectorAll(
-      ".hero-stage-card, .premium-card, .step-card, .floating-mockup, .metric-card"
-    );
+  const revealTargets = document.querySelectorAll(
+    ".premium-card, .step-card, .metric-card"
+  );
 
     if (!revealTargets.length) return;
 
