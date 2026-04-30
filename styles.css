@@ -879,11 +879,53 @@ p {
 }
 
 /* HEADER */
-.products-header {
+.products-header.editorial {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 3;
+}
+/* línea vertical izquierda */
+.products-header.editorial::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 20px;
+  width: 2px;
+  height: 120px;
+  background: rgba(255,255,255,0.2);
 }
 
+.kicker-top {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 20px;
+}
+
+.title-main {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  color: #f3e9d2;
+  margin-bottom: 16px;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+
+.subtitle {
+  font-size: 14px;
+  letter-spacing: 5px;
+  color: #d4a85a;
+  margin-bottom: 18px;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background: #d4a85a;
+  margin: 0 auto;
+}
 .products-header .altitude {
   font-size: 14px;
   letter-spacing: 2px;
@@ -900,35 +942,6 @@ p {
   opacity: 0.8;
 }
 
-.products-header.editorial {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.kicker {
-  font-size: 12px;
-  letter-spacing: 3px;
-  opacity: 0.7;
-}
-
-.title-main {
-  font-family: Georgia, serif;
-  font-size: 64px;
-  margin: 10px 0;
-  color: #f3e9d2;
-}
-
-.subtitle {
-  letter-spacing: 4px;
-  color: #caa86a;
-}
-
-.divider {
-  width: 60px;
-  height: 2px;
-  background: #caa86a;
-  margin: 20px auto;
-}
 
 /* GRID */
 .products-grid {
@@ -945,12 +958,31 @@ p {
   border-radius: 12px;
   backdrop-filter: blur(6px);
 }
+.product-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
 
-.product-box {
-  width: 260px;
-  margin-bottom: 20px;
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
+.product-box {
+  width: 280px;
+  margin-bottom: 30px;
+}
+  filter:
+    drop-shadow(0 30px 40px rgba(0,0,0,0.4))
+    drop-shadow(0 10px 10px rgba(0,0,0,0.3));
+
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-box {
+  transform: translateY(-6px) scale(1.02);
+}
 .product-card h3 {
   font-size: 24px;
 }
@@ -964,27 +996,50 @@ p {
   margin: 10px 0;
 }
 
+
 /* CARTAS */
 .cards-row {
   position: relative;
-  height: 140px;
+  height: 160px;
   margin-top: 30px;
 }
 
 .card {
   position: absolute;
-  width: 110px;
-  transition: all 0.3s ease;
+  width: 120px;
+  border-radius: 14px;
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 18px 30px rgba(0,0,0,0.4);
 }
 
-.card:nth-child(1) { left: 0; transform: rotate(-10deg); }
-.card:nth-child(2) { left: 40px; z-index: 2; }
-.card:nth-child(3) { left: 80px; transform: rotate(10deg); }
-
+.card:nth-child(1) {
+  left: 0;
+  transform: rotate(-12deg);
 }
-/* HOVER */
+
+.card:nth-child(2) {
+  left: 60px;
+  z-index: 2;
+}
+
+.card:nth-child(3) {
+  left: 120px;
+  transform: rotate(12deg);
+}
+
 .card:hover {
-  transform: translateY(-15px) scale(1.1);
+  transform: translateY(-20px) scale(1.1);
+  z-index: 5;
+}
+
+.product-card:first-child h3 span {
+  color: #7ec3ff; /* azul Monte Perdido */
+}
+
+.product-card:last-child h3 span {
+  color: #f2a65a; /* naranja Pedraforca */
 }
 
 /* CTA */
@@ -1002,8 +1057,8 @@ p {
 
 /* BLOQUE INMERSIVO */
 .immersive-block {
-  margin-top: 120px;
-  min-height: 520px;
+  margin-top: 140px;
+  min-height: 560px;
   background: url('assets/refugio-gameplay.webp') center/cover no-repeat;
   position: relative;
   display: flex;
@@ -1013,7 +1068,7 @@ p {
 .immersive-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.8), transparent);
+  linear-gradient(90deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, transparent 70%);
 }
 
 .immersive-text {
@@ -1025,7 +1080,8 @@ p {
 
 .immersive-text h3 {
   font-family: Georgia, serif;
-  font-size: 42px;
+   font-size: 46px;
+  line-height: 1.1;
 }
 
 .immersive-text span {
@@ -1051,10 +1107,15 @@ p {
 }
 
 .content-item img {
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
+  border-radius: 14px;
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  }
 
+.content-item:hover img {
+  transform: translateY(-6px);
+}
 
 /* Resto layout */
 .section-heading {
