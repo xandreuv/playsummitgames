@@ -864,18 +864,36 @@ p {
 .section-products {
   background: linear-gradient(180deg, #1f3a2f 0%, #2e4a3a 100%);
   position: relative;
-  padding: 100px 0;
+  padding: 80px 20px;
   overflow: hidden;
 }
+
+.products-section {
+  animation: fadeIn 1s ease both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /* TEXTURA MONTAÑAS */
 .section-products::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('assets/mountain-texture.png') center/cover no-repeat;
-  opacity: 0.14;
-  pointer-events: none;
+  background: 
+    linear-gradient(to bottom, #1f3b2f, #163328),
+    url('assets/mountain-texture.png') 
+background-size: cover;
+opacity: 0.98;
 }
 
 /* HEADER */
@@ -1013,7 +1031,7 @@ p {
   position: absolute;
   width: 120px;
   border-radius: 14px;
-  transition: all 0.35s ease;
+  transition: all 0.4s ease;
 
   box-shadow:
     0 18px 30px rgba(0,0,0,0.4);
@@ -1035,8 +1053,8 @@ p {
 }
 
 .card:hover {
-  transform: translateY(-20px) scale(1.1);
-  z-index: 5;
+  transform: translateY(-25px) scale(1.08) rotate(0deg);
+  filter: brightness(1.1);
 }
 
 .product-card:first-child h3 span {
@@ -1062,7 +1080,7 @@ p {
 
 /* BLOQUE INMERSIVO */
 .immersive-block {
-  margin-top: 140px;
+  margin-top: 80px;
   min-height: 560px;
   background: url('assets/refugio-gameplay.webp') center/cover no-repeat;
   position: relative;
@@ -1117,6 +1135,10 @@ p {
 }
 
 .content-item {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 6px;
+  max-width: 140px;
   width: 120px;
   text-align: center;
 }
