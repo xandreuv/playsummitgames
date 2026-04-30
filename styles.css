@@ -874,16 +874,15 @@ p {
   position: absolute;
   inset: 0;
   background: url('assets/mountain-texture.png') center/cover no-repeat;
-  opacity: 0.08;
+  opacity: 0.14;
   pointer-events: none;
 }
 
 /* HEADER */
 .products-header.editorial {
   text-align: center;
-  margin-bottom: 90px;
-  position: relative;
-  z-index: 3;
+  margin: 0 auto 60px auto;
+  max-width: 900px;
 }
 /* línea vertical izquierda */
 .products-header.editorial::before {
@@ -900,7 +899,7 @@ p {
   font-size: 11px;
   letter-spacing: 3px;
   color: rgba(255,255,255,0.7);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .title-main {
@@ -909,7 +908,7 @@ p {
   line-height: 1.05;
   letter-spacing: 1px;
   color: #f3e9d2;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   text-shadow: 0 8px 30px rgba(0,0,0,0.35);
 }
 
@@ -917,7 +916,7 @@ p {
   font-size: 14px;
   letter-spacing: 5px;
   color: #d4a85a;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 
 .divider {
@@ -969,9 +968,15 @@ p {
     inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
+.product-box-wrapper {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
 .product-box {
-  width: 280px;
-  margin-bottom: 30px;
+  width: 300px;
+  margin-bottom: 10px;
 }
   filter:
     drop-shadow(0 30px 40px rgba(0,0,0,0.4))
@@ -1000,8 +1005,8 @@ p {
 /* CARTAS */
 .cards-row {
   position: relative;
-  height: 160px;
-  margin-top: 30px;
+  height: 140px;
+  margin-top: -40px;
 }
 
 .card {
@@ -1090,7 +1095,7 @@ p {
 
 /* CONTENIDOS */
 .content-section {
-  margin-top: 80px;
+  margin-top: 60px;
   text-align: center;
 }
 
