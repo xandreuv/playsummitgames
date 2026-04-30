@@ -1693,15 +1693,22 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .title-main {
+   .title-main {
     font-size: 40px;
   }
 
+  .products-header.editorial::before {
+    display: none;
+  }
+
   .cards-row {
-    height: 120px;
+    height: 140px;
+  }
+
+  .card {
+    width: 100px;
   }
 }
-
 @media (max-width: 860px) {
   .site-header {
     position: relative;
