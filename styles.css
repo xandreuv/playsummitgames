@@ -1355,11 +1355,7 @@ opacity: 0.98;
     #dcd8cf 40%,
     #d2cec4 100%
   ),
-  url('assets/textura-curvas-nivel.png');
-
-  background-size: cover, 500px;
-  background-blend-mode: multiply;
-}
+  }
 
 /* transición superior (viene de sección anterior) */
 .seccion-5::before {
