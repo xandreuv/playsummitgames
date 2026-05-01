@@ -1179,6 +1179,8 @@ opacity: 0.98;
 .line.mp { background: #7ec3ff; }
 .line.pf { background: #f2a65a; }
 
+
+
 /* CTA */
 .cta {
   display: inline-block;
@@ -1198,6 +1200,129 @@ opacity: 0.98;
   color: #f2a65a;
   border-color: #f2a65a;
 }
+
+/* =========================
+   SECCIÓN 5 · ZONA TÉCNICA
+========================= */
+
+.seccion-5 {
+  background: #e7e5e0 url('/assets/textura-papel.png');
+  background-size: 600px;
+  padding: 60px 20px 50px;
+  text-align: center;
+}
+
+/* HEADER */
+.s5-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.s5-line {
+  height: 1px;
+  width: 120px;
+  background: linear-gradient(to right, transparent, #5f6f64, transparent);
+  opacity: 0.5;
+}
+
+.s5-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.s5-icon {
+  width: 28px;
+  opacity: 0.7;
+}
+
+.seccion-5 h2 {
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: #4f6658;
+  font-weight: 600;
+}
+
+/* GRID */
+.s5-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ITEM */
+.s5-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* CÍRCULO IMAGEN */
+.s5-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 6px;
+  background: #dcd8cf;
+  box-shadow: 
+    0 4px 10px rgba(0,0,0,0.12),
+    inset 0 0 0 2px rgba(255,255,255,0.6);
+  margin-bottom: 18px;
+}
+
+.s5-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.s5-item h3 {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #4f6658;
+  margin-bottom: 10px;
+}
+
+.s5-item p {
+  font-size: 13px;
+  color: #6e6e6e;
+  max-width: 200px;
+  line-height: 1.4;
+}
+
+/* DETALLE DECORATIVO INFERIOR */
+.s5-item::after {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background: url('/assets/icon-montana.svg') no-repeat center;
+  background-size: contain;
+  margin-top: 12px;
+  opacity: 0.5;
+}
+
+/* RESPONSIVE section 5*/
+@media (max-width: 1000px) {
+  .s5-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .s5-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 
 /* Resto layout */
 .section-heading {
