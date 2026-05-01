@@ -193,3 +193,16 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScrollOrResize);
   window.addEventListener("resize", onScrollOrResize);
 });
+
+// detectar entrada sección 5
+const seccion5 = document.querySelector('.seccion-5');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      seccion5.classList.add('visible');
+    }
+  });
+}, { threshold: 0.3 });
+
+if (seccion5) observer.observe(seccion5);
