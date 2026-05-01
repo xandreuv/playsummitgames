@@ -858,380 +858,184 @@ p {
 }
 
 /* ============================= */
-/* SECCIÓN 2 PRODUCTOS */
+/* SECTION 2 CLEAN */
 /* ============================= */
 
 .section-products {
-  background: linear-gradient(180deg, #1f3a2f 0%, #2e4a3a 100%);
   position: relative;
-  padding: 80px 20px;
-  overflow: hidden;
+  background: linear-gradient(180deg, #1f3a2f 0%, #2e4a3a 100%);
+  padding: 100px 0;
+  display: block;
 }
 
-
-.products-section {
-  animation: fadeIn 1s ease both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* TEXTURA MONTAÑAS */
-.section-products .mountain-texture {
-  background: url("assets/mountain-texture.png");
-  background-size: cover;
+/* TEXTURA */
+.texture-mountain {
+  position: absolute;
+  inset: 0;
+  background: url("assets/mountain-texture.png") center/cover;
   opacity: 0.12;
   pointer-events: none;
 }
 
-.section-products::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(to bottom, #1f3b2f, #163328),
-    url('assets/mountain-texture.png') 
-background-size: cover;
-opacity: 0.98;
-}
-
 /* HEADER */
-.products-header.editorial {
+.products-header {
   text-align: center;
-  margin: 0 auto 60px auto;
-  max-width: 900px;
-}
-/* línea vertical izquierda */
-.products-header.editorial::before {
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 20px;
-  width: 2px;
-  height: 120px;
-  background: rgba(255,255,255,0.2);
+  margin-bottom: 80px;
 }
 
-.kicker-top {
+.products-header .kicker {
   font-size: 11px;
   letter-spacing: 3px;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 10px;
-}
-
-.title-main {
-  font-family: Georgia, serif;
-  font-size: 64px;
-  line-height: 1.05;
-  letter-spacing: 1px;
-  color: #f3e9d2;
-  margin-bottom: 8px;
-  text-shadow: 0 8px 30px rgba(0,0,0,0.35);
-}
-
-.subtitle {
-  font-size: 14px;
-  letter-spacing: 5px;
-  color: #d4a85a;
-  margin-bottom: 10px;
-}
-
-.divider {
-  width: 40px;
-  height: 2px;
-  background: #d4a85a;
-  margin: 0 auto;
-}
-.products-header .altitude {
-  font-size: 14px;
-  letter-spacing: 2px;
   opacity: 0.7;
 }
 
-.products-header h2 {
-  font-size: 48px;
-  margin: 10px 0;
+.products-header .title {
+  font-family: Georgia, serif;
+  font-size: 64px;
+  color: #f3e9d2;
 }
 
-.products-header p {
-  font-size: 18px;
-  opacity: 0.8;
+.products-header .subtitle {
+  letter-spacing: 4px;
+  color: #d4a85a;
 }
 
+.products-header .divider {
+  width: 40px;
+  height: 2px;
+  background: #d4a85a;
+  margin: 10px auto;
+}
 
 /* GRID */
 .products-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
 }
 
-/* CARD */
-.product-card {
+/* PRODUCTO */
+.product {
   text-align: center;
-  padding: 20px 10px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
- 
 }
 
-.product-box-wrapper {
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-}
-
-.product-box {
-  display: block;
-  margin: 0 auto 10px auto;
+/* CAJA (SIN FONDO) */
+.box {
   max-width: 240px;
-  background: none;     
-  border-radius: 0;     
-  transition: transform 0.4s ease;
+  margin: auto;
 }
 
-.product-card:hover .product-box {
-  transform: translateY(-6px) scale(1.02);
-}
-.product-card h3 {
-  font-family: Georgia, "Times New Roman", serif;
+/* TITULOS */
+.product h3 {
+  font-family: Georgia, serif;
   font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
   color: #f3e9d2;
-  margin-bottom: 6px;
 }
 
-.product-card h3 span {
-  font-style: italic;
-}
-
-.product-card span {
-  font-weight: bold;
-}
-
-.alt {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  margin-bottom: 12px;
-  opacity: 0.9;
-}
-
-.line {
-  width: 60px;
-  height: 1px;
-  margin: 10px auto 16px auto;
-  position: relative;
-}
-
-.line::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -4px;
-  width: 8px;
-  height: 8px;
-  transform: translateX(-50%) rotate(45deg);
-  background: currentColor;
-}
-
-.product-alt {
-  color: #8fd3a7;
-  margin: 10px 0;
-}
-
-
-/* CARTAS */
-.cards-row {
-  position: relative;
-  height: 120px;
-  margin-top: -30px;
-  margin-bottom: 30px;
-}
-
-.card {
-  position: absolute;
-  width: 120px;
-  border-radius: 14px;
-  transition: all 0.4s ease;
-
-  box-shadow:
-    0 18px 30px rgba(0,0,0,0.4);
-}
-
-.card:nth-child(1) {
-  left: 0;
-  transform: rotate(-12deg);
-}
-
-.card:nth-child(2) {
-  left: 60px;
-  z-index: 2;
-}
-
-.card:nth-child(3) {
-  left: 120px;
-  transform: rotate(12deg);
-}
-
-.card:hover {
-  transform: translateY(-25px) scale(1.08) rotate(0deg);
-  filter: brightness(1.1);
-}
-
-.product-card:first-child h3 span {
-  color: #7ec3ff; /* azul Monte Perdido */
-}
-
-.product-card:last-child h3 span {
-  color: #f2a65a; /* naranja Pedraforca */
-}
-
-/* CTA */
-.link-cta {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #c7f0d8;
-  border-bottom: 1px solid transparent;
-}
-
-.link-cta:hover {
-  border-bottom: 1px solid #c7f0d8;
-}
-
-/* BLOQUE INMERSIVO */
-.immersive-block {
-  margin-top: 80px;
-  min-height: 560px;
-  background: url('assets/refugio-gameplay.webp') center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.immersive-overlay {
-  background:
-    linear-gradient(90deg,
-      rgba(0,0,0,0.85) 0%,
-      rgba(0,0,0,0.6) 35%,
-      rgba(0,0,0,0.2) 60%,
-      transparent 80%);
-}
-
-.immersive-text {
-  position: relative;
-  z-index: 2;
-  margin-left: 8%;
-  max-width: 420px;
-}
-
-.immersive-text h3 {
-  font-family: Georgia, serif;
-   font-size: 46px;
-  line-height: 1.1;
-}
-
-.immersive-text span {
-  color: #d4a85a;
-}
-
-/* CONTENIDOS */
-.content-section {
-  margin-top: 60px;
-  text-align: center;
-}
-
-.content-section h3 {
-  font-family: Georgia, serif;
-  font-size: 32px;
-  letter-spacing: 1px;
-  margin-bottom: 40px;
-}
-
-.content-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.content-item {
-  font-size: 12px;
-  opacity: 0.7;
-  margin-top: 6px;
-  max-width: 140px;
-  width: 120px;
-  text-align: center;
-}
-
-.content-item img {
-  width: 120px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow:
-    0 12px 25px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-  }
-
-.content-item:hover img {
-  transform: translateY(-6px);
-}
-
-
-/* colores */
 .mp { color: #7ec3ff; }
 .pf { color: #f2a65a; }
 
-/* altitud */
+/* ALT */
 .alt {
-  font-size: 14px;
+  font-size: 16px;
   opacity: 0.8;
-  margin-bottom: 6px;
 }
 
-/* línea decorativa */
+/* LINEA */
 .line {
-  width: 40px;
+  width: 50px;
   height: 2px;
-  margin: 10px auto 14px auto;
+  margin: 10px auto;
 }
 
 .line.mp { background: #7ec3ff; }
 .line.pf { background: #f2a65a; }
 
-
-
 /* CTA */
 .cta {
   display: inline-block;
   margin-top: 10px;
-  font-size: 14px;
-  text-decoration: none;
   border-bottom: 1px solid;
-  padding-bottom: 2px;
 }
 
-.cta.mp {
-  color: #7ec3ff;
-  border-color: #7ec3ff;
+.cta.mp { color: #7ec3ff; }
+.cta.pf { color: #f2a65a; }
+
+/* CARTAS */
+.cards {
+  position: relative;
+  height: 130px;
+  margin-top: 20px;
 }
 
-.cta.pf {
-  color: #f2a65a;
-  border-color: #f2a65a;
+.cards img {
+  position: absolute;
+  width: 110px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  filter: brightness(1.15);
 }
+
+.cards img:nth-child(1) { left: 0; transform: rotate(-12deg); }
+.cards img:nth-child(2) { left: 60px; z-index: 2; }
+.cards img:nth-child(3) { left: 120px; transform: rotate(12deg); }
+
+/* BLOQUE INMERSIVO */
+.immersive {
+  margin-top: 100px;
+  height: 500px;
+  background: url('assets/refugio-gameplay.webp') center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.immersive-content {
+  margin-left: 8%;
+  max-width: 420px;
+  color: white;
+}
+
+.immersive h3 {
+  font-family: Georgia, serif;
+  font-size: 46px;
+}
+
+.immersive span {
+  color: #d4a85a;
+}
+
+/* INCLUDES */
+.includes {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.includes-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item img {
+  width: 120px;
+  height: 160px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header .title {
+    font-size: 40px;
+  }
+}
+
+
 
 /* =========================
    SECCIÓN 5 · ZONA TÉCNICA
