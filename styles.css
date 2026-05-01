@@ -106,8 +106,8 @@ a {
 }
 
 .brand-logo {
-  width: 106px;
-  height: 106px;
+  width: 148px;
+  height: 148px;
   object-fit: contain;
   flex: 0 0 auto;
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
@@ -1824,8 +1824,8 @@ opacity: 0.98;
 }
 
 .footer-logo {
-  width: 180px;
-  height: 180px;
+  width: 290px;
+  height: 290px;
   object-fit: contain;
 }
 
