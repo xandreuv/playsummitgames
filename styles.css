@@ -984,13 +984,11 @@ opacity: 0.98;
 }
 
 .product-box {
-  width: 300px;
-  margin-bottom: 10px;
+  display: block;
   margin: 0 auto 10px auto;
-  filter:
-    drop-shadow(0 30px 40px rgba(0,0,0,0.4))
-    drop-shadow(0 10px 10px rgba(0,0,0,0.3));
-
+  max-width: 240px;
+  background: none;     
+  border-radius: 0;     
   transition: transform 0.4s ease;
 }
 
