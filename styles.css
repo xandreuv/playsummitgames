@@ -1206,8 +1206,10 @@ opacity: 0.98;
 ========================= */
 
 .seccion-5 {
-  background: #e7e5e0 url('/assets/textura-papel.png');
-  background-size: 600px;
+  background: #e7e5e0 url('/assets/textura-curvas-nivel.png');
+  background-size: 500px;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
   padding: 60px 20px 50px;
   text-align: center;
 }
