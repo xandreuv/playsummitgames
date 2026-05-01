@@ -1212,6 +1212,8 @@ opacity: 0.98;
   background-blend-mode: multiply;
   padding: 60px 20px 50px;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 /* HEADER */
