@@ -1207,7 +1207,7 @@ opacity: 0.98;
 
 .seccion-5 {
   background: #e7e5e0 url('/assets/textura-curvas-nivel.png');
-  background-size: 500px;
+  background-size: 350px;
   background-repeat: repeat;
   background-blend-mode: multiply;
   padding: 60px 20px 50px;
@@ -1283,6 +1283,7 @@ opacity: 0.98;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* TEXTO */
@@ -1312,18 +1313,89 @@ opacity: 0.98;
 }
 
 /* RESPONSIVE section 5*/
+/* TABLET */
 @media (max-width: 1000px) {
   .s5-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+  }
+
+  .s5-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .s5-item p {
+    max-width: 180px;
   }
 }
 
+/* MÓVIL */
 @media (max-width: 600px) {
+
+  .seccion-5 {
+    padding: 50px 20px 40px;
+  }
+
+  /* HEADER */
+  .s5-header {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .s5-line {
+    width: 60px;
+  }
+
+  .seccion-5 h2 {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .s5-icon {
+    width: 24px;
+  }
+
+  /* GRID → 1 columna limpia */
   .s5-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* ITEM */
+  .s5-item {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* CÍRCULO */
+  .s5-img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 15px;
+  }
+
+  /* TÍTULO */
+  .s5-item h3 {
+    font-size: 12px;
+    letter-spacing: 1.3px;
+  }
+
+  /* TEXTO */
+  .s5-item p {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 240px;
+  }
+
+  /* ICONO INFERIOR */
+  .s5-item::after {
+    margin-top: 10px;
+    width: 18px;
   }
 }
-
 
 
 /* Resto layout */
