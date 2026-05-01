@@ -868,6 +868,7 @@ p {
   overflow: hidden;
 }
 
+
 .products-section {
   animation: fadeIn 1s ease both;
 }
@@ -885,6 +886,13 @@ p {
 
 
 /* TEXTURA MONTAÑAS */
+.section-products .mountain-texture {
+  background: url("assets/mountain-texture.png");
+  background-size: cover;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
 .section-products::before {
   content: "";
   position: absolute;
@@ -1001,15 +1009,40 @@ opacity: 0.98;
   font-weight: 500;
   letter-spacing: 0.3px;
   color: #f3e9d2;
+  margin-bottom: 6px;
 }
 
 .product-card h3 span {
   font-style: italic;
-  font-weight: 500;
 }
 
 .product-card span {
   font-weight: bold;
+}
+
+.alt {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.line {
+  width: 60px;
+  height: 1px;
+  margin: 10px auto 16px auto;
+  position: relative;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  transform: translateX(-50%) rotate(45deg);
+  background: currentColor;
 }
 
 .product-alt {
@@ -1023,6 +1056,7 @@ opacity: 0.98;
   position: relative;
   height: 120px;
   margin-top: -30px;
+  margin-bottom: 30px;
 }
 
 .card {
