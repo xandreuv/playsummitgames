@@ -106,8 +106,8 @@ a {
 }
 
 .brand-logo {
-  width: 86px;
-  height: 86px;
+  width: 106px;
+  height: 106px;
   object-fit: contain;
   flex: 0 0 auto;
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
