@@ -1215,6 +1215,11 @@ opacity: 0.98;
   display: flex;
   align-items: center;
 }
+/* Ajuste específico sección 5 */
+.seccion-5.section {
+  padding: calc(var(--header-height) + 10px) 0 40px;
+  min-height: auto;
+}
 
 /* HEADER */
 .s5-header {
