@@ -2589,3 +2589,50 @@ opacity: 0.98;
     min-height: 112px;
   }
 }
+
+
+/* ================================
+   (PROVISIONAL) MOCKUP SEQUENCE PEDRAFORCA
+================================ */
+
+.mockup-sequence {
+  width: 100%;
+  background: #ffffff;
+}
+
+.mockup-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.mockup-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Espaciado suave entre imágenes */
+.mockup-image + .mockup-image {
+  margin-top: 40px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .mockup-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .mockup-image + .mockup-image {
+    margin-top: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .mockup-image + .mockup-image {
+    margin-top: 24px;
+  }
+}
