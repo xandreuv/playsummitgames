@@ -2602,37 +2602,93 @@ opacity: 0.98;
 
 .mockup-container {
   width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .mockup-image {
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;
 }
 
-/* Espaciado suave entre imágenes */
-.mockup-image + .mockup-image {
-  margin-top: 40px;
+/* Evita micro gaps por inline rendering */
+.mockup-container img {
+  vertical-align: bottom;
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .mockup-container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
 
-  .mockup-image + .mockup-image {
-    margin-top: 30px;
+/* Mobile: asegurar edge-to-edge */
+@media (max-width: 768px) {
+  .mockup-sequence {
+    padding: 0;
   }
 }
 
-/* Mobile */
-@media (max-width: 640px) {
-  .mockup-image + .mockup-image {
-    margin-top: 24px;
+/* ================================
+   HEADER LIMPIO PEDRAFORCA
+================================ */
+
+.pedraforca-header {
+  background: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.clean-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Logo más grande */
+.brand-logo.large {
+  height: 64px;
+}
+
+/* Alinear logo + texto */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+}
+
+/* Nav limpio */
+.clean-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.clean-nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 15px;
+  transition: opacity 0.2s ease;
+}
+
+.clean-nav a:hover {
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clean-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .brand-logo.large {
+    height: 56px;
+  }
+
+  .clean-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 }
