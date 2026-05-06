@@ -106,8 +106,8 @@ a {
 }
 
 .brand-logo {
-  width: 148px;
-  height: 148px;
+  width: 240px;
+  height: 240px;
   object-fit: contain;
   flex: 0 0 auto;
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
@@ -1255,7 +1255,7 @@ opacity: 0.98;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 /*.s5-line {
@@ -1273,12 +1273,12 @@ opacity: 0.98;
 }
 
 .s5-icon {
-  width: 32px;
+  width: 42px;
   opacity: 0.8;
 }
 
 .seccion-5 h2 {
-  font-size: 18px;
+  font-size: 22px;
   letter-spacing: 2px;
   color: #4f6658;
   font-weight: 600;
@@ -1286,11 +1286,11 @@ opacity: 0.98;
 .seccion-5 .s5-header {
   flex-direction: column;
   gap: 12px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .seccion-5 .kicker-top {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: 3px;
   color: rgba(79,102,88,0.7);
 }
@@ -1317,7 +1317,7 @@ opacity: 0.98;
 .s5-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 26px;
+  gap: 22px;
   max-width: 1200px;
   margin: auto;
 }
@@ -1331,8 +1331,8 @@ opacity: 0.98;
 
 /* CÍRCULO IMAGEN */
 .s5-img {
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   padding: 6px;
   background: #dcd8cf;
@@ -1352,14 +1352,14 @@ opacity: 0.98;
 
 /* TEXTO */
 .s5-item h3 {
-  font-size: 13px;
+  font-size: 16px;
   letter-spacing: 1.5px;
   color: #4f6658;
   margin-bottom: 10px;
 }
 
 .s5-item p {
-  font-size: 13px;
+  font-size: 14px;
   color: #6e6e6e;
   max-width: 200px;
   line-height: 1.4;
@@ -1468,13 +1468,13 @@ opacity: 0.98;
   }
 
   .seccion-5 h2 {
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     line-height: 1.4;
   }
 
   .s5-icon {
-    width: 24px;
+    width: 26px;
   }
 
   /* GRID → 1 columna limpia */
@@ -1491,20 +1491,20 @@ opacity: 0.98;
 
   /* CÍRCULO */
   .s5-img {
-    width: 110px;
-    height: 110px;
+    width: 140px;
+    height: 140px;
     margin-bottom: 15px;
   }
 
   /* TÍTULO */
   .s5-item h3 {
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 1.3px;
   }
 
   /* TEXTO */
   .s5-item p {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
     max-width: 240px;
   }
@@ -1983,8 +1983,8 @@ opacity: 0.98;
 }
 
 .footer-logo {
-  width: 290px;
-  height: 290px;
+  width: 360px;
+  height: 360px;
   object-fit: contain;
 }
 
