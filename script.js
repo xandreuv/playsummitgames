@@ -68,11 +68,12 @@ document.addEventListener("DOMContentLoaded", () => {
     return pageKey === "pedraforca" ? "cat" : "es";
   }
 
-  function getLanguage() {
-    const saved = localStorage.getItem("psg-language");
-    if (saved === "cat" || saved === "es") return saved;
-    return getDefaultLanguage();
-  }
+function getLanguage() {
+  if (pageKey === "pedraforca") return "cat";
+
+  const saved = localStorage.getItem("psg-language");
+  return saved === "cat" ? "cat" : "es";
+}
 
   function applyTranslations(lang) {
     const pageTranslations = translations[pageKey];
@@ -115,11 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function setLanguage(lang) {
-    const normalized = lang === "cat" ? "cat" : "es";
-    localStorage.setItem("psg-language", normalized);
-    applyTranslations(normalized);
+function setLanguage(lang) {
+  if (pageKey === "pedraforca") {
+    applyTranslations("cat");
+    return;
   }
+
+  const normalized = lang === "cat" ? "cat" : "es";
+  localStorage.setItem("psg-language", normalized);
+  applyTranslations(normalized);
+}
 
   function revealOnScroll() {
     const revealTargets = document.querySelectorAll(
