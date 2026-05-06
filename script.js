@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getLanguage() {
     const saved = localStorage.getItem("psg-language");
-    return saved === "cat" ? "cat" : "es";
+    return saved === "es" ? "es" : "cat";
   }
 
   function applyTranslations(lang) {
