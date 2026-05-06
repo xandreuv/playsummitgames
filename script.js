@@ -9,21 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const switchButtons = document.querySelectorAll(".lang-switch-button");
   const translations = window.PSG_TRANSLATIONS || {};
   const panoramaScroll = document.getElementById("summitPanoramaScroll");
-  const seccion5 = document.querySelector('.seccion-5');
+  const seccion5 = document.querySelector(".seccion-5");
 
   if (seccion5) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        seccion5.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.3 });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          seccion5.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.3 });
 
-  observer.observe(seccion5);
-}
+    observer.observe(seccion5);
+  }
 
-  
   function updateActiveStop() {
     if (!sections.length || !stops.length) return;
 
@@ -65,21 +64,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function getDefaultLanguage() {
+    return pageKey === "pedraforca" ? "cat" : "es";
+  }
+
   function getLanguage() {
     const saved = localStorage.getItem("psg-language");
-    return saved === "es" ? "es" : "cat";
+    if (saved === "cat" || saved === "es") return saved;
+    return getDefaultLanguage();
   }
 
   function applyTranslations(lang) {
     const pageTranslations = translations[pageKey];
-    if (!pageTranslations || !pageTranslations[lang]) return;
+    if (!pageTranslations || !pageTranslations[lang]) {
+      htmlEl.setAttribute("lang", pageKey === "pedraforca" ? "ca" : "es");
+      return;
+    }
 
     const current = pageTranslations[lang];
     const strings = current.strings || {};
 
-    document.title = current.title;
+    if (current.title) {
+      document.title = current.title;
+    }
 
-    if (metaDescription) {
+    if (metaDescription && current.description) {
       metaDescription.setAttribute("content", current.description);
     }
 
@@ -87,14 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll("[data-i18n]").forEach((element) => {
       const key = element.dataset.i18n;
-      if (strings[key] !== undefined) {
+      if (Object.prototype.hasOwnProperty.call(strings, key)) {
         element.textContent = strings[key];
       }
     });
 
     document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
       const key = element.dataset.i18nAria;
-      if (strings[key] !== undefined) {
+      if (Object.prototype.hasOwnProperty.call(strings, key)) {
         element.setAttribute("aria-label", strings[key]);
       }
     });
@@ -113,9 +122,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function revealOnScroll() {
-  const revealTargets = document.querySelectorAll(
-    ".premium-card, .step-card, .metric-card"
-  );
+    const revealTargets = document.querySelectorAll(
+      ".premium-card, .step-card, .metric-card"
+    );
 
     if (!revealTargets.length) return;
 
@@ -129,14 +138,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function initLanguageSwitch() {
-    if (!switchButtons.length) return;
+  function initLanguage() {
+    if (pageKey === "pedraforca") {
+      setLanguage("cat");
+      return;
+    }
 
-    switchButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        setLanguage(button.dataset.lang);
+    if (switchButtons.length) {
+      switchButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          setLanguage(button.dataset.lang);
+        });
       });
-    });
+    }
 
     applyTranslations(getLanguage());
   }
@@ -199,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
     revealOnScroll();
   }
 
-  initLanguageSwitch();
+  initLanguage();
   initPanoramaScroll();
   updateActiveStop();
   revealOnScroll();
