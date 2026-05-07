@@ -3,11 +3,13 @@ window.PSG_TRANSLATIONS = {
     es: {
       title: "Play Summit Games | Juegos diseñados en los Pirineos",
       description:
-        "Summit Games: juegos de cartas inspirados en la alta montaña. Descubre Objetivo Monte Perdido 3.355 y Objectiu Pedraforca 2.506.",
+        "Summit Series: juegos de cartas inspirados en la alta montaña. Descubre Objetivo Monte Perdido 3.355 y Objectiu Pedraforca 2.506.",
       strings: {
         "brand.subtitle": "Juegos diseñados en los Pirineos",
         "lang.es": "ES",
         "lang.cat": "CAT",
+
+        "ruler.title": "PROGRESIÓN",
 
         "nav.home": "Inicio",
         "nav.games": "Juegos",
@@ -23,23 +25,68 @@ window.PSG_TRANSLATIONS = {
         "hero.cta1": "Descubrir juegos",
         "hero.cta2": "Ver colección",
 
-        "products.kicker": "Campamento base · 1.450 m",
-        "products.title": "Dos primeras ascensiones",
+        "products.kicker": "CAMPAMENTO BASE · 1.450 m",
+        "products.title": "DESCUBRE LOS JUEGOS",
+        "products.subtitle": "DE LA SUMMIT SERIES",
         "products.intro":
           "Dos montañas, dos identidades y dos landings específicas.",
 
+        "products.mp.prefix": "Objetivo",
+        "products.mp.name": "Monte Perdido",
+        "products.mp.alt": "3.355 m",
         "products.mp.text":
-          "Ascensión táctica al Monte Perdido con clima, energía y sensación real de expedición.",
-        "products.mp.cta": "Ir a la landing",
+          "La expedición definitiva en el Parque Nacional de Ordesa.",
+        "products.mp.cta": "Ver juego →",
 
+        "products.pf.prefix": "Objectiu",
+        "products.pf.name": "Pedraforca",
+        "products.pf.alt": "2.506 m",
         "products.pf.text":
-          "Edición con fuerte identidad catalana y personalidad territorial en torno al Pedraforca.",
-        "products.pf.cta": "Ir a la landing",
+          "Escalada técnica y aventura en uno de los iconos de Catalunya.",
+        "products.pf.cta": "Ver juego →",
 
         "products.common.p1": "1–4 jugadores",
         "products.common.p2": "20–40 min",
         "products.common.p3": "+10 años",
         "products.common.p4": "Competitivo · Cooperativo · Solo",
+
+        "products.immersive.title.before": "Después de la montaña,",
+        "products.immersive.title.after": "empieza la historia.",
+        "products.immersive.text":
+          "Estrategia, aventura y naturaleza se unen en cada partida.",
+        "products.immersive.cta": "La experiencia Summit →",
+
+        "products.includes.title": "¿Qué incluye cada juego?",
+
+        "products.includes.board.title": "TABLERO",
+        "products.includes.board.text":
+          "Ruta de montaña con altitudes y refugios.",
+
+        "products.includes.weather.title": "CLIMA",
+        "products.includes.weather.text":
+          "El clima cambia, adáptate y decide.",
+
+        "products.includes.events.title": "EVENTOS",
+        "products.includes.events.text":
+          "Imprevistos que pondrán a prueba tu plan.",
+
+        "products.includes.equipment.title": "EQUIPO",
+        "products.includes.equipment.text":
+          "Equipamiento esencial para avanzar seguro.",
+
+        "products.includes.resources.title": "RECURSOS",
+        "products.includes.resources.text":
+          "Gestiona recursos: no sabes cuándo los vas a necesitar más.",
+
+        "products.includes.nature.title": "FLORA & FAUNA",
+        "products.includes.nature.text":
+          "Observa y protege la fauna y flora del parque.",
+
+        "panorama.aria": "Panorámica de cumbres Summit Series",
+        "panorama.monte.aria":
+          "Ir a la landing de Objetivo Monte Perdido 3.355",
+        "panorama.pedra.aria":
+          "Ir a la landing de Objectiu Pedraforca 2.506",
 
         "slots.productMockup": "MOCKUP / CARTAS / BANNER",
 
@@ -75,43 +122,58 @@ window.PSG_TRANSLATIONS = {
         "modes.comp.c1.title": "Sprint running",
         "modes.comp.c1.text": "Lectura ágil y directa de la ascensión.",
         "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text": "Más interacción, decisiones tácticas y control del ritmo.",
+        "modes.comp.c2.text":
+          "Más interacción, decisiones tácticas y control del ritmo.",
         "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text": "La versión más completa, tensa y estratégica.",
+        "modes.comp.c3.text":
+          "La versión más completa, tensa y estratégica.",
 
         "modes.coop.title": "Modo cooperativo",
         "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text": "Ascensión individual para optimizar tu línea de juego.",
+        "modes.coop.c1.text":
+          "Ascensión individual para optimizar tu línea de juego.",
         "modes.coop.c2.title": "Estilo Alpino",
-        "modes.coop.c2.text": "Cooperativo ágil, exigente y con pocos apoyos.",
+        "modes.coop.c2.text":
+          "Cooperativo ágil, exigente y con pocos apoyos.",
         "modes.coop.c3.title": "Estilo Clásico",
-        "modes.coop.c3.text": "Más herramientas, más componentes y construcción de expedición.",
+        "modes.coop.c3.text":
+          "Más herramientas, más componentes y construcción de expedición.",
 
-        "values.kicker": "Zona técnica · 2.506 m",
-        "values.title": "Qué transmite cada juego Summit Series",
+        "values.kicker": "ZONA TÉCNICA · 2.506 m",
+        "values.title": "LO QUE TRANSMITE CADA JUEGO SUMMIT SERIES",
+        "values.title.line1": "LO QUE TRANSMITE CADA JUEGO",
+        "values.title.line2": "SUMMIT SERIES",
         "values.intro":
           "Cada edición comunica territorio, naturaleza, cultura de montaña y buenas prácticas.",
-        "values.c1.title": "Identidad territorial",
+
+        "values.c1.title": "IDENTIDAD TERRITORIAL",
         "values.c1.text":
-          "Paisajes, refugios, fauna, flora y referentes propios de cada montaña.",
-        "values.c2.title": "Sensibilización ambiental",
+          "Conecta con los paisajes, la cultura y las historias que nos definen.",
+
+        "values.c2.title": "SENSIBILIZACIÓN AMBIENTAL",
         "values.c2.text":
-          "Acerca al jugador a la realidad natural y al respeto por el entorno.",
-        "values.c3.title": "Buenas prácticas",
+          "Promueve el respeto y la conservación de la naturaleza.",
+
+        "values.c3.title": "BUENAS PRÁCTICAS",
         "values.c3.text":
-          "Prevención, preparación, previsión meteorológica, material adecuado, ruta según capacidades y gestión de energía.",
-        "values.c4.title": "Patrimonio cultural",
+          "Fomenta decisiones responsables y sostenibles en cada aventura.",
+
+        "values.c4.title": "TRANSMISIÓN DE VALORES",
         "values.c4.text":
-          "Cooperación, responsabilidad y divulgación de la cultura de cada zona.",
+          "Inspira cooperación, resiliencia y espíritu de superación.",
+
+        "values.c5.title": "DEFENSA PATRIMONIO CULTURAL",
+        "values.c5.text":
+          "Pone en valor y protege nuestro legado histórico y natural.",
 
         "rules.kicker": "Ataque a la cima · 3.000 m",
         "rules.title": "Reglas y mecánicas básicas",
         "rules.intro":
-          "Gestión de mano, colección de mazo, lectura del clima y decisiones de ataque.",
+          "Gestión de mano, construcción de mazo, lectura del clima y decisiones de ataque.",
         "rules.c1.title": "Gestión de mano",
         "rules.c1.text":
           "Juega tus cartas en el momento adecuado para avanzar y resistir.",
-        "rules.c2.title": "Colección de mazo",
+        "rules.c2.title": "Construcción de mazo",
         "rules.c2.text":
           "Cada partida se construye con combinaciones que cambian la experiencia.",
         "rules.cta1": "Ver Monte Perdido",
@@ -120,13 +182,15 @@ window.PSG_TRANSLATIONS = {
         "slots.rulesBanner": "BANNER DE JUEGO / TABLERO / CARTAS",
 
         "buy.kicker": "Cima · 3.355 m",
-        "buy.title": "Dos juegos, dos compras diferenciadas",
+        "buy.title": "Dos juegos, dos ascensiones únicas",
         "buy.intro":
           "Cada caja tiene su espacio visual y su propio enlace de compra.",
+        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
         "buy.mp.title": "Comprar Monte Perdido",
         "buy.mp.text":
           "Reserva el espacio para el render final o fotografía de caja.",
         "buy.mp.cta": "Ir al juego",
+        "buy.pf.alt": "Objectiu Pedraforca 2.506",
         "buy.pf.title": "Comprar Pedraforca",
         "buy.pf.text":
           "Lista para insertar caja final, mockup o arte promocional.",
@@ -145,11 +209,13 @@ window.PSG_TRANSLATIONS = {
     cat: {
       title: "Play Summit Games | Jocs dissenyats als Pirineus",
       description:
-        "Summit Games: jocs de cartes inspirats en l'alta muntanya. Descobreix Objetivo Monte Perdido 3.355 i Objectiu Pedraforca 2.506.",
+        "Summit Series: jocs de cartes inspirats en l'alta muntanya. Descobreix Objetivo Monte Perdido 3.355 i Objectiu Pedraforca 2.506.",
       strings: {
         "brand.subtitle": "Jocs dissenyats als Pirineus",
         "lang.es": "ES",
         "lang.cat": "CAT",
+
+        "ruler.title": "PROGRESSIÓ",
 
         "nav.home": "Inici",
         "nav.games": "Jocs",
@@ -161,40 +227,85 @@ window.PSG_TRANSLATIONS = {
         "hero.title": "Summit Games",
         "hero.lead": "Jocs de cartes inspirats en l'alta muntanya.",
         "hero.text":
-          "Una col·lecció creada per viure la tensió, l'estratègia, la climatologia variable i l'emoció d'una ascensió real.",
+          "Una col·lecció creada per viure la tensió, l'estratègia, la meteorologia canviant i l'emoció d'una ascensió real.",
         "hero.cta1": "Descobrir jocs",
-        "hero.cta2": "Veure col·lecció",
+        "hero.cta2": "Veure la col·lecció",
 
-        "products.kicker": "Campament base · 1.450 m",
-        "products.title": "Dues primeres ascensions",
+        "products.kicker": "CAMP BASE · 1.450 m",
+        "products.title": "DESCOBREIX ELS JOCS",
+        "products.subtitle": "DE LA SUMMIT SERIES",
         "products.intro":
           "Dues muntanyes, dues identitats i dues landings específiques.",
 
+        "products.mp.prefix": "Objetivo",
+        "products.mp.name": "Monte Perdido",
+        "products.mp.alt": "3.355 m",
         "products.mp.text":
-          "Ascensió tàctica al Monte Perdido amb clima, energia i sensació real d'expedició.",
-        "products.mp.cta": "Anar a la landing",
+          "L'expedició definitiva al Parc Nacional d'Ordesa.",
+        "products.mp.cta": "Veure joc →",
 
+        "products.pf.prefix": "Objectiu",
+        "products.pf.name": "Pedraforca",
+        "products.pf.alt": "2.506 m",
         "products.pf.text":
-          "Edició amb forta identitat catalana i personalitat territorial al voltant del Pedraforca.",
-        "products.pf.cta": "Anar a la landing",
+          "Escalada tècnica i aventura en una de les icones de Catalunya.",
+        "products.pf.cta": "Veure joc →",
 
         "products.common.p1": "1–4 jugadors",
         "products.common.p2": "20–40 min",
         "products.common.p3": "+10 anys",
         "products.common.p4": "Competitiu · Cooperatiu · Solo",
 
+        "products.immersive.title.before": "Després de la muntanya,",
+        "products.immersive.title.after": "comença la història.",
+        "products.immersive.text":
+          "Estratègia, aventura i natura s'uneixen en cada partida.",
+        "products.immersive.cta": "L'experiència Summit →",
+
+        "products.includes.title": "Què inclou cada joc?",
+
+        "products.includes.board.title": "TAULER",
+        "products.includes.board.text":
+          "Ruta de muntanya amb altituds i refugis.",
+
+        "products.includes.weather.title": "METEO",
+        "products.includes.weather.text":
+          "El temps canvia: adapta't i decideix.",
+
+        "products.includes.events.title": "ESDEVENIMENTS",
+        "products.includes.events.text":
+          "Imprevistos que posaran a prova el teu pla.",
+
+        "products.includes.equipment.title": "EQUIPAMENT",
+        "products.includes.equipment.text":
+          "Material essencial per avançar amb seguretat.",
+
+        "products.includes.resources.title": "RECURSOS",
+        "products.includes.resources.text":
+          "Gestiona els recursos: no saps quan et faran més falta.",
+
+        "products.includes.nature.title": "FLORA I FAUNA",
+        "products.includes.nature.text":
+          "Observa i protegeix la fauna i la flora del parc.",
+
+        "panorama.aria": "Panoràmica de cims Summit Series",
+        "panorama.monte.aria":
+          "Anar a la landing d'Objetivo Monte Perdido 3.355",
+        "panorama.pedra.aria":
+          "Anar a la landing d'Objectiu Pedraforca 2.506",
+
         "slots.productMockup": "MOCKUP / CARTES / BÀNER",
 
         "features.kicker": "Primera cordada · 1.850 m",
         "features.title": "Característiques comunes que es gestionen en partida",
         "features.intro":
-          "Energia, risc, clima, altitud, expedició, esdeveniments, personatges asimètrics i enorme rejugabilitat.",
+          "Energia, risc, temps, altitud, expedició, esdeveniments, personatges asimètrics i una gran rejugabilitat.",
         "features.c1.title": "Gestió d'energia, risc i recursos",
         "features.c1.text":
-          "Cada decisió exigeix mesurar desgast, recursos i moment d'atac.",
-        "features.c2.title": "Clima canviant",
+          "Cada decisió exigeix mesurar el desgast, els recursos i el moment d'atac.",
+        "features.c2.title": "Meteorologia canviant",
         "features.c2.text":
-          "La meteorologia altera el ritme i obliga a adaptar-se.",
+          "El temps altera el ritme i obliga a adaptar-se.",
         "features.c3.title": "Altitud progressiva",
         "features.c3.text":
           "L'ascensió es viu per cotes, refugis i atac final.",
@@ -203,7 +314,7 @@ window.PSG_TRANSLATIONS = {
           "Progressió, tensió i desgast amb ritme de muntanya real.",
         "features.c5.title": "Esdeveniments i personatges asimètrics",
         "features.c5.text":
-          "Cartes d'esdeveniment i alpinistes amb propietats diferents canvien cada partida.",
+          "Les cartes d'esdeveniment i els alpinistes amb propietats diferents canvien cada partida.",
         "features.c6.title": "Gran rejugabilitat i combinació entre jocs",
 
         "slots.cardsMain": "IMATGE DE CARTES / ALPINISTA / MATERIAL",
@@ -217,43 +328,58 @@ window.PSG_TRANSLATIONS = {
         "modes.comp.c1.title": "Sprint running",
         "modes.comp.c1.text": "Lectura àgil i directa de l'ascensió.",
         "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text": "Més interacció, decisions tàctiques i control del ritme.",
+        "modes.comp.c2.text":
+          "Més interacció, decisions tàctiques i control del ritme.",
         "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text": "La versió més completa, tensa i estratègica.",
+        "modes.comp.c3.text":
+          "La versió més completa, tensa i estratègica.",
 
         "modes.coop.title": "Mode cooperatiu",
         "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text": "Ascensió individual per optimitzar la teva línia de joc.",
+        "modes.coop.c1.text":
+          "Ascensió individual per optimitzar la teva línia de joc.",
         "modes.coop.c2.title": "Estil Alpí",
-        "modes.coop.c2.text": "Cooperatiu àgil, exigent i amb pocs suports.",
+        "modes.coop.c2.text":
+          "Cooperatiu àgil, exigent i amb pocs suports.",
         "modes.coop.c3.title": "Estil Clàssic",
-        "modes.coop.c3.text": "Més eines, més components i construcció d'expedició.",
+        "modes.coop.c3.text":
+          "Més eines, més components i construcció d'expedició.",
 
-        "values.kicker": "Zona tècnica · 2.506 m",
-        "values.title": "Què transmet cada joc Summit Series",
+        "values.kicker": "ZONA TÈCNICA · 2.506 m",
+        "values.title": "QUÈ TRANSMET CADA JOC SUMMIT SERIES",
+        "values.title.line1": "QUÈ TRANSMET CADA JOC",
+        "values.title.line2": "SUMMIT SERIES",
         "values.intro":
           "Cada edició comunica territori, natura, cultura de muntanya i bones pràctiques.",
-        "values.c1.title": "Identitat territorial",
+
+        "values.c1.title": "IDENTITAT TERRITORIAL",
         "values.c1.text":
-          "Paisatges, refugis, fauna, flora i referents propis de cada muntanya.",
-        "values.c2.title": "Sensibilització ambiental",
+          "Connecta amb els paisatges, la cultura i les històries que ens defineixen.",
+
+        "values.c2.title": "SENSIBILITZACIÓ AMBIENTAL",
         "values.c2.text":
-          "Apropa el jugador a la realitat natural i al respecte per l'entorn.",
-        "values.c3.title": "Bones pràctiques",
+          "Promou el respecte i la conservació de la natura.",
+
+        "values.c3.title": "BONES PRÀCTIQUES",
         "values.c3.text":
-          "Prevenció, preparació, previsió meteorològica, material adequat, ruta segons capacitats i gestió d'energia.",
-        "values.c4.title": "Patrimoni cultural",
+          "Fomenta decisions responsables i sostenibles en cada aventura.",
+
+        "values.c4.title": "TRANSMISSIÓ DE VALORS",
         "values.c4.text":
-          "Cooperació, responsabilitat i divulgació de la cultura de cada zona.",
+          "Inspira cooperació, resiliència i esperit de superació.",
+
+        "values.c5.title": "DEFENSA DEL PATRIMONI CULTURAL",
+        "values.c5.text":
+          "Posa en valor i protegeix el nostre llegat històric i natural.",
 
         "rules.kicker": "Atac al cim · 3.000 m",
         "rules.title": "Regles i mecàniques bàsiques",
         "rules.intro":
-          "Gestió de mà, col·lecció de mazo, lectura del clima i decisions d'atac.",
+          "Gestió de mà, construcció de baralla, lectura del temps i decisions d'atac.",
         "rules.c1.title": "Gestió de mà",
         "rules.c1.text":
           "Juga les teves cartes en el moment adequat per avançar i resistir.",
-        "rules.c2.title": "Col·lecció de mazo",
+        "rules.c2.title": "Construcció de baralla",
         "rules.c2.text":
           "Cada partida es construeix amb combinacions que canvien l'experiència.",
         "rules.cta1": "Veure Monte Perdido",
@@ -262,16 +388,18 @@ window.PSG_TRANSLATIONS = {
         "slots.rulesBanner": "BÀNER DE JOC / TAULER / CARTES",
 
         "buy.kicker": "Cim · 3.355 m",
-        "buy.title": "Dos jocs, dues compres diferenciades",
+        "buy.title": "Dos jocs, dues ascensions úniques",
         "buy.intro":
           "Cada caixa té el seu espai visual i el seu propi enllaç de compra.",
+        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
         "buy.mp.title": "Comprar Monte Perdido",
         "buy.mp.text":
-          "Reserva l'espai per al render final o fotografia de caixa.",
+          "Reserva l'espai per al render final o la fotografia de caixa.",
         "buy.mp.cta": "Anar al joc",
+        "buy.pf.alt": "Objectiu Pedraforca 2.506",
         "buy.pf.title": "Comprar Pedraforca",
         "buy.pf.text":
-          "Llista per inserir caixa final, mockup o art promocional.",
+          "Preparat per inserir-hi la caixa final, el mockup o l'art promocional.",
         "buy.pf.cta": "Anar al joc",
 
         "slots.buyBox1": "POSICIÓ IMATGE CAIXA MONTE PERDIDO",
