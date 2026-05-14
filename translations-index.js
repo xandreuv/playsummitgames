@@ -181,20 +181,29 @@ window.PSG_TRANSLATIONS = {
 
         "slots.rulesBanner": "BANNER DE JUEGO / TABLERO / CARTAS",
 
-        "buy.kicker": "Cima · 3.355 m",
-        "buy.title": "Dos juegos, dos ascensiones únicas",
-        "buy.intro":
-          "Cada caja tiene su espacio visual y su propio enlace de compra.",
-        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
-        "buy.mp.title": "Comprar Monte Perdido",
+                "buy.kicker": "CUMBRE - 3.355 M.",
+        "buy.title": "DOS JUEGOS, DOS ASCENSIONES ÚNICAS.",
+
+        "buy.mp.prefix": "Objetivo",
+        "buy.mp.name": "Monte Perdido",
+        "buy.mp.alt": "3.355 m",
         "buy.mp.text":
-          "Reserva el espacio para el render final o fotografía de caja.",
-        "buy.mp.cta": "Ir al juego",
-        "buy.pf.alt": "Objectiu Pedraforca 2.506",
-        "buy.pf.title": "Comprar Pedraforca",
+          "La expedición definitiva en el Parque Nacional de Ordesa.",
+
+        "buy.pf.prefix": "Objectiu",
+        "buy.pf.name": "Pedraforca",
+        "buy.pf.alt": "2.506 m",
         "buy.pf.text":
-          "Lista para insertar caja final, mockup o arte promocional.",
-        "buy.pf.cta": "Ir al juego",
+          "Escalada técnica y aventura en uno de los iconos de Catalunya.",
+
+        "buy.common.age": "AÑOS",
+        "buy.common.timeMain": "15–25",
+        "buy.common.timeSub": "MIN",
+        "buy.common.playersMain": "1–4",
+        "buy.common.playersSub": "JUGADORES",
+
+        "buy.cta.buy": "COMPRAR",
+        "buy.cta.view": "VER JUEGO",
 
         "slots.buyBox1": "POSICIÓN IMAGEN CAJA MONTE PERDIDO",
         "slots.buyBox2": "POSICIÓN IMAGEN CAJA PEDRAFORCA",
@@ -387,20 +396,29 @@ window.PSG_TRANSLATIONS = {
 
         "slots.rulesBanner": "BÀNER DE JOC / TAULER / CARTES",
 
-        "buy.kicker": "Cim · 3.355 m",
-        "buy.title": "Dos jocs, dues ascensions úniques",
-        "buy.intro":
-          "Cada caixa té el seu espai visual i el seu propi enllaç de compra.",
-        "buy.mp.alt": "Objetivo Monte Perdido 3.355",
-        "buy.mp.title": "Comprar Monte Perdido",
+                "buy.kicker": "CIM - 3.355 M.",
+        "buy.title": "DOS JOCS, DUES ASCENSIONS ÚNIQUES.",
+
+        "buy.mp.prefix": "Objetivo",
+        "buy.mp.name": "Monte Perdido",
+        "buy.mp.alt": "3.355 m",
         "buy.mp.text":
-          "Reserva l'espai per al render final o la fotografia de caixa.",
-        "buy.mp.cta": "Anar al joc",
-        "buy.pf.alt": "Objectiu Pedraforca 2.506",
-        "buy.pf.title": "Comprar Pedraforca",
+          "L'expedició definitiva al Parc Nacional d'Ordesa.",
+
+        "buy.pf.prefix": "Objectiu",
+        "buy.pf.name": "Pedraforca",
+        "buy.pf.alt": "2.506 m",
         "buy.pf.text":
-          "Preparat per inserir-hi la caixa final, el mockup o l'art promocional.",
-        "buy.pf.cta": "Anar al joc",
+          "Escalada tècnica i aventura en una de les icones de Catalunya.",
+
+        "buy.common.age": "ANYS",
+        "buy.common.timeMain": "15–25",
+        "buy.common.timeSub": "MIN",
+        "buy.common.playersMain": "1–4",
+        "buy.common.playersSub": "JUGADORS",
+
+        "buy.cta.buy": "COMPRAR",
+        "buy.cta.view": "VEURE JOC",
 
         "slots.buyBox1": "POSICIÓ IMATGE CAIXA MONTE PERDIDO",
         "slots.buyBox2": "POSICIÓ IMATGE CAIXA PEDRAFORCA",
