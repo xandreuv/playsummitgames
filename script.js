@@ -10,17 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const translations = window.PSG_TRANSLATIONS || {};
   const panoramaScroll = document.getElementById("summitPanoramaScroll");
   const seccion5 = document.querySelector(".seccion-5");
+  const seccion6 = document.querySelector(".seccion-6");
 
-  if (seccion5) {
+  const revealSections = [seccion5, seccion6].filter(Boolean);
+
+  if (revealSections.length) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          seccion5.classList.add("visible");
+          entry.target.classList.add("visible");
         }
       });
-    }, { threshold: 0.3 });
+    }, { threshold: 0.22 });
 
-    observer.observe(seccion5);
+    revealSections.forEach((section) => observer.observe(section));
   }
 
   function updateActiveStop() {
