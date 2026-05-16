@@ -166,20 +166,38 @@ window.PSG_TRANSLATIONS = {
         "values.c5.text":
           "Pone en valor y protege nuestro legado histórico y natural.",
 
-        "rules.kicker": "Ataque a la cima · 3.000 m",
-        "rules.title": "Reglas y mecánicas básicas",
-        "rules.intro":
-          "Gestión de mano, construcción de mazo, lectura del clima y decisiones de ataque.",
-        "rules.c1.title": "Gestión de mano",
-        "rules.c1.text":
-          "Juega tus cartas en el momento adecuado para avanzar y resistir.",
-        "rules.c2.title": "Construcción de mazo",
-        "rules.c2.text":
-          "Cada partida se construye con combinaciones que cambian la experiencia.",
-        "rules.cta1": "Ver Monte Perdido",
-        "rules.cta2": "Ver Pedraforca",
+"rules.kicker": "ATAQUE A LA CIMA · 3.000 m",
+"rules.title": "MECÁNICAS UTILIZADAS",
 
-        "slots.rulesBanner": "BANNER DE JUEGO / TABLERO / CARTAS",
+"rules.board.label": "TABLERO",
+"rules.eventsDeck.label": "MAZO DE EVENTOS",
+"rules.weatherDeck.label": "MAZO DE CLIMA",
+"rules.discardDeck.label": "MAZO DE DESCARTES",
+"rules.mainDeck.label": "MAZO PRINCIPAL",
+"rules.hand.label": "6 CARTAS DE MANO",
+"rules.character.label": "CARTA PERSONAJE",
+"rules.collection.label": "ZONA DE COLECCIÓN\nMAZO DEL JUGADOR",
+
+"rules.m1.title": "MECÁNICA DE GESTIÓN DE MANO",
+"rules.m1.text": "Hasta 6 cartas",
+
+"rules.m2.title": "CONSTRUCCIÓN DE MAZOS",
+"rules.m2.text": "Mejora tu estrategia carta a carta",
+
+"rules.m3.title": "ORDEN DE TURNO DINÁMICO",
+"rules.m3.text": "La partida cambia en cada ascensión",
+
+"rules.m4.title": "COSTE CRECIENTE",
+"rules.m4.text": "Cada esfuerzo exige más recursos",
+
+"rules.m5.title": "VENTANAS DE OPORTUNIDAD",
+"rules.m5.text": "El clima abre y cierra opciones",
+
+"rules.m6.title": "FATIGA ACUMULATIVA",
+"rules.m6.text": "Energía, recursos y mano: 6 → 5 → 4",
+
+"rules.m7.title": "DRAFT DE CARTAS",
+"rules.m7.text": "Elige, pasa y adapta tu expedición",
 
                 "buy.kicker": "CUMBRE - 3.355 M.",
         "buy.title": "DOS JUEGOS, DOS ASCENSIONES ÚNICAS.",
@@ -381,20 +399,38 @@ window.PSG_TRANSLATIONS = {
         "values.c5.text":
           "Posa en valor i protegeix el nostre llegat històric i natural.",
 
-        "rules.kicker": "Atac al cim · 3.000 m",
-        "rules.title": "Regles i mecàniques bàsiques",
-        "rules.intro":
-          "Gestió de mà, construcció de baralla, lectura del temps i decisions d'atac.",
-        "rules.c1.title": "Gestió de mà",
-        "rules.c1.text":
-          "Juga les teves cartes en el moment adequat per avançar i resistir.",
-        "rules.c2.title": "Construcció de baralla",
-        "rules.c2.text":
-          "Cada partida es construeix amb combinacions que canvien l'experiència.",
-        "rules.cta1": "Veure Monte Perdido",
-        "rules.cta2": "Veure Pedraforca",
+    "rules.kicker": "ATAC AL CIM · 3.000 m",
+"rules.title": "MECÀNIQUES UTILITZADES",
 
-        "slots.rulesBanner": "BÀNER DE JOC / TAULER / CARTES",
+"rules.board.label": "TAULER",
+"rules.eventsDeck.label": "PILA D'ESDEVENIMENTS",
+"rules.weatherDeck.label": "PILA DE METEO",
+"rules.discardDeck.label": "PILA DE DESCARTS",
+"rules.mainDeck.label": "BARALLA PRINCIPAL",
+"rules.hand.label": "6 CARTES DE MÀ",
+"rules.character.label": "CARTA PERSONATGE",
+"rules.collection.label": "ZONA DE COL·LECCIÓ\nBARALLA DEL JUGADOR",
+
+"rules.m1.title": "MECÀNICA DE GESTIÓ DE MÀ",
+"rules.m1.text": "Fins a 6 cartes",
+
+"rules.m2.title": "CONSTRUCCIÓ DE BARALLES",
+"rules.m2.text": "Millora l'estratègia carta a carta",
+
+"rules.m3.title": "ORDRE DE TORN DINÀMIC",
+"rules.m3.text": "La partida canvia en cada ascensió",
+
+"rules.m4.title": "COST CREIXENT",
+"rules.m4.text": "Cada esforç exigeix més recursos",
+
+"rules.m5.title": "FINESTRES D'OPORTUNITAT",
+"rules.m5.text": "La meteo obre i tanca opcions",
+
+"rules.m6.title": "FATIGA ACUMULATIVA",
+"rules.m6.text": "Energia, recursos i mà: 6 → 5 → 4",
+
+"rules.m7.title": "DRAFT DE CARTES",
+"rules.m7.text": "Tria, passa i adapta l'expedició",
 
                 "buy.kicker": "CIM - 3.355 M.",
         "buy.title": "DOS JOCS, DUES ASCENSIONS ÚNIQUES.",
