@@ -1260,37 +1260,28 @@ opacity: 0.98;
 
 .s3-bg-mountains {
   position: absolute;
-  right: -4vw;
-  top: 230px;
-  width: min(720px, 58vw);
+  right: -5vw;
+  top: 250px;
+  width: min(860px, 64vw);
   height: 520px;
   z-index: 1;
-  opacity: 0.44;
+  opacity: 0.58;
   pointer-events: none;
-  background:
-    linear-gradient(to top, rgba(26, 41, 25, 0.85), rgba(26, 41, 25, 0.06) 54%, transparent 100%),
-    linear-gradient(135deg, transparent 0 44%, rgba(239, 232, 207, 0.78) 45% 47%, transparent 48%),
-    linear-gradient(45deg, transparent 0 50%, rgba(239, 232, 207, 0.62) 51% 53%, transparent 54%);
-  clip-path: polygon(0 100%, 10% 78%, 22% 88%, 34% 52%, 48% 82%, 62% 32%, 75% 76%, 86% 58%, 100% 90%, 100% 100%);
-  filter: blur(0.2px);
+  background: url("assets/s3-bg-mountains-detailed.webp") center bottom / contain no-repeat;
+  filter: blur(0.1px);
 }
 
 .s3-rope-corner {
   position: absolute;
-  right: -34px;
-  top: -24px;
-  width: 250px;
-  height: 210px;
+  right: -72px;
+  top: -52px;
+  width: min(390px, 34vw);
+  height: min(300px, 26vw);
   z-index: 2;
-  opacity: 0.32;
+  opacity: 0.54;
   pointer-events: none;
-  border: 18px solid #8b6f45;
-  border-radius: 50%;
-  box-shadow:
-    -26px 18px 0 -4px #6e5635,
-    -54px 34px 0 -8px #9a7b4b,
-    inset 0 0 0 8px rgba(0,0,0,0.18);
-  transform: rotate(-18deg);
+  background: url("assets/s3-rope-corner-detailed.webp") center / contain no-repeat;
+  filter: drop-shadow(0 18px 22px rgba(0,0,0,0.22));
 }
 
 /* Header estilo sección 5 */
@@ -1312,8 +1303,8 @@ opacity: 0.98;
 
 .s3-icon {
   width: 42px;
-  opacity: 0.84;
-  filter: brightness(0) saturate(100%) invert(91%) sepia(18%) saturate(405%) hue-rotate(351deg) brightness(100%) contrast(90%);
+  opacity: 0.92;
+  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.16));
 }
 
 .seccion-3 .kicker-top {
@@ -1494,12 +1485,12 @@ opacity: 0.98;
 }
 
 .s3-info-item img {
-  width: 58px;
-  height: 58px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
   margin: 0 auto 10px;
-  color: #f3ead7;
-  opacity: 0.9;
+  opacity: 0.96;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
 }
 
 .s3-info-item h3 {
@@ -1544,10 +1535,11 @@ opacity: 0.98;
 }
 
 .s3-expand-icon img {
-  width: 64px;
-  height: 64px;
-  color: #f3ead7;
-  opacity: 0.9;
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  opacity: 0.96;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
 }
 
 .s3-expand-copy h3 {
@@ -1728,9 +1720,10 @@ opacity: 0.98;
 }
 
 .s3-mode-item > img {
-  width: 74px;
-  height: 74px;
+  width: 84px;
+  height: 84px;
   object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
 }
 
 .s3-mode-copy h4 {
@@ -1765,9 +1758,10 @@ opacity: 0.98;
 }
 
 .s3-difficulty img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,0.18));
 }
 
 /* Animación */
@@ -1950,10 +1944,10 @@ opacity: 0.98;
     gap: 14px;
   }
 
-  .s3-mode-item > img {
-    width: 54px;
-    height: 54px;
-  }
+.s3-mode-item > img {
+  width: 62px;
+  height: 62px;
+}
 
   .s3-mode-copy h4 {
     font-size: 1.16rem;
@@ -1963,10 +1957,10 @@ opacity: 0.98;
     font-size: 0.9rem;
   }
 
-  .s3-difficulty img {
-    width: 18px;
-    height: 18px;
-  }
+.s3-difficulty img {
+  width: 21px;
+  height: 21px;
+}
 }
 
 
