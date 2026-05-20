@@ -373,7 +373,6 @@ aria-label="Ir a la landing de Objectiu Pedraforca 2.506">
 <section id="reglas" class="section section-cta seccion-6" data-section data-altitude="3000">
 
   <div class="s6-bg" aria-hidden="true"></div>
-  <div class="section-texture topo-lines topo-lines-light"></div>
 
   <div class="container section-inner">
 
@@ -391,10 +390,10 @@ aria-label="Ir a la landing de Objectiu Pedraforca 2.506">
     <div class="s6-board">
 
       <!-- TABLERO -->
-      <div class="s6-component s6-board-map">
-        <img src="assets/s6-tablero-monte-perdido.png" alt="Tablero de ascensión Monte Perdido">
-        <span class="s6-label s6-label-bottom" data-i18n="rules.board.label">TABLERO</span>
-      </div>
+<div class="s6-component s6-board-map">
+  <img src="assets/s6-tablero-monte-perdido-fichas.webp" alt="Tablero de ascensión Monte Perdido con fichas de jugador">
+  <span class="s6-label s6-label-bottom" data-i18n="rules.board.label">TABLERO</span>
+</div>
 
       <!-- MAZO EVENTOS -->
       <div class="s6-component s6-deck s6-events">
@@ -433,18 +432,14 @@ aria-label="Ir a la landing de Objectiu Pedraforca 2.506">
       </div>
 
       <!-- MANO DE 6 CARTAS -->
-      <div class="s6-component s6-hand">
-        <div class="s6-hand-fan" aria-label="6 cartas de mano">
-          <img src="assets/s6-carta-mapa.png" alt="">
-          <img src="assets/s6-carta-progresion-200.png" alt="">
-          <img src="assets/s6-reverso-cartas.png" alt="">
-          <img src="assets/s6-carta-evento-clavijas.png" alt="">
-          <img src="assets/s6-carta-quebrantahuesos.png" alt="">
-          <img src="assets/s6-carta-progresion-500.png" alt="">
-          <div class="s6-hand-grip" aria-hidden="true"></div>
-        </div>
-        <span class="s6-label s6-label-bottom" data-i18n="rules.hand.label">6 CARTAS DE MANO</span>
-      </div>
+   <div class="s6-component s6-hand">
+  <img
+    src="assets/s6-mano-6-cartas.webp"
+    class="s6-hand-image"
+    alt="Mano sujetando seis cartas de juego en abanico"
+  >
+  <span class="s6-label s6-label-bottom" data-i18n="rules.hand.label">6 CARTAS DE MANO</span>
+</div>
 
       <!-- CARTA PERSONAJE -->
       <div class="s6-component s6-character">
@@ -453,84 +448,63 @@ aria-label="Ir a la landing de Objectiu Pedraforca 2.506">
       </div>
 
       <!-- COLECCIÓN DEL JUGADOR -->
-      <div class="s6-component s6-collection">
-        <div class="s6-collection-stack">
-          <img src="assets/s6-carta-clima-cauterets.png" alt="">
-          <img src="assets/s6-carta-refugio-goriz.png" alt="">
-          <img src="assets/s6-carta-mapa.png" alt="">
-          <img src="assets/s6-carta-escalada.png" alt="">
-          <img src="assets/s6-carta-progresion-250.png" alt="">
-          <img src="assets/s6-carta-progresion-menos50.png" alt="">
-          <img src="assets/s6-carta-quebrantahuesos.png" alt="">
-          <img src="assets/s6-carta-personaje-pedraforca.png" alt="">
-          <img src="assets/s6-carta-refugio-goriz.png" alt="">
-        </div>
-        <span class="s6-label s6-label-bottom" data-i18n="rules.collection.label">ZONA DE COLECCIÓN<br>MAZO DEL JUGADOR</span>
-      </div>
+ <div class="s6-component s6-collection">
+  <img
+    src="assets/s6-coleccion-jugador-grupos.webp"
+    class="s6-collection-image"
+    alt="Colección del jugador agrupada por progresión, flora, fauna, escudos, eventos y recursos"
+  >
+  <span class="s6-label s6-label-bottom" data-i18n="rules.collection.label">ZONA DE COLECCIÓN<br>MAZO DEL JUGADOR</span>
+</div>
 
     </div>
 
     <!-- MECÁNICAS -->
     <div class="s6-mechanics">
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 18l22-8 8 24-22 8z"/><path d="M22 14l22 2 2 25-22-2z"/><path d="M30 16h20v25H30z"/></svg>
-        </div>
-        <h3 data-i18n="rules.m1.title">MECÁNICA DE GESTIÓN DE MANO</h3>
-        <p data-i18n="rules.m1.text">Hasta 6 cartas</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-gestion-mano.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m1.title">MECÁNICA DE GESTIÓN DE MANO</h3>
+    <p data-i18n="rules.m1.text">Hasta 6 cartas</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 20l18-8 18 8-18 8z"/><path d="M14 30l18 8 18-8"/><path d="M14 40l18 8 18-8"/></svg>
-        </div>
-        <h3 data-i18n="rules.m2.title">CONSTRUCCIÓN DE MAZOS</h3>
-        <p data-i18n="rules.m2.text">Mejora tu estrategia carta a carta</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-construccion-mazos.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m2.title">CONSTRUCCIÓN DE MAZOS</h3>
+    <p data-i18n="rules.m2.text">Mejora tu estrategia carta a carta</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M20 20a17 17 0 0 1 24 0"/><path d="M44 20h-9"/><path d="M44 20v-9"/><path d="M44 44a17 17 0 0 1-24 0"/><path d="M20 44h9"/><path d="M20 44v9"/></svg>
-        </div>
-        <h3 data-i18n="rules.m3.title">ORDEN DE TURNO DINÁMICO</h3>
-        <p data-i18n="rules.m3.text">La partida cambia en cada ascensión</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-orden-turno.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m3.title">ORDEN DE TURNO DINÁMICO</h3>
+    <p data-i18n="rules.m3.text">La partida cambia en cada ascensión</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 48h8V34h-8z"/><path d="M28 48h8V26h-8z"/><path d="M42 48h8V16h-8z"/><path d="M16 18l10 8 12-14 10 6"/></svg>
-        </div>
-        <h3 data-i18n="rules.m4.title">COSTE CRECIENTE</h3>
-        <p data-i18n="rules.m4.text">Cada esfuerzo exige más recursos</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-coste-creciente.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m4.title">COSTE CRECIENTE</h3>
+    <p data-i18n="rules.m4.text">Cada esfuerzo exige más recursos</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M21 42h25a9 9 0 0 0 0-18 13 13 0 0 0-25-3 10 10 0 0 0 0 21z"/><path d="M18 12v6"/><path d="M8 22l5 3"/><path d="M30 8v6"/></svg>
-        </div>
-        <h3 data-i18n="rules.m5.title">VENTANAS DE OPORTUNIDAD</h3>
-        <p data-i18n="rules.m5.text">El clima abre y cierra opciones</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-ventana-clima.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m5.title">VENTANAS DE OPORTUNIDAD</h3>
+    <p data-i18n="rules.m5.text">El clima abre y cierra opciones</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 51s-18-10-18-25a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 15-18 25-18 25z"/><path d="M18 54h6"/><path d="M28 54h6"/><path d="M38 54h6"/></svg>
-        </div>
-        <h3 data-i18n="rules.m6.title">FATIGA ACUMULATIVA</h3>
-        <p data-i18n="rules.m6.text">Energía, recursos y mano: 6 → 5 → 4</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-fatiga.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m6.title">FATIGA ACUMULATIVA</h3>
+    <p data-i18n="rules.m6.text">Energía, recursos y mano: 6 → 5 → 4</p>
+  </article>
 
-      <article class="s6-mechanic">
-        <div class="s6-mechanic-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 18h20v28H18z"/><path d="M26 14h20v28H26z"/><path d="M36 20l10 8-10 8"/><path d="M28 44l-10-8 10-8"/></svg>
-        </div>
-        <h3 data-i18n="rules.m7.title">DRAFT DE CARTAS</h3>
-        <p data-i18n="rules.m7.text">Elige, pasa y adapta tu expedición</p>
-      </article>
+  <article class="s6-mechanic">
+    <img src="assets/s6-icon-draft.webp" class="s6-mechanic-img" alt="">
+    <h3 data-i18n="rules.m7.title">DRAFT DE CARTAS</h3>
+    <p data-i18n="rules.m7.text">Elige, pasa y adapta tu expedición</p>
+  </article>
 
     </div>
-
   </div>
 </section>
   
