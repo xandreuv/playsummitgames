@@ -90,54 +90,51 @@ window.PSG_TRANSLATIONS = {
 
         "slots.productMockup": "MOCKUP / CARTAS / BANNER",
 
-        "features.kicker": "Primera cordada · 1.850 m",
-        "features.title": "Características comunes que se gestionan en partida",
-        "features.intro":
-          "Energía, riesgo, clima, altura, expedición, eventos, personajes asimétricos y enorme rejugabilidad.",
-        "features.c1.title": "Gestión de energía, riesgo y recursos",
-        "features.c1.text":
-          "Cada decisión exige medir desgaste, recursos y momento de ataque.",
-        "features.c2.title": "Clima cambiante",
-        "features.c2.text":
-          "La meteorología altera el ritmo y obliga a adaptarse.",
-        "features.c3.title": "Altitud progresiva",
-        "features.c3.text":
-          "La ascensión se vive por cotas, refugios y ataque final.",
-        "features.c4.title": "Sensación de expedición",
-        "features.c4.text":
-          "Progresión, tensión y desgaste con ritmo de montaña real.",
-        "features.c5.title": "Eventos y personajes asimétricos",
-        "features.c5.text":
-          "Cartas de evento y alpinistas con propiedades distintas cambian cada partida.",
-        "features.c6.title": "Gran rejugabilidad y combinación entre juegos",
+        "features.kicker": "PRIMERA CORDADA - 1.850 m",
+"features.title": "CADA PARTIDA, UNA NUEVA CUMBRE",
+"features.intro":
+  "Estrategia, riesgo y planificación en cada decisión. Fácil de aprender, rápido de jugar y difícil de dominar.",
+"features.objective.title": "OBJETIVO",
+"features.objective.text":
+  "Ser el primer alpinista en alcanzar la cumbre.",
 
-        "slots.cardsMain": "IMAGEN DE CARTAS / ALPINISTA / MATERIAL",
+"features.info.players.title": "1-4 JUGADORES",
+"features.info.players.text": "Solo o en equipo, tú eliges la expedición.",
+"features.info.age.title": "+10 AÑOS",
+"features.info.age.text": "Aventuras desafiantes para mentes curiosas.",
+"features.info.time.title": "15-25 MINUTOS",
+"features.info.time.text":
+  "Partidas rápidas e intensas, perfectas para cualquier momento.",
 
-        "modes.kicker": "Refugio · 2.200 m",
-        "modes.title": "Modos de juego y estilos de ascensión",
-        "modes.intro":
-          "La complejidad crece a medida que añadimos reglas y componentes a la partida.",
+"features.expand.combo.title": "COMBINABLES Y AMPLIABLES",
+"features.expand.combo.text":
+  "Combina juegos, expande tu mazo y crea nuevas rutas hacia la cima.",
+"features.expand.cards.title": "CARTAS COLECCIONABLES",
+"features.expand.cards.text":
+  "Cada carta, una pieza de tu historia. Colecciona, intercambia y completa tu expedición.",
 
-        "modes.comp.title": "Modo competitivo",
-        "modes.comp.c1.title": "Sprint running",
-        "modes.comp.c1.text": "Lectura ágil y directa de la ascensión.",
-        "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text":
-          "Más interacción, decisiones tácticas y control del ritmo.",
-        "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text":
-          "La versión más completa, tensa y estratégica.",
+"modes.title": "MODOS DE JUEGO",
 
-        "modes.coop.title": "Modo cooperativo",
-        "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text":
-          "Ascensión individual para optimizar tu línea de juego.",
-        "modes.coop.c2.title": "Estilo Alpino",
-        "modes.coop.c2.text":
-          "Cooperativo ágil, exigente y con pocos apoyos.",
-        "modes.coop.c3.title": "Estilo Clásico",
-        "modes.coop.c3.text":
-          "Más herramientas, más componentes y construcción de expedición.",
+"modes.comp.title": "MODO COMPETITIVO",
+"modes.comp.c1.title": "SPRINT RUNNING",
+"modes.comp.c1.text": "Lectura ágil y directa de la ascensión.",
+"modes.comp.c2.title": "CROSS RUNNING",
+"modes.comp.c2.text":
+  "Más interacción, decisiones tácticas y control del ritmo.",
+"modes.comp.c3.title": "SKY RUNNING",
+"modes.comp.c3.text":
+  "La versión más completa, tensa y estratégica.",
+
+"modes.coop.title": "MODO COOPERATIVO",
+"modes.coop.c1.title": "SOLO",
+"modes.coop.c1.text":
+  "Ascensión individual para optimizar tu línea de juego.",
+"modes.coop.c2.title": "ESTILO ALPINO",
+"modes.coop.c2.text":
+  "Cooperativo ágil, exigente y con pocos apoyos.",
+"modes.coop.c3.title": "ESTILO CLÁSICO",
+"modes.coop.c3.text":
+  "Más herramientas, más componentes y construcción de expedición.",
 
         "values.kicker": "ZONA TÉCNICA · 2.506 m",
         "values.title": "LO QUE TRANSMITE CADA JUEGO SUMMIT SERIES",
@@ -323,54 +320,51 @@ window.PSG_TRANSLATIONS = {
 
         "slots.productMockup": "MOCKUP / CARTES / BÀNER",
 
-        "features.kicker": "Primera cordada · 1.850 m",
-        "features.title": "Característiques comunes que es gestionen en partida",
-        "features.intro":
-          "Energia, risc, temps, altitud, expedició, esdeveniments, personatges asimètrics i una gran rejugabilitat.",
-        "features.c1.title": "Gestió d'energia, risc i recursos",
-        "features.c1.text":
-          "Cada decisió exigeix mesurar el desgast, els recursos i el moment d'atac.",
-        "features.c2.title": "Meteorologia canviant",
-        "features.c2.text":
-          "El temps altera el ritme i obliga a adaptar-se.",
-        "features.c3.title": "Altitud progressiva",
-        "features.c3.text":
-          "L'ascensió es viu per cotes, refugis i atac final.",
-        "features.c4.title": "Sensació d'expedició",
-        "features.c4.text":
-          "Progressió, tensió i desgast amb ritme de muntanya real.",
-        "features.c5.title": "Esdeveniments i personatges asimètrics",
-        "features.c5.text":
-          "Les cartes d'esdeveniment i els alpinistes amb propietats diferents canvien cada partida.",
-        "features.c6.title": "Gran rejugabilitat i combinació entre jocs",
+       "features.kicker": "PRIMERA CORDADA - 1.850 m",
+"features.title": "CADA PARTIDA, UN NOU CIM",
+"features.intro":
+  "Estratègia, risc i planificació en cada decisió. Fàcil d'aprendre, ràpid de jugar i difícil de dominar.",
+"features.objective.title": "OBJECTIU",
+"features.objective.text":
+  "Ser el primer alpinista a assolir el cim.",
 
-        "slots.cardsMain": "IMATGE DE CARTES / ALPINISTA / MATERIAL",
+"features.info.players.title": "1-4 JUGADORS",
+"features.info.players.text": "Sol o en equip, tu tries l'expedició.",
+"features.info.age.title": "+10 ANYS",
+"features.info.age.text": "Aventures desafiants per a ments curioses.",
+"features.info.time.title": "15-25 MINUTS",
+"features.info.time.text":
+  "Partides ràpides i intenses, perfectes per a qualsevol moment.",
 
-        "modes.kicker": "Refugi · 2.200 m",
-        "modes.title": "Modes de joc i estils d'ascensió",
-        "modes.intro":
-          "La complexitat creix a mesura que afegim regles i components a la partida.",
+"features.expand.combo.title": "COMBINABLES I AMPLIABLES",
+"features.expand.combo.text":
+  "Combina jocs, expandeix la baralla i crea noves rutes cap al cim.",
+"features.expand.cards.title": "CARTES COL·LECCIONABLES",
+"features.expand.cards.text":
+  "Cada carta, una peça de la teva història. Col·lecciona, intercanvia i completa la teva expedició.",
 
-        "modes.comp.title": "Mode competitiu",
-        "modes.comp.c1.title": "Sprint running",
-        "modes.comp.c1.text": "Lectura àgil i directa de l'ascensió.",
-        "modes.comp.c2.title": "Cross running",
-        "modes.comp.c2.text":
-          "Més interacció, decisions tàctiques i control del ritme.",
-        "modes.comp.c3.title": "Sky running",
-        "modes.comp.c3.text":
-          "La versió més completa, tensa i estratègica.",
+"modes.title": "MODES DE JOC",
 
-        "modes.coop.title": "Mode cooperatiu",
-        "modes.coop.c1.title": "Solo",
-        "modes.coop.c1.text":
-          "Ascensió individual per optimitzar la teva línia de joc.",
-        "modes.coop.c2.title": "Estil Alpí",
-        "modes.coop.c2.text":
-          "Cooperatiu àgil, exigent i amb pocs suports.",
-        "modes.coop.c3.title": "Estil Clàssic",
-        "modes.coop.c3.text":
-          "Més eines, més components i construcció d'expedició.",
+"modes.comp.title": "MODE COMPETITIU",
+"modes.comp.c1.title": "SPRINT RUNNING",
+"modes.comp.c1.text": "Lectura àgil i directa de l'ascensió.",
+"modes.comp.c2.title": "CROSS RUNNING",
+"modes.comp.c2.text":
+  "Més interacció, decisions tàctiques i control del ritme.",
+"modes.comp.c3.title": "SKY RUNNING",
+"modes.comp.c3.text":
+  "La versió més completa, tensa i estratègica.",
+
+"modes.coop.title": "MODE COOPERATIU",
+"modes.coop.c1.title": "SOLO",
+"modes.coop.c1.text":
+  "Ascensió individual per optimitzar la teva línia de joc.",
+"modes.coop.c2.title": "ESTIL ALPÍ",
+"modes.coop.c2.text":
+  "Cooperatiu àgil, exigent i amb pocs suports.",
+"modes.coop.c3.title": "ESTIL CLÀSSIC",
+"modes.coop.c3.text":
+  "Més eines, més components i construcció d'expedició.",
 
         "values.kicker": "ZONA TÈCNICA · 2.506 m",
         "values.title": "QUÈ TRANSMET CADA JOC SUMMIT SERIES",
