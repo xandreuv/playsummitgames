@@ -113,6 +113,20 @@ window.PSG_TRANSLATIONS = {
 "features.expand.cards.text":
   "Cada carta, una pieza de tu historia. Colecciona, intercambia y completa tu expedición.",
 
+        "features.expand.small.title": "PEQUEÑO FORMATO",
+"features.expand.small.text":
+  "Fácilmente transportable en tu mochila para que puedas llevar el juego donde quieras.",
+
+"features.quote.1.text":
+  "No es la montaña la que conquistamos, sino a nosotros mismos.",
+"features.quote.1.author": "– Edmund Hillary",
+"features.quote.2.text":
+  "La cima no es el final, es solo el comienzo de otra aventura.",
+"features.quote.2.author": "– Reinhold Messner",
+"features.quote.3.text":
+  "En cada paso hacia arriba, descubro quién soy realmente.",
+"features.quote.3.author": "– Anatoli Boukreev",
+
 "modes.title": "MODOS DE JUEGO",
 
 "modes.comp.title": "MODO COMPETITIVO",
@@ -342,6 +356,20 @@ window.PSG_TRANSLATIONS = {
 "features.expand.cards.title": "CARTES COL·LECCIONABLES",
 "features.expand.cards.text":
   "Cada carta, una peça de la teva història. Col·lecciona, intercanvia i completa la teva expedició.",
+
+        "features.expand.small.title": "PETIT FORMAT",
+"features.expand.small.text":
+  "Fàcilment transportable a la motxilla perquè puguis portar el joc on vulguis.",
+
+"features.quote.1.text":
+  "No és la muntanya la que conquerim, sinó a nosaltres mateixos.",
+"features.quote.1.author": "– Edmund Hillary",
+"features.quote.2.text":
+  "El cim no és el final, és només el començament d'una altra aventura.",
+"features.quote.2.author": "– Reinhold Messner",
+"features.quote.3.text":
+  "A cada pas cap amunt, descobreixo qui soc realment.",
+"features.quote.3.author": "– Anatoli Boukreev",
 
 "modes.title": "MODES DE JOC",
 
