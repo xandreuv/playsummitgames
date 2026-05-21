@@ -1407,13 +1407,15 @@ opacity: 0.98;
 }
 
 .s3-objective-icon img {
-  width: 58px;
-  height: 58px;
+  width: 68px;
+  height: 68px;
   object-fit: contain;
   background: transparent;
-  color: #f3ead7;
-  opacity: 0.94;
-  filter: drop-shadow(0 6px 10px rgba(0,0,0,0.22));
+  opacity: 0.96;
+  filter:
+    drop-shadow(0 8px 12px rgba(0,0,0,0.26))
+    saturate(0.94)
+    contrast(1.02);
 }
 
 .s3-objective-copy {
