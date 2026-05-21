@@ -1936,14 +1936,9 @@ opacity: 0.98;
 ========================= */
 
 .s3-reveal {
-  opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.72s ease, transform 0.72s ease;
-}
-
-.seccion-3.visible .s3-reveal {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  transition: opacity 0.72s ease, transform 0.72s ease;
 }
 
 /* =========================
