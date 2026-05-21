@@ -9,11 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const switchButtons = document.querySelectorAll(".lang-switch-button");
   const translations = window.PSG_TRANSLATIONS || {};
   const panoramaScroll = document.getElementById("summitPanoramaScroll");
-  const seccion3 = document.querySelector(".seccion-3");
   const seccion5 = document.querySelector(".seccion-5");
   const seccion6 = document.querySelector(".seccion-6");
 
-  const revealSections = [seccion3, seccion5, seccion6].filter(Boolean);
+  const revealSections = [seccion5, seccion6].filter(Boolean);
 
   if (revealSections.length) {
     const observer = new IntersectionObserver((entries) => {
