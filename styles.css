@@ -1962,7 +1962,362 @@ opacity: 0.98;
   height: 21px;
 }
 }
+/*  AJUSTES FINALES SECCIÓN 3
+   Iconos transparentes · tercer módulo · citas · badges */
 
+/* Evita el “cuadrado blanco” visual: los nuevos WEBP ya van recortados.
+   Este bloque asegura que no se les aplique fondo accidental. */
+.s3-info-item img,
+.s3-expand-icon img,
+.s3-mode-item > img,
+.s3-objective-icon img,
+.s3-difficulty img,
+.s3-mode-badge img {
+  background: transparent !important;
+}
+
+/* Iconos informativos redondos */
+.s3-info-item img {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+  opacity: 0.98;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
+}
+
+/* Iconos de módulos */
+.s3-expand-icon img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  opacity: 0.98;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
+}
+
+/* La banda pasa de 2 a 3 módulos */
+.s3-expand-band {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.s3-expand-item {
+  grid-template-columns: 70px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  min-height: 214px;
+}
+
+.s3-expand-item:first-child {
+  border-right: 1px solid rgba(243, 234, 215, 0.32);
+  border-bottom: 0;
+}
+
+.s3-expand-item:nth-child(2) {
+  border-right: 1px solid rgba(243, 234, 215, 0.32);
+}
+
+.s3-box-combo,
+.s3-collectible-cards,
+.s3-backpack-box {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 10px;
+}
+
+/* Caja + caja Pedraforca en mochila */
+.s3-backpack-box {
+  width: min(100%, 250px);
+  display: flex;
+  justify-content: center;
+}
+
+.s3-backpack-box img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 18px 24px rgba(0,0,0,0.28))
+    drop-shadow(0 4px 8px rgba(0,0,0,0.16));
+}
+
+/* Ajuste cajas combinables para que no dominen el nuevo módulo */
+.s3-box-combo {
+  min-width: 0;
+}
+
+.s3-box-combo img {
+  width: clamp(60px, 5.6vw, 88px);
+}
+
+/* Ajuste cartas coleccionables */
+.s3-collectible-cards {
+  width: 210px;
+  height: 130px;
+}
+
+.s3-collect-card {
+  width: 74px;
+  height: 116px;
+}
+
+/* Badges superiores de modos:
+   ahora son imágenes transparentes, más grandes y situadas dentro del marco */
+.s3-mode-panel {
+  padding-top: 54px;
+  overflow: visible;
+}
+
+.s3-mode-panel-title {
+  position: relative;
+  margin: -34px auto 22px;
+  z-index: 5;
+}
+
+.s3-mode-badge {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  margin-bottom: 4px;
+  transform: translateY(8px);
+}
+
+.s3-mode-badge img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 10px 14px rgba(0,0,0,0.20))
+    drop-shadow(0 2px 3px rgba(0,0,0,0.10));
+}
+
+/* Franja título del panel: deja aire para que no la pise el badge */
+.s3-mode-panel-title h3 {
+  margin-top: 0;
+  min-width: 280px;
+}
+
+/* Logos de cada modo más detallados en pantallas grandes */
+.s3-mode-item > img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.18));
+}
+
+/* Piolets: transparentes, más grandes, con pequeño solape */
+.s3-difficulty {
+  min-width: 118px;
+  gap: 0;
+}
+
+.s3-difficulty img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  margin-left: -4px;
+  filter: drop-shadow(0 4px 5px rgba(0,0,0,0.20));
+}
+
+.s3-difficulty img:first-child {
+  margin-left: 0;
+}
+
+/* Citas finales */
+.s3-quotes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin: 34px auto 0;
+  padding: 24px 0 0;
+  border-top: 1px solid rgba(243, 234, 215, 0.28);
+}
+
+.s3-quote {
+  position: relative;
+  padding: 0 32px;
+  min-height: 116px;
+}
+
+.s3-quote:not(:last-child) {
+  border-right: 1px solid rgba(243, 234, 215, 0.28);
+}
+
+.s3-quote p {
+  margin: 0 0 8px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: clamp(1rem, 1.5vw, 1.32rem);
+  line-height: 1.25;
+  color: rgba(248, 239, 219, 0.94);
+}
+
+.s3-quote p::before {
+  content: "“";
+  margin-right: 4px;
+  font-size: 1.4em;
+  line-height: 0;
+  color: rgba(248, 239, 219, 0.76);
+}
+
+.s3-quote span {
+  display: block;
+  font-size: 0.92rem;
+  color: rgba(248, 239, 219, 0.74);
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+  .s3-expand-band {
+    grid-template-columns: 1fr;
+  }
+
+  .s3-expand-item:first-child,
+  .s3-expand-item:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid rgba(243, 234, 215, 0.32);
+  }
+
+  .s3-expand-item {
+    grid-template-columns: 76px minmax(0, 1fr) auto;
+    grid-template-rows: auto;
+  }
+
+  .s3-box-combo,
+  .s3-collectible-cards,
+  .s3-backpack-box {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .s3-backpack-box {
+    width: 230px;
+  }
+
+  .s3-quotes {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .s3-quote {
+    padding: 20px 0;
+    min-height: auto;
+    border-right: 0 !important;
+    border-bottom: 1px solid rgba(243, 234, 215, 0.22);
+  }
+
+  .s3-quote:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 860px) {
+  .s3-expand-item {
+    grid-template-columns: 62px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .s3-box-combo,
+  .s3-collectible-cards,
+  .s3-backpack-box {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 10px;
+  }
+
+  .s3-backpack-box {
+    width: min(100%, 260px);
+  }
+
+  .s3-mode-panel {
+    padding-top: 48px;
+  }
+
+  .s3-mode-badge {
+    width: 68px;
+    height: 68px;
+    transform: translateY(6px);
+  }
+
+  .s3-mode-badge img {
+    width: 68px;
+    height: 68px;
+  }
+
+  .s3-mode-item > img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .s3-difficulty {
+    min-width: 0;
+  }
+
+  .s3-difficulty img {
+    width: 30px;
+    height: 30px;
+    margin-left: -6px;
+  }
+}
+
+@media (max-width: 560px) {
+  .s3-info-item img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .s3-expand-icon img {
+    width: 62px;
+    height: 62px;
+  }
+
+  .s3-mode-panel {
+    padding-top: 44px;
+  }
+
+  .s3-mode-panel-title {
+    margin-top: -30px;
+  }
+
+  .s3-mode-badge {
+    width: 60px;
+    height: 60px;
+    transform: translateY(4px);
+  }
+
+  .s3-mode-badge img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .s3-mode-panel-title h3 {
+    min-width: 220px;
+  }
+
+  .s3-mode-item > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .s3-difficulty img {
+    width: 27px;
+    height: 27px;
+    margin-left: -7px;
+  }
+
+  .s3-quotes {
+    margin-top: 26px;
+  }
+
+  .s3-quote p {
+    font-size: 1rem;
+  }
+}
 
 /* =========================
    SECCIÓN 5 · ZONA TÉCNICA
