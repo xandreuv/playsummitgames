@@ -1979,22 +1979,42 @@ opacity: 0.98;
   filter: brightness(0) saturate(100%) invert(90%) sepia(15%) saturate(414%) hue-rotate(353deg) brightness(98%) contrast(90%);
 }
 
-/* Si la sección 4 tiene fondo claro, esta variante oscurece la cita */
-.summit-end-quote-s4 p {
+/* Variantes para secciones con fondo claro: sección 4 y sección 6 */
+.summit-end-quote-s4,
+.summit-end-quote-s6 {
+  border-top: 1px solid rgba(36, 45, 32, 0.24);
+}
+
+.summit-end-quote-s4 p,
+.summit-end-quote-s6 p {
   color: rgba(36, 45, 32, 0.88);
 }
 
 .summit-end-quote-s4 p::before,
 .summit-end-quote-s4 p::after,
-.summit-end-quote-s4 span {
+.summit-end-quote-s4 span,
+.summit-end-quote-s6 p::before,
+.summit-end-quote-s6 p::after,
+.summit-end-quote-s6 span {
   color: rgba(36, 45, 32, 0.66);
 }
 
-.summit-end-quote-s4 img {
+.summit-end-quote-s4 img,
+.summit-end-quote-s6 img {
   filter: brightness(0) saturate(100%) invert(21%) sepia(14%) saturate(1200%) hue-rotate(56deg) brightness(92%) contrast(89%);
   opacity: 0.48;
 }
 
+/* Ajuste específico cita sección 6 */
+.summit-end-quote-s6 {
+  width: min(100%, 620px);
+  margin-top: 34px;
+  padding-top: 22px;
+}
+
+.summit-end-quote-s6 p {
+  font-size: clamp(0.98rem, 1.22vw, 1.14rem);
+}
 
 
 /* =========================
