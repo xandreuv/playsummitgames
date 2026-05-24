@@ -150,6 +150,48 @@ window.PSG_TRANSLATIONS = {
 "modes.coop.c3.text":
   "Más herramientas, más componentes y construcción de expedición.",
 
+       
+        "s4.kicker": "REFUGIO - 2.200 m.",
+        "s4.title.line1": "CÓMO AFRONTAR UNA",
+        "s4.title.line2": "ASCENSIÓN DE SUMMIT SERIES",
+        "s4.lead.1": "Cada decisión cuenta. Gestiona tu equipo, tu cuerpo y la montaña.",
+        "s4.lead.2": "La cima es solo el final de una gran estrategia.",
+
+        "s4.alpinist.title": "ELIGE TU ALPINISTA:",
+        "s4.alpinist.subtitle": "marcará tu estrategia.",
+        "s4.alpinist.text": "Cada alpinista tiene habilidades únicas. Conoce tus fortalezas y compensa tus debilidades.",
+
+        "s4.weather.title": "CLIMA VARIABLE:",
+        "s4.weather.subtitle": "la meteorología altera el ritmo y obliga a adaptarse.",
+        "s4.weather.text": "El clima cambia sin avisar. Prepárate para lo inesperado. La montaña manda.",
+
+        "s4.energy.title": "GESTIÓN DE ENERGÍA:",
+        "s4.energy.subtitle": "si te agotas demasiado rápido, tu cuerpo se resiente.",
+        "s4.energy.text": "Equilibra esfuerzo y descanso. La resistencia física y mental es tu mejor aliada.",
+
+        "s4.altitude.title": "ALTITUD PROGRESIVA:",
+        "s4.altitude.subtitle": "la ascensión se vive por cotas, refugios y ataque final.",
+        "s4.altitude.text": "Cada paso te acerca a la cima, pero también te pone a prueba. Planifica tu ruta.",
+
+        "s4.expedition.title": "SENSACIÓN DE EXPEDICIÓN:",
+        "s4.expedition.subtitle": "progresión, tensión y desgaste con ritmo de montaña real.",
+        "s4.expedition.text": "Cada decisión, cada carta y cada paso cuentan tu historia en la montaña.",
+
+        "s4.quote.1.text": "No es la montaña la que conquistamos, sino a nosotros mismos.",
+        "s4.quote.1.author": "— Sir Edmund Hillary",
+        "s4.quote.2.text": "En la montaña, el clima es el jefe al que nunca puedes desafiar.",
+        "s4.quote.2.author": "— Reinhold Messner",
+        "s4.quote.3.text": "La montaña no castiga la ambición, castiga la imprudencia.",
+        "s4.quote.3.author": "— Anatoli Boukreev",
+        "s4.quote.4.text": "No se trata de llegar primero, sino de llegar entero.",
+        "s4.quote.4.author": "— Walter Bonatti",
+        "s4.quote.5.text": "Una expedición no termina en la cima, sino cuando todos vuelven a casa.",
+        "s4.quote.5.author": "— Ed Viesturs",
+
+        "s4.footer": "Prepárate. Adáptate. Supera tus límites. Haz cumbre.",
+
+
+        
         "values.kicker": "ZONA TÉCNICA · 2.506 m",
         "values.title": "LO QUE TRANSMITE CADA JUEGO SUMMIT SERIES",
         "values.title.line1": "LO QUE TRANSMITE CADA JUEGO",
@@ -394,6 +436,47 @@ window.PSG_TRANSLATIONS = {
 "modes.coop.c3.text":
   "Més eines, més components i construcció d'expedició.",
 
+
+               "s4.kicker": "REFUGI - 2.200 m.",
+        "s4.title.line1": "COM AFRONTAR UNA",
+        "s4.title.line2": "ASCENSIÓ DE SUMMIT SERIES",
+        "s4.lead.1": "Cada decisió compta. Gestiona el teu equip, el teu cos i la muntanya.",
+        "s4.lead.2": "El cim és només el final d’una gran estratègia.",
+
+        "s4.alpinist.title": "TRIA EL TEU ALPINISTA:",
+        "s4.alpinist.subtitle": "marcarà la teva estratègia.",
+        "s4.alpinist.text": "Cada alpinista té habilitats úniques. Coneix les teves fortaleses i compensa les teves febleses.",
+
+        "s4.weather.title": "METEOROLOGIA VARIABLE:",
+        "s4.weather.subtitle": "la meteorologia altera el ritme i obliga a adaptar-se.",
+        "s4.weather.text": "El temps canvia sense avisar. Prepara’t per a l’imprevist. La muntanya mana.",
+
+        "s4.energy.title": "GESTIÓ DE L’ENERGIA:",
+        "s4.energy.subtitle": "si t’esgotes massa ràpid, el cos se’n ressent.",
+        "s4.energy.text": "Equilibra esforç i descans. La resistència física i mental és la teva millor aliada.",
+
+        "s4.altitude.title": "ALTITUD PROGRESSIVA:",
+        "s4.altitude.subtitle": "l’ascensió es viu per cotes, refugis i atac final.",
+        "s4.altitude.text": "Cada pas t’acosta al cim, però també et posa a prova. Planifica la ruta.",
+
+        "s4.expedition.title": "SENSACIÓ D’EXPEDICIÓ:",
+        "s4.expedition.subtitle": "progressió, tensió i desgast amb ritme de muntanya real.",
+        "s4.expedition.text": "Cada decisió, cada carta i cada pas expliquen la teva història a la muntanya.",
+
+        "s4.quote.1.text": "No és la muntanya la que conquerim, sinó a nosaltres mateixos.",
+        "s4.quote.1.author": "— Sir Edmund Hillary",
+        "s4.quote.2.text": "A la muntanya, el temps és el cap que mai no pots desafiar.",
+        "s4.quote.2.author": "— Reinhold Messner",
+        "s4.quote.3.text": "La muntanya no castiga l’ambició, castiga la imprudència.",
+        "s4.quote.3.author": "— Anatoli Boukreev",
+        "s4.quote.4.text": "No es tracta d’arribar primer, sinó d’arribar sencer.",
+        "s4.quote.4.author": "— Walter Bonatti",
+        "s4.quote.5.text": "Una expedició no acaba al cim, sinó quan tothom torna a casa.",
+        "s4.quote.5.author": "— Ed Viesturs",
+
+        "s4.footer": "Prepara’t. Adapta’t. Supera els teus límits. Fes cim.",
+
+        
         "values.kicker": "ZONA TÈCNICA · 2.506 m",
         "values.title": "QUÈ TRANSMET CADA JOC SUMMIT SERIES",
         "values.title.line1": "QUÈ TRANSMET CADA JOC",
