@@ -4805,11 +4805,45 @@ SECTION 1 HERO NUEVO
 /* Adaptación de las cards S7 al fondo verde de sección 2 */
 .section-products .s2-game-card {
   background:
-    radial-gradient(circle at 78% 12%, color-mix(in srgb, var(--s7-accent) 12%, transparent), transparent 30%),
-    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(244,241,230,0.88));
+    radial-gradient(circle at 78% 12%, color-mix(in srgb, var(--s7-accent) 16%, transparent), transparent 34%),
+    linear-gradient(180deg, rgba(54, 86, 67, 0.82), rgba(33, 63, 49, 0.88)),
+    url("assets/mountain-texture.png");
+  background-size: cover, cover, cover;
+  background-position: center, center, center;
+  background-blend-mode: soft-light, normal, multiply;
+  border-color: color-mix(in srgb, var(--s7-accent) 46%, rgba(244, 234, 212, 0.24));
   box-shadow:
-    0 28px 64px rgba(7, 18, 18, 0.26),
-    inset 0 0 0 1px rgba(255,255,255,0.58);
+    0 28px 64px rgba(7, 18, 18, 0.34),
+    inset 0 0 0 1px rgba(244, 234, 212, 0.16);
+}
+
+.section-products .s2-game-card .s7-game-prefix,
+.section-products .s2-game-card .s7-game-text,
+.section-products .s2-game-card .s7-feature,
+.section-products .s2-game-card .s7-feature strong,
+.section-products .s2-game-card .s7-feature small {
+  color: #f3ead7;
+}
+
+.section-products .s2-game-card .s7-game-text {
+  color: rgba(243, 234, 215, 0.88);
+}
+
+.section-products .s2-game-card .s7-clock-icon {
+  border-color: #f3ead7;
+}
+
+.section-products .s2-game-card .s7-clock-icon::before,
+.section-products .s2-game-card .s7-clock-icon::after,
+.section-products .s2-game-card .s7-players-icon span,
+.section-products .s2-game-card .s7-players-icon::before,
+.section-products .s2-game-card .s7-players-icon::after {
+  background: #f3ead7;
+}
+
+.section-products .s2-game-card .s7-age-box,
+.section-products .s2-game-card .s7-players-icon {
+  background: rgba(12, 32, 24, 0.22);
 }
 
 .section-products .s7-panel-grid {
