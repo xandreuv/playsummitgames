@@ -352,7 +352,7 @@ window.PSG_TRANSLATIONS = {
 
         "products.includes.title": "Què inclou cada joc?",
 
-        "products.includes.board.title": "TAULER",
+        "products.includes.board.title": "TAULELL",
         "products.includes.board.text":
           "Ruta de muntanya amb altituds i refugis.",
 
