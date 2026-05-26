@@ -28,23 +28,27 @@ window.PSG_TRANSLATIONS = {
         "products.kicker": "CAMPAMENTO BASE · 1.450 m",
         "products.title": "DESCUBRE LOS JUEGOS",
         "products.subtitle": "DE LA SUMMIT SERIES",
-        "products.intro":
-          "Dos montañas, dos identidades y dos landings específicas.",
-
+        
         "products.mp.prefix": "Objetivo",
         "products.mp.name": "Monte Perdido",
         "products.mp.alt": "3.355 m",
         "products.mp.text":
-          "La expedición definitiva en el Parque Nacional de Ordesa.",
-        "products.mp.cta": "Ver juego →",
-
+          "Afronta los pasos más delicados para hacer cima en el Monte Perdido dentro del Parque Nacional de Ordesa..",
+        
         "products.pf.prefix": "Objectiu",
         "products.pf.name": "Pedraforca",
         "products.pf.alt": "2.506 m",
         "products.pf.text":
-          "Escalada técnica y aventura en uno de los iconos de Catalunya.",
-        "products.pf.cta": "Ver juego →",
-
+          "Escalada técnica y planificación de la aventura en uno de los iconos de Catalunya.",
+        
+       "buy.cta.buy": "COMPRAR",
+       "buy.cta.view": "VER JUEGO",
+       "buy.common.age": "AÑOS",
+       "buy.common.timeMain": "15–25",
+       "buy.common.timeSub": "MIN",
+       "buy.common.playersMain": "1–4",
+       "buy.common.playersSub": "JUGADORES"
+  
         "products.common.p1": "1–4 jugadores",
         "products.common.p2": "20–40 min",
         "products.common.p3": "+10 años",
@@ -314,23 +318,27 @@ window.PSG_TRANSLATIONS = {
         "products.kicker": "CAMP BASE · 1.450 m",
         "products.title": "DESCOBREIX ELS JOCS",
         "products.subtitle": "DE LA SUMMIT SERIES",
-        "products.intro":
-          "Dues muntanyes, dues identitats i dues landings específiques.",
-
+        
         "products.mp.prefix": "Objetivo",
         "products.mp.name": "Monte Perdido",
         "products.mp.alt": "3.355 m",
         "products.mp.text":
-          "L'expedició definitiva al Parc Nacional d'Ordesa.",
-        "products.mp.cta": "Veure joc →",
-
+          "Afronta els passos més delicats per fer cim al Mont Perdut dins el Parc Nacional d'Ordesa.",
+       
         "products.pf.prefix": "Objectiu",
         "products.pf.name": "Pedraforca",
         "products.pf.alt": "2.506 m",
         "products.pf.text":
-          "Escalada tècnica i aventura en una de les icones de Catalunya.",
-        "products.pf.cta": "Veure joc →",
+          "Escalada tècnica i planificació de l'aventura en una de les icones de Catalunya.",
 
+        "buy.cta.buy": "COMPRAR",
+"buy.cta.view": "VEURE JOC",
+"buy.common.age": "ANYS",
+"buy.common.timeMain": "15–25",
+"buy.common.timeSub": "MIN",
+"buy.common.playersMain": "1–4",
+"buy.common.playersSub": "JUGADORS"
+  
         "products.common.p1": "1–4 jugadors",
         "products.common.p2": "20–40 min",
         "products.common.p3": "+10 anys",
