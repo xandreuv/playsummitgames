@@ -904,11 +904,18 @@ SECTION 1 HERO NUEVO
   content: "";
   position: absolute;
   inset: 0;
-  background: 
-    linear-gradient(to bottom, #1f3b2f, #163328),
-    url('assets/mountain-texture.png') 
-background-size: cover;
-opacity: 0.98;
+  z-index: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(31, 59, 47, 0.94) 0%,
+      rgba(22, 51, 40, 0.96) 100%
+    ),
+    url("assets/mountain-texture.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 1;
+  pointer-events: none;
 }
 
 /* HEADER */
@@ -974,148 +981,6 @@ opacity: 0.98;
   opacity: 0.8;
 }
 
-
-/* GRID */
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-/* CARD */
-.product-card {
-  text-align: center;
-  padding: 20px 10px;
-  background: transparent;
-  border: none;
-  box-shadow: none;
- 
-}
-
-.product-box-wrapper {
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-}
-
-.product-box {
-  display: block;
-  margin: 0 auto 10px auto;
-  max-width: 240px;
-  background: none;     
-  border-radius: 0;     
-  transition: transform 0.4s ease;
-}
-
-.product-card:hover .product-box {
-  transform: translateY(-6px) scale(1.02);
-}
-.product-card h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0.3px;
-  color: #f3e9d2;
-  margin-bottom: 6px;
-}
-
-.product-card h3 span {
-  font-style: italic;
-}
-
-.product-card span {
-  font-weight: bold;
-}
-
-.alt {
-  font-family: Georgia, serif;
-  font-size: 20px;
-  margin-bottom: 12px;
-  opacity: 0.9;
-}
-
-.line {
-  width: 60px;
-  height: 1px;
-  margin: 10px auto 16px auto;
-  position: relative;
-}
-
-.line::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: -4px;
-  width: 8px;
-  height: 8px;
-  transform: translateX(-50%) rotate(45deg);
-  background: currentColor;
-}
-
-.product-alt {
-  color: #8fd3a7;
-  margin: 10px 0;
-}
-
-
-/* CARTAS */
-.cards-row {
-  position: relative;
-  height: 120px;
-  margin-top: -30px;
-  margin-bottom: 30px;
-}
-
-.card {
-  position: absolute;
-  width: 120px;
-  border-radius: 14px;
-  transition: all 0.4s ease;
-
-  box-shadow:
-    0 18px 30px rgba(0,0,0,0.4);
-}
-
-.card:nth-child(1) {
-  left: 0;
-  transform: rotate(-12deg);
-}
-
-.card:nth-child(2) {
-  left: 60px;
-  z-index: 2;
-}
-
-.card:nth-child(3) {
-  left: 120px;
-  transform: rotate(12deg);
-}
-
-.card:hover {
-  transform: translateY(-25px) scale(1.08) rotate(0deg);
-  filter: brightness(1.1);
-}
-
-.product-card:first-child h3 span {
-  color: #7ec3ff; /* azul Monte Perdido */
-}
-
-.product-card:last-child h3 span {
-  color: #f2a65a; /* naranja Pedraforca */
-}
-
-/* CTA */
-.link-cta {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #c7f0d8;
-  border-bottom: 1px solid transparent;
-}
-
-.link-cta:hover {
-  border-bottom: 1px solid #c7f0d8;
-}
 
 /* BLOQUE INMERSIVO */
 .immersive-block {
@@ -1196,49 +1061,6 @@ opacity: 0.98;
   transform: translateY(-6px);
 }
 
-
-/* colores */
-.mp { color: #7ec3ff; }
-.pf { color: #f2a65a; }
-
-/* altitud */
-.alt {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 6px;
-}
-
-/* línea decorativa */
-.line {
-  width: 40px;
-  height: 2px;
-  margin: 10px auto 14px auto;
-}
-
-.line.mp { background: #7ec3ff; }
-.line.pf { background: #f2a65a; }
-
-
-
-/* CTA */
-.cta {
-  display: inline-block;
-  margin-top: 10px;
-  font-size: 14px;
-  text-decoration: none;
-  border-bottom: 1px solid;
-  padding-bottom: 2px;
-}
-
-.cta.mp {
-  color: #7ec3ff;
-  border-color: #7ec3ff;
-}
-
-.cta.pf {
-  color: #f2a65a;
-  border-color: #f2a65a;
-}
 
 /* =========================================================
    SECCIÓN 3 · PRIMERA CORDADA
@@ -4906,6 +4728,250 @@ opacity: 0.98;
     min-height: 56px;
   }
 }
+
+/* =========================================================
+   SECCIÓN 2 · PRODUCTOS CON ESTILO SECCIÓN 7
+========================================================= */
+
+.s2-products-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.s2-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 34px;
+}
+
+.s2-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 720px;
+}
+
+.s2-icon {
+  width: 42px;
+  height: auto;
+  opacity: 0.84;
+  filter: brightness(0) saturate(100%) invert(90%) sepia(15%) saturate(414%) hue-rotate(353deg) brightness(98%) contrast(90%);
+}
+
+.section-products .kicker-top {
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: rgba(244, 234, 212, 0.72);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.s2-main-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #f3ead7;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.section-products .subtitle {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #d4a85a;
+  margin: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.section-products .divider {
+  width: 40px;
+  height: 2px;
+  background: #d4a85a;
+  opacity: 0.8;
+  margin: 4px auto 0;
+}
+
+.s2-games-grid {
+  align-items: stretch;
+}
+
+/* Adaptación de las cards S7 al fondo verde de sección 2 */
+.section-products .s2-game-card {
+  background:
+    radial-gradient(circle at 78% 12%, color-mix(in srgb, var(--s7-accent) 12%, transparent), transparent 30%),
+    linear-gradient(180deg, rgba(255,255,255,0.94), rgba(244,241,230,0.88));
+  box-shadow:
+    0 28px 64px rgba(7, 18, 18, 0.26),
+    inset 0 0 0 1px rgba(255,255,255,0.58);
+}
+
+.section-products .s7-panel-grid {
+  min-height: 430px;
+}
+
+.section-products .s7-game-copy {
+  padding-top: 14px;
+}
+
+.section-products .s7-game-prefix {
+  color: #101821;
+}
+
+.section-products .s7-game-text {
+  max-width: 280px;
+}
+
+.section-products .s7-product-stage {
+  min-height: 405px;
+}
+
+.section-products .s7-box-image {
+  width: min(86%, 320px);
+}
+
+.section-products .s7-box-image-pedra {
+  width: min(96%, 370px);
+  transform: translateY(-6px) scale(1.06);
+}
+
+.section-products .s7-card-fan {
+  bottom: 0;
+  height: 198px;
+}
+
+.section-products .s7-sample-card {
+  width: clamp(100px, 8.8vw, 134px);
+}
+
+.section-products .s7-features {
+  margin-top: 12px;
+}
+
+.section-products .s7-button {
+  min-height: 56px;
+}
+
+/* Responsive específico sección 2 */
+@media (max-width: 1180px) {
+  .section-products {
+    padding: 78px 0 86px;
+  }
+
+  .s2-games-grid {
+    grid-template-columns: 1fr;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .section-products .s7-panel-grid {
+    min-height: 420px;
+  }
+
+  .section-products .s7-box-image {
+    width: min(78%, 350px);
+  }
+}
+
+@media (max-width: 860px) {
+  .section-products {
+    padding: 70px 0 78px;
+  }
+
+  .s2-header {
+    margin-bottom: 28px;
+  }
+
+  .s2-main-title {
+    font-size: 28px;
+    max-width: 520px;
+  }
+
+  .section-products .s7-panel-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .section-products .s7-game-copy {
+    padding-top: 0;
+  }
+
+  .section-products .s7-game-text {
+    max-width: 330px;
+  }
+
+  .section-products .s7-product-stage {
+    min-height: 395px;
+  }
+
+  .section-products .s7-box-image {
+    width: min(78%, 320px);
+    margin: 0 auto;
+  }
+
+  .section-products .s7-box-image-pedra {
+    width: min(86%, 340px);
+    transform: translateY(-4px) scale(1.05);
+  }
+
+  .section-products .s7-card-fan {
+    width: min(410px, 94%);
+  }
+}
+
+@media (max-width: 620px) {
+  .section-products {
+    padding: 62px 0 70px;
+  }
+
+  .s2-icon {
+    width: 34px;
+  }
+
+  .section-products .kicker-top {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .s2-main-title {
+    max-width: 320px;
+    font-size: 24px;
+    line-height: 1.22;
+  }
+
+  .section-products .subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .section-products .s7-product-stage {
+    min-height: 340px;
+  }
+
+  .section-products .s7-box-image {
+    width: min(82%, 270px);
+  }
+
+  .section-products .s7-box-image-pedra {
+    width: min(88%, 290px);
+    transform: translateY(-2px) scale(1.04);
+  }
+
+  .section-products .s7-card-fan {
+    height: 166px;
+  }
+
+  .section-products .s7-sample-card {
+    width: clamp(86px, 28vw, 112px);
+  }
+}
+
 
 .site-footer {
   background: #edf2f5;
