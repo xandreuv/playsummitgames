@@ -290,6 +290,8 @@ window.PSG_TRANSLATIONS = {
       }
     },
 
+
+    
     cat: {
       title: "Play Summit Games | Jocs dissenyats als Pirineus",
       description:
@@ -311,7 +313,7 @@ window.PSG_TRANSLATIONS = {
         "hero.title": "Summit Games",
         "hero.lead": "Jocs de cartes inspirats en l'alta muntanya.",
         "hero.text":
-          "Una col·lecció creada per viure la tensió, l'estratègia, la meteorologia canviant i l'emoció d'una ascensió real.",
+          "Una col·lecció creada per viure la tensió, l'estratègia, la meteo canviant i l'emoció d'una ascensió real.",
         "hero.cta1": "Descobrir jocs",
         "hero.cta2": "Veure la col·lecció",
 
