@@ -58,8 +58,7 @@ window.PSG_TRANSLATIONS = {
         "products.immersive.title.after": "empieza la historia.",
         "products.immersive.text":
           "Estrategia, aventura y naturaleza se unen en cada partida.",
-        "products.immersive.cta": "La experiencia Summit →",
-
+  
         "products.includes.title": "¿Qué incluye cada juego?",
 
         "products.includes.board.title": "TABLERO",
@@ -350,7 +349,6 @@ window.PSG_TRANSLATIONS = {
         "products.immersive.title.after": "comença la història.",
         "products.immersive.text":
           "Estratègia, aventura i natura s'uneixen en cada partida.",
-        "products.immersive.cta": "L'experiència Summit →",
 
         "products.includes.title": "Què inclou cada joc?",
 
