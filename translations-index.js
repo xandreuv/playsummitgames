@@ -21,7 +21,7 @@ window.PSG_TRANSLATIONS = {
         "hero.title": "Summit Games",
         "hero.lead": "Juegos de cartas inspirados en la alta montaña.",
         "hero.text":
-          "Una colección creada para vivir la tensión, la estrategia, la climatología variable y la emoción de una ascensión real.",
+          "Una colección creada para vivir la tensión, la estrategia, el clima variable y la emoción de una ascensión real.",
         "hero.cta1": "Descubrir juegos",
         "hero.cta2": "Ver colección",
 
