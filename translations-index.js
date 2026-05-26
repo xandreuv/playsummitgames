@@ -33,7 +33,7 @@ window.PSG_TRANSLATIONS = {
         "products.mp.name": "Monte Perdido",
         "products.mp.alt": "3.355 m",
         "products.mp.text":
-          "Afronta los pasos más delicados para hacer cima en el Monte Perdido dentro del Parque Nacional de Ordesa..",
+          "Afronta los pasos más delicados para hacer cima en el Monte Perdido dentro del Parque Nacional de Ordesa.",
         
         "products.pf.prefix": "Objectiu",
         "products.pf.name": "Pedraforca",
@@ -47,7 +47,7 @@ window.PSG_TRANSLATIONS = {
        "buy.common.timeMain": "15–25",
        "buy.common.timeSub": "MIN",
        "buy.common.playersMain": "1–4",
-       "buy.common.playersSub": "JUGADORES"
+       "buy.common.playersSub": "JUGADORES",
   
         "products.common.p1": "1–4 jugadores",
         "products.common.p2": "20–40 min",
@@ -337,7 +337,7 @@ window.PSG_TRANSLATIONS = {
 "buy.common.timeMain": "15–25",
 "buy.common.timeSub": "MIN",
 "buy.common.playersMain": "1–4",
-"buy.common.playersSub": "JUGADORS"
+"buy.common.playersSub": "JUGADORS",
   
         "products.common.p1": "1–4 jugadors",
         "products.common.p2": "20–40 min",
