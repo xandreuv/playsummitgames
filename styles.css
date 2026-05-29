@@ -1073,13 +1073,20 @@ SECTION 1 HERO NUEVO
   overflow: hidden;
   color: #f4ead4;
   background:
-    radial-gradient(circle at 78% 16%, rgba(246, 234, 202, 0.10), transparent 26%),
-    linear-gradient(180deg, #34452d 0%, #405236 42%, #334429 100%);
+    linear-gradient(
+      180deg,
+      rgba(33, 53, 31, 0.88) 0%,
+      rgba(48, 70, 40, 0.82) 42%,
+      rgba(34, 50, 28, 0.90) 100%
+    ),
+    url("assets/s4-refugio-montana-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .seccion-3 .topo-lines {
-  opacity: 0.18;
-  mix-blend-mode: soft-light;
+  display: none;
 }
 
 .s3-inner {
@@ -1443,8 +1450,8 @@ SECTION 1 HERO NUEVO
 }
 
 .s3-box-combo img {
-  width: clamp(60px, 5.6vw, 88px);
-  filter: drop-shadow(0 14px 16px rgba(0,0,0,0.35));
+  width: clamp(86px, 7.6vw, 128px);
+  filter: drop-shadow(0 16px 18px rgba(0,0,0,0.38));
 }
 
 .s3-box-combo img:first-child {
@@ -1459,7 +1466,7 @@ SECTION 1 HERO NUEVO
   position: relative;
   z-index: 2;
   color: #f3ead7;
-  font-size: 2.1rem;
+  font-size: 2.5rem;
   font-weight: 900;
   margin: 0 4px;
   text-shadow: 0 6px 12px rgba(0,0,0,0.35);
@@ -2142,7 +2149,7 @@ SECTION 1 HERO NUEVO
   }
 
   .s3-box-combo img {
-    width: 82px;
+    width: 104px;
   }
 
   .s3-collectible-cards {
@@ -2251,62 +2258,58 @@ SECTION 1 HERO NUEVO
 
 /* HEADER igual familia visual sección 5 */
 .s4-header {
-  text-align: center;
-  margin: 0 auto 28px;
-}
-
-.s4-kicker-row {
-  display: grid;
-  grid-template-columns: minmax(80px, 1fr) auto auto minmax(80px, 1fr);
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
-  width: min(100%, 980px);
-  margin: 0 auto 12px;
+  text-align: center;
+  margin: 0 auto 30px;
 }
 
-.s4-line {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(112, 78, 34, 0.58), transparent);
+.s4-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 720px;
 }
 
 .s4-mountain-icon {
-  width: 38px;
+  width: 42px;
   height: auto;
-  opacity: 0.82;
+  opacity: 0.8;
   filter: brightness(0) saturate(100%) invert(32%) sepia(31%) saturate(755%) hue-rotate(356deg) brightness(90%) contrast(88%);
 }
 
 .s4-kicker {
   margin: 0;
-  color: #7a5524;
   font-size: 14px;
   letter-spacing: 3px;
-  line-height: 1;
-  font-weight: 950;
+  color: rgba(79,102,88,0.72);
+  font-weight: 900;
   text-transform: uppercase;
 }
 
 .s4-main-title {
-  max-width: 920px;
-  margin: 0 auto 12px;
-  font-family: "Arial Narrow", "Roboto Condensed", "Montserrat", Inter, sans-serif;
-  font-size: clamp(2.35rem, 4.8vw, 4.45rem);
-  font-weight: 780;
-  line-height: 1;
-  letter-spacing: 0.025em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #4f6658;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
   text-transform: uppercase;
-  color: #08243a;
   text-shadow: none;
-}
 }
 
 .s4-divider {
-  width: 110px;
-  height: 1px;
-  margin: 18px auto;
-  position: relative;
-  background: rgba(112, 78, 34, 0.46);
+  width: 40px;
+  height: 2px;
+  margin: 4px auto 0;
+  background: #4f6658;
+  opacity: 0.6;
 }
+
 
 .s4-divider::after {
   content: "";
@@ -2491,11 +2494,11 @@ SECTION 1 HERO NUEVO
 /* EXPEDICIÓN */
 .s4-expedition-set {
   display: grid;
-  grid-template-columns: 190px repeat(4, 104px);
-  gap: 14px;
+  grid-template-columns: 210px repeat(2, 112px);
+  gap: 16px;
   align-items: end;
   justify-content: center;
-  --s4-card-w: 104px;
+  --s4-card-w: 112px;
 }
 
 .s4-board-img {
@@ -2605,11 +2608,11 @@ SECTION 1 HERO NUEVO
     --s4-card-w: 96px;
   }
 
-  .s4-expedition-set {
-    grid-template-columns: 170px repeat(4, 82px);
-    gap: 10px;
-    --s4-card-w: 82px;
-  }
+ .s4-expedition-set {
+  grid-template-columns: 180px repeat(2, 96px);
+  gap: 12px;
+  --s4-card-w: 96px;
+}
 
   .s4-board-img {
     width: 170px;
@@ -2670,11 +2673,11 @@ SECTION 1 HERO NUEVO
     --s4-card-w: 104px;
   }
 
-  .s4-expedition-set {
-    grid-template-columns: 180px repeat(2, 104px);
-    gap: 12px;
-    --s4-card-w: 104px;
-  }
+.s4-expedition-set {
+  grid-template-columns: 190px repeat(2, 104px);
+  gap: 12px;
+  --s4-card-w: 104px;
+}
 
   .s4-board-img {
     width: 180px;
