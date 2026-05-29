@@ -1081,9 +1081,9 @@ SECTION 1 HERO NUEVO
   background:
     linear-gradient(
       180deg,
-      rgba(22, 38, 26, 0.78) 0%,
-      rgba(35, 54, 33, 0.72) 42%,
-      rgba(20, 34, 23, 0.84) 100%
+      rgba(34, 45, 30, 0.54) 0%,
+      rgba(67, 77, 52, 0.46) 42%,
+      rgba(41, 52, 34, 0.58) 100%
     ),
     url("assets/s3-mountain-landscape-bg.webp");
   background-size: cover;
@@ -1097,12 +1097,26 @@ SECTION 1 HERO NUEVO
   inset: 0;
   z-index: 0;
   background:
-    linear-gradient(90deg, rgba(12, 28, 19, 0.50) 0%, rgba(12, 28, 19, 0.18) 48%, rgba(12, 28, 19, 0.54) 100%),
-    linear-gradient(180deg, rgba(12, 28, 19, 0.22) 0%, rgba(12, 28, 19, 0.04) 42%, rgba(12, 28, 19, 0.36) 100%);
+    linear-gradient(
+      90deg,
+      rgba(20, 32, 23, 0.42) 0%,
+      rgba(20, 32, 23, 0.10) 44%,
+      rgba(20, 32, 23, 0.38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(20, 32, 23, 0.22) 0%,
+      rgba(20, 32, 23, 0.02) 42%,
+      rgba(20, 32, 23, 0.28) 100%
+    );
   pointer-events: none;
 }
 
 .seccion-3 .topo-lines {
+  display: none;
+}
+
+.seccion-3::after {
   display: none;
 }
 
@@ -1338,16 +1352,24 @@ SECTION 1 HERO NUEVO
 .s3-info-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  border: 1px solid rgba(243, 234, 215, 0.38);
-  background: rgba(255,255,255,0.035);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  border: 1px solid rgba(229, 215, 180, 0.34);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(92, 101, 70, 0.42),
+      rgba(111, 113, 79, 0.34),
+      rgba(92, 101, 70, 0.42)
+    );
+  box-shadow:
+    inset 0 0 0 1px rgba(245, 232, 197, 0.06),
+    0 14px 30px rgba(14, 28, 18, 0.16);
   margin: 0 auto 24px;
 }
 
 .s3-info-item {
   text-align: center;
   padding: clamp(18px, 3vw, 28px) clamp(12px, 2vw, 24px);
-  border-right: 1px solid rgba(243, 234, 215, 0.34);
+  border-right: 1px solid rgba(229, 215, 180, 0.26);
 }
 
 .s3-info-item:last-child {
@@ -1390,10 +1412,18 @@ SECTION 1 HERO NUEVO
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
   margin-bottom: 34px;
-  border: 1px solid rgba(243, 234, 215, 0.38);
+  border: 1px solid rgba(229, 215, 180, 0.34);
   background:
-    linear-gradient(90deg, rgba(34, 52, 28, 0.82), rgba(49, 69, 38, 0.60)),
-    rgba(255,255,255,0.04);
+    linear-gradient(
+      90deg,
+      rgba(92, 101, 70, 0.76) 0%,
+      rgba(111, 113, 79, 0.70) 48%,
+      rgba(92, 101, 70, 0.76) 100%
+    );
+  box-shadow:
+    0 18px 38px rgba(14, 28, 18, 0.22),
+    inset 0 0 0 1px rgba(245, 232, 197, 0.08);
+  backdrop-filter: blur(2px);
 }
 
 .s3-expand-item {
@@ -1404,10 +1434,16 @@ SECTION 1 HERO NUEVO
   align-items: center;
   min-height: 214px;
   padding: clamp(18px, 2.4vw, 28px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(235, 220, 184, 0.055),
+      rgba(27, 44, 29, 0.10)
+    );
 }
 
 .s3-expand-item:not(:last-child) {
-  border-right: 1px solid rgba(243, 234, 215, 0.32);
+  border-right: 1px solid rgba(229, 215, 180, 0.28);
 }
 
 .s3-expand-icon img {
@@ -1568,14 +1604,33 @@ SECTION 1 HERO NUEVO
   position: relative;
   padding: 54px 32px 24px;
   background:
-    linear-gradient(180deg, rgba(232, 222, 197, 0.96), rgba(214, 203, 177, 0.94));
-  color: #182128;
-  border: 1px solid rgba(243, 234, 215, 0.48);
+    linear-gradient(
+      180deg,
+      rgba(184, 181, 136, 0.96) 0%,
+      rgba(143, 151, 106, 0.96) 48%,
+      rgba(116, 130, 92, 0.98) 100%
+    );
+  color: #132018;
+  border: 1px solid rgba(232, 218, 181, 0.42);
   box-shadow:
-    0 24px 44px rgba(0,0,0,0.18),
-    inset 0 0 0 1px rgba(255,255,255,0.42);
+    0 24px 44px rgba(10, 22, 14, 0.24),
+    inset 0 0 0 1px rgba(250, 238, 204, 0.16);
   clip-path: polygon(22px 0, calc(100% - 22px) 0, 100% 22px, 100% calc(100% - 22px), calc(100% - 22px) 100%, 22px 100%, 0 calc(100% - 22px), 0 22px);
   overflow: visible;
+}
+
+.s3-mode-panel .s3-mode-copy p {
+  color: rgba(19, 32, 24, 0.86);
+}
+
+.s3-mode-panel-title h3 {
+  background: #2d3e25;
+  color: #f3ead7;
+  border: 1px solid rgba(243, 234, 215, 0.34);
+}
+
+.s3-mode-item {
+  border-bottom: 1px dashed rgba(31, 45, 30, 0.36);
 }
 
 .s3-mode-panel-title {
@@ -1898,10 +1953,10 @@ SECTION 1 HERO NUEVO
     grid-template-rows: auto;
   }
 
-  .s3-expand-item:not(:last-child) {
-    border-right: 0;
-    border-bottom: 1px solid rgba(243, 234, 215, 0.32);
-  }
+.s3-expand-item:not(:last-child) {
+  border-right: 0;
+  border-bottom: 1px solid rgba(229, 215, 180, 0.28);
+}
 
   .s3-box-combo,
   .s3-collectible-cards,
@@ -1993,10 +2048,10 @@ SECTION 1 HERO NUEVO
     grid-template-columns: 1fr;
   }
 
-  .s3-info-item {
-    border-right: 0;
-    border-bottom: 1px solid rgba(243, 234, 215, 0.28);
-  }
+.s3-info-item {
+  border-right: 0;
+  border-bottom: 1px solid rgba(229, 215, 180, 0.24);
+}
 
   .s3-info-item:last-child {
     border-bottom: 0;
