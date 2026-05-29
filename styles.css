@@ -34,6 +34,19 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -1068,11 +1081,11 @@ SECTION 1 HERO NUEVO
   background:
     linear-gradient(
       180deg,
-      rgba(30, 48, 28, 0.76) 0%,
-      rgba(46, 66, 38, 0.68) 42%,
-      rgba(28, 44, 25, 0.80) 100%
+      rgba(22, 38, 26, 0.78) 0%,
+      rgba(35, 54, 33, 0.72) 42%,
+      rgba(20, 34, 23, 0.84) 100%
     ),
-    url("assets/s4-refugio-montana-bg.webp");
+    url("assets/s3-mountain-landscape-bg.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1084,23 +1097,8 @@ SECTION 1 HERO NUEVO
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(circle at 18% 16%, rgba(246, 234, 202, 0.12), transparent 26%),
-    radial-gradient(circle at 82% 22%, rgba(255, 255, 255, 0.08), transparent 24%),
-    linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18));
-  pointer-events: none;
-}
-
-.seccion-3::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-image: url("assets/s3-icon-mountain.webp");
-  background-repeat: no-repeat;
-  background-position: right -8vw bottom -40px;
-  background-size: min(980px, 76vw) auto;
-  opacity: 0.18;
-  mix-blend-mode: screen;
+    linear-gradient(90deg, rgba(12, 28, 19, 0.50) 0%, rgba(12, 28, 19, 0.18) 48%, rgba(12, 28, 19, 0.54) 100%),
+    linear-gradient(180deg, rgba(12, 28, 19, 0.22) 0%, rgba(12, 28, 19, 0.04) 42%, rgba(12, 28, 19, 0.36) 100%);
   pointer-events: none;
 }
 
@@ -1115,20 +1113,7 @@ SECTION 1 HERO NUEVO
 
 /* Montaña grande de fondo */
 .s3-bg-mountains {
-  position: absolute;
-  right: -10vw;
-  top: 210px;
-  width: min(1120px, 76vw);
-  height: 720px;
-  z-index: 2;
-  opacity: 0.42;
-  pointer-events: none;
-  background: url("assets/s3-icon-mountain.webp") center bottom / contain no-repeat;
-  filter:
-    drop-shadow(0 30px 38px rgba(0,0,0,0.28))
-    saturate(0.9)
-    contrast(1.02);
-  mix-blend-mode: screen;
+  display: none;
 }
 
 /* Cuerda superior derecha */
@@ -1886,13 +1871,6 @@ SECTION 1 HERO NUEVO
 ========================= */
 
 @media (max-width: 1180px) {
-.s3-bg-mountains {
-  top: 500px;
-  right: -16vw;
-  width: min(980px, 104vw);
-  height: 600px;
-  opacity: 0.42;
-}
 
   .s3-rope-corner {
     width: 310px;
@@ -1968,14 +1946,6 @@ SECTION 1 HERO NUEVO
   .seccion-3 {
     padding: 70px 0 64px;
   }
-
-.s3-bg-mountains {
-  top: 610px;
-  right: -30vw;
-  width: 128vw;
-  height: 500px;
-  opacity: 0.32;
-}
 
   .s3-rope-corner {
     width: 220px;
@@ -2088,13 +2058,6 @@ SECTION 1 HERO NUEVO
 }
 
 @media (max-width: 560px) {
-.s3-bg-mountains {
-  top: 690px;
-  right: -50vw;
-  width: 155vw;
-  height: 410px;
-  opacity: 0.26;
-}
 
   .s3-rope-corner {
     width: 168px;
@@ -5110,10 +5073,11 @@ SECTION 1 HERO NUEVO
 }
 
 @media (max-width: 1180px) {
-  .container {
+.container {
   width: min(calc(100% - 120px), var(--container));
-  margin-left: 88px;
-  margin-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 76px;
 }
 
 .altitude-ruler {
@@ -5257,9 +5221,13 @@ SECTION 1 HERO NUEVO
     padding: 74px 0;
   }
 
-  .container {
-    width: min(calc(100% - 36px), var(--container));
-  }
+.container {
+  width: min(calc(100% - 32px), var(--container));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
 
   .altitude-ruler {
     display: none;
@@ -5337,9 +5305,13 @@ SECTION 1 HERO NUEVO
     width: 100%;
   }
 
-  .container {
-    width: min(calc(100% - 24px), var(--container));
-  }
+.container {
+  width: min(calc(100% - 24px), var(--container));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
 
   .brand {
     gap: 12px;
