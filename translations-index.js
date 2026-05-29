@@ -155,8 +155,9 @@ window.PSG_TRANSLATIONS = {
 
        
         "s4.kicker": "REFUGIO - 2.200 m.",
-        "s4.title.line1": "CÓMO AFRONTAR UNA",
-        "s4.title.line2": "ASCENSIÓN DE SUMMIT SERIES",
+        "s4.title": "EL INICIO DE LA ASCENSIÓN",
+        "s4.title.line1": "EL INICIO",
+        "s4.title.line2": "DE LA ASCENSIÓN",
         "s4.lead.1": "Cada decisión cuenta. Gestiona tu equipo, tu cuerpo y la montaña.",
         "s4.lead.2": "La cima es solo el final de una gran estrategia.",
 
@@ -445,9 +446,10 @@ window.PSG_TRANSLATIONS = {
   "Més eines, més components i construcció d'expedició.",
 
 
-               "s4.kicker": "REFUGI - 2.200 m.",
-        "s4.title.line1": "COM AFRONTAR UNA",
-        "s4.title.line2": "ASCENSIÓ DE SUMMIT SERIES",
+        "s4.kicker": "REFUGI - 2.200 m.",
+        "s4.title": "L'INICI DE L'ASCENSIÓ",
+        "s4.title.line1": "L'INICI",
+        "s4.title.line2": "DE L'ASCENSIÓ",
         "s4.lead.1": "Cada decisió compta. Gestiona el teu equip, el teu cos i la muntanya.",
         "s4.lead.2": "El cim és només el final d’una gran estratègia.",
 
