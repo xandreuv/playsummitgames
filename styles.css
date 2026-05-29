@@ -26,7 +26,7 @@
   --radius-md: 16px;
 
   --container: 1240px;
-  --header-height: 112px;
+  --header-height: 76px;
   --transition: 240ms ease;
 }
 
@@ -88,10 +88,11 @@ a {
 
 .header-inner {
   min-height: var(--header-height);
+  padding: 6px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: clamp(14px, 2vw, 24px);
 }
 
 .brand {
@@ -106,11 +107,12 @@ a {
 }
 
 .brand-logo {
-  width: 240px;
-  height: 240px;
+  width: clamp(86px, 8.4vw, 132px);
+  height: clamp(42px, 4.8vw, 66px);
   object-fit: contain;
+  object-position: left center;
   flex: 0 0 auto;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.24));
 }
 
 .brand-copy {
@@ -121,33 +123,29 @@ a {
 }
 
 .brand-title {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.08rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  color: #fffaf0;
-  line-height: 1.04;
+  display: none;
 }
 
 .brand-subtitle {
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-weight: 800;
   letter-spacing: 0.01em;
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.08;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: clamp(12px, 1.7vw, 20px);
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 .main-nav a {
   position: relative;
-  font-size: 0.95rem;
+  font-size: clamp(0.78rem, 0.95vw, 0.9rem);
+  font-weight: 700;
   color: rgba(255, 255, 255, 0.92);
   transition: opacity var(--transition), color var(--transition);
 }
@@ -185,11 +183,11 @@ a {
   background: transparent;
   color: rgba(255, 255, 255, 0.84);
   font: inherit;
-  font-size: 0.84rem;
+  font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
   cursor: pointer;
   transition: background var(--transition), color var(--transition), opacity var(--transition);
@@ -210,7 +208,8 @@ a {
 .altitude-ruler {
   position: fixed;
   left: 12px;
-  top: 160px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 76px;
   z-index: 700;
   pointer-events: none;
@@ -5014,25 +5013,26 @@ SECTION 1 HERO NUEVO
 }
 
 .footer-inner {
-  min-height: 152px;
-  padding: 28px 0;
+  min-height: auto;
+  padding: 14px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: clamp(14px, 2vw, 24px);
   flex-wrap: wrap;
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 14px;
 }
 
 .footer-logo {
-  width: 360px;
-  height: 360px;
+  width: clamp(130px, 16vw, 220px);
+  height: clamp(62px, 8vw, 104px);
   object-fit: contain;
+  object-position: left center;
 }
 
 .footer-brand-subtitle {
@@ -5064,8 +5064,15 @@ SECTION 1 HERO NUEVO
 
 /* Responsive base */
 @media (max-width: 1380px) {
-  .container { width: min(calc(100% - 184px), var(--container)); }
-  .altitude-ruler { left: 8px; width: 68px; }
+  .container {
+    width: min(calc(100% - 184px), var(--container));
+  }
+
+  .altitude-ruler {
+    left: 10px;
+    width: 68px;
+  }
+
   .altitude-ruler-inner { width: 64px; }
   .ruler-title { left: -6px; }
   .ruler-track, .ruler-fill { left: 30px; }
@@ -5079,14 +5086,17 @@ SECTION 1 HERO NUEVO
 
 @media (max-width: 1180px) {
   .container {
-    width: min(calc(100% - 52px), var(--container));
-  }
+  width: min(calc(100% - 120px), var(--container));
+  margin-left: 88px;
+  margin-right: 32px;
+}
 
-  .altitude-ruler {
-    left: 4px;
-    top: 150px;
-    width: 56px;
-  }
+.altitude-ruler {
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+}
 
   .altitude-ruler-inner {
     width: 52px;
@@ -5200,15 +5210,17 @@ SECTION 1 HERO NUEVO
 }
 @media (max-width: 860px) {
   .site-header {
-    position: relative;
-  }
+  position: relative;
+  min-height: auto;
+}
 
-  .header-inner {
-    padding: 16px 0;
-    min-height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.header-inner {
+  padding: 8px 0;
+  min-height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
 
   .main-nav {
     justify-content: flex-start;
@@ -5229,14 +5241,14 @@ SECTION 1 HERO NUEVO
   }
 
   .brand-logo {
-    width: 72px;
-    height: 72px;
+    width: 112px;
+    height: 52px;
   }
 
-  .footer-logo {
-    width: 118px;
-    height: 118px;
-  }
+.footer-logo {
+  width: 156px;
+  height: 76px;
+}
 
   .brand-title {
     font-size: 1rem;
@@ -5312,8 +5324,8 @@ SECTION 1 HERO NUEVO
   }
 
   .brand-logo {
-    width: 64px;
-    height: 64px;
+    width: 104px;
+    height: 50px;
   }
 
   .brand-title {
@@ -5344,10 +5356,10 @@ SECTION 1 HERO NUEVO
     width: 100%;
   }
 
-  .footer-logo {
-    width: 100px;
-    height: 100px;
-  }
+.footer-logo {
+  width: 150px;
+  height: 72px;
+}
 }
 
 /* V3.1 content/layout adjustments */
@@ -5730,7 +5742,7 @@ SECTION 1 HERO NUEVO
   }
 
   .brand-logo.large {
-    height: 56px;
+    height: 66px;
   }
 
   .clean-nav {
