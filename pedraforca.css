@@ -1,1 +1,527 @@
+/* =========================================================
+   LANDING OBJECTIU PEDRAFORCA · CSS ESPECÍFICO
+   Este archivo debe cargarse después de styles.css
+========================================================= */
 
+body[data-page="pedraforca"] {
+  background: #102920;
+}
+
+/* Header Pedraforca: limpio, compacto y compatible con styles.css */
+body[data-page="pedraforca"] .pedraforca-header {
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(24, 33, 40, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+body[data-page="pedraforca"] .clean-header {
+  min-height: 74px;
+  padding: 6px 0;
+}
+
+body[data-page="pedraforca"] .brand-logo.large {
+  width: clamp(180px, 16vw, 260px);
+  height: clamp(72px, 8vw, 104px);
+  object-fit: contain;
+}
+
+body[data-page="pedraforca"] .brand-subtitle {
+  color: #182128;
+  font-size: 0.92rem;
+}
+
+body[data-page="pedraforca"] .clean-nav a {
+  color: #1c252b;
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+
+body[data-page="pedraforca"] .main-nav a:first-child::after {
+  background: #df5a08;
+}
+
+/* =========================================================
+   SECCIÓN 1 · SALDES · PRESENTACIÓN
+========================================================= */
+
+.pedra-s1 {
+  position: relative;
+  min-height: calc(100vh - 20px);
+  padding: calc(var(--header-height) + 44px) 0 92px;
+  overflow: hidden;
+  color: #f7f1e7;
+  background:
+    linear-gradient(180deg, #102920 0%, #1c3a2e 100%);
+}
+
+.pedra-s1-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("assets/pedraforca-s1-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  filter: saturate(0.96) contrast(1.04);
+}
+
+.pedra-s1-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 24, 20, 0.92) 0%,
+      rgba(10, 30, 24, 0.78) 34%,
+      rgba(10, 30, 24, 0.42) 58%,
+      rgba(10, 30, 24, 0.18) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 18, 16, 0.28) 0%,
+      rgba(8, 18, 16, 0.10) 44%,
+      rgba(8, 18, 16, 0.54) 100%
+    );
+}
+
+.pedra-s1-inner {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: clamp(34px, 5vw, 78px);
+  align-items: center;
+}
+
+.pedra-s1-copy {
+  max-width: 590px;
+}
+
+.pedra-breadcrumb {
+  margin-bottom: 22px;
+}
+
+.pedra-breadcrumb a {
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: rgba(247, 241, 231, 0.82);
+  transition: opacity 220ms ease;
+}
+
+.pedra-breadcrumb a:hover {
+  opacity: 0.72;
+}
+
+/* Pretítulo naranja común para esta landing */
+.pedra-kicker-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin: 0 0 18px;
+}
+
+.pedra-kicker-icon {
+  width: 42px;
+  height: 30px;
+  object-fit: contain;
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(48%)
+    sepia(95%)
+    saturate(2234%)
+    hue-rotate(9deg)
+    brightness(95%)
+    contrast(98%);
+}
+
+.pedra-kicker {
+  margin: 0;
+  color: #df5a08;
+  font-size: clamp(0.78rem, 1.15vw, 0.96rem);
+  line-height: 1.1;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pedra-kicker-line {
+  width: clamp(42px, 6vw, 82px);
+  height: 3px;
+  border-radius: 999px;
+  background: #df5a08;
+  flex: 0 0 auto;
+}
+
+.pedra-s1-title {
+  max-width: 9.5ch;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.1rem, 6.2vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+  color: #f7f1e7;
+  text-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
+}
+
+.pedra-s1-lead {
+  max-width: 20ch;
+  margin: 0 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.35rem, 2.25vw, 2.15rem);
+  line-height: 1.14;
+  color: #e3b06f;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+}
+
+.pedra-s1-text {
+  max-width: 36ch;
+  margin: 0 0 22px;
+  font-size: clamp(0.98rem, 1.16vw, 1.08rem);
+  line-height: 1.58;
+  color: rgba(247, 241, 231, 0.88);
+}
+
+.pedra-s1-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: min(100%, 470px);
+  margin: 26px 0 28px;
+  border-top: 1px solid rgba(247, 241, 231, 0.22);
+  border-bottom: 1px solid rgba(247, 241, 231, 0.22);
+}
+
+.pedra-s1-facts div {
+  min-height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 14px;
+  border-right: 1px solid rgba(247, 241, 231, 0.18);
+}
+
+.pedra-s1-facts div:last-child {
+  border-right: 0;
+}
+
+.pedra-s1-facts strong {
+  display: block;
+  font-size: clamp(1.28rem, 2vw, 1.75rem);
+  line-height: 1;
+  color: #f7f1e7;
+  font-weight: 950;
+}
+
+.pedra-s1-facts span {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.76rem;
+  line-height: 1;
+  color: rgba(247, 241, 231, 0.76);
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pedra-s1-actions {
+  margin-top: 0;
+}
+
+/* Producto: caja + 3 cartas solapadas */
+.pedra-s1-product {
+  position: relative;
+  min-width: 0;
+}
+
+.pedra-product-stage {
+  position: relative;
+  width: min(100%, 660px);
+  min-height: 650px;
+  margin-left: auto;
+}
+
+.pedra-product-stage::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: min(88%, 520px);
+  height: min(70%, 430px);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(255, 175, 86, 0.18) 0%, rgba(255, 175, 86, 0.05) 44%, transparent 70%);
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+.pedra-product-box {
+  position: relative;
+  z-index: 3;
+  width: min(86%, 520px);
+  margin: 0 auto;
+  filter:
+    drop-shadow(0 34px 34px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 10px 10px rgba(0, 0, 0, 0.18));
+  transform: translateY(6px);
+}
+
+.pedra-product-cards {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 5;
+  width: min(96%, 560px);
+  height: 280px;
+  transform: translateX(-50%);
+}
+
+.pedra-product-card {
+  position: absolute;
+  bottom: 0;
+  width: clamp(132px, 12.2vw, 182px);
+  aspect-ratio: 70 / 110;
+  object-fit: contain;
+  border-radius: 18px;
+  filter:
+    drop-shadow(0 24px 24px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 6px 8px rgba(0, 0, 0, 0.18));
+  transition:
+    transform 240ms ease,
+    filter 240ms ease,
+    z-index 240ms ease;
+}
+
+.pedra-product-card:hover {
+  z-index: 12;
+  filter:
+    brightness(1.04)
+    drop-shadow(0 28px 28px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 8px 10px rgba(0, 0, 0, 0.22));
+}
+
+.pedra-card-left {
+  left: 2%;
+  z-index: 1;
+  transform: rotate(-8deg) translateY(24px);
+}
+
+.pedra-card-center {
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+.pedra-card-right {
+  right: 2%;
+  z-index: 2;
+  transform: rotate(8deg) translateY(24px);
+}
+
+.pedra-card-left:hover {
+  transform: rotate(-3deg) translateY(2px) scale(1.04);
+}
+
+.pedra-card-center:hover {
+  transform: translateX(-50%) translateY(-28px) scale(1.04);
+}
+
+.pedra-card-right:hover {
+  transform: rotate(3deg) translateY(2px) scale(1.04);
+}
+
+/* Responsive sección 1 */
+@media (max-width: 1180px) {
+  .pedra-s1 {
+    padding: 82px 0 84px;
+  }
+
+  .pedra-s1-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .pedra-s1-copy {
+    max-width: 680px;
+  }
+
+  .pedra-s1-title {
+    max-width: 11ch;
+  }
+
+  .pedra-s1-lead {
+    max-width: 24ch;
+  }
+
+  .pedra-s1-text {
+    max-width: 46ch;
+  }
+
+  .pedra-product-stage {
+    width: min(100%, 680px);
+    min-height: 590px;
+    margin: 0 auto;
+  }
+
+  .pedra-product-box {
+    width: min(78%, 500px);
+  }
+
+  .pedra-product-cards {
+    width: min(92%, 540px);
+    height: 250px;
+  }
+}
+
+@media (max-width: 860px) {
+  body[data-page="pedraforca"] .clean-header {
+    align-items: center;
+  }
+
+  body[data-page="pedraforca"] .brand {
+    justify-content: center;
+  }
+
+  body[data-page="pedraforca"] .brand-copy {
+    display: none;
+  }
+
+  body[data-page="pedraforca"] .clean-nav {
+    justify-content: center;
+    gap: 14px;
+  }
+
+  body[data-page="pedraforca"] .clean-nav a {
+    font-size: 0.8rem;
+  }
+
+  .pedra-s1 {
+    padding: 70px 0 74px;
+  }
+
+  .pedra-s1-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 24, 20, 0.82) 0%,
+        rgba(8, 24, 20, 0.62) 40%,
+        rgba(8, 24, 20, 0.86) 100%
+      );
+  }
+
+  .pedra-kicker-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .pedra-kicker-icon {
+    width: 34px;
+  }
+
+  .pedra-kicker {
+    font-size: 0.76rem;
+    letter-spacing: 0.09em;
+  }
+
+  .pedra-s1-title {
+    font-size: clamp(2.7rem, 12vw, 4.8rem);
+  }
+
+  .pedra-s1-lead {
+    max-width: 20ch;
+  }
+
+  .pedra-s1-facts {
+    width: 100%;
+  }
+
+  .pedra-product-stage {
+    min-height: 520px;
+  }
+
+  .pedra-product-box {
+    width: min(82%, 420px);
+  }
+
+  .pedra-product-cards {
+    height: 224px;
+  }
+
+  .pedra-product-card {
+    width: clamp(112px, 27vw, 152px);
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .pedra-s1 {
+    padding: 58px 0 64px;
+  }
+
+  .pedra-breadcrumb {
+    margin-bottom: 16px;
+  }
+
+  .pedra-s1-title {
+    max-width: 9ch;
+  }
+
+  .pedra-s1-lead {
+    font-size: 1.34rem;
+  }
+
+  .pedra-s1-text {
+    font-size: 0.96rem;
+  }
+
+  .pedra-s1-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .pedra-s1-facts div {
+    min-height: 58px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(247, 241, 231, 0.16);
+  }
+
+  .pedra-s1-facts div:last-child {
+    border-bottom: 0;
+  }
+
+  .pedra-product-stage {
+    min-height: 430px;
+  }
+
+  .pedra-product-box {
+    width: min(92%, 350px);
+  }
+
+  .pedra-product-cards {
+    bottom: 2px;
+    height: 186px;
+    width: min(100%, 360px);
+  }
+
+  .pedra-product-card {
+    width: clamp(92px, 29vw, 118px);
+    border-radius: 12px;
+  }
+
+  .pedra-card-left {
+    left: 0;
+    transform: rotate(-7deg) translateY(22px);
+  }
+
+  .pedra-card-center {
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  .pedra-card-right {
+    right: 0;
+    transform: rotate(7deg) translateY(22px);
+  }
+}
