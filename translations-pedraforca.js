@@ -14,20 +14,18 @@ window.PSG_TRANSLATIONS = {
         "nav.rules": "Reglas",
         "nav.summit": "Cima",
 
-        "hero.back": "← Volver a Play Summit Games",
-        "hero.kicker": "Fondo del valle · 0 m",
-        "hero.title": "Objectiu Pedraforca 2.506",
-        "hero.lead":
-          "Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.",
-        "hero.p1":
-          "Un juego de cartas de Summit Series con gestión de energía, clima cambiante, progresión en altitud, identidad territorial y cultura excursionista.",
-        "hero.cta1": "Descubrir el juego",
-        "hero.cta2": "Volver a la colección",
-        "hero.panel.title": "Datos básicos",
-        "hero.panel.li1": "1–4 jugadores",
-        "hero.panel.li2": "20–40 minutos",
-        "hero.panel.li3": "Modo competitivo, cooperativo y solitario",
-        "hero.panel.li4": "Gestión de mano y colección de mazo",
+       "hero.back": "← Volver a Play Summit Games",
+"hero.kicker": "Saldes · 1.215 m · Presentación",
+"hero.title": "Objectiu Pedraforca 2.506",
+"hero.lead":
+  "Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.",
+"hero.p1":
+  "Un juego de cartas de montaña con gestión de energía, clima cambiante, progresión en altitud, riesgo, protección y decisiones tácticas constantes.",
+"hero.fact.players": "jugadores",
+"hero.fact.age": "años",
+"hero.fact.time": "minutos",
+"hero.cta1": "Descubrir el juego",
+"hero.cta2": "Ir a compra",
 
         "game.kicker": "Campamento base · 1.450 m",
         "game.title": "Pedraforca convertido en experiencia de juego",
@@ -87,19 +85,17 @@ window.PSG_TRANSLATIONS = {
         "nav.summit": "Cim",
 
         "hero.back": "← Tornar a Play Summit Games",
-        "hero.kicker": "Fons de la vall · 0 m",
-        "hero.title": "Objectiu Pedraforca 2.506",
-        "hero.lead":
-          "Una ascensió lúdica inspirada en la muntanya més emblemàtica de Catalunya.",
-        "hero.p1":
-          "Un joc de cartes de Summit Series amb gestió d'energia, clima canviant, progressió en altitud, identitat territorial i cultura excursionista.",
-        "hero.cta1": "Descobrir el joc",
-        "hero.cta2": "Tornar a la col·lecció",
-        "hero.panel.title": "Dades bàsiques",
-        "hero.panel.li1": "1–4 jugadors",
-        "hero.panel.li2": "20–40 minuts",
-        "hero.panel.li3": "Mode competitiu, cooperatiu i solitari",
-        "hero.panel.li4": "Gestió de mà i col·lecció de mazo",
+         "hero.kicker": "Saldes · 1.215 m · Presentació",
+         "hero.title": "Objectiu Pedraforca 2.506",
+          "hero.lead":
+           "Una ascensió lúdica inspirada en la muntanya més emblemàtica de Catalunya.",
+          "hero.p1":
+           "Un joc de cartes de muntanya amb gestió d’energia, clima canviant, progressió en altitud, risc, protecció i decisions tàctiques constants.",
+           "hero.fact.players": "jugadors",
+         "hero.fact.age": "anys",
+         "hero.fact.time": "minuts",
+          "hero.cta1": "Descobrir el joc",
+         "hero.cta2": "Anar a compra",
 
         "game.kicker": "Campament base · 1.450 m",
         "game.title": "Pedraforca convertit en experiència de joc",
