@@ -81,9 +81,9 @@
     <img src="assets/Joc_Taula_Pedraforca_S7.png" alt="Mockup 7 Pedraforca" class="mockup-image" />
 
   </div>
+</section>
 
-
-  <!-- SECCIÓ 1 INICIAL  -->
+  <!-- SECCIÓ 1 INICIAL SALDES -->
   
 <section id="saldes" class="section pedra-s1" data-section>
   <div class="pedra-s1-bg" aria-hidden="true"></div>
@@ -183,49 +183,130 @@
   </div>
 </section>
 
-  <section id="gosol" class="section section-basecamp section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Gósol · 1.500 m</p>
-      <h2>Sis alpinistes, sis estils d'ascensió</h2>
-      <p class="section-intro">
-        El joc inclou 6 cartes d'alpinistes especifics amb propietats asimètriques. Cada personatje
-        canvia la manera d'afrontar la partida i t'empeny a prendere una estratègia diferent.
-      </p>
+ <!-- SECCIÓ 2 GÒSOL -->
+  
+ <section id="gosol" class="section pedra-s2" data-section>
+  <div class="pedra-s2-bg" aria-hidden="true"></div>
+  <div class="pedra-s2-overlay" aria-hidden="true"></div>
 
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Perfils asimètrics</h3>
-          <p>
-            Cada alpinista aporta una identitat jugable pròpia: no tots avancen igual, ni resistexen igual,
-            ni gestionen el risc de la mateixa manera.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Avantatges concrets</h3>
-          <p>
-            Alguns destaquen en eficiència energètica, altres amb capacitat de reacció, altres amb protecció,
-            recuperació o adaptació a la muntanya o clima.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Més jugabilitat</h3>
-          <p>
-            Canviar de personatje canvia el ritme i les decisions de la partida. La muntanya és la mateixa,
-            però cada expedició es viu de manera diferent.
-          </p>
-        </article>
-      </div>
-
-      <div class="section-block">
-        <p>
-          Aquesta asimetria fa que el joc no es redueixi a una carrera lineal: obliga a llegir millor la teva mà de cartes,
-          la posició i el moment exacte d'assumir o evitar riscs.
-        </p>
-      </div>
+  <div class="container pedra-s2-inner">
+    <div class="pedra-kicker-row">
+      <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+      <p class="pedra-kicker" data-i18n="s2.kicker">Gòsol - 1.500 m</p>
+      <span class="pedra-kicker-line"></span>
     </div>
-  </section>
+
+    <div class="pedra-s2-heading">
+      <h2 data-i18n="s2.title">Obre la caixa i prepara l’ascensió</h2>
+      <p data-i18n="s2.lead">
+        Tot el que necessites per convertir el Pedraforca en una experiència de joc: tablero, fitxes, llibret i cartes per progressar, resistir el clima, gestionar recursos i descobrir la muntanya.
+      </p>
+    </div>
+
+    <div class="pedra-s2-layout">
+      <article class="pedra-s2-components" aria-label="Components principals del joc">
+        <div class="pedra-s2-board-card">
+          <img
+            src="assets/pedraforca-board.webp"
+            alt="Tauler d'ascensió del joc Objectiu Pedraforca"
+            class="pedra-s2-board"
+          />
+
+          <div class="pedra-s2-token-zone" aria-label="Fitxes de fusta del joc">
+            <div class="pedra-token-pair token-yellow"><span></span><span></span></div>
+            <div class="pedra-token-pair token-red"><span></span><span></span></div>
+            <div class="pedra-token-pair token-green"><span></span><span></span></div>
+            <div class="pedra-token-pair token-blue"><span></span><span></span></div>
+            <div class="pedra-token-pair token-purple"><span></span><span></span></div>
+            <div class="pedra-token-pair token-white"><span></span><span></span></div>
+            <div class="pedra-token-single token-black"><span></span></div>
+          </div>
+        </div>
+
+        <div class="pedra-s2-book-card">
+          <img
+            src="assets/pedraforca-rulebook.webp"
+            alt="Llibret d'instruccions, històries i llegendes del Pedraforca"
+            class="pedra-s2-book"
+          />
+          <div>
+            <h3 data-i18n="s2.book.title">Instruccions, històries i llegendes</h3>
+            <p data-i18n="s2.book.text">
+              Un llibret compacte per aprendre a jugar i connectar cada partida amb l’imaginari del Pedraforca.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="pedra-s2-decks" aria-label="Mazos i tipus de cartes">
+        <div class="pedra-s2-deck-card deck-progress">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-progressio.webp" alt="Carta de progressió" />
+          </div>
+          <h3 data-i18n="s2.deck.progress.title">Progressió</h3>
+          <p data-i18n="s2.deck.progress.text">Avança metres i decideix quan forçar el ritme.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-alpinist">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-alpinista.webp" alt="Carta d'alpinista" />
+          </div>
+          <h3 data-i18n="s2.deck.alpinist.title">Alpinista</h3>
+          <p data-i18n="s2.deck.alpinist.text">Personatges amb habilitats i estils d’ascensió.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-weather">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-clima.webp" alt="Carta de clima" />
+          </div>
+          <h3 data-i18n="s2.deck.weather.title">Clima</h3>
+          <p data-i18n="s2.deck.weather.text">Condicions canviants que afecten tota la muntanya.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-progress">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-progressio-2.webp" alt="Carta de progressió avançada" />
+          </div>
+          <h3 data-i18n="s2.deck.progress2.title">Progressió</h3>
+          <p data-i18n="s2.deck.progress2.text">Tria si avances segur o assumeixes més desgast.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-event">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-event.webp" alt="Carta d'esdeveniment" />
+          </div>
+          <h3 data-i18n="s2.deck.event.title">Esdeveniment</h3>
+          <p data-i18n="s2.deck.event.text">Imprevistos, passos delicats i situacions de risc.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-resource">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-recurs.webp" alt="Carta de recurs" />
+          </div>
+          <h3 data-i18n="s2.deck.resource.title">Recurs</h3>
+          <p data-i18n="s2.deck.resource.text">Eines tàctiques per superar dificultats concretes.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-permanent">
+          <div class="pedra-deck-stack">
+            <img src="assets/pedraforca-card-recurs-permanent.webp" alt="Carta de recurs permanent" />
+          </div>
+          <h3 data-i18n="s2.deck.permanent.title">Recurs permanent</h3>
+          <p data-i18n="s2.deck.permanent.text">Proteccions que queden actives durant la partida.</p>
+        </div>
+
+        <div class="pedra-s2-deck-card deck-nature">
+          <div class="pedra-deck-stack pedra-deck-stack-double">
+            <img src="assets/pedraforca-card-fauna.webp" alt="Carta de fauna" />
+            <img src="assets/pedraforca-card-flora.webp" alt="Carta de flora" />
+          </div>
+          <h3 data-i18n="s2.deck.nature.title">Flora i fauna</h3>
+          <p data-i18n="s2.deck.nature.text">Descobreix l’entorn natural mentre progresses.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
   <section id="estasen" class="section section-first-rope section-rich" data-section>
     <div class="container section-inner">
