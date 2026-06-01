@@ -767,3 +767,379 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   width: 100%;
 }
 }
+
+/* =========================================================
+   SECCIÓN 2 · GÒSOL · COMPONENTES DEL JUEGO
+========================================================= */
+
+.pedra-s2 {
+  position: relative;
+  overflow: hidden;
+  color: #f7f1e7;
+  background:
+    linear-gradient(180deg, #1c3a2e 0%, #254736 100%);
+  padding: 78px 0 86px;
+}
+
+.pedra-s2-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url("assets/pedraforca-s2-gosol-bg.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: saturate(0.88) contrast(1.04);
+  transform: scale(1.03);
+}
+
+.pedra-s2-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(18, 43, 34, 0.90) 0%,
+      rgba(28, 58, 46, 0.82) 46%,
+      rgba(37, 71, 54, 0.94) 100%
+    ),
+    radial-gradient(circle at 50% 20%, rgba(223, 90, 8, 0.16), transparent 34%);
+}
+
+.pedra-s2-inner {
+  position: relative;
+  z-index: 3;
+}
+
+.pedra-s2-heading {
+  max-width: 780px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.pedra-s2-heading h2 {
+  margin: 0 0 13px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  line-height: 1.03;
+  letter-spacing: -0.025em;
+  color: #f3ead7;
+  text-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.pedra-s2-heading p {
+  max-width: 660px;
+  margin: 0 auto;
+  color: rgba(247, 241, 231, 0.84);
+  font-size: clamp(0.98rem, 1.25vw, 1.1rem);
+  line-height: 1.58;
+  font-weight: 650;
+}
+
+.pedra-s2-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.92fr) minmax(420px, 1.35fr);
+  gap: clamp(22px, 3vw, 38px);
+  align-items: stretch;
+}
+
+.pedra-s2-components,
+.pedra-s2-decks {
+  border: 1.5px solid rgba(223, 90, 8, 0.56);
+  border-radius: 26px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.028));
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.09),
+    0 24px 54px rgba(0,0,0,0.20);
+  backdrop-filter: blur(7px);
+}
+
+.pedra-s2-components {
+  padding: clamp(18px, 2.4vw, 28px);
+  display: grid;
+  gap: 18px;
+}
+
+.pedra-s2-board-card {
+  position: relative;
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(223,90,8,0.16), transparent 42%),
+    rgba(8, 24, 20, 0.28);
+  overflow: hidden;
+}
+
+.pedra-s2-board {
+  width: min(100%, 420px);
+  max-height: 330px;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 22px 26px rgba(0,0,0,0.32))
+    drop-shadow(0 7px 8px rgba(0,0,0,0.18));
+}
+
+.pedra-s2-token-zone {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+
+.pedra-token-pair,
+.pedra-token-single {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.pedra-token-pair span,
+.pedra-token-single span {
+  width: 19px;
+  height: 19px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.42);
+  box-shadow:
+    inset -3px -4px 6px rgba(0,0,0,0.28),
+    inset 3px 3px 6px rgba(255,255,255,0.25),
+    0 5px 8px rgba(0,0,0,0.30);
+}
+
+.token-yellow span { background: #e6b333; }
+.token-red span { background: #b64232; }
+.token-green span { background: #4f8f45; }
+.token-blue span { background: #2f6e9f; }
+.token-purple span { background: #77579b; }
+.token-white span { background: #efe7d8; }
+.token-black span { background: #171717; }
+
+.pedra-s2-book-card {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(8, 24, 20, 0.30);
+}
+
+.pedra-s2-book {
+  width: 112px;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 16px rgba(0,0,0,0.32));
+}
+
+.pedra-s2-book-card h3,
+.pedra-s2-deck-card h3 {
+  margin: 0 0 6px;
+  color: #f3ead7;
+  font-size: 0.92rem;
+  line-height: 1.15;
+  font-weight: 950;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.pedra-s2-book-card p,
+.pedra-s2-deck-card p {
+  margin: 0;
+  color: rgba(247, 241, 231, 0.74);
+  font-size: 0.83rem;
+  line-height: 1.42;
+  font-weight: 650;
+}
+
+.pedra-s2-decks {
+  padding: clamp(16px, 2.2vw, 24px);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pedra-s2-deck-card {
+  min-width: 0;
+  padding: 13px 11px 14px;
+  border-radius: 18px;
+  background: rgba(8, 24, 20, 0.32);
+  border: 1px solid rgba(247, 241, 231, 0.12);
+  text-align: center;
+  transition:
+    transform 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease;
+}
+
+.pedra-s2-deck-card:hover {
+  transform: translateY(-4px);
+  background: rgba(8, 24, 20, 0.44);
+  border-color: rgba(223, 90, 8, 0.44);
+}
+
+.pedra-deck-stack {
+  position: relative;
+  width: min(100%, 88px);
+  aspect-ratio: 70 / 110;
+  margin: 0 auto 12px;
+}
+
+.pedra-deck-stack::before,
+.pedra-deck-stack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9px;
+  background: rgba(247, 241, 231, 0.20);
+  transform: translate(5px, 5px);
+  z-index: 0;
+}
+
+.pedra-deck-stack::after {
+  transform: translate(9px, 9px);
+  opacity: 0.42;
+}
+
+.pedra-deck-stack img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 9px;
+  filter:
+    drop-shadow(0 12px 12px rgba(0,0,0,0.30))
+    drop-shadow(0 4px 4px rgba(0,0,0,0.18));
+}
+
+.pedra-deck-stack-double img:first-child {
+  position: absolute;
+  left: -9px;
+  transform: rotate(-7deg);
+}
+
+.pedra-deck-stack-double img:last-child {
+  position: absolute;
+  right: -9px;
+  transform: rotate(7deg);
+}
+
+.deck-progress .pedra-deck-stack img { border: 4px solid #df5a08; }
+.deck-alpinist .pedra-deck-stack img { border: 4px solid #6fc6dc; }
+.deck-weather .pedra-deck-stack img { border: 4px solid #cc7aa4; }
+.deck-event .pedra-deck-stack img { border: 4px solid #7e2430; }
+.deck-resource .pedra-deck-stack img { border: 4px solid #234f75; }
+.deck-permanent .pedra-deck-stack img { border: 4px solid #d7b64a; }
+.deck-nature .pedra-deck-stack img:first-child { border: 4px solid #d2c39b; }
+.deck-nature .pedra-deck-stack img:last-child { border: 4px solid #6e8f45; }
+
+@media (max-width: 1120px) {
+  .pedra-s2-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .pedra-s2-components {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: stretch;
+  }
+
+  .pedra-s2-board-card {
+    min-height: 320px;
+  }
+
+  .pedra-s2-book-card {
+    grid-template-columns: 1fr;
+    align-content: center;
+    text-align: center;
+  }
+
+  .pedra-s2-book {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 860px) {
+  .pedra-s2 {
+    padding: 62px 0 70px;
+  }
+
+  .pedra-s2-heading {
+    margin-bottom: 26px;
+  }
+
+  .pedra-s2-components {
+    grid-template-columns: 1fr;
+  }
+
+  .pedra-s2-decks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .pedra-s2-board-card {
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 560px) {
+  .pedra-s2 {
+    padding: 52px 0 58px;
+  }
+
+  .pedra-s2-components,
+  .pedra-s2-decks {
+    border-radius: 20px;
+  }
+
+  .pedra-s2-board-card {
+    min-height: 250px;
+    padding: 12px;
+  }
+
+  .pedra-s2-book-card {
+    padding: 15px;
+  }
+
+  .pedra-s2-decks {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .pedra-s2-deck-card {
+    display: grid;
+    grid-template-columns: 86px 1fr;
+    column-gap: 14px;
+    align-items: center;
+    text-align: left;
+    padding: 12px 14px;
+  }
+
+  .pedra-deck-stack {
+    width: 76px;
+    margin: 0;
+  }
+
+  .pedra-s2-deck-card h3 {
+    margin-top: 0;
+  }
+
+  .pedra-s2-token-zone {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .pedra-token-pair span,
+  .pedra-token-single span {
+    width: 16px;
+    height: 16px;
+  }
+}
