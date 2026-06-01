@@ -27,10 +27,12 @@ window.PSG_TRANSLATIONS = {
 "hero.cta2": "Ir a compra",
 
         "s2.kicker": "Gósol - 1.500 m",
-"s2.title": "Abre la caja y prepara la ascensión",
-"s2.lead":
-  "Todo lo que necesitas para convertir el Pedraforca en una experiencia de juego: tablero, fichas, libreto y cartas para progresar, resistir el clima, gestionar recursos y descubrir la montaña.",
-
+"s2.title": "Contenido y Objetivo",
+"s2.objective":
+  "Objetivo: Alcanzar primero la cima del Pedraforca o que toda la expedición llegue antes de que acabe el tiempo.",
+"s2.contents":
+  "Contenidos: 1 tablero. 6 cartas de personaje. 120 cartas temáticas. 13 fichas. 1 libreto de instrucciones.",
+        
 "s2.book.title": "Instrucciones, historias y leyendas",
 "s2.book.text":
   "Un libreto compacto para aprender a jugar y conectar cada partida con el imaginario del Pedraforca.",
@@ -41,16 +43,17 @@ window.PSG_TRANSLATIONS = {
 "s2.deck.alpinist.text": "Personajes con habilidades y estilos de ascensión.",
 "s2.deck.weather.title": "Clima",
 "s2.deck.weather.text": "Condiciones cambiantes que afectan a toda la montaña.",
-"s2.deck.progress2.title": "Progresión",
-"s2.deck.progress2.text": "Elige si avanzas seguro o asumes más desgaste.",
+
 "s2.deck.event.title": "Evento",
 "s2.deck.event.text": "Imprevistos, pasos delicados y situaciones de riesgo.",
 "s2.deck.resource.title": "Recurso",
 "s2.deck.resource.text": "Herramientas tácticas para superar dificultades concretas.",
 "s2.deck.permanent.title": "Recurso permanente",
 "s2.deck.permanent.text": "Protecciones que quedan activas durante la partida.",
-"s2.deck.nature.title": "Flora y fauna",
-"s2.deck.nature.text": "Descubre el entorno natural mientras progresas.",
+"s2.deck.fauna.title": "Fauna",
+"s2.deck.fauna.text": "Animales del macizo que aportan valor y descubrimiento.",
+"s2.deck.flora.title": "Flora",
+"s2.deck.flora.text": "Plantas y paisaje vegetal vinculados a la montaña.",
 
         "game.kicker": "Campamento base · 1.450 m",
         "game.title": "Pedraforca convertido en experiencia de juego",
@@ -122,10 +125,12 @@ window.PSG_TRANSLATIONS = {
          "hero.cta2": "Anar a compra",
 
 "s2.kicker": "Gòsol - 1.500 m",
-"s2.title": "Obre la caixa i prepara l’ascensió",
-"s2.lead":
-  "Tot el que necessites per convertir el Pedraforca en una experiència de joc: tauler, fitxes, llibret i cartes per progressar, resistir el clima, gestionar recursos i descobrir la muntanya.",
-
+"s2.title": "Contingut i Objectiu",
+"s2.objective":
+  "Objectiu: Assolir primer el cim del Pedraforca o tota l'expedició abans que acabi el temps.",
+"s2.contents":
+  "Continguts: 1 Taulell. 6 cartes personatge. 120 cartes temàtiques. 13 Fitxes. 1 Llibret d'instruccions.",
+        
 "s2.book.title": "Instruccions, històries i llegendes",
 "s2.book.text":
   "Un llibret compacte per aprendre a jugar i connectar cada partida amb l’imaginari del Pedraforca.",
@@ -136,16 +141,18 @@ window.PSG_TRANSLATIONS = {
 "s2.deck.alpinist.text": "Personatges amb habilitats i estils d’ascensió.",
 "s2.deck.weather.title": "Clima",
 "s2.deck.weather.text": "Condicions canviants que afecten tota la muntanya.",
-"s2.deck.progress2.title": "Progressió",
-"s2.deck.progress2.text": "Tria si avances segur o assumeixes més desgast.",
+
+
 "s2.deck.event.title": "Esdeveniment",
 "s2.deck.event.text": "Imprevistos, passos delicats i situacions de risc.",
 "s2.deck.resource.title": "Recurs",
 "s2.deck.resource.text": "Eines tàctiques per superar dificultats concretes.",
 "s2.deck.permanent.title": "Recurs permanent",
 "s2.deck.permanent.text": "Proteccions que queden actives durant la partida.",
-"s2.deck.nature.title": "Flora i fauna",
-"s2.deck.nature.text": "Descobreix l’entorn natural mentre progresses.",
+"s2.deck.fauna.title": "Fauna",
+"s2.deck.fauna.text": "Animals del massís que aporten valor i descoberta.",
+"s2.deck.flora.title": "Flora",
+"s2.deck.flora.text": "Plantes i paisatge vegetal vinculats a la muntanya.",
         
         "game.kicker": "Campament base · 1.450 m",
         "game.title": "Pedraforca convertit en experiència de joc",
