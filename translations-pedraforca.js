@@ -15,12 +15,11 @@ window.PSG_TRANSLATIONS = {
         "nav.summit": "Cima",
 
        "hero.back": "← Volver a Play Summit Games",
-"hero.kicker": "Saldes · 1.215 m · Presentación",
+"hero.kicker": "Saldes - 1.215 m ",
 "hero.title": "Objectiu Pedraforca 2.506",
 "hero.lead":
   "Una ascensión lúdica inspirada en la montaña más emblemática de Catalunya.",
-"hero.p1":
-  "Un juego de cartas de montaña con gestión de energía, clima cambiante, progresión en altitud, riesgo, protección y decisiones tácticas constantes.",
+
 "hero.fact.players": "jugadores",
 "hero.fact.age": "años",
 "hero.fact.time": "minutos",
@@ -85,12 +84,11 @@ window.PSG_TRANSLATIONS = {
         "nav.summit": "Cim",
 
         "hero.back": "← Tornar a Play Summit Games",
-         "hero.kicker": "Saldes · 1.215 m · Presentació",
+         "hero.kicker": "Saldes - 1.215 m",
          "hero.title": "Objectiu Pedraforca 2.506",
           "hero.lead":
            "Una ascensió lúdica inspirada en la muntanya més emblemàtica de Catalunya.",
-          "hero.p1":
-           "Un joc de cartes de muntanya amb gestió d’energia, clima canviant, progressió en altitud, risc, protecció i decisions tàctiques constants.",
+          
            "hero.fact.players": "jugadors",
          "hero.fact.age": "anys",
          "hero.fact.time": "minuts",
