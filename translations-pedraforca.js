@@ -26,6 +26,32 @@ window.PSG_TRANSLATIONS = {
 "hero.cta1": "Descubrir el juego",
 "hero.cta2": "Ir a compra",
 
+        "s2.kicker": "Gósol - 1.500 m",
+"s2.title": "Abre la caja y prepara la ascensión",
+"s2.lead":
+  "Todo lo que necesitas para convertir el Pedraforca en una experiencia de juego: tablero, fichas, libreto y cartas para progresar, resistir el clima, gestionar recursos y descubrir la montaña.",
+
+"s2.book.title": "Instrucciones, historias y leyendas",
+"s2.book.text":
+  "Un libreto compacto para aprender a jugar y conectar cada partida con el imaginario del Pedraforca.",
+
+"s2.deck.progress.title": "Progresión",
+"s2.deck.progress.text": "Avanza metros y decide cuándo forzar el ritmo.",
+"s2.deck.alpinist.title": "Alpinista",
+"s2.deck.alpinist.text": "Personajes con habilidades y estilos de ascensión.",
+"s2.deck.weather.title": "Clima",
+"s2.deck.weather.text": "Condiciones cambiantes que afectan a toda la montaña.",
+"s2.deck.progress2.title": "Progresión",
+"s2.deck.progress2.text": "Elige si avanzas seguro o asumes más desgaste.",
+"s2.deck.event.title": "Evento",
+"s2.deck.event.text": "Imprevistos, pasos delicados y situaciones de riesgo.",
+"s2.deck.resource.title": "Recurso",
+"s2.deck.resource.text": "Herramientas tácticas para superar dificultades concretas.",
+"s2.deck.permanent.title": "Recurso permanente",
+"s2.deck.permanent.text": "Protecciones que quedan activas durante la partida.",
+"s2.deck.nature.title": "Flora y fauna",
+"s2.deck.nature.text": "Descubre el entorno natural mientras progresas.",
+
         "game.kicker": "Campamento base · 1.450 m",
         "game.title": "Pedraforca convertido en experiencia de juego",
         "game.text":
@@ -95,6 +121,32 @@ window.PSG_TRANSLATIONS = {
           "hero.cta1": "Descobrir el joc",
          "hero.cta2": "Anar a compra",
 
+"s2.kicker": "Gòsol - 1.500 m",
+"s2.title": "Obre la caixa i prepara l’ascensió",
+"s2.lead":
+  "Tot el que necessites per convertir el Pedraforca en una experiència de joc: tauler, fitxes, llibret i cartes per progressar, resistir el clima, gestionar recursos i descobrir la muntanya.",
+
+"s2.book.title": "Instruccions, històries i llegendes",
+"s2.book.text":
+  "Un llibret compacte per aprendre a jugar i connectar cada partida amb l’imaginari del Pedraforca.",
+
+"s2.deck.progress.title": "Progressió",
+"s2.deck.progress.text": "Avança metres i decideix quan forçar el ritme.",
+"s2.deck.alpinist.title": "Alpinista",
+"s2.deck.alpinist.text": "Personatges amb habilitats i estils d’ascensió.",
+"s2.deck.weather.title": "Clima",
+"s2.deck.weather.text": "Condicions canviants que afecten tota la muntanya.",
+"s2.deck.progress2.title": "Progressió",
+"s2.deck.progress2.text": "Tria si avances segur o assumeixes més desgast.",
+"s2.deck.event.title": "Esdeveniment",
+"s2.deck.event.text": "Imprevistos, passos delicats i situacions de risc.",
+"s2.deck.resource.title": "Recurs",
+"s2.deck.resource.text": "Eines tàctiques per superar dificultats concretes.",
+"s2.deck.permanent.title": "Recurs permanent",
+"s2.deck.permanent.text": "Proteccions que queden actives durant la partida.",
+"s2.deck.nature.title": "Flora i fauna",
+"s2.deck.nature.text": "Descobreix l’entorn natural mentre progresses.",
+        
         "game.kicker": "Campament base · 1.450 m",
         "game.title": "Pedraforca convertit en experiència de joc",
         "game.text":
