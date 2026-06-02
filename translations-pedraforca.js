@@ -26,35 +26,26 @@ window.PSG_TRANSLATIONS = {
 "hero.cta1": "Descubrir el juego",
 "hero.cta2": "Ir a compra",
 
-        "s2.kicker": "Gósol - 1.500 m",
+  "s2.kicker": "Gósol - 1.500 m",
 "s2.title": "Contenido y Objetivo",
-"s2.objective":
-  "Objetivo: Alcanzar primero la cima del Pedraforca o que toda la expedición llegue antes de que acabe el tiempo.",
-"s2.contents":
-  "Contenidos: 1 tablero. 6 cartas de personaje. 120 cartas temáticas. 13 fichas. 1 libreto de instrucciones.",
+  "s2.objective.label": "Objetivo",
+"s2.objective.text":
+  "Alcanzar primero la cima del Pedraforca o que toda la expedición llegue antes de que acabe el tiempo.",
+"s2.contents.label":
+  "Contenidos:",
         
-"s2.book.title": "Instrucciones, historias y leyendas",
-"s2.book.text":
-  "Un libreto compacto para aprender a jugar y conectar cada partida con el imaginario del Pedraforca.",
-
-"s2.deck.progress.title": "Progresión",
-"s2.deck.progress.text": "Avanza metros y decide cuándo forzar el ritmo.",
-"s2.deck.alpinist.title": "Alpinista",
-"s2.deck.alpinist.text": "Personajes con habilidades y estilos de ascensión.",
-"s2.deck.weather.title": "Clima",
-"s2.deck.weather.text": "Condiciones cambiantes que afectan a toda la montaña.",
-
-"s2.deck.event.title": "Evento",
-"s2.deck.event.text": "Imprevistos, pasos delicados y situaciones de riesgo.",
-"s2.deck.resource.title": "Recurso",
-"s2.deck.resource.text": "Herramientas tácticas para superar dificultades concretas.",
-"s2.deck.permanent.title": "Recurso permanente",
-"s2.deck.permanent.text": "Protecciones que quedan activas durante la partida.",
-"s2.deck.fauna.title": "Fauna",
-"s2.deck.fauna.text": "Animales del macizo que aportan valor y descubrimiento.",
-"s2.deck.flora.title": "Flora",
-"s2.deck.flora.text": "Plantas y paisaje vegetal vinculados a la montaña.",
-
+"s2.board.title": "1 Tablero",
+"s2.book.title": "1 Libreto de instrucciones, historia y leyendas",
+"s2.fichas.title": 13 Fichas de colores",
+"s2.deck.progress.title": "24 Cartas de Progresión",
+"s2.deck.alpinist.title": "8 Cartas de Alpinista",
+"s2.deck.weather.title": "7 Cartas de Clima",
+"s2.deck.event.title": "12 Cartas de Evento",
+"s2.deck.resource.title": "24 Cartas de Equipamiento",
+"s2.deck.permanent.title": "5 Cartas de Recursos Permanentes",
+"s2.deck.fauna.title": "6 Cartas de Fauna",
+"s2.deck.flora.title": "5 Cartas de Flora",
+        
         "game.kicker": "Campamento base · 1.450 m",
         "game.title": "Pedraforca convertido en experiencia de juego",
         "game.text":
@@ -126,21 +117,22 @@ window.PSG_TRANSLATIONS = {
 
 "s2.kicker": "Gòsol - 1.500 m",
 "s2.title": "Contingut i Objectiu",
-"s2.objective":
+"s2.objective.text":
   "Objectiu: Assolir primer el cim del Pedraforca o tota l'expedició abans que acabi el temps.",
-"s2.contents":
-  "Continguts: 1 Taulell. 6 cartes personatge. 120 cartes temàtiques. 13 Fitxes. 1 Llibret d'instruccions.",
+"s2.contents.label": "Contingut",
         
-"s2.book.title": "Instruccions, històries i llegendes",
-"s2.book.text":
-  "Un llibret compacte per aprendre a jugar i connectar cada partida amb l’imaginari del Pedraforca.",
-
-"s2.deck.progress.title": "Progressió",
-"s2.deck.progress.text": "Avança metres i decideix quan forçar el ritme.",
-"s2.deck.alpinist.title": "Alpinista",
-"s2.deck.alpinist.text": "Personatges amb habilitats i estils d’ascensió.",
-"s2.deck.weather.title": "Clima",
-"s2.deck.weather.text": "Condicions canviants que afecten tota la muntanya.",
+ "s2.board.title": "1 Taulell",
+"s2.book.title": "1 Llibret d'instruccions, història i llegendes",  
+"s2.fichas.title": "13 Fitxes de colors",
+        
+"s2.deck.progress.title": "24 Cartes de Progressió",
+"s2.deck.alpinist.title": "8 Cartes d'Alpinista",
+"s2.deck.weather.title": "7 Cartes de Clima",
+"s2.deck.event.title": "12 Cartes d'esdeveniments",
+"s2.deck.resource.title": "24 Cartes d'equipament",
+"s2.deck.permanent.title": "5 Cartes de recursos permanents",
+"s2.deck.fauna.title": "6 Cartes de fauna",
+"s2.deck.flora.title": "5 Cartes de flora",
 
 
 "s2.deck.event.title": "Esdeveniment",
