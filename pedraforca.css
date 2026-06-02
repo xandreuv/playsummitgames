@@ -840,17 +840,45 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .pedra-s2-summary {
   display: grid;
-  gap: 8px;
+  gap: 18px;
   max-width: 760px;
   margin: 0 auto;
 }
 
+.pedra-s2-summary-block {
+  display: grid;
+  gap: 8px;
+}
+
+.pedra-s2-subtitle {
+  margin: 0;
+  color: #df5a08;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  line-height: 1.1;
+  font-weight: 950;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .pedra-s2-summary p {
   margin: 0;
-  color: rgba(247, 241, 231, 0.86);
-  font-size: clamp(0.98rem, 1.25vw, 1.1rem);
-  line-height: 1.5;
-  font-weight: 750;
+  color: rgba(247, 241, 231, 0.88);
+  font-size: clamp(0.98rem, 1.25vw, 1.08rem);
+  line-height: 1.55;
+  font-weight: 730;
+  text-align: center;
+}
+
+.pedra-s2-component-title {
+  margin: 0;
+  color: #f3ead7;
+  font-size: 0.96rem;
+  line-height: 1.25;
+  font-weight: 950;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .pedra-s2-summary p:first-child {
@@ -883,16 +911,22 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .pedra-s2-board-card {
-  position: relative;
   min-height: 360px;
   display: grid;
-  place-items: center;
+  align-content: start;
+  gap: 16px;
   padding: 18px;
   border-radius: 22px;
   background:
     radial-gradient(circle at 50% 22%, rgba(223,90,8,0.16), transparent 42%),
     rgba(8, 24, 20, 0.28);
   overflow: hidden;
+}
+
+.pedra-s2-board-visual {
+  min-height: 300px;
+  display: grid;
+  place-items: center;
 }
 
 .pedra-s2-board {
@@ -944,12 +978,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .pedra-s2-book-card {
   display: grid;
-  grid-template-columns: 112px 1fr;
-  gap: 18px;
-  align-items: center;
+  justify-items: center;
+  gap: 14px;
   padding: 18px;
   border-radius: 22px;
   background: rgba(8, 24, 20, 0.30);
+  text-align: center;
 }
 
 .pedra-s2-book {
@@ -988,8 +1022,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   align-items: center;
   justify-content: center;
   gap: 7px;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   flex-wrap: wrap;
+}
+
+.pedra-s2-deck-card h3 {
+  margin: 0;
 }
 
 .pedra-card-title-row h3 {
@@ -1043,37 +1081,53 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .pedra-deck-stack {
   position: relative;
-  width: min(100%, 88px);
-  aspect-ratio: 70 / 110;
+  width: 120px;
+  height: 146px;
   margin: 0 auto 12px;
 }
 
 .pedra-deck-stack::before,
 .pedra-deck-stack::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 9px;
-  background: rgba(247, 241, 231, 0.20);
-  transform: translate(5px, 5px);
-  z-index: 0;
-}
-
-.pedra-deck-stack::after {
-  transform: translate(9px, 9px);
-  opacity: 0.42;
+  display: none;
 }
 
 .pedra-deck-stack img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 74px;
+  height: auto;
   object-fit: contain;
   border-radius: 9px;
   filter:
-    drop-shadow(0 12px 12px rgba(0,0,0,0.30))
-    drop-shadow(0 4px 4px rgba(0,0,0,0.18));
+    drop-shadow(0 10px 10px rgba(0,0,0,0.28))
+    drop-shadow(0 3px 4px rgba(0,0,0,0.16));
+}
+
+.pedra-deck-stack.stack-four img:nth-child(1) {
+  left: 4px;
+  top: 16px;
+  z-index: 1;
+  transform: rotate(-14deg);
+}
+
+.pedra-deck-stack.stack-four img:nth-child(2) {
+  left: 18px;
+  top: 9px;
+  z-index: 2;
+  transform: rotate(-7deg);
+}
+
+.pedra-deck-stack.stack-four img:nth-child(3) {
+  left: 33px;
+  top: 7px;
+  z-index: 3;
+  transform: rotate(5deg);
+}
+
+.pedra-deck-stack.stack-four img:nth-child(4) {
+  left: 46px;
+  top: 10px;
+  z-index: 4;
+  transform: rotate(11deg);
 }
 
 .pedra-deck-stack-double img:first-child {
@@ -1181,10 +1235,35 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   height: 17px;
 }
 
-  .pedra-deck-stack {
-    width: 76px;
-    margin: 0;
-  }
+.pedra-deck-stack {
+  width: 96px;
+  height: 120px;
+  margin: 0;
+}
+
+.pedra-deck-stack img {
+  width: 60px;
+}
+
+.pedra-deck-stack.stack-four img:nth-child(1) {
+  left: 0;
+  top: 16px;
+}
+
+.pedra-deck-stack.stack-four img:nth-child(2) {
+  left: 11px;
+  top: 9px;
+}
+
+.pedra-deck-stack.stack-four img:nth-child(3) {
+  left: 22px;
+  top: 7px;
+}
+
+.pedra-deck-stack.stack-four img:nth-child(4) {
+  left: 33px;
+  top: 10px;
+}
 
   .pedra-s2-deck-card h3 {
     margin-top: 0;
