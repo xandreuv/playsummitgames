@@ -938,17 +938,6 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     drop-shadow(0 7px 8px rgba(0,0,0,0.18));
 }
 
-.pedra-s2-token-zone {
-  position: absolute;
-  left: 18px;
-  right: 18px;
-  bottom: 15px;
-  display: flex;
-  justify-content: center;
-  gap: 7px;
-  flex-wrap: wrap;
-  pointer-events: none;
-}
 
 .pedra-token-pair,
 .pedra-token-single {
@@ -991,6 +980,25 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   max-height: 150px;
   object-fit: contain;
   filter: drop-shadow(0 14px 16px rgba(0,0,0,0.32));
+}
+
+.pedra-s2-tokens-card {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(8, 24, 20, 0.30);
+  text-align: center;
+}
+
+.pedra-s2-tokens-card .pedra-s2-token-zone {
+  position: static;
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  pointer-events: none;
 }
 
 .pedra-s2-book-card h3,
