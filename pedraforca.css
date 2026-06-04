@@ -46,6 +46,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .pedra-s1 {
   position: relative;
+  display: block;
   min-height: auto;
   padding: calc(var(--header-height) + 22px) 0 58px;
   overflow: hidden;
@@ -92,7 +93,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .pedra-s1-back-container {
   position: relative;
   z-index: 4;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .pedra-s1-inner {
@@ -111,6 +112,10 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .pedra-breadcrumb {
   width: 100%;
   margin: 0;
+  text-align: left;
+}
+
+.pedra-s1-back-container .pedra-breadcrumb {
   text-align: left;
 }
 
@@ -292,22 +297,24 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   right: 8px;
 }
 
-.pedra-fact-icon-age {
-  width: 52px;
-  height: 44px;
+.pedra-s1-facts .pedra-fact-icon-age {
+  width: 58px;
+  height: 48px;
   display: grid;
   place-items: center;
+  margin: 0 0 8px;
   border: 2px solid #df5a08;
   border-radius: 10px;
-  font-size: 1.42rem;
+  font-size: 1.72rem;
   line-height: 1;
   font-weight: 950;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.06em;
   color: #df5a08;
   background: rgba(223, 90, 8, 0.08);
   box-shadow:
     inset 0 0 0 1px rgba(255,255,255,0.12),
     0 8px 16px rgba(0,0,0,0.14);
+  text-transform: none;
 }
 
 .pedra-fact .pedra-fact-icon-age + strong {
@@ -842,6 +849,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   transform: scale(1.03);
 }
 
+.pedra-s2 .pedra-kicker-row {
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
 .pedra-s2-overlay {
   position: absolute;
   inset: 0;
@@ -863,8 +876,10 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .pedra-s2-heading {
-  max-width: 780px;
-  margin: 0 auto 34px;
+  width: 100%;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
@@ -876,6 +891,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   letter-spacing: -0.025em;
   color: #f3ead7;
   text-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: none;
+  text-align: center;
 }
 
 .pedra-s2-heading p {
@@ -892,6 +910,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   gap: 18px;
   max-width: 760px;
   margin: 0 auto;
+  justify-items: center;
+  text-align: center;
 }
 
 .pedra-s2-summary-block {
@@ -1078,7 +1098,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 14px;
   margin-bottom: 0;
   flex-wrap: wrap;
 }
@@ -1095,17 +1115,17 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
 .pedra-type-icon {
-  width: 18px;
-  height: 18px;
+  width: 54px;
+  height: 54px;
   object-fit: contain;
   flex: 0 0 auto;
   filter:
-    drop-shadow(0 2px 3px rgba(0,0,0,0.28));
+    drop-shadow(0 5px 7px rgba(0,0,0,0.34));
 }
 
 .pedra-s2-decks {
@@ -1288,8 +1308,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .pedra-type-icon {
-  width: 17px;
-  height: 17px;
+  width: 42px;
+  height: 42px;
 }
 
 .pedra-deck-stack {
