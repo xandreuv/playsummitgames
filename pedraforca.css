@@ -110,25 +110,22 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .pedra-breadcrumb {
   width: 100%;
-  margin-bottom: 8px;
+  margin: 0;
   text-align: left;
 }
 
 .pedra-breadcrumb a {
+  justify-content: flex-start;
   display: inline-flex;
+  color: rgba(247, 241, 231, 0.82);
   font-size: 0.86rem;
   font-weight: 800;
-  color: rgba(247, 241, 231, 0.82);
-  transition: opacity 220ms ease;
 }
 
 .pedra-breadcrumb a:hover {
   opacity: 0.72;
 }
 
-.pedra-breadcrumb a {
-  justify-content: flex-start;
-}
 
 /* Pretítulo naranja común para esta landing */
 .pedra-kicker-row {
