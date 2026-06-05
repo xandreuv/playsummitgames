@@ -1408,23 +1408,42 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   padding: clamp(72px, 8vw, 120px) 0;
 }
 
-.s3-header {
-  max-width: 820px;
+.s3-header,
+.s3-header-centered {
+  max-width: 860px;
   margin: 0 auto clamp(36px, 5vw, 64px);
   text-align: center;
 }
 
-.pedra-section-s3 .pedra-pretitle {
-  display: inline-flex;
+.pedra-section-s3 .pedra-section-kicker {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 14px;
+  width: fit-content;
+  margin: 0 auto 16px;
   color: #f08a2f;
   font-size: clamp(0.82rem, 1vw, 0.98rem);
   font-weight: 800;
   letter-spacing: 0.12em;
+  line-height: 1.2;
   text-transform: uppercase;
+}
+
+.pedra-section-s3 .pedra-section-title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.pedra-section-s3 .pedra-section-lead {
+  display: block;
+  max-width: 720px;
+  margin: 22px auto 0;
+  color: rgba(255, 247, 234, 0.82);
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  line-height: 1.65;
+  text-align: center;
 }
 
 .pedra-section-s3 .mountain-mark {
@@ -1679,10 +1698,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     padding: 58px 0 70px;
   }
 
-  .pedra-section-s3 .pedra-pretitle {
-    gap: 8px;
-    letter-spacing: 0.08em;
-  }
+.pedra-section-s3 .pedra-section-kicker {
+  gap: 8px;
+  letter-spacing: 0.08em;
+  max-width: 92%;
+  text-align: center;
+}
 
   .pedra-section-s3 .mountain-mark {
     width: 30px;
