@@ -63,14 +63,46 @@ window.PSG_TRANSLATIONS = {
         "territory.c3.text":
           "Favorece conversaciones, recuerdos y vivencias ligadas a la excursión y la cima.",
 
-        "culture.kicker": "Refugio guardado · 2.200 m",
-        "culture.title": "Divulgación y valores",
-        "culture.c1.title": "Buenas prácticas",
-        "culture.c1.text":
-          "El juego permite introducir ideas de prevención, preparación y respeto por la montaña.",
-        "culture.c2.title": "Patrimonio cultural",
-        "culture.c2.text":
-          "La temática facilita incorporar paisaje, historia, referencias locales y valor territorial.",
+s3: {
+  preTitle: "Refugio Lluís Estasen · 1.675 m",
+  title: "PREPARACIÓN DEL JUEGO",
+  lead: "Antes de comenzar la ascensión, cada jugador escoge a su alpinista, sus fichas, prepara los distintos mazos de juego y la mano inicial de 6 cartas.",
+
+  step1: {
+    title: "Elige tu alpinista",
+    text: "Determinará el color de tus fichas y tu estilo de ascensión. Cada alpinista aporta una manera diferente de afrontar la progresión."
+  },
+
+  step2: {
+    title: "Coloca tus fichas sobre el tablero",
+    text: "Sitúa una ficha en la casilla de salida y la otra en el nivel 6 inicial de energía."
+  },
+
+  step3: {
+    title: "Marca el tiempo de partida",
+    text: "Coloca la ficha negra sobre el número de rondas máximas que tendrá la partida."
+  },
+
+  step4: {
+    title: "Prepara el mazo de clima",
+    text: "Separa y mezcla las cartas de clima. El tiempo imprevisto puede abrir una ventana de ascensión o complicar la ruta."
+  },
+
+  step5: {
+    title: "Prepara el mazo de eventos",
+    text: "Separa y mezcla las cartas de evento. Representan imprevistos, pasos técnicos y situaciones propias de la alta montaña."
+  },
+
+  step6: {
+    title: "Prepara el mazo de la expedición",
+    text: "Mezcla el resto de cartas para formar el mazo principal de la expedición."
+  },
+
+  step7: {
+    title: "Coge 6 cartas de mano al azar del mazo de la expedición",
+    text: "Cada jugador empieza con 6 cartas. Esta mano inicial marcará las primeras decisiones de la ascensión."
+  }
+}
 
         "rules.kicker": "Zona técnica · 2.450 m",
         "rules.title": "Base preparada para ampliar contenido",
@@ -163,14 +195,46 @@ window.PSG_TRANSLATIONS = {
         "territory.c3.text":
           "Afavoreix converses, records i vivències lligades a l'excursió i al cim.",
 
-        "culture.kicker": "Refugi guardat · 2.200 m",
-        "culture.title": "Divulgació i valors",
-        "culture.c1.title": "Bones pràctiques",
-        "culture.c1.text":
-          "El joc permet introduir idees de prevenció, preparació i respecte per la muntanya.",
-        "culture.c2.title": "Patrimoni cultural",
-        "culture.c2.text":
-          "La temàtica facilita incorporar paisatge, història, referències locals i valor territorial.",
+s3: {
+  preTitle: "Refugi Lluís Estasen · 1.675 m",
+  title: "PREPARACIÓ DEL JOC",
+  lead: "Abans de començar l’ascensió, cada jugador tria el seu alpinista, les seves fitxes, les diferents baralles de joc i la mà inicial de 6 cartes.",
+
+  step1: {
+    title: "Tria el teu alpinista",
+    text: "Determinarà el color de les teves fitxes i el teu estil d’ascensió. Cada alpinista aporta una manera diferent d’afrontar el Pedraforca."
+  },
+
+  step2: {
+    title: "Col·loca les teves fitxes sobre el taulell",
+    text: "Situa una fitxa a la casella de sortida i l’altra al nivell inicial de 6 d'energia."
+  },
+
+  step3: {
+    title: "Marca el temps de partida",
+    text: "Col·loca la fitxa negra sobre el número de rondes màximes que tindrà la partida."
+  },
+
+  step4: {
+    title: "Prepara la baralla de clima",
+    text: "Separa i barreja les cartes de clima. El temps imprevist pot obrir una finestra d’ascensió o complicar la ruta."
+  },
+
+  step5: {
+    title: "Prepara la baralla d’esdeveniments",
+    text: "Separa i barreja les cartes d’esdeveniment. Representen imprevistos, passos tècnics i situacions pròpies de l’alta muntanya."
+  },
+
+  step6: {
+    title: "Prepara la baralla de l’expedició",
+    text: "Barreja la resta de cartes per formar el mall principal de l’expedició."
+  },
+
+  step7: {
+    title: "Agafa 6 cartes de mà a l’atzar del mall d'expedició",
+    text: "Cada jugador comença amb 6 cartes. Aquesta mà inicial marcarà les primeres decisions de l’ascensió."
+  }
+}
 
         "rules.kicker": "Zona tècnica · 2.450 m",
         "rules.title": "Base preparada per ampliar contingut",
