@@ -107,13 +107,11 @@ s3: {
 s4: {
   preTitle: "Tartera · 2.050 m",
   title: "PROGRESIÓN EN ALTURA CON GESTIÓN DE ENERGÍA Y RECURSOS",
-  lead: "Cada carta puede abrir una oportunidad de ascenso, protegerte de un imprevisto u obligarte a gestionar mejor la energía antes de seguir subiendo.",
-
+  
   progress: {
     title: "Progresa en altura",
     text: "Juega cartas con metros de progresión, fauna, flora o genera combos con buen tiempo y aprovecha el efecto cordada si tienes un alpinista por delante.",
-    cordada: "Efecto cordada: si un alpinista va por encima de ti dentro de la distancia de referencia, puedes aprovechar un impulso extra de progresión.",
-    card1: {
+     card1: {
       title: "Progresión",
       text: "Avance directo en metros."
     },
@@ -131,23 +129,23 @@ s4: {
     title: "Gestiona la energía",
     text: "La energía sube o baja según el ritmo de ascenso, el clima, los eventos y las decisiones tácticas de cada turno.",
     marker: "ENERGÍA",
-    loss: {
-      title: "Pierdes energía",
-      item1: "Clima adverso.",
-      item2: "Eventos rojos.",
-      item3: "Progresión demasiado agresiva."
-    },
-    gain: {
-      title: "Ganas energía",
-      item1: "Equipación y planificación.",
-      item2: "Recursos permanentes.",
-      item3: "Descanso: descarta una carta."
-    }
+loss: {
+  title: "Pierdes energía",
+  card1: "Clima adverso",
+  card2: "Eventos",
+  card3: "Progresión agresiva"
+},
+gain: {
+  title: "Ganas energía",
+  card1: "Equipación",
+  card2: "Planificación",
+  card3: "Recursos permanentes"
+}
   },
 
   resources: {
-    title: "Organiza recursos por familias",
-    text: "Cada amenaza de la montaña tiene una respuesta temporal y, si la consigues, una protección permanente para toda la partida.",
+    title: "Gestión de recursos",
+text: "Familias de recursos",
     col1: "Obstáculos",
     col2: "Respuesta de un turno",
     col3: "Protección permanente",
@@ -307,47 +305,45 @@ s3: {
 s4: {
   preTitle: "Tartera · 2.050 m",
   title: "PROGRESSIÓ EN ALÇADA AMB GESTIÓ D'ENERGIA I RECURSOS",
-  lead: "Cada carta pot obrir una oportunitat d’ascensió, protegir-te d’un imprevist o obligar-te a gestionar millor l’energia abans de continuar pujant.",
-
+  
   progress: {
     title: "Progressa en altura",
-    text: "Juga cartes amb metres de progressió, fauna, flora o genera combos amb bon temps i aprofita l’efecte cordada si tens un alpinista per davant.",
-    cordada: "Efecte cordada: si un alpinista va per sobre teu dins la distància de referència, pots aprofitar un impuls extra de progressió.",
+    text: "Juga cartes amb metres de progressió, fauna, flora y genera combos amb bon temps.",    
     card1: {
       title: "Progressió",
       text: "Avanç directe en metres."
     },
-    card2: {
-      title: "Fauna / flora",
-      text: "Descoberta del territori i impuls d’ascensió."
-    },
-    card3: {
-      title: "Bon temps",
-      text: "Finestra favorable per encadenar avanç."
-    }
+card2: {
+  title: "Fauna / flora",
+  text: "Impuls d’ascensió."
+},
+card3: {
+  title: "Bon temps",
+  text: "Combo de progressió."
+}
   },
 
   energy: {
     title: "Gestiona l’energia",
     text: "L’energia puja o baixa segons el ritme d’ascensió, el clima, els esdeveniments i les decisions tàctiques de cada torn.",
     marker: "ENERGIA",
-    loss: {
-      title: "Perds energia",
-      item1: "Clima advers.",
-      item2: "Esdeveniments vermells.",
-      item3: "Progressió massa agressiva."
-    },
-    gain: {
-      title: "Guanyes energia",
-      item1: "Equipació i planificació.",
-      item2: "Recursos permanents.",
-      item3: "Descans: descarta una carta."
-    }
+loss: {
+  title: "Perds energia",
+  card1: "Clima advers",
+  card2: "Esdeveniments",
+  card3: "Progressió agressiva"
+},
+gain: {
+  title: "Guanyes energia",
+  card1: "Equipació",
+  card2: "Planificació",
+  card3: "Recursos permanents"
+}
   },
 
   resources: {
-    title: "Organitza recursos per famílies",
-    text: "Cada amenaça de la muntanya té una resposta temporal i, si l’aconsegueixes, una protecció permanent per a tota la partida.",
+    title: "Gestió de recursos",
+    text: "Famílies de recursos",    
     col1: "Obstacles",
     col2: "Resposta d’un torn",
     col3: "Protecció permanent",
