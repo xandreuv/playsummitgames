@@ -102,8 +102,76 @@ s3: {
     title: "Coge 6 cartas de mano al azar del mazo de la expedición",
     text: "Cada jugador empieza con 6 cartas. Esta mano inicial marcará las primeras decisiones de la ascensión."
   }
-}
+},
 
+s4: {
+  preTitle: "Tartera · 2.050 m",
+  title: "PROGRESIÓN EN ALTURA CON GESTIÓN DE ENERGÍA Y RECURSOS",
+  lead: "Cada carta puede abrir una oportunidad de ascenso, protegerte de un imprevisto u obligarte a gestionar mejor la energía antes de seguir subiendo.",
+
+  progress: {
+    title: "Progresa en altura",
+    text: "Juega cartas con metros de progresión, fauna, flora o genera combos con buen tiempo y aprovecha el efecto cordada si tienes un alpinista por delante.",
+    cordada: "Efecto cordada: si un alpinista va por encima de ti dentro de la distancia de referencia, puedes aprovechar un impulso extra de progresión.",
+    card1: {
+      title: "Progresión",
+      text: "Avance directo en metros."
+    },
+    card2: {
+      title: "Fauna / flora",
+      text: "Descubrimiento del territorio e impulso de ascenso."
+    },
+    card3: {
+      title: "Buen tiempo",
+      text: "Ventana favorable para encadenar avance."
+    }
+  },
+
+  energy: {
+    title: "Gestiona la energía",
+    text: "La energía sube o baja según el ritmo de ascenso, el clima, los eventos y las decisiones tácticas de cada turno.",
+    marker: "ENERGÍA",
+    loss: {
+      title: "Pierdes energía",
+      item1: "Clima adverso.",
+      item2: "Eventos rojos.",
+      item3: "Progresión demasiado agresiva."
+    },
+    gain: {
+      title: "Ganas energía",
+      item1: "Equipación y planificación.",
+      item2: "Recursos permanentes.",
+      item3: "Descanso: descarta una carta."
+    }
+  },
+
+  resources: {
+    title: "Organiza recursos por familias",
+    text: "Cada amenaza de la montaña tiene una respuesta temporal y, si la consigues, una protección permanente para toda la partida.",
+    col1: "Obstáculos",
+    col2: "Respuesta de un turno",
+    col3: "Protección permanente",
+
+    obstacle1: "Paso imprevisto",
+    obstacle2: "Escalada",
+    obstacle3: "Material inadecuado",
+    obstacle4: "Deshidratación",
+    obstacle5: "Cambio de tiempo",
+
+    turn1: "Planificación de ruta",
+    turn2: "Material de escalada",
+    turn3: "Material adecuado",
+    turn4: "Bebida Km0",
+    turn5: "Refugio temporal",
+
+    perm1: "Guía experto",
+    perm2: "Centro excursionista",
+    perm3: "Espónsor",
+    perm4: "Font de la Roca",
+    perm5: "Refugio"
+  }
+},
+        
         "rules.kicker": "Zona técnica · 2.450 m",
         "rules.title": "Base preparada para ampliar contenido",
         "rules.text":
@@ -234,8 +302,76 @@ s3: {
     title: "Agafa 6 cartes de mà a l’atzar del mall d'expedició",
     text: "Cada jugador comença amb 6 cartes. Aquesta mà inicial marcarà les primeres decisions de l’ascensió."
   }
-}
+},
 
+s4: {
+  preTitle: "Tartera · 2.050 m",
+  title: "PROGRESSIÓ EN ALÇADA AMB GESTIÓ D'ENERGIA I RECURSOS",
+  lead: "Cada carta pot obrir una oportunitat d’ascensió, protegir-te d’un imprevist o obligar-te a gestionar millor l’energia abans de continuar pujant.",
+
+  progress: {
+    title: "Progressa en altura",
+    text: "Juga cartes amb metres de progressió, fauna, flora o genera combos amb bon temps i aprofita l’efecte cordada si tens un alpinista per davant.",
+    cordada: "Efecte cordada: si un alpinista va per sobre teu dins la distància de referència, pots aprofitar un impuls extra de progressió.",
+    card1: {
+      title: "Progressió",
+      text: "Avanç directe en metres."
+    },
+    card2: {
+      title: "Fauna / flora",
+      text: "Descoberta del territori i impuls d’ascensió."
+    },
+    card3: {
+      title: "Bon temps",
+      text: "Finestra favorable per encadenar avanç."
+    }
+  },
+
+  energy: {
+    title: "Gestiona l’energia",
+    text: "L’energia puja o baixa segons el ritme d’ascensió, el clima, els esdeveniments i les decisions tàctiques de cada torn.",
+    marker: "ENERGIA",
+    loss: {
+      title: "Perds energia",
+      item1: "Clima advers.",
+      item2: "Esdeveniments vermells.",
+      item3: "Progressió massa agressiva."
+    },
+    gain: {
+      title: "Guanyes energia",
+      item1: "Equipació i planificació.",
+      item2: "Recursos permanents.",
+      item3: "Descans: descarta una carta."
+    }
+  },
+
+  resources: {
+    title: "Organitza recursos per famílies",
+    text: "Cada amenaça de la muntanya té una resposta temporal i, si l’aconsegueixes, una protecció permanent per a tota la partida.",
+    col1: "Obstacles",
+    col2: "Resposta d’un torn",
+    col3: "Protecció permanent",
+
+    obstacle1: "Pas imprevist",
+    obstacle2: "Escalada",
+    obstacle3: "Material inadequat",
+    obstacle4: "Deshidratació",
+    obstacle5: "Canvi de temps",
+
+    turn1: "Planificació ruta",
+    turn2: "Material escalada",
+    turn3: "Material adequat",
+    turn4: "Beguda Km0",
+    turn5: "Refugi temporal",
+
+    perm1: "Guia expert",
+    perm2: "Centre excursionista",
+    perm3: "Espònsor",
+    perm4: "Font de la Roca",
+    perm5: "Refugi"
+  }
+}
+        
         "rules.kicker": "Zona tècnica · 2.450 m",
         "rules.title": "Base preparada per ampliar contingut",
         "rules.text":
