@@ -117,17 +117,17 @@ s4: {
     },
     card2: {
       title: "Fauna / flora",
-      text: "Descubrimiento del territorio e impulso de ascenso."
+      text: "Ascenso incluso estando bloqueado."
     },
     card3: {
       title: "Buen tiempo",
-      text: "Ventana favorable para encadenar avance."
+      text: "Combo de progresión."
     }
   },
 
   energy: {
     title: "Gestiona la energía",
-    text: "La energía sube o baja según el ritmo de ascenso, el clima, los eventos y las decisiones tácticas de cada turno.",
+    text: "Tu energía aumenta o disminuye según el ritmo de ascenso, el clima, los eventos y las decisiones tácticas de cada turno.",
     marker: "ENERGÍA",
 loss: {
   title: "Pierdes energía",
@@ -137,8 +137,8 @@ loss: {
 },
 gain: {
   title: "Ganas energía",
-  card1: "Equipación",
-  card2: "Planificación",
+  card1: "Equipación adecuada",
+  card2: "Planificación de ruta",
   card3: "Recursos permanentes"
 }
   },
@@ -147,14 +147,14 @@ gain: {
     title: "Gestión de recursos",
 text: "Familias de recursos",
     col1: "Obstáculos",
-    col2: "Respuesta de un turno",
+    col2: "Recurso temporal",
     col3: "Protección permanente",
 
     obstacle1: "Paso imprevisto",
-    obstacle2: "Escalada",
+    obstacle2: "Via de escalada",
     obstacle3: "Material inadecuado",
     obstacle4: "Deshidratación",
-    obstacle5: "Cambio de tiempo",
+    obstacle5: "Tiempo adverso",
 
     turn1: "Planificación de ruta",
     turn2: "Material de escalada",
@@ -315,7 +315,7 @@ s4: {
     },
 card2: {
   title: "Fauna / flora",
-  text: "Impuls d’ascensió."
+  text: "Ascensió inclús estant bloquejat."
 },
 card3: {
   title: "Bon temps",
@@ -325,12 +325,12 @@ card3: {
 
   energy: {
     title: "Gestiona l’energia",
-    text: "L’energia puja o baixa segons el ritme d’ascensió, el clima, els esdeveniments i les decisions tàctiques de cada torn.",
+    text: "L’energia augmenta o disminueix segons el ritme d’ascensió, el clima, els esdeveniments i les decisions tàctiques de cada torn.",
     marker: "ENERGIA",
 loss: {
   title: "Perds energia",
   card1: "Clima advers",
-  card2: "Esdeveniments",
+  card2: "Events",
   card3: "Progressió agressiva"
 },
 gain: {
@@ -345,14 +345,14 @@ gain: {
     title: "Gestió de recursos",
     text: "Famílies de recursos",    
     col1: "Obstacles",
-    col2: "Resposta d’un torn",
+    col2: "Recurs temporal",
     col3: "Protecció permanent",
 
     obstacle1: "Pas imprevist",
-    obstacle2: "Escalada",
+    obstacle2: "Via d'escalada",
     obstacle3: "Material inadequat",
     obstacle4: "Deshidratació",
-    obstacle5: "Canvi de temps",
+    obstacle5: "Temps advers",
 
     turn1: "Planificació ruta",
     turn2: "Material escalada",
