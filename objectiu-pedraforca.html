@@ -879,50 +879,188 @@
   </div>
 </section>
 
-<!-- SECCIÓ 5 CANAL VERDET  -->
+<!-- =========================================================
+  SECCIÓ 5 · CANAL VERDET · ACCIONS DE JOC EN CADA TORN
+========================================================= -->
+<section id="canal-verdet" class="pedra-section pedra-section-s5 section-torn" data-section>
+  <div class="section-texture s5-texture" aria-hidden="true"></div>
+  <div class="s5-overlay" aria-hidden="true"></div>
 
-  
-  <section id="canal-verdet" class="section section-summit-attack section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Canal Verdet · 2.330 m</p>
-      <h2>Regles bàsiques i mecàniques de joc</h2>
-      <p class="section-intro">
-        Aquí s'ordena el cor del sistema: es fixa la seqüencia del torn, es descobreix el clima i l'event, gestió de mà,
-        progressió en altitut, ressolució d'efectes i reposició d'una o dues cartes.
-      </p>
+  <div class="pedra-section-inner">
 
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Seqüencia de joc</h3>
-          <p>
-            La partida combina informació visible i decisions tàctiques permanents: apareix l'entorn, es
-            resolen amenaces i cada jugador decideix com respondre.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Mecàniques principals</h3>
-          <p>
-            Gestió d'energia, gestió de mà, progressió vertical, control del risc, protecció amb recursos
-            i adaptació a l'estat cambiant de la muntanya.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Corba de tensió</h3>
-          <p>
-            Quant més ascendeixes, més pesa cada error. El joc concentra cada cop més tensió fins al tram final.
-          </p>
-        </article>
+    <header class="s5-heading">
+      <div class="pedra-kicker-row s5-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="s5.preTitle">Canal Verdet · 2.330 m</p>
+        <span class="pedra-kicker-line"></span>
       </div>
 
-      <div class="button-row">
-        <a href="assets/instruccions-objectiu-pedraforca.pdf" class="button button-primary" target="_blank" rel="noopener noreferrer">
-          Baixar instruccions en PDF
-        </a>
+      <div class="pedra-s2-heading s5-title-block">
+        <h2 data-i18n="s5.title">ACCIONS DE JOC EN CADA TORN</h2>
+        <p data-i18n="s5.subtitle">
+          Seqüència de joc d’una ronda · mode cooperatiu
+        </p>
       </div>
+    </header>
+
+    <div class="s5-round-map" aria-label="Seqüència visual d'una ronda de joc cooperativa">
+
+      <!-- PAS 1 -->
+      <article class="s5-step-card s5-step-small">
+        <span class="s5-step-pin">01</span>
+
+        <div class="s5-icon-box s5-hourglass" aria-hidden="true">
+          <span></span>
+        </div>
+
+        <h3 data-i18n="s5.step1.title">Avança el marcador de temps</h3>
+        <p data-i18n="s5.step1.text">La ronda avança i queda menys marge per assolir el cim.</p>
+      </article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+      <!-- PAS 2 -->
+      <article class="s5-step-card s5-step-small">
+        <span class="s5-step-pin">02</span>
+
+        <div class="s5-icon-box">
+          <img src="assets/meteo.png" alt="" loading="lazy">
+        </div>
+
+        <h3 data-i18n="s5.step2.title">Revela el clima</h3>
+        <p data-i18n="s5.step2.text">El temps afecta tota l’expedició durant aquesta ronda.</p>
+      </article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+      <!-- PAS 3 -->
+      <article class="s5-step-card s5-step-small">
+        <span class="s5-step-pin">03</span>
+
+        <div class="s5-icon-box s5-card-question" aria-hidden="true">
+          <span>?</span>
+        </div>
+
+        <h3 data-i18n="s5.step3.title">Revela esdeveniments</h3>
+        <p data-i18n="s5.step3.text">1 esdeveniment amb 1–2 jugadors. 2 esdeveniments amb 3–4 jugadors.</p>
+      </article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+      <!-- PAS 4 -->
+      <article class="s5-step-card s5-step-small">
+        <span class="s5-step-pin">04</span>
+
+        <div class="s5-icon-box">
+          <img src="assets/mosqueton.png" alt="" loading="lazy">
+        </div>
+
+        <h3 data-i18n="s5.step4.title">Desbloqueja un event</h3>
+        <p data-i18n="s5.step4.text">Qualsevol alpinista pot gastar recursos o energia per superar-lo.</p>
+      </article>
+
+      <!-- PAS 5 · GRAN BLOQUE CENTRAL -->
+      <article class="s5-player-turn-card">
+        <span class="s5-step-pin s5-step-pin-main">05</span>
+
+        <div class="s5-player-heading">
+          <span class="s5-climber-icon" aria-hidden="true">
+            <svg viewBox="0 0 72 72">
+              <path d="M36 10a7 7 0 1 0 0.1 0M34 20l-6 15-10 7M38 22l10 12 9 2M30 36l-5 20M42 36l9 19M18 60h39" />
+            </svg>
+          </span>
+
+          <div>
+            <h3 data-i18n="s5.step5.title">Torn de cada jugador</h3>
+            <p data-i18n="s5.step5.text">
+              Tria una acció principal i aplica després l’altitud, el desgast o la recuperació d’energia.
+            </p>
+          </div>
+        </div>
+
+        <div class="s5-action-list">
+
+          <div class="s5-action-row s5-action-progress">
+            <span class="s5-action-letter">A</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionA.title">Avançar</h4>
+              <p data-i18n="s5.actionA.text">Juga progressió si el clima o els events no bloquegen.</p>
+            </div>
+
+            <div class="s5-action-icons" aria-hidden="true">
+              <img src="assets/icon-montana.svg" alt="">
+              <img src="assets/Pisadas.PNG" alt="">
+            </div>
+          </div>
+
+          <div class="s5-action-row s5-action-nature">
+            <span class="s5-action-letter">B</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionB.title">Observació de la natura</h4>
+              <p data-i18n="s5.actionB.text">Fauna o flora permeten avançar encara que estiguis bloquejat.</p>
+            </div>
+
+            <div class="s5-action-icons" aria-hidden="true">
+              <img src="assets/Trebol.PNG" alt="">
+              <img src="assets/Carta_Falco_Pelegri.png" alt="">
+            </div>
+          </div>
+
+          <div class="s5-action-row s5-action-rest">
+            <span class="s5-action-letter">C</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionC.title">Descansar</h4>
+              <p data-i18n="s5.actionC.text">Descarta 1 carta i recupera +1 energia.</p>
+            </div>
+
+            <div class="s5-rest-icons" aria-hidden="true">
+              <span class="s5-sleeping-bag"></span>
+              <span class="s5-hot-cup">☕</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="s5-apply-note">
+          <img src="assets/icon-montana.svg" alt="" aria-hidden="true">
+          <p data-i18n="s5.apply.text">
+            Aplica altitud, desgast o recuperació d’energia sobre les teves fitxes del taulell.
+          </p>
+          <span class="s5-energy-heart" aria-hidden="true">❤</span>
+        </div>
+      </article>
+
+      <span class="s5-flow-arrow s5-arrow-final" aria-hidden="true"></span>
+
+      <!-- PAS 6 -->
+      <article class="s5-step-card s5-step-small s5-step-final">
+        <span class="s5-step-pin">06</span>
+
+        <div class="s5-icon-box s5-hand-icon">
+          <img src="assets/s3-ma-6-cartes.png" alt="" loading="lazy">
+        </div>
+
+        <h3 data-i18n="s5.step6.title">Reposa la mà</h3>
+        <p data-i18n="s5.step6.text">Roba cartes fins a tornar a tenir-ne 6 a la mà.</p>
+      </article>
+
     </div>
-  </section>
+
+    <div class="s3-prep-footer s5-footer">
+      <span class="s3-footer-line"></span>
+      <span class="s3-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
+      <span class="s3-footer-line"></span>
+    </div>
+
+  </div>
+</section>
 
 
 
