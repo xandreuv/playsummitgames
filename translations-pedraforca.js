@@ -169,6 +169,62 @@ text: "Familias de recursos",
     perm5: "Refugio"
   }
 },
+
+    s5: {
+  preTitle: "Canal Verdet · 2.330 m",
+  title: "ACCIONES DE JUEGO EN CADA TURNO",
+  subtitle: "Secuencia de juego de una ronda · modo cooperativo",
+
+  step1: {
+    title: "Avanza el marcador de tiempo",
+    text: "La ronda avanza y queda menos margen para alcanzar la cima."
+  },
+
+  step2: {
+    title: "Revela el clima",
+    text: "El tiempo afecta a toda la expedición durante esta ronda."
+  },
+
+  step3: {
+    title: "Revela eventos",
+    text: "1 evento con 1–2 jugadores. 2 eventos con 3–4 jugadores."
+  },
+
+  step4: {
+    title: "Desbloquea un evento",
+    text: "Cualquier alpinista puede gastar recursos o energía para superarlo."
+  },
+
+  step5: {
+    title: "Turno de cada jugador",
+    text: "Elige una acción principal y aplica después la altitud, el desgaste o la recuperación de energía."
+  },
+
+  actionA: {
+    title: "Avanzar",
+    text: "Juega progresión si el clima o los eventos no bloquean."
+  },
+
+  actionB: {
+    title: "Observación de la naturaleza",
+    text: "Fauna o flora permiten avanzar aunque estés bloqueado."
+  },
+
+  actionC: {
+    title: "Descansar",
+    text: "Descarta 1 carta y recupera +1 energía."
+  },
+
+  apply: {
+    text: "Aplica altitud, desgaste o recuperación de energía sobre tus fichas del tablero."
+  },
+
+  step6: {
+    title: "Repón la mano",
+    text: "Roba cartas hasta volver a tener 6 en la mano."
+  }
+},
+         
         
         "rules.kicker": "Zona técnica · 2.450 m",
         "rules.title": "Base preparada para ampliar contenido",
@@ -187,6 +243,8 @@ text: "Familias de recursos",
         "footer.email.aria": "Correo electrónico"
       }
     },
+
+    
     cat: {
       title: "Objectiu Pedraforca 2.506 | Play Summit Games",
       description:
@@ -366,8 +424,62 @@ gain: {
     perm4: "Font de la Roca",
     perm5: "Refugi"
   }
-}
-        
+},
+
+  s5: {
+  preTitle: "Canal Verdet · 2.330 m",
+  title: "ACCIONS DE JOC EN CADA TORN",
+  subtitle: "Seqüència de joc d’una ronda · mode cooperatiu",
+
+  step1: {
+    title: "Avança el marcador de temps",
+    text: "La ronda avança i queda menys marge per assolir el cim."
+  },
+
+  step2: {
+    title: "Revela el clima",
+    text: "El temps afecta tota l’expedició durant aquesta ronda."
+  },
+
+  step3: {
+    title: "Revela esdeveniments",
+    text: "1 esdeveniment amb 1–2 jugadors. 2 esdeveniments amb 3–4 jugadors."
+  },
+
+  step4: {
+    title: "Desbloqueja un event",
+    text: "Qualsevol alpinista pot gastar recursos o energia per superar-lo."
+  },
+
+  step5: {
+    title: "Torn de cada jugador",
+    text: "Tria una acció principal i aplica després l’altitud, el desgast o la recuperació d’energia."
+  },
+
+  actionA: {
+    title: "Avançar",
+    text: "Juga progressió si el clima o els events no bloquegen."
+  },
+
+  actionB: {
+    title: "Observació de la natura",
+    text: "Fauna o flora permeten avançar encara que estiguis bloquejat."
+  },
+
+  actionC: {
+    title: "Descansar",
+    text: "Descarta 1 carta i recupera +1 energia."
+  },
+
+  apply: {
+    text: "Aplica altitud, desgast o recuperació d’energia sobre les teves fitxes del taulell."
+  },
+
+  step6: {
+    title: "Reposa la mà",
+    text: "Roba cartes fins a tornar a tenir-ne 6 a la mà."
+  }
+},
         "rules.kicker": "Zona tècnica · 2.450 m",
         "rules.title": "Base preparada per ampliar contingut",
         "rules.text":
