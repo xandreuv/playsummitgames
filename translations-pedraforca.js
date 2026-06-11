@@ -224,19 +224,34 @@ text: "Familias de recursos",
     text: "Roba cartas hasta volver a tener 6 en la mano."
   }
 },
-         
+        
+"buy.kicker": "CUMBRE - 2.506 M.",
+"buy.title": "DOS JUEGOS, DOS ASCENSIONES ÚNICAS.",
+
+"buy.pf.prefix": "Objectiu",
+"buy.pf.name": "Pedraforca",
+"buy.pf.alt": "2.506 m",
+"buy.pf.text": "Escalada técnica y aventura en uno de los iconos de Cataluña.",
+
+"buy.mp.prefix": "Objetivo",
+"buy.mp.name": "Monte Perdido",
+"buy.mp.alt": "3.355 m",
+"buy.mp.text": "La expedición definitiva em el Parque Nacional de Ordesa.",
+
+"buy.common.age": "AÑOS",
+"buy.common.timeMain": "15–25",
+"buy.common.timeSub": "MIN",
+"buy.common.playersMain": "1–4",
+"buy.common.playersSub": "JUGADORES",
+
+"buy.cta.buy": "COMPRAR"     
         
         "rules.kicker": "Zona técnica · 2.450 m",
         "rules.title": "Base preparada para ampliar contenido",
         "rules.text":
           "Esta landing ya queda lista para añadir después cartas, componentes, reglas detalladas, imágenes, apoyos y llamada a compra.",
 
-        "summit.kicker": "Cima · 2.506 m",
-        "summit.title": "Objectiu Pedraforca 2.506",
-        "summit.text":
-          "Estructura visual y técnica ya preparada para seguir desarrollando esta página específica.",
-        "summit.cta": "Volver a la landing principal",
-
+        
         "footer.instagram": "@playsummitgames",
         "footer.email": "info@playsummitgames.es",
         "footer.instagram.aria": "Instagram",
@@ -485,11 +500,26 @@ gain: {
         "rules.text":
           "Aquesta landing ja queda llesta per afegir després cartes, components, regles detallades, imatges, suports i crida a compra.",
 
-        "summit.kicker": "Cim · 2.506 m",
-        "summit.title": "Objectiu Pedraforca 2.506",
-        "summit.text":
-          "Estructura visual i tècnica ja preparada per continuar desenvolupant aquesta pàgina específica.",
-        "summit.cta": "Tornar a la landing principal",
+"buy.kicker": "CIM - 2.506 M.",
+"buy.title": "DOS JOCS, DUES ASCENSIONS ÚNIQUES.",
+
+"buy.pf.prefix": "Objectiu",
+"buy.pf.name": "Pedraforca",
+"buy.pf.alt": "2.506 m",
+"buy.pf.text": "Escalada tècnica i aventura en una de les icones de Catalunya.",
+
+"buy.mp.prefix": "Objetivo",
+"buy.mp.name": "Monte Perdido",
+"buy.mp.alt": "3.355 m",
+"buy.mp.text": "L'expedició definitiva al Parc Nacional d'Ordesa.",
+
+"buy.common.age": "ANYS",
+"buy.common.timeMain": "15–25",
+"buy.common.timeSub": "MIN",
+"buy.common.playersMain": "1–4",
+"buy.common.playersSub": "JUGADORS",
+
+"buy.cta.buy": "COMPRAR"
 
         "footer.instagram": "@playsummitgames",
         "footer.email": "info@playsummitgames.es",
