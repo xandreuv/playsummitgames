@@ -3131,7 +3131,556 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   }
 
 
+/* =========================================================
+   SECCIÓ 6 · ATAC A CIM · FI DE LA PARTIDA
+========================================================= */
 
+.pedra-s6 {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 100vh;
+  padding: clamp(5.5rem, 8vw, 8rem) 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(229, 231, 229, 0.96) 0%,
+      rgba(240, 241, 239, 0.96) 52%,
+      rgba(247, 247, 244, 0.98) 100%
+    );
+  color: #203028;
+}
+
+.pedra-s6__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(236, 238, 235, 0.94) 0%,
+      rgba(236, 238, 235, 0.82) 38%,
+      rgba(236, 238, 235, 0.58) 100%
+    ),
+    url("assets/pedraforca-s6-cresta-aeria-textura.webp");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.92;
+  filter: saturate(0.82) contrast(0.95);
+}
+
+.pedra-s6::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.82), transparent 34%),
+    radial-gradient(circle at 86% 64%, rgba(212, 117, 49, 0.13), transparent 28%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(40, 55, 48, 0.035) 0,
+      rgba(40, 55, 48, 0.035) 1px,
+      transparent 1px,
+      transparent 18px
+    );
+  pointer-events: none;
+}
+
+.pedra-s6::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8rem;
+  width: min(92vw, 1180px);
+  height: 18rem;
+  transform: translateX(-50%);
+  z-index: -1;
+  background:
+    linear-gradient(135deg, transparent 0 48%, rgba(32, 48, 40, 0.09) 49% 51%, transparent 52%),
+    linear-gradient(25deg, transparent 0 46%, rgba(32, 48, 40, 0.08) 47% 49%, transparent 50%);
+  clip-path: polygon(0 100%, 18% 42%, 28% 72%, 45% 18%, 58% 62%, 72% 30%, 100% 100%);
+  opacity: 0.75;
+}
+
+.pedra-s6__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.pedra-s6__head {
+  max-width: 860px;
+  margin: 0 auto clamp(2rem, 4vw, 3.6rem);
+  text-align: center;
+}
+
+.pedra-s6__kicker {
+  justify-content: center;
+}
+
+.pedra-s6__title {
+  color: #1f3028;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.pedra-s6__lead {
+  max-width: 700px;
+  margin-inline: auto;
+  color: rgba(31, 48, 40, 0.78);
+}
+
+.pedra-kicker__mountain {
+  display: inline-block;
+  width: 1.45rem;
+  height: 1.1rem;
+  margin-right: 0.45rem;
+  background: currentColor;
+  clip-path: polygon(0 100%, 32% 36%, 46% 64%, 62% 18%, 100% 100%);
+  transform: translateY(0.08rem);
+}
+
+.pedra-s6__summit-line {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1.1rem;
+  width: min(680px, 92%);
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.pedra-s6__summit-line span {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(211, 110, 44, 0.75),
+    transparent
+  );
+}
+
+.pedra-s6__summit-line i {
+  display: block;
+  width: 2.2rem;
+  height: 1.55rem;
+  background: #d36e2c;
+  clip-path: polygon(0 100%, 30% 40%, 45% 70%, 64% 15%, 100% 100%);
+  box-shadow: 0 10px 22px rgba(211, 110, 44, 0.22);
+}
+
+.pedra-s6__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.2rem, 2.4vw, 2rem);
+  align-items: stretch;
+}
+
+.pedra-s6-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  padding: clamp(1.35rem, 2.6vw, 2.1rem);
+  border: 1px solid rgba(32, 48, 40, 0.14);
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(248, 248, 244, 0.66)),
+    rgba(255, 255, 255, 0.52);
+  box-shadow:
+    0 24px 60px rgba(24, 38, 31, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.pedra-s6-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(211, 110, 44, 0.11), transparent 35%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(32, 48, 40, 0.025) 0,
+      rgba(32, 48, 40, 0.025) 1px,
+      transparent 1px,
+      transparent 16px
+    );
+  pointer-events: none;
+}
+
+.pedra-s6-card::after {
+  content: "";
+  position: absolute;
+  right: -2.4rem;
+  bottom: -2.4rem;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid rgba(211, 110, 44, 0.23);
+  border-radius: 999px;
+  opacity: 0.65;
+}
+
+.pedra-s6-card__top {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.pedra-s6-icon {
+  display: grid;
+  place-items: center;
+  width: clamp(4rem, 7vw, 5.2rem);
+  height: clamp(4rem, 7vw, 5.2rem);
+  border: 1px solid rgba(211, 110, 44, 0.36);
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(211, 110, 44, 0.2), rgba(255, 255, 255, 0.5));
+  box-shadow:
+    0 16px 34px rgba(211, 110, 44, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.72);
+}
+
+.pedra-s6-icon span {
+  display: block;
+  position: relative;
+}
+
+.pedra-s6-icon--flag span {
+  width: 2.2rem;
+  height: 2.45rem;
+  border-left: 3px solid #1f3028;
+}
+
+.pedra-s6-icon--flag span::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  left: 0.22rem;
+  width: 1.65rem;
+  height: 1.05rem;
+  background: #d36e2c;
+  clip-path: polygon(0 0, 100% 14%, 86% 50%, 100% 86%, 0 100%);
+}
+
+.pedra-s6-icon--flag span::after {
+  content: "";
+  position: absolute;
+  left: -0.35rem;
+  bottom: -0.08rem;
+  width: 2rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(31, 48, 40, 0.16);
+}
+
+.pedra-s6-icon--rope span {
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 3px solid #d36e2c;
+  border-radius: 999px;
+}
+
+.pedra-s6-icon--rope span::before,
+.pedra-s6-icon--rope span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 1.25rem;
+  height: 0.32rem;
+  border-radius: 999px;
+  background: #1f3028;
+}
+
+.pedra-s6-icon--rope span::before {
+  right: 1.75rem;
+  transform: translateY(-50%) rotate(-18deg);
+}
+
+.pedra-s6-icon--rope span::after {
+  left: 1.75rem;
+  transform: translateY(-50%) rotate(18deg);
+}
+
+.pedra-s6-card__eyebrow {
+  margin: 0 0 0.25rem;
+  color: #d36e2c;
+  font-size: clamp(0.72rem, 1vw, 0.82rem);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.pedra-s6-card__title {
+  margin: 0;
+  color: #1f3028;
+  font-size: clamp(1.35rem, 2.5vw, 2.05rem);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.pedra-s6-card__visual {
+  position: relative;
+  z-index: 1;
+  min-height: clamp(9.5rem, 16vw, 13rem);
+  margin: 0 0 clamp(1rem, 2vw, 1.4rem);
+  border: 1px solid rgba(32, 48, 40, 0.12);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.56), rgba(236, 238, 235, 0.46));
+  overflow: hidden;
+}
+
+.pedra-s6-card__visual::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 76%;
+  background:
+    linear-gradient(145deg, transparent 0 46%, rgba(31, 48, 40, 0.09) 47% 48%, transparent 49%),
+    linear-gradient(35deg, transparent 0 42%, rgba(211, 110, 44, 0.18) 43% 45%, transparent 46%);
+  clip-path: polygon(0 100%, 18% 54%, 30% 78%, 48% 28%, 60% 72%, 76% 42%, 100% 100%);
+}
+
+.pedra-s6-mini-board {
+  position: absolute;
+  inset: 1.3rem;
+}
+
+.pedra-s6-mini-board__track {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 28%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  gap: 0.6rem;
+}
+
+.pedra-s6-mini-board__track::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  height: 0.22rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(31, 48, 40, 0.22), #d36e2c);
+}
+
+.pedra-s6-mini-board__dot {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-inline: auto;
+  border: 1px solid rgba(31, 48, 40, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: rgba(31, 48, 40, 0.74);
+  font-size: 0.7rem;
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(24, 38, 31, 0.08);
+}
+
+.pedra-s6-mini-board__dot--summit {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: #d36e2c;
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(211, 110, 44, 0.28);
+}
+
+.pedra-s6-mini-board__climber {
+  position: absolute;
+  right: 9%;
+  bottom: 48%;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 999px;
+  background: #1f3028;
+  box-shadow:
+    -2.6rem 2.4rem 0 -0.22rem rgba(211, 110, 44, 0.95),
+    -5rem 4.2rem 0 -0.28rem rgba(31, 48, 40, 0.78);
+}
+
+.pedra-s6-rope-team {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 50%;
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  align-items: center;
+  transform: translateY(-50%) rotate(-8deg);
+}
+
+.pedra-s6-rope-team span {
+  display: block;
+  width: clamp(2.4rem, 5vw, 3.4rem);
+  height: clamp(2.4rem, 5vw, 3.4rem);
+  border: 2px solid rgba(31, 48, 40, 0.22);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 50% 34%, #1f3028 0 18%, transparent 19%),
+    linear-gradient(180deg, #d36e2c 0 58%, #1f3028 59% 100%);
+  box-shadow: 0 16px 30px rgba(24, 38, 31, 0.14);
+}
+
+.pedra-s6-rope-team i {
+  display: block;
+  height: 0.22rem;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    #d36e2c 0 8px,
+    rgba(31, 48, 40, 0.7) 8px 14px
+  );
+}
+
+.pedra-s6-card__text {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 1rem;
+  color: rgba(31, 48, 40, 0.78);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+  line-height: 1.6;
+}
+
+.pedra-s6-card__rule {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.72rem 0.9rem;
+  border: 1px solid rgba(211, 110, 44, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: #1f3028;
+  font-size: 0.92rem;
+  font-weight: 800;
+  box-shadow: 0 12px 26px rgba(24, 38, 31, 0.08);
+}
+
+.pedra-s6-rule-icon {
+  display: grid;
+  place-items: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  border-radius: 999px;
+  background: rgba(211, 110, 44, 0.16);
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.pedra-s6__footer-note {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  width: min(840px, 100%);
+  margin: clamp(1.5rem, 3vw, 2.4rem) auto 0;
+  padding: clamp(1rem, 2vw, 1.35rem) clamp(1.1rem, 2.4vw, 1.6rem);
+  border: 1px solid rgba(32, 48, 40, 0.12);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 18px 42px rgba(24, 38, 31, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.pedra-s6__footer-icon {
+  width: 3rem;
+  height: 2.2rem;
+  background: #d36e2c;
+  clip-path: polygon(0 100%, 30% 42%, 45% 68%, 64% 12%, 100% 100%);
+}
+
+.pedra-s6__footer-note p {
+  margin: 0;
+  color: rgba(31, 48, 40, 0.82);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .pedra-s6 {
+    min-height: auto;
+    padding: 5rem 0;
+  }
+
+  .pedra-s6__bg {
+    background-position: 62% center;
+  }
+
+  .pedra-s6__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pedra-s6-card {
+    border-radius: 24px;
+  }
+}
+
+@media (max-width: 620px) {
+  .pedra-s6 {
+    padding: 4.2rem 0;
+  }
+
+  .pedra-s6__head {
+    text-align: left;
+    margin-bottom: 1.8rem;
+  }
+
+  .pedra-s6__kicker {
+    justify-content: flex-start;
+  }
+
+  .pedra-s6__summit-line {
+    width: 100%;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pedra-s6-card {
+    padding: 1.05rem;
+  }
+
+  .pedra-s6-card__top {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .pedra-s6-icon {
+    width: 3.7rem;
+    height: 3.7rem;
+    border-radius: 18px;
+  }
+
+  .pedra-s6-card__visual {
+    min-height: 9rem;
+  }
+
+  .pedra-s6-card__rule {
+    width: 100%;
+    border-radius: 18px;
+    align-items: flex-start;
+  }
+
+  .pedra-s6__footer-note {
+    grid-template-columns: 1fr;
+  }
+}
 
    
 /* =========================================================
