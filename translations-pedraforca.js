@@ -224,6 +224,28 @@ text: "Familias de recursos",
     text: "Roba cartas hasta volver a tener 6 en la mano."
   }
 },
+
+s6: {
+  kicker: "ATAQUE A CIMA · CRESTA AÉREA · 2.450 m",
+  title: "FIN DE LA PARTIDA",
+  lead: "La partida termina cuando se alcanza la cima o cuando se agota el tiempo de ascensión.",
+
+  competitive: {
+    eyebrow: "Modo competitivo",
+    title: "Gana quien llega primero a la cima",
+    text: "En el modo competitivo, la partida finaliza cuando un jugador llega a la cima del Pedraforca.",
+    rule: "Final inmediato al llegar a la cima."
+  },
+
+  cooperative: {
+    eyebrow: "Modo cooperativo",
+    title: "Toda la cordada debe llegar a la cima",
+    text: "En el modo cooperativo, todos los jugadores deben llegar a la cima antes de que se agote el contador de tiempo.",
+    rule: "Éxito sólo si llega toda la cordada."
+  },
+
+  footer: "La cima no es sólo llegar: es gestionar bien la energía, el tiempo y las decisiones finales."
+},
         
 "buy.kicker": "CUMBRE - 2.506 M.",
 "buy.title": "DOS JUEGOS, DOS ASCENSIONES ÚNICAS.",
@@ -495,10 +517,29 @@ gain: {
     text: "Roba cartes fins a tornar a tenir-ne 6 a la mà."
   }
 },
-        "rules.kicker": "Zona tècnica · 2.450 m",
-        "rules.title": "Base preparada per ampliar contingut",
-        "rules.text":
-          "Aquesta landing ja queda llesta per afegir després cartes, components, regles detallades, imatges, suports i crida a compra.",
+
+ s6: {
+  kicker: "ATAC A CIM · CRESTA AÈRIA · 2.450 m",
+  title: "FI DE LA PARTIDA",
+  lead: "La partida acaba quan s’assoleix el cim o quan s’esgota el temps d’ascensió.",
+
+  competitive: {
+    eyebrow: "Mode competitiu",
+    title: "Guanya qui arriba primer al cim",
+    text: "En el mode competitiu, la partida finalitza quan un jugador arriba al cim del Pedraforca.",
+    rule: "Final immediat en arribar al cim."
+  },
+
+  cooperative: {
+    eyebrow: "Mode cooperatiu",
+    title: "Tota la cordada ha d’arribar al cim",
+    text: "En el mode cooperatiu, cal que tots els jugadors arribin al cim abans que s’esgoti el comptador de temps.",
+    rule: "Èxit només si arriba tota la cordada."
+  },
+
+  footer: "El cim no és només arribar-hi: és gestionar bé l’energia, el temps i les decisions finals."
+},       
+   
 
 "buy.kicker": "CIM - 2.506 M.",
 "buy.title": "DOS JOCS, DUES ASCENSIONS ÚNIQUES.",
