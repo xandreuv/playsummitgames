@@ -266,7 +266,7 @@ s6: {
 "buy.common.playersMain": "1–4",
 "buy.common.playersSub": "JUGADORES",
 
-"buy.cta.buy": "COMPRAR"     
+"buy.cta.buy": "COMPRAR",     
         
         "rules.kicker": "Zona técnica · 2.450 m",
         "rules.title": "Base preparada para ampliar contenido",
@@ -560,7 +560,7 @@ gain: {
 "buy.common.playersMain": "1–4",
 "buy.common.playersSub": "JUGADORS",
 
-"buy.cta.buy": "COMPRAR"
+"buy.cta.buy": "COMPRAR",
 
         "footer.instagram": "@playsummitgames",
         "footer.email": "info@playsummitgames.es",
