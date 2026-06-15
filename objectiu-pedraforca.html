@@ -1062,118 +1062,162 @@
   </div>
 </section>
 
-
 <!-- =========================================================
-     SECCIÓ 6 · ATAC A CIM · FI DE LA PARTIDA
+  SECCIÓ 6 · ATAC A CIM · FI DE LA PARTIDA
 ========================================================= -->
-<section id="pedraforca-s6" class="pedra-section pedra-s6 summit-end-section">
-  <div class="pedra-s6__bg" aria-hidden="true"></div>
+<section id="cresta" class="pedra-section pedra-section-s6 section-final-partida" data-section>
+  <div class="section-texture s6-texture" aria-hidden="true"></div>
+  <div class="s6p-overlay" aria-hidden="true"></div>
 
-  <div class="pedra-container pedra-s6__inner">
+  <div class="pedra-section-inner">
 
-    <header class="pedra-section-head pedra-s6__head">
-      <p class="pedra-kicker pedra-s6__kicker">
-        <span class="pedra-kicker__mountain" aria-hidden="true"></span>
-        <span data-i18n="s6.kicker">ATAC A CIM · CRESTA AÈRIA · 2.450 m</span>
-      </p>
+    <header class="s6p-heading">
+      <div class="pedra-kicker-row s6-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="s6.kicker">ATAC A CIM · CRESTA AÈRIA · 2.450 m</p>
+        <span class="pedra-kicker-line"></span>
+      </div>
 
-      <h2 class="pedra-section-title pedra-s6__title" data-i18n="s6.title">
-        FI DE LA PARTIDA
-      </h2>
-
-      <p class="pedra-section-lead pedra-s6__lead" data-i18n="s6.lead">
-        La partida acaba quan s’assoleix el cim o quan s’esgota el temps d’ascensió.
-      </p>
+      <div class="pedra-s2-heading s6p-title-block">
+        <h2 data-i18n="s6.title">FI DE LA PARTIDA</h2>
+        <p data-i18n="s6.lead">
+          La partida acaba quan s’assoleix el cim o quan s’esgota el temps d’ascensió.
+        </p>
+      </div>
     </header>
 
-    <div class="pedra-s6__summit-line" aria-hidden="true">
-      <span></span>
-      <i></i>
-      <span></span>
-    </div>
+    <div class="s6p-grid">
 
-    <div class="pedra-s6__grid">
+      <!-- BLOQUE 1 · MODO COMPETITIVO -->
+      <article class="s6p-mode-card s6p-mode-card--competitive">
+        <div class="s6p-mode-header">
+          <div class="s6p-mode-number">01</div>
 
-      <!-- MODE COMPETITIU -->
-      <article class="pedra-s6-card pedra-s6-card--competitive">
-        <div class="pedra-s6-card__top">
-          <div class="pedra-s6-icon pedra-s6-icon--flag" aria-hidden="true">
-            <span></span>
-          </div>
-
-          <div>
-            <p class="pedra-s6-card__eyebrow" data-i18n="s6.competitive.eyebrow">
-              Mode competitiu
+          <div class="s6p-mode-copy">
+            <p class="s6p-mode-eyebrow" data-i18n="s6.competitive.eyebrow">Mode competitiu</p>
+            <h3 data-i18n="s6.competitive.title">Guanya qui arriba primer al cim</h3>
+            <p class="s6p-mode-text" data-i18n="s6.competitive.text">
+              En el mode competitiu, la partida finalitza quan un jugador arriba al cim del Pedraforca.
             </p>
-            <h3 class="pedra-s6-card__title" data-i18n="s6.competitive.title">
-              Guanya qui arriba primer al cim
-            </h3>
           </div>
         </div>
 
-        <div class="pedra-s6-card__visual" aria-hidden="true">
-          <div class="pedra-s6-mini-board">
-            <div class="pedra-s6-mini-board__track">
-              <span class="pedra-s6-mini-board__dot">0</span>
-              <span class="pedra-s6-mini-board__dot">1</span>
-              <span class="pedra-s6-mini-board__dot">2</span>
-              <span class="pedra-s6-mini-board__dot pedra-s6-mini-board__dot--summit">2.506</span>
-            </div>
-            <div class="pedra-s6-mini-board__climber"></div>
+        <div class="s6p-styles">
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-sprint.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style1">Sprint Running</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-cross.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style2">Trail Running</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-sky.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style3">Sky Running</span>
           </div>
         </div>
 
-        <p class="pedra-s6-card__text" data-i18n="s6.competitive.text">
-          En el mode competitiu, la partida finalitza quan un jugador arriba al cim del Pedraforca.
-        </p>
+        <div class="s6p-visuals">
+          <figure class="s6p-visual-card">
+            <img
+              src="assets/s4-alpinista-runner.webp"
+              alt="Carta alpinista runner"
+              loading="lazy"
+            >
+          </figure>
 
-        <div class="pedra-s6-card__rule">
-          <span class="pedra-s6-rule-icon" aria-hidden="true">🏁</span>
+          <figure class="s6p-visual-board">
+            <img
+              src="assets/s4-tablero-pedraforca.webp"
+              alt="Taulell del joc amb una fitxa a la línia de meta"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+        <div class="s6p-rule-pill">
+          <span class="s6p-rule-icon" aria-hidden="true">🏁</span>
           <span data-i18n="s6.competitive.rule">Final immediat en arribar al cim.</span>
         </div>
       </article>
 
-      <!-- MODE COOPERATIU -->
-      <article class="pedra-s6-card pedra-s6-card--cooperative">
-        <div class="pedra-s6-card__top">
-          <div class="pedra-s6-icon pedra-s6-icon--rope" aria-hidden="true">
-            <span></span>
-          </div>
+      <!-- BLOQUE 2 · MODO COOPERATIVO -->
+      <article class="s6p-mode-card s6p-mode-card--cooperative">
+        <div class="s6p-mode-header">
+          <div class="s6p-mode-number">02</div>
 
-          <div>
-            <p class="pedra-s6-card__eyebrow" data-i18n="s6.cooperative.eyebrow">
-              Mode cooperatiu
+          <div class="s6p-mode-copy">
+            <p class="s6p-mode-eyebrow" data-i18n="s6.cooperative.eyebrow">Mode cooperatiu</p>
+            <h3 data-i18n="s6.cooperative.title">Tota la cordada ha d’arribar al cim</h3>
+            <p class="s6p-mode-text" data-i18n="s6.cooperative.text">
+              En el mode cooperatiu, cal que tots els jugadors arribin al cim abans que s’esgoti el comptador de temps.
             </p>
-            <h3 class="pedra-s6-card__title" data-i18n="s6.cooperative.title">
-              Tota la cordada ha d’arribar al cim
-            </h3>
           </div>
         </div>
 
-        <div class="pedra-s6-card__visual" aria-hidden="true">
-          <div class="pedra-s6-rope-team">
-            <span></span>
-            <i></i>
-            <span></span>
-            <i></i>
-            <span></span>
+        <div class="s6p-styles">
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-solo.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style1">Solo</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-alpino.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style2">Estil alpí</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-clasico.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style3">Estil clàssic</span>
           </div>
         </div>
 
-        <p class="pedra-s6-card__text" data-i18n="s6.cooperative.text">
-          En el mode cooperatiu, cal que tots els jugadors arribin al cim abans que s’esgoti el comptador de temps.
-        </p>
+        <div class="s6p-visuals">
+          <figure class="s6p-visual-card">
+            <img
+              src="assets/pedraforca-card-event-8.webp"
+              alt="Carta d'un grup de muntanyers"
+              loading="lazy"
+            >
+          </figure>
 
-        <div class="pedra-s6-card__rule">
-          <span class="pedra-s6-rule-icon" aria-hidden="true">⏱</span>
+          <figure class="s6p-visual-board">
+            <img
+              src="assets/tablero-monte-perdido-final.webp"
+              alt="Taulell amb tres fitxes a la línia de meta"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+        <div class="s6p-rule-pill">
+          <span class="s6p-rule-icon" aria-hidden="true">⏱</span>
           <span data-i18n="s6.cooperative.rule">Èxit només si arriba tota la cordada.</span>
         </div>
       </article>
 
     </div>
 
-    <div class="pedra-s6__footer-note">
-      <div class="pedra-s6__footer-icon" aria-hidden="true"></div>
+    <div class="s6p-footer-note">
+      <span class="s6p-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
       <p data-i18n="s6.footer">
         El cim no és només arribar-hi: és gestionar bé l’energia, el temps i les decisions finals.
       </p>
