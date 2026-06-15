@@ -68,18 +68,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  function getDefaultLanguage() {
-    return pageKey === "pedraforca" ? "cat" : "es";
-  }
+function getDefaultLanguage() {
+  return "cat";
+}
 
 function getLanguage() {
+  if (pageKey === "pedraforca") {
+    return "cat";
+  }
+
   const pageStorageKey = `psg-language-${pageKey}`;
   const savedPageLanguage = localStorage.getItem(pageStorageKey);
-  const savedGlobalLanguage = localStorage.getItem("psg-language");
-  const saved = savedPageLanguage || savedGlobalLanguage;
 
-  if (saved === "cat" || saved === "es") {
-    return saved;
+  if (savedPageLanguage === "es" || savedPageLanguage === "cat") {
+    return savedPageLanguage;
   }
 
   return getDefaultLanguage();
@@ -127,15 +129,15 @@ function getLanguage() {
   }
 
 function setLanguage(lang) {
-  const normalized = lang === "cat" ? "cat" : "es";
+  if (pageKey === "pedraforca") {
+    applyTranslations("cat");
+    return;
+  }
+
+  const normalized = lang === "es" ? "es" : "cat";
   const pageStorageKey = `psg-language-${pageKey}`;
 
   localStorage.setItem(pageStorageKey, normalized);
-
-  if (pageKey !== "pedraforca") {
-    localStorage.setItem("psg-language", normalized);
-  }
-
   applyTranslations(normalized);
 }
 
