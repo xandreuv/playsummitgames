@@ -154,6 +154,13 @@ window.PSG_TRANSLATIONS = {
         "s6.cooperative.text": "En el modo cooperativo, todos los jugadores deben llegar a la cima antes de que se agote el contador de tiempo.",
         "s6.cooperative.rule": "Éxito sólo si llega toda la cordada.",
         "s6.footer": "La cima no es sólo llegar: es gestionar bien la energía, el tiempo y las decisiones finales.",
+        
+        "s6.competitive.style1": "Sprint Running",
+        "s6.competitive.style2": "Trail Running",
+        "s6.competitive.style3": "Sky Running",
+        "s6.cooperative.style1": "Solo",
+        "s6.cooperative.style2": "Estilo alpino",
+        "s6.cooperative.style3": "Estilo clásico",
 
         "buy.kicker": "CUMBRE - 2.506 M.",
         "buy.title": "DOS JUEGOS, DOS ASCENSIONES ÚNICAS.",
@@ -338,6 +345,14 @@ window.PSG_TRANSLATIONS = {
         "s6.cooperative.rule": "Èxit només si arriba tota la cordada.",
         "s6.footer": "El cim no és només arribar-hi: és gestionar bé l’energia, el temps i les decisions finals.",
 
+        "s6.competitive.style1": "Sprint Running",
+        "s6.competitive.style2": "Trail Running", 
+        "s6.competitive.style3": "Sky Running",
+        "s6.cooperative.style1": "Solo",
+        "s6.cooperative.style2": "Estil alpí",
+        "s6.cooperative.style3": "Estil clàssic",
+
+        
         "buy.kicker": "CIM - 2.506 M.",
         "buy.title": "DOS JOCS, DUES ASCENSIONS ÚNIQUES.",
         "buy.pf.prefix": "Objectiu",
