@@ -153,6 +153,8 @@ window.PSG_TRANSLATIONS = {
         "s6.cooperative.title": "Toda la cordada debe llegar a la cima",
         "s6.cooperative.text": "En el modo cooperativo, todos los jugadores deben llegar a la cima antes de que se agote el contador de tiempo.",
         "s6.cooperative.rule": "Éxito sólo si llega toda la cordada.",
+        "s6.download.competitive": "Descargar las instrucciones del modo competitivo",
+        "s6.download.cooperative": "Descargar las instrucciones del modo cooperativo",
         "s6.footer": "La cima no es sólo llegar: es gestionar bien la energía, el tiempo y las decisiones finales.",
         
         "s6.competitive.style1": "Sprint Running",
@@ -343,6 +345,8 @@ window.PSG_TRANSLATIONS = {
         "s6.cooperative.title": "Tota la cordada ha d’arribar al cim",
         "s6.cooperative.text": "En el mode cooperatiu, cal que tots els jugadors arribin al cim abans que s’esgoti el comptador de temps.",
         "s6.cooperative.rule": "Èxit només si arriba tota la cordada.",
+        "s6.download.competitive": "Descarrega les instruccions del mode competitiu",
+        "s6.download.cooperative": "Descarrega les instruccions del mode cooperatiu",
         "s6.footer": "El cim no és només arribar-hi: és gestionar bé l’energia, el temps i les decisions finals.",
 
         "s6.competitive.style1": "Sprint Running",
