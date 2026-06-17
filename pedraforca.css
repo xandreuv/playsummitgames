@@ -4506,3 +4506,128 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     font-size: 0.86rem;
   }
 }
+
+
+/* =========================================================
+   AJUSTES FINALES GLOBALS · PEDRAFORCA
+   Header fijo desktop, texturas más visibles y compactación S3-S5
+========================================================= */
+
+/* 1) Header fijo solo en pantallas grandes, con color progresivo por sección */
+@media (min-width: 821px) {
+  body[data-page="pedraforca"] {
+    --pedra-header-bg: rgba(255, 255, 255, 0.94);
+    --pedra-header-border: rgba(24, 33, 40, 0.10);
+    --pedra-header-link: #1c252b;
+  }
+
+  body[data-page="pedraforca"] .pedraforca-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--pedra-header-bg);
+    border-bottom: 1px solid var(--pedra-header-border);
+    backdrop-filter: blur(10px) saturate(1.08);
+    -webkit-backdrop-filter: blur(10px) saturate(1.08);
+    transition: background 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+    box-shadow: 0 10px 30px rgba(8, 18, 16, 0.08);
+  }
+
+  body[data-page="pedraforca"] .pedraforca-header .clean-nav a,
+  body[data-page="pedraforca"] .pedraforca-header .brand-subtitle {
+    color: var(--pedra-header-link);
+  }
+
+  body[data-page="pedraforca"][data-current-section="s1"] {
+    --pedra-header-bg: rgba(16, 41, 32, 0.88);
+    --pedra-header-border: rgba(247, 241, 231, 0.14);
+    --pedra-header-link: #f7f1e7;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s2"] {
+    --pedra-header-bg: rgba(30, 63, 48, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.16);
+    --pedra-header-link: #f7f1e7;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s3"] {
+    --pedra-header-bg: rgba(29, 75, 53, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.16);
+    --pedra-header-link: #f7f1e7;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s4"] {
+    --pedra-header-bg: rgba(75, 91, 58, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.18);
+    --pedra-header-link: #fff7ea;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s5"] {
+    --pedra-header-bg: rgba(190, 184, 158, 0.88);
+    --pedra-header-border: rgba(32, 35, 38, 0.12);
+    --pedra-header-link: #202326;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s6"] {
+    --pedra-header-bg: rgba(235, 234, 226, 0.88);
+    --pedra-header-border: rgba(32, 35, 38, 0.10);
+    --pedra-header-link: #203028;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s7"] {
+    --pedra-header-bg: rgba(255, 255, 255, 0.94);
+    --pedra-header-border: rgba(24, 33, 40, 0.08);
+    --pedra-header-link: #1c252b;
+  }
+}
+
+/* En móvil el header no queda fijo: ocupa al inicio y desaparece al hacer scroll */
+@media (max-width: 820px) {
+  body[data-page="pedraforca"] .pedraforca-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+}
+
+/* 2) Texturas más visibles y cajas menos opacas / menos difuminadas */
+body[data-page="pedraforca"] .pedra-s2-bg {
+  opacity: 1;
+  filter: saturate(1.02) contrast(1.12);
+}
+
+body[data-page="pedraforca"] .pedra-s2-overlay {
+  background:
+    linear-gradient(180deg, rgba(18, 43, 34, 0.72) 0%, rgba(28, 58, 46, 0.62) 46%, rgba(37, 71, 54, 0.78) 100%),
+    radial-gradient(circle at 50% 20%, rgba(223, 90, 8, 0.16), transparent 34%);
+}
+
+body[data-page="pedraforca"] .pedra-section-s3 .section-texture.s3-texture,
+body[data-page="pedraforca"] .pedra-section-s4 .section-texture.s4-texture,
+body[data-page="pedraforca"] .pedra-section-s5 .section-texture.s5-texture {
+  opacity: 0.42;
+  mix-blend-mode: overlay;
+  filter: saturate(1.05) contrast(1.16);
+}
+
+body[data-page="pedraforca"] .s6-texture {
+  opacity: 0.46;
+  filter: saturate(1.04) contrast(1.14);
+}
+
+body[data-page="pedraforca"] .pedra-s2-components,
+body[data-page="pedraforca"] .pedra-s2-decks,
+body[data-page="pedraforca"] .s3-prep-card,
+body[data-page="pedraforca"] .s4-main-block,
+body[data-page="pedraforca"] .s4-energy-card-group,
+body[data-page="pedraforca"] .s5-round-map,
+body[data-page="pedraforca"] .s5-step-card,
+body[data-page="pedraforca"] .s5-player-turn-card,
+body[data-page="pedraforca"] .s6p-mode-card {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
