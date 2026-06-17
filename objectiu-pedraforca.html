@@ -1480,6 +1480,47 @@
   </div>
 </footer>
 
+  <script>
+(function () {
+  const body = document.body;
+  const sections = Array.from(document.querySelectorAll('[data-section]'));
+
+  function sectionKey(section) {
+    if (section.id === 'saldes') return 's1';
+    if (section.id === 'gosol') return 's2';
+    if (section.id === 'preparacio-joc') return 's3';
+    if (section.id === 'tartera') return 's4';
+    if (section.id === 'canal-verdet') return 's5';
+    if (section.id === 'cresta') return 's6';
+    if (section.id === 'compra') return 's7';
+    return '';
+  }
+
+  function updateHeaderTheme() {
+    const probeY = window.innerHeight * 0.32;
+    let current = 's1';
+
+    for (const section of sections) {
+      const key = sectionKey(section);
+      if (!key) continue;
+
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= probeY && rect.bottom >= probeY) {
+        current = key;
+        break;
+      }
+    }
+
+    body.dataset.currentSection = current;
+  }
+
+  updateHeaderTheme();
+  window.addEventListener('scroll', updateHeaderTheme, { passive: true });
+  window.addEventListener('resize', updateHeaderTheme);
+})();
+</script>
+  
 <script src="translations-pedraforca.js"></script>
 <script src="script.js"></script>
 </body>
