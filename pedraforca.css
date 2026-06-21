@@ -1841,9 +1841,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(circle at 10% 8%, rgba(223, 90, 8, 0.20), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.10), transparent 34%),
-    linear-gradient(120deg, rgba(0, 0, 0, 0.22), transparent 52%);
+    radial-gradient(circle at 10% 8%, rgba(223, 90, 8, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.08), transparent 34%),
+    linear-gradient(120deg, rgba(0, 0, 0, 0.16), transparent 52%);
 }
 
 .pedra-section-s4 .section-texture.s4-texture {
@@ -1853,8 +1853,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background-image: url("assets/s4-textura-tartera-pedraforca.webp");
   background-size: cover;
   background-position: center;
-  opacity: 0.23;
-  mix-blend-mode: soft-light;
+  opacity: 0.42;
+  mix-blend-mode: overlay;
+  filter: saturate(1.05) contrast(1.16);
   pointer-events: none;
 }
 
@@ -1903,31 +1904,32 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .s4-main-block {
   position: relative;
-  margin-top: clamp(14px, 1.7vw, 22px);
-  padding: clamp(16px, 2vw, 24px);
-  border: 1px solid rgba(255, 247, 234, 0.18);
-  border-radius: 30px;
+  margin-top: clamp(12px, 1.4vw, 18px);
+  padding: clamp(14px, 1.7vw, 20px);
+  border: 1px solid rgba(255, 247, 234, 0.16);
+  border-radius: 26px;
   background:
-    linear-gradient(145deg, rgba(255, 247, 234, 0.13), rgba(255, 247, 234, 0.055)),
-    rgba(10, 30, 22, 0.32);
+    linear-gradient(145deg, rgba(255, 247, 234, 0.085), rgba(255, 247, 234, 0.032)),
+    rgba(10, 30, 22, 0.24);
   box-shadow:
-    0 22px 52px rgba(0, 0, 0, 0.20),
-    inset 0 1px 0 rgba(255, 255, 255, 0.13);
-  backdrop-filter: blur(8px);
+    0 18px 42px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   overflow: hidden;
 }
 
 .s4-main-block::before {
   content: "";
   position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 60px;
-  height: 60px;
-  border-radius: 18px;
-  border: 1px solid rgba(240, 138, 47, 0.34);
-  background: linear-gradient(135deg, rgba(240, 138, 47, 0.18), transparent);
-  opacity: 0.75;
+  top: 16px;
+  right: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  border: 1px solid rgba(240, 138, 47, 0.28);
+  background: linear-gradient(135deg, rgba(240, 138, 47, 0.13), transparent);
+  opacity: 0.62;
   pointer-events: none;
 }
 
@@ -1938,17 +1940,22 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s4-step-pill {
-  display: inline-flex;
-  width: fit-content;
-  margin-bottom: 14px;
-  padding: 8px 13px 7px;
-  border: 1px solid rgba(240, 138, 47, 0.45);
-  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 10px;
+  padding: 0;
+  border: 1.5px solid rgba(240, 138, 47, 0.58);
+  border-radius: 50%;
   color: #f08a2f;
-  background: rgba(240, 138, 47, 0.12);
+  background: rgba(240, 138, 47, 0.14);
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.16),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
   font-size: 0.82rem;
-  font-weight: 900;
-  letter-spacing: 0.12em;
+  font-weight: 950;
+  letter-spacing: 0.04em;
   line-height: 1;
 }
 
@@ -2140,13 +2147,35 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s4-heart-marker {
-  min-width: 38px;
+  min-width: 46px;
+  min-height: 42px;
+  padding: 3px 5px 4px;
   color: #c63528;
   background:
-    linear-gradient(145deg, rgba(255,255,255,0.92), rgba(246,226,200,0.82));
+    linear-gradient(145deg, rgba(255,255,255,0.94), rgba(246,226,200,0.84));
   border-color: rgba(240, 138, 47, 0.86);
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   line-height: 1;
+}
+
+.s4-heart-marker .s4-heart-icon {
+  display: block;
+  font-size: 1.35rem;
+  line-height: 0.9;
+}
+
+.s4-heart-marker b {
+  display: block;
+  margin-top: -2px;
+  color: #7f1d16;
+  font-size: 0.74rem;
+  line-height: 1;
+  font-weight: 950;
+  letter-spacing: -0.02em;
+}
+
+.s4-energy-gain .s4-heart-marker b {
+  color: #1f6a3c;
 }
 
 .s4-highlight-altitude::after,
@@ -2211,8 +2240,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 .s4-block-energy {
   display: grid;
-  grid-template-columns: minmax(220px, 0.46fr) minmax(620px, 1.54fr);
-  gap: clamp(16px, 2.4vw, 30px);
+  grid-template-columns: minmax(200px, 0.42fr) minmax(600px, 1.58fr);
+  gap: clamp(12px, 1.8vw, 22px);
   align-items: start;
 }
 
@@ -2225,10 +2254,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s4-energy-card-group {
-  padding: 14px;
-  border-radius: 24px;
-  background: rgba(8, 24, 20, 0.34);
-  border: 1px solid rgba(255, 247, 234, 0.14);
+  padding: 12px;
+  border-radius: 22px;
+  background: rgba(8, 24, 20, 0.24);
+  border: 1px solid rgba(255, 247, 234, 0.13);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 .s4-energy-card-group h4 {
@@ -2376,7 +2407,15 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   }
 
   .s4-energy-cards-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2px 2px 16px;
+  }
+
+  .s4-energy-card-group {
+    min-width: 300px;
+    scroll-snap-align: center;
   }
    
   .s4-card-row {
@@ -2462,12 +2501,52 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     flex: 0 0 min(72vw, 245px);
     scroll-snap-align: center;
   }
+     .s4-energy-cards-layout {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2px 2px 16px;
+  }
+
+  .s4-energy-cards-layout::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .s4-energy-cards-layout::-webkit-scrollbar-track {
+    background: rgba(255, 247, 234, 0.08);
+    border-radius: 999px;
+  }
+
+  .s4-energy-cards-layout::-webkit-scrollbar-thumb {
+    background: rgba(240, 138, 47, 0.62);
+    border-radius: 999px;
+  }
+
+  .s4-energy-card-group {
+    flex: 0 0 min(86vw, 390px);
+    min-width: 0;
+    scroll-snap-align: center;
+  }
+
+  .s4-energy-card-row {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 2px 2px 14px;
+  }
+
+  .s4-energy-card-row .s4-play-card {
+    flex: 0 0 min(66vw, 215px);
+    scroll-snap-align: center;
+  }
 }
 
 @media (max-width: 520px) {
   .s4-main-block {
-    border-radius: 24px;
-    padding: 18px 15px 20px;
+    border-radius: 22px;
+    padding: 16px 13px 18px;
   }
 
   .s4-cordada-note {
@@ -2497,6 +2576,24 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   .s4-family-icon img {
     width: 23px;
     height: 23px;
+  }
+     .s4-step-pill {
+    width: 38px;
+    height: 38px;
+    font-size: 0.76rem;
+  }
+
+  .s4-heart-marker {
+    min-width: 44px;
+    min-height: 40px;
+  }
+
+  .s4-heart-marker .s4-heart-icon {
+    font-size: 1.25rem;
+  }
+
+  .s4-heart-marker b {
+    font-size: 0.7rem;
   }
 }
 
