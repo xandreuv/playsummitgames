@@ -2621,9 +2621,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background-image: url("assets/s5-textura-canal-verdet.webp");
   background-size: cover;
   background-position: center;
-  opacity: 0.42;
+  opacity: 0.54;
   mix-blend-mode: overlay;
-  filter: saturate(1.05) contrast(1.16);
+  filter: saturate(1.16) contrast(1.24);
   pointer-events: none;
 }
 
@@ -2635,12 +2635,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background:
     linear-gradient(
       180deg,
-      rgba(126, 149, 101, 0.72) 0%,
-      rgba(203, 196, 174, 0.68) 52%,
-      rgba(235, 229, 211, 0.82) 100%
+      rgba(126, 149, 101, 0.62) 0%,
+      rgba(203, 196, 174, 0.58) 52%,
+      rgba(235, 229, 211, 0.72) 100%
     ),
-    radial-gradient(circle at 12% 8%, rgba(223, 90, 8, 0.13), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.17), transparent 34%);
+    radial-gradient(circle at 12% 8%, rgba(223, 90, 8, 0.10), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.12), transparent 34%);
 }
 
 .pedra-section-s5 .pedra-section-inner {
@@ -2704,15 +2704,15 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     minmax(118px, 0.75fr);
   gap: 8px;
   align-items: center;
-  padding: clamp(14px, 1.6vw, 20px);
-  border: 1.5px solid rgba(32, 35, 38, 0.16);
-  border-radius: 28px;
+  padding: clamp(14px, 1.4vw, 16px);
+  border: 1.3px solid rgba(32, 35, 38, 0.16);
+  border-radius: 26px;
   background:
-    linear-gradient(145deg, rgba(255, 247, 234, 0.62), rgba(255, 247, 234, 0.34)),
-    rgba(232, 224, 202, 0.52);
+    linear-gradient(145deg, rgba(255, 247, 234, 0.42), rgba(255, 247, 234, 0.24)),
+    rgba(232, 224, 202, 0.32);
   box-shadow:
-    0 20px 48px rgba(32, 35, 38, 0.15),
-    inset 0 0 0 1px rgba(255,255,255,0.36);
+    0 20px 48px rgba(32, 35, 38, 0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.26);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
@@ -2731,7 +2731,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
       rgba(117, 54, 31, 0.48) 0 12px,
       transparent 12px 22px
     );
-  opacity: 0.52;
+  opacity: 0.32;
   pointer-events: none;
 }
 
