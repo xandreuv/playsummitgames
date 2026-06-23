@@ -2657,9 +2657,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background-image: url("assets/s5-textura-canal-verdet.webp");
   background-size: cover;
   background-position: center;
-  opacity: 0.54;
+  opacity: 0.62;
   mix-blend-mode: overlay;
-  filter: saturate(1.16) contrast(1.24);
+  filter: saturate(1.18) contrast(1.28);
   pointer-events: none;
 }
 
@@ -2671,12 +2671,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background:
     linear-gradient(
       180deg,
-      rgba(126, 149, 101, 0.62) 0%,
-      rgba(203, 196, 174, 0.58) 52%,
-      rgba(235, 229, 211, 0.72) 100%
+      rgba(126, 149, 101, 0.50) 0%,
+      rgba(203, 196, 174, 0.48) 52%,
+      rgba(235, 229, 211, 0.62) 100%
     ),
-    radial-gradient(circle at 12% 8%, rgba(223, 90, 8, 0.10), transparent 30%),
-    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.12), transparent 34%);
+    radial-gradient(circle at 12% 8%, rgba(223, 90, 8, 0.08), transparent 30%),
+    radial-gradient(circle at 88% 18%, rgba(255, 247, 234, 0.09), transparent 34%);
 }
 
 .pedra-section-s5 .pedra-section-inner {
@@ -2727,30 +2727,30 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: relative;
   display: grid;
   grid-template-columns:
-    minmax(118px, 0.75fr)
-    26px
-    minmax(118px, 0.75fr)
-    26px
-    minmax(118px, 0.75fr)
-    26px
-    minmax(118px, 0.75fr)
-    30px
-    minmax(380px, 1.7fr)
-    30px
-    minmax(118px, 0.75fr);
+    minmax(150px, 0.9fr)
+    24px
+    minmax(150px, 0.9fr)
+    24px
+    minmax(150px, 0.9fr)
+    24px
+    minmax(150px, 0.9fr)
+    28px
+    minmax(390px, 1.55fr)
+    28px
+    minmax(150px, 0.9fr);
   gap: 8px;
-  align-items: center;
+  align-items: stretch;
   padding: clamp(14px, 1.4vw, 16px);
-  border: 1.3px solid rgba(32, 35, 38, 0.16);
+  border: 1.3px solid rgba(32, 35, 38, 0.12);
   border-radius: 26px;
   background:
-    linear-gradient(145deg, rgba(255, 247, 234, 0.42), rgba(255, 247, 234, 0.24)),
-    rgba(232, 224, 202, 0.32);
+    linear-gradient(145deg, rgba(255, 247, 234, 0.30), rgba(255, 247, 234, 0.16)),
+    rgba(232, 224, 202, 0.20);
   box-shadow:
-    0 20px 48px rgba(32, 35, 38, 0.12),
-    inset 0 0 0 1px rgba(255,255,255,0.26);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+    0 18px 42px rgba(32, 35, 38, 0.10),
+    inset 0 0 0 1px rgba(255,255,255,0.18);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 .s5-round-map::before {
@@ -2764,10 +2764,10 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   background:
     repeating-linear-gradient(
       90deg,
-      rgba(117, 54, 31, 0.48) 0 12px,
+      rgba(117, 54, 31, 0.34) 0 12px,
       transparent 12px 22px
     );
-  opacity: 0.32;
+  opacity: 0.22;
   pointer-events: none;
 }
 
@@ -2775,42 +2775,71 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .s5-player-turn-card {
   position: relative;
   z-index: 2;
-  border: 1.5px solid rgba(32, 35, 38, 0.16);
+  border: 1.3px solid rgba(32, 35, 38, 0.12);
   background:
-    linear-gradient(180deg, rgba(255, 252, 242, 0.94), rgba(239, 231, 210, 0.86));
+    linear-gradient(180deg, rgba(255, 252, 242, 0.68), rgba(239, 231, 210, 0.48));
   box-shadow:
-    0 18px 38px rgba(32, 35, 38, 0.14),
-    inset 0 0 0 1px rgba(255,255,255,0.58);
+    0 14px 30px rgba(32, 35, 38, 0.10),
+    inset 0 0 0 1px rgba(255,255,255,0.32);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 .s5-step-card {
-  min-height: 220px;
+  min-height: 292px;
   display: grid;
+  grid-template-rows: auto minmax(128px, 1fr) auto auto;
   justify-items: center;
   align-content: start;
-  padding: 36px 12px 16px;
+  padding: 32px 12px 16px;
   border-radius: 24px;
   text-align: center;
 }
 
 .s5-step-card h3 {
-  margin: 12px 0 8px;
+  margin: 4px 0 8px;
   color: #14212a;
-  font-size: clamp(0.9rem, 1vw, 1.02rem);
+  font-size: clamp(0.86rem, 0.95vw, 1rem);
   line-height: 1.12;
   font-weight: 950;
-  letter-spacing: 0.035em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .s5-step-card p {
   margin: 0;
-  color: rgba(32, 35, 38, 0.72);
-  font-size: 0.82rem;
-  line-height: 1.35;
-  font-weight: 720;
+  color: rgba(32, 35, 38, 0.76);
+  font-size: 0.78rem;
+  line-height: 1.32;
+  font-weight: 780;
 }
 
+.s5-step-preview {
+  width: min(100%, 150px);
+  height: 128px;
+  margin: 0 auto 12px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(223, 90, 8, 0.10), transparent 58%),
+    rgba(255, 247, 234, 0.26);
+  border: 1px solid rgba(32, 35, 38, 0.10);
+  box-shadow:
+    0 10px 22px rgba(32,35,38,0.10),
+    inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.s5-step-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 8px;
+  filter:
+    drop-shadow(0 10px 12px rgba(32,35,38,0.16));
+}
 .s5-step-pin {
   position: absolute;
   left: 50%;
@@ -2847,6 +2876,10 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   height: 52px;
   object-fit: contain;
   filter: drop-shadow(0 7px 8px rgba(32,35,38,0.20));
+}
+
+.s5-step-card .s5-icon-box {
+  display: none;
 }
 
 /* Icono reloj de arena en CSS */
@@ -2934,7 +2967,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   content: "";
   position: absolute;
   inset: 9px;
-  border: 1px solid rgba(223, 90, 8, 0.24);
+  border: 1px solid rgba(223, 90, 8, 0.16);
   border-radius: 20px;
   pointer-events: none;
 }
@@ -3008,24 +3041,26 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   align-items: center;
   min-height: 76px;
   padding: 10px 12px;
-  border: 1px solid rgba(32, 35, 38, 0.12);
+  border: 1px solid rgba(32, 35, 38, 0.10);
   border-radius: 18px;
-  background: rgba(255, 247, 234, 0.64);
+  background: rgba(255, 247, 234, 0.44);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.18);
 }
 
 .s5-action-progress {
   background:
-    linear-gradient(90deg, rgba(95, 118, 52, 0.18), rgba(255, 247, 234, 0.70));
+    linear-gradient(90deg, rgba(95, 118, 52, 0.13), rgba(255, 247, 234, 0.42));
 }
 
 .s5-action-nature {
   background:
-    linear-gradient(90deg, rgba(47, 95, 94, 0.16), rgba(255, 247, 234, 0.70));
+    linear-gradient(90deg, rgba(47, 95, 94, 0.12), rgba(255, 247, 234, 0.42));
 }
 
 .s5-action-rest {
   background:
-    linear-gradient(90deg, rgba(93, 62, 123, 0.14), rgba(255, 247, 234, 0.70));
+    linear-gradient(90deg, rgba(93, 62, 123, 0.11), rgba(255, 247, 234, 0.42));
 }
 
 .s5-action-letter {
@@ -3126,7 +3161,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   align-items: center;
   margin-top: 14px;
   padding: 10px 12px;
-  border-top: 1px solid rgba(32, 35, 38, 0.16);
+  border-top: 1px solid rgba(32, 35, 38, 0.10);
+  background: rgba(255, 247, 234, 0.18);
+  border-radius: 16px;
 }
 
 .s5-apply-note img {
@@ -3166,6 +3203,29 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     linear-gradient(180deg, rgba(255, 252, 242, 0.98), rgba(230, 218, 194, 0.9));
 }
 
+.s5-step-final {
+  min-height: 292px;
+}
+
+.s5-step-final .s5-icon-box {
+  width: min(100%, 150px);
+  height: 128px;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(223, 90, 8, 0.10), transparent 58%),
+    rgba(255, 247, 234, 0.26);
+}
+
+.s5-step-final .s5-hand-icon img {
+  width: 100%;
+  height: 100%;
+  max-width: 136px;
+  max-height: 112px;
+  object-fit: contain;
+  padding: 8px;
+}
+
 .s5-hand-icon img {
   width: 76px;
   height: 58px;
@@ -3193,8 +3253,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 @media (max-width: 1180px) {
   .s5-round-map {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 16px;
   }
 
   .s5-round-map::before,
@@ -3264,6 +3324,11 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     scroll-snap-align: center;
   }
 
+  .s5-step-preview {
+    width: min(100%, 155px);
+    height: 132px;
+  }
+
   .s5-player-heading {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -3284,9 +3349,15 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 
 @media (max-width: 520px) {
   .s5-step-card {
-    min-height: 214px;
-    padding: 34px 12px 15px;
+    min-height: 280px;
+    padding: 30px 10px 15px;
     border-radius: 22px;
+  }
+
+  .s5-step-preview {
+    width: min(100%, 142px);
+    height: 120px;
+    margin-bottom: 10px;
   }
 
   .s5-player-turn-card {
