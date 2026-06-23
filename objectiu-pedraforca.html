@@ -1009,20 +1009,14 @@
       <article class="s5-player-turn-card">
         <span class="s5-step-pin s5-step-pin-main">05</span>
 
-        <div class="s5-player-heading">
-          <span class="s5-climber-icon" aria-hidden="true">
-            <svg viewBox="0 0 72 72">
-              <path d="M36 10a7 7 0 1 0 0.1 0M34 20l-6 15-10 7M38 22l10 12 9 2M30 36l-5 20M42 36l9 19M18 60h39" />
-            </svg>
-          </span>
-
-          <div>
-            <h3 data-i18n="s5.step5.title">Torn de cada jugador</h3>
-            <p data-i18n="s5.step5.text">
-              Tria una acció principal i aplica després l’altitud, el desgast o la recuperació d’energia.
-            </p>
-          </div>
-        </div>
+     <div class="s5-player-heading s5-player-heading-simple">
+  <div>
+    <h3 data-i18n="s5.step5.title">Torn de cada jugador</h3>
+    <p data-i18n="s5.step5.text">
+      Tria una acció principal
+    </p>
+  </div>
+</div>
 
         <div class="s5-action-list">
 
@@ -1034,10 +1028,11 @@
               <p data-i18n="s5.actionA.text">Juga progressió si el clima o els events no bloquegen.</p>
             </div>
 
-            <div class="s5-action-icons" aria-hidden="true">
-              <img src="assets/icon-montana.svg" alt="">
-              <img src="assets/Pisadas.PNG" alt="">
-            </div>
+<div class="s5-action-icons s5-action-icons-progress" aria-hidden="true">
+  <img src="assets/icon-montana.svg" alt="">
+  <img src="assets/Pisadas.PNG" alt="">
+  <img src="assets/pedraforca-card-progressio-1.webp" alt="" class="s5-mini-progress-card">
+</div>
           </div>
 
           <div class="s5-action-row s5-action-nature">
@@ -1062,10 +1057,12 @@
               <p data-i18n="s5.actionC.text">Descarta 1 carta i recupera +1 energia.</p>
             </div>
 
-            <div class="s5-rest-icons" aria-hidden="true">
-              <span class="s5-sleeping-bag"></span>
-              <span class="s5-hot-cup">☕</span>
-            </div>
+<div class="s5-rest-icons s5-rest-heart-zone" aria-hidden="true">
+  <span class="s5-rest-heart">
+    <span>❤</span>
+    <b>+1</b>
+  </span>
+</div>
           </div>
 
         </div>
@@ -1085,9 +1082,9 @@
       <article class="s5-step-card s5-step-small s5-step-final">
         <span class="s5-step-pin">06</span>
 
-        <div class="s5-icon-box s5-hand-icon">
-          <img src="assets/s3-ma-6-cartes.png" alt="" loading="lazy">
-        </div>
+<figure class="s5-step-preview s5-hand-preview">
+  <img src="assets/s3-ma-6-cartes.png" alt="" loading="lazy">
+</figure>
 
         <h3 data-i18n="s5.step6.title">Reposa la mà</h3>
         <p data-i18n="s5.step6.text">Roba cartes fins a tornar a tenir-ne 6 a la mà.</p>
