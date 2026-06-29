@@ -3259,9 +3259,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s5-hand-preview {
-  width: 100%;
-  height: 150px;
-  margin: 0 auto 12px;
+  width: min(100% - 24px, 520px);
+  height: 190px;
+  margin: 0 auto 14px;
   display: grid;
   place-items: center;
   border-radius: 18px;
@@ -3279,7 +3279,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  padding: 4px;
+  object-position: center center;
+  padding: 0;
   filter:
     drop-shadow(0 12px 14px rgba(32,35,38,0.16));
 }
@@ -3308,8 +3309,43 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 /* Responsive S5 */
+@media (min-width: 1441px) {
+  .s5-round-map {
+    grid-template-columns:
+      minmax(170px, 0.9fr)
+      24px
+      minmax(170px, 0.9fr)
+      24px
+      minmax(170px, 0.9fr)
+      24px
+      minmax(170px, 0.9fr)
+      28px
+      minmax(430px, 1.6fr)
+      28px
+      minmax(170px, 0.9fr);
+    align-items: stretch;
+  }
+
+  .s5-step-card,
+  .s5-step-final {
+    min-height: 292px;
+  }
+
+  .s5-step-preview {
+    width: calc(100% - 18px);
+    height: 150px;
+  }
+
+  .s5-step-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 4px;
+  }
+}
 
 @media (max-width: 1180px) {
+  @media (max-width: 1440px) {
   .s5-round-map {
     grid-template-columns: repeat(4, minmax(180px, 1fr));
     gap: 16px;
@@ -3391,18 +3427,24 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   scroll-snap-align: center;
 }
 
-.s5-step-preview,
-.s5-hand-preview {
+.s5-step-preview {
   width: calc(100% - 16px);
   height: 168px;
   margin: 0 auto 12px;
   border-radius: 18px;
 }
 
+.s5-hand-preview {
+  width: min(calc(100% - 18px), 500px);
+  height: 200px;
+  margin: 0 auto 14px;
+  border-radius: 18px;
+}
+
 .s5-step-preview img,
 .s5-hand-preview img {
   width: 100%;
-  height: 100%;
+  height: 150%;
   object-fit: contain;
   padding: 4px;
 }
@@ -3445,7 +3487,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .s5-step-preview,
 .s5-hand-preview {
   width: calc(100% - 12px);
-  height: 168px;
+  height: 176px;
   margin: 0 auto 12px;
   border-radius: 17px;
 }
