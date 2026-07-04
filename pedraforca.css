@@ -5089,3 +5089,23 @@ body[data-page="pedraforca"] .s6p-mode-card {
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 }
+
+/* Mockups Pedraforca al final de la landing */
+
+.mockup-sequence-final {
+  padding: clamp(42px, 6vw, 76px) 0;
+  background:
+    linear-gradient(180deg, #f5f7f8 0%, #ffffff 100%);
+}
+
+.mockup-sequence-final .mockup-container {
+  width: min(1220px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.mockup-sequence-final .mockup-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
