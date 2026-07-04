@@ -2790,7 +2790,31 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   font-weight: 780;
 }
 
+.s5-step-small:nth-of-type(1) {
+  order: 1;
+}
 
+.s5-step-small:nth-of-type(2) {
+  order: 2;
+}
+
+.s5-step-small:nth-of-type(3) {
+  order: 3;
+}
+
+.s5-step-small:nth-of-type(4) {
+  order: 4;
+}
+
+.s5-player-turn-card {
+  grid-column: 1 / -1;
+  order: 5;
+}
+
+.s5-step-final {
+  grid-column: 1 / -1;
+  order: 6;
+}
 
 .s5-step-preview {
   width: calc(100% - 10px);
