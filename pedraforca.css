@@ -4949,8 +4949,6 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     min-height: 58px;
   }
 }   
-}
-
 
 /* =========================================================
    AJUSTES FINALES GLOBALS · PEDRAFORCA
@@ -5094,4 +5092,113 @@ body[data-page="pedraforca"] .s6p-mode-card {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+
+/* =========================================================
+   HEADER FIJO DESKTOP · OBJECTIU PEDRAFORCA
+   Refuerzo final
+========================================================= */
+
+@media (min-width: 861px) {
+  body[data-page="pedraforca"] {
+    --pedra-header-bg: rgba(255, 255, 255, 0.94);
+    --pedra-header-border: rgba(24, 33, 40, 0.10);
+    --pedra-header-link: #1c252b;
+    --pedra-header-accent: #df5a08;
+  }
+
+  body[data-page="pedraforca"] .site-header.pedraforca-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5000;
+    width: 100%;
+    background: var(--pedra-header-bg);
+    border-bottom: 1px solid var(--pedra-header-border);
+    backdrop-filter: blur(14px) saturate(1.08);
+    -webkit-backdrop-filter: blur(14px) saturate(1.08);
+    box-shadow: 0 10px 30px rgba(8, 18, 16, 0.10);
+    transition:
+      background 260ms ease,
+      border-color 260ms ease,
+      box-shadow 260ms ease;
+  }
+
+  body[data-page="pedraforca"] .site-header.pedraforca-header .clean-nav a,
+  body[data-page="pedraforca"] .site-header.pedraforca-header .brand-subtitle {
+    color: var(--pedra-header-link);
+    transition: color 260ms ease, opacity 260ms ease;
+  }
+
+  body[data-page="pedraforca"] .site-header.pedraforca-header .main-nav a:first-child::after {
+    background: var(--pedra-header-accent);
+  }
+
+  body[data-page="pedraforca"] .section,
+  body[data-page="pedraforca"] .pedra-section {
+    scroll-margin-top: calc(var(--header-height) + 16px);
+  }
+
+  body[data-page="pedraforca"][data-current-section="s1"] {
+    --pedra-header-bg: rgba(16, 41, 32, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.14);
+    --pedra-header-link: #f7f1e7;
+    --pedra-header-accent: #df5a08;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s2"] {
+    --pedra-header-bg: rgba(30, 63, 48, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.16);
+    --pedra-header-link: #f7f1e7;
+    --pedra-header-accent: #df5a08;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s3"] {
+    --pedra-header-bg: rgba(29, 75, 53, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.16);
+    --pedra-header-link: #f7f1e7;
+    --pedra-header-accent: #f08a2f;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s4"] {
+    --pedra-header-bg: rgba(75, 91, 58, 0.90);
+    --pedra-header-border: rgba(247, 241, 231, 0.18);
+    --pedra-header-link: #fff7ea;
+    --pedra-header-accent: #f08a2f;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s5"] {
+    --pedra-header-bg: rgba(190, 184, 158, 0.90);
+    --pedra-header-border: rgba(32, 35, 38, 0.12);
+    --pedra-header-link: #202326;
+    --pedra-header-accent: #df5a08;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s6"] {
+    --pedra-header-bg: rgba(235, 234, 226, 0.92);
+    --pedra-header-border: rgba(32, 35, 38, 0.10);
+    --pedra-header-link: #203028;
+    --pedra-header-accent: #df5a08;
+  }
+
+  body[data-page="pedraforca"][data-current-section="s7"] {
+    --pedra-header-bg: rgba(255, 255, 255, 0.94);
+    --pedra-header-border: rgba(24, 33, 40, 0.08);
+    --pedra-header-link: #1c252b;
+    --pedra-header-accent: #df5a08;
+  }
+}
+
+/* En móvil el header NO queda fijo */
+@media (max-width: 860px) {
+  body[data-page="pedraforca"] .site-header.pedraforca-header {
+    position: relative !important;
+    top: auto;
+    left: auto;
+    right: auto;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: none;
+  }
 }
