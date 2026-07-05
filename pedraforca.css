@@ -2767,10 +2767,11 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .s5-round-map {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(14px, 1.6vw, 22px);
+  grid-template-columns: repeat(4, minmax(210px, 1fr));
+  gap: clamp(16px, 1.8vw, 24px);
   align-items: stretch;
-  padding: clamp(18px, 1.8vw, 24px);
+  justify-items: stretch;
+  padding: clamp(20px, 2vw, 26px);
   border: 1px solid rgba(32, 35, 38, 0.055);
   border-radius: 26px;
   background:
@@ -2803,12 +2804,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s5-step-card {
-  min-height: 340px;
+  min-height: 350px;
   display: grid;
-  grid-template-rows: auto auto auto 1fr;
+  grid-template-rows: auto 210px auto 1fr;
   justify-items: center;
   align-content: start;
-  padding: 34px 12px 18px;
+  padding: 34px 14px 18px;
   border-radius: 24px;
   text-align: center;
 }
@@ -2858,9 +2859,9 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s5-step-preview {
-  width: calc(100% - 10px);
-  min-height: 190px;
-  height: auto;
+  width: calc(100% - 8px);
+  height: 210px;
+  min-height: 210px;
   margin: 0 auto 14px;
   display: grid;
   place-items: center;
@@ -2874,13 +2875,20 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .s5-step-preview img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 215px;
+  height: 100%;
+  max-height: 210px;
   object-fit: contain;
   object-position: center center;
   padding: 0;
   filter:
     drop-shadow(0 10px 12px rgba(32,35,38,0.14));
+}
+
+.s5-step-small:nth-of-type(2) .s5-step-preview img,
+.s5-step-small:nth-of-type(4) .s5-step-preview img {
+  max-width: 92%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .s5-step-pin {
@@ -3287,10 +3295,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 .s5-hand-preview {
-  width: calc(100% - 14px);
-  height: auto;
+  width: min(100% - 16px, 520px);
+  min-height: 210px;
+  height: 210px;
   margin: 0 auto 14px;
-  display: block;
+  display: grid;
+  place-items: center;
   border: 0;
   border-radius: 0;
   overflow: visible;
@@ -3301,8 +3311,8 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .s5-hand-preview img {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 230px;
+  height: 100%;
+  max-height: 210px;
   object-fit: contain;
   object-position: center center;
   padding: 0;
@@ -3334,45 +3344,12 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 /* Responsive S5 */
-@media (min-width: 1441px) {
-  .s5-round-map {
-    grid-template-columns:
-      minmax(170px, 0.9fr)
-      24px
-      minmax(170px, 0.9fr)
-      24px
-      minmax(170px, 0.9fr)
-      24px
-      minmax(170px, 0.9fr)
-      28px
-      minmax(430px, 1.6fr)
-      28px
-      minmax(170px, 0.9fr);
-    align-items: stretch;
-  }
-
-  .s5-step-card,
-  .s5-step-final {
-    min-height: 292px;
-  }
-
-  .s5-step-preview {
-    width: calc(100% - 18px);
-    height: 150px;
-  }
-
-  .s5-step-preview img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding: 4px;
-  }
-}
 
   @media (max-width: 1440px) {
   .s5-round-map {
     grid-template-columns: repeat(4, minmax(180px, 1fr));
     gap: 16px;
+    justify-items: stretch;
   }
 
   .s5-round-map::before,
@@ -3380,13 +3357,22 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
     display: none;
   }
 
+       .s5-step-small {
+    width: 100%;
+    min-width: 0;
+  }
+     
   .s5-player-turn-card {
-    grid-column: span 4;
+    grid-column: 1 / -1;
+    width: min(100%, 860px);
+    justify-self: center;
     order: 5;
   }
 
   .s5-step-final {
-    grid-column: span 4;
+    grid-column: 1 / -1;
+    width: min(100%, 560px);
+    justify-self: center;
     order: 6;
   }
 }
