@@ -7,7 +7,7 @@
   <meta name="description" content="Summit Series: juegos de cartas inspirados en la alta montaña. Descubre Objetivo Monte Perdido 3.355 y Objectiu Pedraforca 2.506." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body data-page="index">
+<body data-page="index" data-current-section="s1">
   <aside class="altitude-ruler">
     <div class="altitude-ruler-inner">
       <div class="ruler-title" data-i18n="ruler.title">PROGRESIÓN</div>
@@ -1212,8 +1212,49 @@ aria-label="Ir a la landing de Objectiu Pedraforca 2.506">
     </div>
   </footer>
 
-  <script src="translations-index.js"></script>
-  <script src="script.js"></script>
-  <script src="popup-compass.js"></script>
+<script>
+(function () {
+  const body = document.body;
+  const sections = Array.from(document.querySelectorAll('[data-section]'));
+
+  function sectionKey(section) {
+    if (section.id === 'inicio') return 's1';
+    if (section.id === 'productos') return 's2';
+    if (section.id === 'caracteristicas') return 's3';
+    if (section.id === 'modos') return 's4';
+    if (section.id === 'valores') return 's5';
+    if (section.id === 'reglas') return 's6';
+    if (section.id === 'compra') return 's7';
+    return '';
+  }
+
+  function updateHeaderTheme() {
+    const probeY = window.innerHeight * 0.32;
+    let current = 's1';
+
+    for (const section of sections) {
+      const key = sectionKey(section);
+      if (!key) continue;
+
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= probeY && rect.bottom >= probeY) {
+        current = key;
+        break;
+      }
+    }
+
+    body.dataset.currentSection = current;
+  }
+
+  updateHeaderTheme();
+  window.addEventListener('scroll', updateHeaderTheme, { passive: true });
+  window.addEventListener('resize', updateHeaderTheme);
+})();
+</script>
+
+<script src="translations-index.js"></script>
+<script src="script.js"></script>
+<script src="popup-compass.js"></script>
 </body>
 </html>
