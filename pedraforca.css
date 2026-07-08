@@ -33,7 +33,12 @@ body[data-page="pedraforca"] .brand-subtitle {
 body[data-page="pedraforca"] .clean-nav a {
   color: #1c252b;
   font-weight: 800;
-  font-size: 0.86rem;
+  font-size: clamp(0.76rem, 0.82vw, 0.86rem);
+  white-space: nowrap;
+}
+
+body[data-page="pedraforca"] .clean-nav {
+  gap: clamp(12px, 1.45vw, 24px);
 }
 
 body[data-page="pedraforca"] .main-nav a:first-child::after {
