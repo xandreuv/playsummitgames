@@ -51,7 +51,7 @@ window.PSG_TRANSLATIONS = {
   
         "products.common.p1": "1–4 jugadores",
         "products.common.p2": "20–40 min",
-        "products.common.p3": "+10 años",
+        "products.common.p3": "+8 años",
         "products.common.p4": "Competitivo · Cooperativo · Solo",
 
         "products.immersive.title.before": "Después de la montaña,",
@@ -103,7 +103,7 @@ window.PSG_TRANSLATIONS = {
 
 "features.info.players.title": "1-4 JUGADORES",
 "features.info.players.text": "Solo o en equipo, tú eliges la expedición.",
-"features.info.age.title": "+10 AÑOS",
+"features.info.age.title": "+8 AÑOS",
 "features.info.age.text": "Aventuras desafiantes para mentes curiosas.",
 "features.info.time.title": "15-25 MINUTOS",
 "features.info.time.text":
@@ -343,7 +343,7 @@ window.PSG_TRANSLATIONS = {
   
         "products.common.p1": "1–4 jugadors",
         "products.common.p2": "20–40 min",
-        "products.common.p3": "+10 anys",
+        "products.common.p3": "+8 anys",
         "products.common.p4": "Competitiu · Cooperatiu · Solo",
 
         "products.immersive.title.before": "Després de la muntanya,",
@@ -395,7 +395,7 @@ window.PSG_TRANSLATIONS = {
 
 "features.info.players.title": "1-4 JUGADORS",
 "features.info.players.text": "Sol o en equip, tu tries l'expedició.",
-"features.info.age.title": "+10 ANYS",
+"features.info.age.title": "+8 ANYS",
 "features.info.age.text": "Aventures desafiants per a ments curioses.",
 "features.info.time.title": "15-25 MINUTS",
 "features.info.time.text":
