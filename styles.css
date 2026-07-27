@@ -4456,51 +4456,17 @@ SECTION 1 HERO NUEVO
   transform: translate(-50%, -100%) rotate(92deg);
 }
 
-.s7-players-icon {
-  position: relative;
-  width: 42px;
-  height: 38px;
-  flex: 0 0 42px;
-  display: inline-block;
-  border: 1.5px solid var(--s7-accent);
+.s7-players-img {
+  width: 46px;
+  height: 42px;
+  flex: 0 0 46px;
+  object-fit: contain;
+  display: block;
   border-radius: 8px;
   background: rgba(255,255,255,0.66);
-}
-
-.s7-players-icon span {
-  position: absolute;
-  top: 9px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #071827;
-}
-
-.s7-players-icon span:first-child {
-  left: 10px;
-}
-
-.s7-players-icon span:last-child {
-  right: 10px;
-}
-
-.s7-players-icon::before,
-.s7-players-icon::after {
-  content: "";
-  position: absolute;
-  bottom: 8px;
-  width: 13px;
-  height: 12px;
-  border-radius: 7px 7px 3px 3px;
-  background: #071827;
-}
-
-.s7-players-icon::before {
-  left: 8px;
-}
-
-.s7-players-icon::after {
-  right: 8px;
+  border: 1.5px solid var(--s7-accent);
+  padding: 4px;
+  mix-blend-mode: multiply;
 }
 
 /* Divisor antes botones */
@@ -4682,10 +4648,10 @@ SECTION 1 HERO NUEVO
     flex-basis: 34px;
   }
 
-  .s7-players-icon {
-    width: 38px;
-    height: 34px;
-    flex-basis: 38px;
+ .s7-players-img {
+  width: 42px;
+  height: 38px;
+  flex-basis: 42px;
   }
 }
 
@@ -4873,15 +4839,12 @@ SECTION 1 HERO NUEVO
 }
 
 .section-products .s2-game-card .s7-clock-icon::before,
-.section-products .s2-game-card .s7-clock-icon::after,
-.section-products .s2-game-card .s7-players-icon span,
-.section-products .s2-game-card .s7-players-icon::before,
-.section-products .s2-game-card .s7-players-icon::after {
+.section-products .s2-game-card .s7-clock-icon::after {
   background: #f3ead7;
 }
 
 .section-products .s2-game-card .s7-age-box,
-.section-products .s2-game-card .s7-players-icon {
+.section-products .s2-game-card .s7-players-img {
   background: rgba(12, 32, 24, 0.22);
 }
 
