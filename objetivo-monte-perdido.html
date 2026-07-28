@@ -6,8 +6,9 @@
   <title>Objetivo Monte Perdido 3.355 | Play Summit Games</title>
   <meta name="description" content="Landing page de Objetivo Monte Perdido 3.355, juego de cartas de Summit Series." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="MPerdido.css" />
 </head>
-<body data-page="monte">
+<body data-page="monte" data-current-section="s1">
 
 <aside class="altitude-ruler altitude-ruler-monte">
   <div class="altitude-ruler-inner">
@@ -17,25 +18,25 @@
     <div class="ruler-dot"></div>
 
     <div class="altitude-current">
-      <div class="altitude-current-value">ALT 1032 m</div>
+      <div class="altitude-current-value">ALT 1.032 m</div>
     </div>
 
-   <a href="#Torla" class="altitude-stop active" data-target="Torla" data-bearing="0">
-  <span class="altitude-stop-meter">1032 m</span>
+    <a href="#torla" class="altitude-stop active" data-target="torla" data-bearing="0">
+  <span class="altitude-stop-meter">1.032 m</span>
 </a>
-<a href="#cola-caballo" class="altitude-stop" data-target="cola-caballo" data-bearing="35">
+<a href="#cola-caballo" class="altitude-stop" data-target="cola-caballo" data-bearing="40">
   <span class="altitude-stop-meter">1.755 m</span>
 </a>
-<a href="#clavijas" class="altitude-stop" data-target="clavijas" data-bearing="75">
+<a href="#clavijas" class="altitude-stop" data-target="clavijas" data-bearing="80">
   <span class="altitude-stop-meter">1.825 m</span>
 </a>
-<a href="#goriz" class="altitude-stop" data-target="goriz" data-bearing="120">
+<a href="#goriz" class="altitude-stop" data-target="goriz" data-bearing="125">
   <span class="altitude-stop-meter">2.200 m</span>
 </a>
-<a href="#lago-helado" class="altitude-stop" data-target="lago-helado" data-bearing="165">
+<a href="#lago-helado" class="altitude-stop" data-target="lago-helado" data-bearing="175">
   <span class="altitude-stop-meter">2.990 m</span>
 </a>
-<a href="#escupidera" class="altitude-stop" data-target="escupidera" data-bearing="220">
+<a href="#escupidera" class="altitude-stop" data-target="escupidera" data-bearing="225">
   <span class="altitude-stop-meter">3.200 m</span>
 </a>
 <a href="#cumbre" class="altitude-stop" data-target="cumbre" data-bearing="270">
@@ -44,408 +45,1511 @@
   </div>
 </aside>
 
-<header class="site-header">
-  <div class="container header-inner">
+<header class="site-header pedraforca-header">
+  <div class="container header-inner clean-header">
 
     <a href="index.html" class="brand">
-  <div class="header-compass">
-    <div class="compass-ring">
-      <div class="compass-outer-ring"></div>
-      <div class="compass-ticks"></div>
-      <div class="compass-inner-rim"></div>
-
-      <div class="compass-cardinal compass-n">N</div>
-      <div class="compass-cardinal compass-ne">NE</div>
-      <div class="compass-cardinal compass-e">E</div>
-      <div class="compass-cardinal compass-se">SE</div>
-      <div class="compass-cardinal compass-s">S</div>
-      <div class="compass-cardinal compass-sw">SW</div>
-      <div class="compass-cardinal compass-w">W</div>
-      <div class="compass-cardinal compass-nw">NW</div>
-
-      <div class="compass-face">
-        <div class="compass-band band-yellow"></div>
-        <div class="compass-band band-orange"></div>
-        <div class="compass-band band-red"></div>
-        <div class="compass-band band-lightblue"></div>
-        <div class="compass-band band-blue"></div>
-
-        <div class="compass-rings-grid ring-a"></div>
-        <div class="compass-rings-grid ring-b"></div>
-        <div class="compass-rings-grid ring-c"></div>
-        <div class="compass-rings-grid ring-d"></div>
-
-        <div class="compass-spokes spokes-1"></div>
-        <div class="compass-spokes spokes-2"></div>
-
-        <div class="compass-mountain mountain-left"></div>
-        <div class="compass-mountain mountain-center"></div>
-        <div class="compass-mountain mountain-right"></div>
-        <div class="compass-mountain mountain-front-left"></div>
-        <div class="compass-mountain mountain-front-right"></div>
-
-        <div class="compass-center-band">
-          <span>SUMMIT GAMES</span>
-        </div>
+      <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo large" />
+      <div class="brand-copy">
+        <div class="brand-subtitle">Jocs disenyats als Pirineus</div>
       </div>
+    </a>
 
-      <div class="compass-needle-wrap" id="compassNeedleWrap">
-        <div class="compass-needle"></div>
-        <div class="compass-needle-tail"></div>
-        <div class="compass-center-cap"></div>
-      </div>
-    </div>
-  </div>
+   <nav class="main-nav clean-nav">
+  <a href="#torla" data-i18n="nav.home">Inici</a>
+  <a href="#cola-caballo" data-i18n="nav.content">Contingut</a>
+  <a href="#clavijas" data-i18n="nav.preparation">Preparació</a>
+  <a href="#goriz" data-i18n="nav.energyResources">Energia/Recursos</a>
+  <a href="#lago-helado" data-i18n="nav.rules">Regles</a>
+  <a href="#cumbre" data-i18n="nav.buy">Compra</a>
+</nav>
 
-  <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="brand-logo" />
-  <div class="brand-copy">
-    <div class="brand-subtitle">Juegos diseñados en los Pirineos</div>
-  </div>
-</a>
-
-    <nav class="main-nav">
-      <a href="index.html">Inicio</a>
-      <a href="#cola-caballo">Alpinistas</a>
-      <a href="#clavijas">Clima y eventos</a>
-      <a href="#goriz">Energía</a>
-      <a href="#lago-helado">Reglas</a>
-      <a href="#cumbre">Compra</a>
-    </nav>
-
-    <div class="language-switch" aria-label="Selector de idioma">
-      <button type="button" class="lang-switch-button active" data-lang="es" aria-pressed="true">ES</button>
-      <button type="button" class="lang-switch-button" data-lang="cat" aria-pressed="false">CAT</button>
-    </div>
   </div>
 </header>
 
 <main>
 
-  <section id="Torla" class="section section-valley section-rich" data-section>
-    <div class="container section-inner hero-layout">
-      <div class="hero-copy">
-        <div class="breadcrumb"><a href="index.html">← Volver a Play Summit Games</a></div>
-        <p class="section-kicker">Torla · 1032 m</p>
-        <h1 class="page-hero-title">Objetivo Monte Perdido 3.355</h1>
-        <p class="hero-lead">Una ascensión lúdica al gran macizo calcáreo del Pirineo.</p>
-        <p>
-          Avanza por altitud, adapta tu estrategia al clima cambiante, protege tu expedición y gestiona
-          la energía para alcanzar una de las cumbres más emblemáticas del Pirineo.
-        </p>
-        <p>
-          Objetivo Monte Perdido convierte la experiencia de montaña en una partida tensa y temática:
-          progresión, desgaste, riesgo, material, lesiones y decisiones constantes entre atacar o resistir.
-        </p>
+  <!-- SECCIÓ 1 INICIAL SALDES -->
+  
+<section id="torla" class="section pedra-s1" data-section>
+  <div class="pedra-s1-bg" aria-hidden="true"></div>
+  <div class="pedra-s1-overlay" aria-hidden="true"></div>
 
-        <div class="button-row">
-          <a href="#cola-caballo" class="button button-primary">Descubrir el juego</a>
-          <a href="#cumbre" class="button button-secondary">Ir a la compra</a>
+<div class="container pedra-s1-back-container">
+  <div class="breadcrumb pedra-breadcrumb">
+    <a href="index.html" data-i18n="hero.back">← Tornar a Play Summit Games</a>
+  </div>
+</div>
+
+<div class="container pedra-s1-inner">
+  <div class="pedra-s1-copy">
+
+      <div class="pedra-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="hero.kicker">Torla - 1.032 m</p>
+        <span class="pedra-kicker-line"></span>
+      </div>
+
+<h1 class="pedra-s1-title"data-i18n="hero.title">
+  <span>Objectiu</span>
+  <strong>Monte Perdido</strong>
+  <em>3.355 m</em>
+</h1>
+
+      <p class="pedra-s1-lead" data-i18n="hero.lead">
+        Una ascensió lúdica inspirada en la muntanya més emblemàtica de Catalunya.
+      </p>
+
+      <div class="pedra-product-stage">
+        <img
+          src="assets/Joc_Taula_Pedraforca.png"
+          alt="Caixa del joc Objetivo Monte Perdido 3.355 m"
+          class="pedra-product-box"
+        />
+
+        <div class="pedra-product-cards" aria-hidden="true">
+          <img
+            src="assets/pedraforca-card-progressio.webp"
+            alt=""
+            class="pedra-product-card pedra-card-left"
+          />
+          <img
+            src="assets/pedraforca-card-guia-expert.webp"
+            alt=""
+            class="pedra-product-card pedra-card-center"
+          />
+          <img
+            src="assets/pedraforca-card-refugi.webp"
+            alt=""
+            class="pedra-product-card pedra-card-right"
+          />
         </div>
       </div>
 
-      <div class="hero-panel">
-        <div class="hero-panel-card">
-          <h2>Datos básicos</h2>
-          <ul class="clean-list">
-            <li>1–4 jugadores</li>
-            <li>20–40 minutos</li>
-            <li>Modo competitivo, cooperativo y solitario</li>
-            <li>Gestión de mano, energía, riesgo y progresión en altitud</li>
-          </ul>
+      <div class="pedra-s1-facts" aria-label="Dades bàsiques del joc">
+        <div class="pedra-fact">
+          <span class="pedra-fact-icon pedra-fact-icon-players" aria-hidden="true">
+            <span></span><span></span>
+          </span>
+          <strong>1–4</strong>
+          <span data-i18n="hero.fact.players">jugadors</span>
         </div>
 
-        <div class="hero-panel-card">
-          <h2>Contenido de la caja</h2>
-          <ul class="clean-list">
-            <li>2 barajas temáticas de juego</li>
-            <li>Tablero de ascensión al Monte Perdido</li>
-            <li>Fichas de alpinista y marcadores</li>
-            <li>Cartas de alpinistas, clima, eventos, equipación, escudos y lesiones</li>
-            <li>Instrucciones de juego</li>
-          </ul>
+        <div class="pedra-fact">
+          <span class="pedra-fact-icon pedra-fact-icon-age" aria-hidden="true">+8</span>
+          <strong>+8</strong>
+          <span data-i18n="hero.fact.age">anys</span>
+        </div>
+
+        <div class="pedra-fact">
+          <span class="pedra-fact-icon pedra-fact-icon-clock" aria-hidden="true"></span>
+          <strong>15–25</strong>
+          <span data-i18n="hero.fact.time">minuts</span>
+        </div>
+</div>
+
+<div class="pedra-s1-divider" aria-hidden="true">
+  <span></span>
+</div>
+
+<div class="button-row pedra-s1-actions">
+  <a href="#cumbre" class="button pedra-button-buy">
+    <span class="pedra-cart-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none">
+        <path d="M4 5h2l2.2 10.4a2 2 0 0 0 2 1.6h6.9a2 2 0 0 0 1.9-1.4L21 8H7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="10" cy="20" r="1.8" fill="currentColor"/>
+        <circle cx="18" cy="20" r="1.8" fill="currentColor"/>
+      </svg>
+    </span>
+   <span>COMPRAR</span>
+  </a>
+
+  <a href="#cola-caballo" class="button pedra-button-discover" data-i18n="hero.cta1">
+    Descobrir el joc
+  </a>
+</div>
+    </div>
+  </div>
+</section>
+
+ <!-- SECCIÓ 2 GÒSOL -->
+  
+ <section id="cola-caballo" class="section pedra-s2" data-section>
+  <div class="pedra-s2-bg" aria-hidden="true"></div>
+  <div class="pedra-s2-overlay" aria-hidden="true"></div>
+
+  <div class="container pedra-s2-inner">
+    <div class="pedra-kicker-row">
+      <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+      <p class="pedra-kicker" data-i18n="s2.kicker">Gòsol - 1.755 m</p>
+      <span class="pedra-kicker-line"></span>
+    </div>
+
+<div class="pedra-s2-heading">
+  <h2 data-i18n="s2.title">Contingut i Objectiu</h2>
+
+  <div class="pedra-s2-summary">
+    <div class="pedra-s2-summary-block">
+      <h3 class="pedra-s2-subtitle" data-i18n="s2.objective.label">Objectiu</h3>
+      <p data-i18n="s2.objective.text">
+        Assolir primer el cim del Monte Perdido o tota l'expedició abans que acabi el temps.
+      </p>
+    </div>
+
+    <div class="pedra-s2-summary-block">
+      <h3 class="pedra-s2-subtitle" data-i18n="s2.contents.label">Contingut</h3>
+    </div>
+  </div>
+</div>
+
+    <div class="pedra-s2-layout">
+      <article class="pedra-s2-components" aria-label="Components principals del joc">
+        <div class="pedra-s2-board-card">
+          <div class="pedra-s2-board-visual">
+          <img
+            src="assets/s4-tablero-pedraforca.webp"
+            alt="Tauler d'ascensió del joc Objetivo Monte Perdido"
+            class="pedra-s2-board"
+          />
+                       
+</div>
+    <h3 class="pedra-s2-component-title" data-i18n="s2.board.title">1 Taulell</h3>
+  </div>
+
+        <div class="pedra-s2-tokens-card">
+          <div class="pedra-s2-token-zone" aria-label="Fitxes de fusta del joc">
+            <div class="pedra-token-pair token-yellow"><span></span><span></span></div>
+            <div class="pedra-token-pair token-red"><span></span><span></span></div>
+            <div class="pedra-token-pair token-green"><span></span><span></span></div>
+            <div class="pedra-token-pair token-blue"><span></span><span></span></div>
+            <div class="pedra-token-pair token-purple"><span></span><span></span></div>
+            <div class="pedra-token-pair token-white"><span></span><span></span></div>
+            <div class="pedra-token-single token-black"><span></span></div>
+          </div>
+            
+    
+    <h3 class="pedra-s2-component-title" data-i18n="s2.fichas.title">
+      13 Fitxes de colors</h3>
+     </div>
+   
+        <div class="pedra-s2-book-card">
+          <img
+            src="assets/pedraforca-rulebook.png"
+            alt="Llibret d'instruccions, històries i llegendes del Monte Perdido"
+            class="pedra-s2-book"
+          />
+              <h3 class="pedra-s2-component-title" data-i18n="s2.book.title">
+      1 Llibret d'instruccions, història i llegendes</h3>
+      </div>
+      </article>
+          
+
+<article class="pedra-s2-decks" aria-label="Mazos i tipus de cartes">
+  <div class="pedra-s2-deck-card deck-progress">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-progressio-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-progressio-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-progressio-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-progressio-1.webp" alt="Cartes de progressió" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.progress.title">45 Cartes de Progressió</h3>
+        <img src="assets/Pisadas.PNG" alt="" class="pedra-type-icon" />
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-alpinist">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/s4-alpinista-escalada.webp" alt="" aria-hidden="true" />
+      <img src="assets/s4-alpinista-experto.webp" alt="" aria-hidden="true" />
+      <img src="assets/s4-alpinista-meteo.webp" alt="" aria-hidden="true" />
+      <img src="assets/s4-alpinista-eco.webp" alt="Cartes d'alpinista" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.alpinist.title">6 Cartes d'Alpinista</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-weather">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-clima-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-clima-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-clima-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/Carta_Objectiu_Pedraforca_Clima2.webp" alt="Cartes de clima" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.weather.title">7 Cartes de Clima</h3>
+        <img src="assets/meteo.png" alt="" class="pedra-type-icon" />
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-event">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-event-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-event-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-event-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-event-1.webp" alt="Cartes d'esdeveniment" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.event.title">14 Cartes d'esdeveniments</h3>
+        <span class="pedra-type-icons">
+          <img src="assets/mosqueton.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Mapa-Planificacio.PNG" alt="" class="pedra-type-icon" />
+          <img src="assets/aigua.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Material-piolets.png" alt="" class="pedra-type-icon" />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-resource">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-recurs-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-1.webp" alt="Cartes d'equipament" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.resource.title">35 Cartes d'equipament</h3>
+        <span class="pedra-type-icons">
+          <img src="assets/mosqueton.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Mapa-Planificacio.PNG" alt="" class="pedra-type-icon" />
+          <img src="assets/aigua.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Material-piolets.png" alt="" class="pedra-type-icon" />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-permanent">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-recurs-permanent-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-permanent-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-permanent-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-recurs-permanent-1.webp" alt="Cartes de recursos permanents" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.permanent.title">6 Cartes de recursos permanents</h3>
+        <span class="pedra-type-icons">
+          <img src="assets/mosqueton.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Mapa-Planificacio.PNG" alt="" class="pedra-type-icon" />
+          <img src="assets/aigua.png" alt="" class="pedra-type-icon" />
+          <img src="assets/Material-piolets.png" alt="" class="pedra-type-icon" />
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-fauna">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-fauna-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-fauna-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-fauna-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/Carta_Falco_Pelegri.png" alt="Cartes de fauna" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.fauna.title">8 Cartes de fauna</h3>
+        <img src="assets/Huellas-lobo.PNG" alt="" class="pedra-type-icon" />
+      </div>
+    </div>
+  </div>
+
+  <div class="pedra-s2-deck-card deck-flora">
+    <div class="pedra-deck-stack stack-four">
+      <img src="assets/pedraforca-card-flora-2.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-flora-3.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-flora-4.webp" alt="" aria-hidden="true" />
+      <img src="assets/pedraforca-card-flora-1.webp" alt="Cartes de flora" />
+    </div>
+
+    <div class="pedra-s2-card-text">
+      <div class="pedra-card-title-row">
+        <h3 data-i18n="s2.deck.flora.title">7 Cartes de flora</h3>
+        <img src="assets/Trebol.PNG" alt="" class="pedra-type-icon" />
+      </div>
+    </div>
+  </div>
+</article>
+    
+    </div>
+  </div>
+</section>
+
+ <!-- =========================================================
+  SECCIÓ 3 · REFUGI LLUÍS ESTASEN · PREPARACIÓ DEL JOC
+========================================================= -->
+<section id="clavijas" class="pedra-section pedra-section-s3 section-preparacio" data-section>
+  <div class="section-texture s3-texture" aria-hidden="true"></div>
+
+  <div class="pedra-section-inner">
+
+ <header class="s3-heading">
+  <div class="pedra-kicker-row s3-kicker-row">
+    <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+    <p class="pedra-kicker" data-i18n="s3.preTitle">Refugi Lluís Estasen · 1.825 m</p>
+    <span class="pedra-kicker-line"></span>
+  </div>
+
+  <div class="pedra-s2-heading s3-title-block">
+    <h2 data-i18n="s3.title">PREPARACIÓ DEL JOC</h2>
+
+    <p data-i18n="s3.lead">
+      Abans de començar l’ascensió, cada jugador prepara el seu alpinista,
+      les seves fitxes, els diferents malls de joc i la mà inicial de cartes.
+    </p>
+  </div>
+</header>
+
+    <div class="s3-prep-layout">
+
+      <!-- Punt 1 -->
+      <article class="s3-prep-card s3-prep-card-featured">
+        <div class="s3-step-number">01</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step1.title">Tria el teu alpinista</h3>
+          <p data-i18n="s3.step1.text">
+            Determinarà el color de les teves fitxes i el teu estil d’ascensió.
+            Cada alpinista aporta una manera diferent d’afrontar la progressió al cim.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-cartes-alpinistes.webp"
+            alt="Sis cartes blaves d’alpinista d’Objetivo Monte Perdido"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 2 -->
+      <article class="s3-prep-card s3-prep-card-featured">
+        <div class="s3-step-number">02</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step2.title">Col·loca les teves fitxes sobre el taulell</h3>
+          <p data-i18n="s3.step2.text">
+            Situa una fitxa a la casella de sortida i l’altra a al nivell 6 inicial d’energia.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-detall-taulell-inici-energia.webp"
+            alt="Detall del taulell amb les fitxes a la sortida i al nivell 6 d’energia"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 3 -->
+      <article class="s3-prep-card">
+        <div class="s3-step-number">03</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step3.title">Marca el temps de partida</h3>
+          <p data-i18n="s3.step3.text">
+            Col·loca la fitxa negra sobre el número de rondes màximes que
+            tindrà la partida.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-fitxa-temps-rondes.webp"
+            alt="Fitxa negra situada sobre el marcador de rondes del taulell"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 4 -->
+      <article class="s3-prep-card">
+        <div class="s3-step-number">04</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step4.title">Prepara la baralla de clima</h3>
+          <p data-i18n="s3.step4.text">
+            Separa i barreja les cartes de clima. El temps imprevist 
+            pot obrir una finestra d’ascensió o complicar la ruta.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-mazo-clima.webp"
+            alt="Mazo de cartes de clima amb una carta superior boca amunt"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 5 -->
+      <article class="s3-prep-card">
+        <div class="s3-step-number">05</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step5.title">Prepara la baralla d’esdeveniments</h3>
+          <p data-i18n="s3.step5.text">
+            Separa i barreja les cartes d’esdeveniment. Representen imprevistos,
+            passos tècnics i situacions pròpies de l’alta muntanya.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-mazo-events.webp"
+            alt="Mazo de cartes d’esdeveniments amb una carta superior boca amunt"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 6 -->
+      <article class="s3-prep-card">
+        <div class="s3-step-number">06</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step6.title">Prepara el mall de l’expedició</h3>
+          <p data-i18n="s3.step6.text">
+            Barreja la resta de cartes per formar el mall principal de
+            l’expedició.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-mazo-expedicio.webp"
+            alt="Mazo principal de l’expedició amb les cartes boca avall"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+      <!-- Punt 7 -->
+      <article class="s3-prep-card s3-prep-card-final">
+        <div class="s3-step-number">07</div>
+
+        <div class="s3-card-copy">
+          <h3 data-i18n="s3.step7.title">Agafa 6 cartes de mà a l’atzar</h3>
+          <p data-i18n="s3.step7.text">
+            Cada jugador comença amb 6 cartes de mà del mall d'expedició. 
+            Aquesta mà inicial marcarà les primeres decisions de l’ascensió.
+          </p>
+        </div>
+
+        <figure class="s3-card-media">
+          <img
+            src="assets/s3-ma-6-cartes.png"
+            alt="Mà inicial de sis cartes d’Objetivo Monte Perdido"
+            loading="lazy"
+          >
+        </figure>
+      </article>
+
+    </div>
+
+    <div class="s3-prep-footer">
+      <span class="s3-footer-line"></span>
+      <span class="s3-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
+      <span class="s3-footer-line"></span>
+    </div>
+
+  </div>
+</section>
+  
+<!-- =========================================================
+  SECCIÓ 4 · TARTERA · PROGRESIÓN, ENERGIA I RECURSOS
+========================================================= -->
+<section id="goriz" class="pedra-section pedra-section-s4 section-progressio" data-section>
+  <div class="section-texture s4-texture" aria-hidden="true"></div>
+
+  <div class="pedra-section-inner">
+
+    <header class="s4-heading">
+      <div class="pedra-kicker-row s4-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="s4.preTitle">Góriz · 2.200 m</p>
+        <span class="pedra-kicker-line"></span>
+      </div>
+
+      <div class="pedra-s2-heading s4-title-block">
+        <h2 data-i18n="s4.title">PROGRESIÓN EN ALÇADA AMB GESTIÓ D'ENERGIA I RECURSOS</h2>
+      </div>
+    </header>
+
+    <!-- BLOQUE 1 · PROGRESIÓN EN ALÇADA -->
+<article class="s4-main-block s4-block-progress">
+  <div class="s4-block-copy s4-title-with-icon">
+    <span class="s4-step-pill">01</span>
+
+    <div class="s4-title-line">
+      <h3 data-i18n="s4.progress.title">Progressa en altura</h3>
+
+      <span class="s4-card-stat-icon s4-altitude-stat" aria-label="Icona de progressió 100 metres">
+        <img src="assets/icon-montana.svg" alt="">
+        <small>100 m</small>
+      </span>
+    </div>
+  </div>
+
+  <div class="s4-card-row s4-card-row-compact" aria-label="Cartes que permeten progressar en alçada">
+    <figure class="s4-play-card s4-card-orange s4-highlight-altitude">
+      <span class="s4-card-corner-marker s4-marker-left">
+        <img src="assets/icon-montana.svg" alt="">
+        <small>400 m</small>
+      </span>
+
+      <img src="assets/pedraforca-card-progressio-1.webp" alt="Carta de progressió" loading="lazy">
+
+      <figcaption>
+        <strong data-i18n="s4.progress.card1.title">Progressió</strong>
+        <span data-i18n="s4.progress.card1.text">Avanç directe en metres.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="s4-play-card s4-highlight-altitude">
+      <span class="s4-card-corner-marker s4-marker-left">
+        <img src="assets/icon-montana.svg" alt="">
+        <small>150 m</small>
+      </span>
+
+      <img src="assets/Carta_Falco_Pelegri.png" alt="Carta de fauna" loading="lazy">
+
+      <figcaption>
+        <strong data-i18n="s4.progress.card2.title">Fauna / flora</strong>
+        <span data-i18n="s4.progress.card2.text">Avança inclús estant bloquejat.</span>
+      </figcaption>
+    </figure>
+
+    <figure class="s4-play-card s4-highlight-altitude">
+      <span class="s4-card-corner-marker s4-marker-left">
+        <img src="assets/icon-montana.svg" alt="">
+        <small>+100 m</small>
+      </span>
+
+      <img src="assets/pedraforca-card-clima-2.webp" alt="Carta de meteorologia favorable" loading="lazy">
+
+      <figcaption>
+        <strong data-i18n="s4.progress.card3.title">Bon temps</strong>
+        <span data-i18n="s4.progress.card3.text">Combo de progressió.</span>
+      </figcaption>
+    </figure>
+  </div>
+</article>
+
+<!-- BLOQUE 2 · ENERGIA -->
+<article class="s4-main-block s4-block-energy">
+  <div class="s4-block-copy s4-title-with-icon">
+    <span class="s4-step-pill">02</span>
+
+    <div class="s4-title-line">
+      <h3 data-i18n="s4.energy.title">Gestiona l’energia</h3>
+
+      <span class="s4-card-stat-icon s4-heart-stat" aria-label="Icona d'energia">
+        <span>❤</span>
+      </span>
+    </div>
+  </div>
+
+  <div class="s4-energy-cards-layout">
+
+    <div class="s4-energy-lane s4-energy-loss">
+      <h4 data-i18n="s4.energy.loss.title">Perds energia</h4>
+
+      <div class="s4-card-row s4-energy-card-row">
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="-1">
+            <span class="s4-heart-icon">❤</span>
+            <b>-1</b>
+          </span>
+
+          <img src="assets/pedraforca-card-clima-6.webp" alt="Carta de clima advers" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.loss.card1">Clima advers</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="-2">
+            <span class="s4-heart-icon">❤</span>
+            <b>-2</b>
+          </span>
+
+          <img src="assets/pedraforca-card-event-1.webp" alt="Carta d'esdeveniment" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.loss.card2">Events</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="-2">
+            <span class="s4-heart-icon">❤</span>
+            <b>-2</b>
+          </span>
+
+          <img src="assets/pedraforca-card-progressio-1.webp" alt="Carta de progressió agressiva" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.loss.card3">Progressió agressiva</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="s4-energy-lane s4-energy-gain">
+      <h4 data-i18n="s4.energy.gain.title">Guanyes energia</h4>
+
+      <div class="s4-card-row s4-energy-card-row">
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="+1">
+            <span class="s4-heart-icon">❤</span>
+            <b>+1</b>
+          </span>
+
+          <img src="assets/pedraforca-card-recurs-2.webp" alt="Carta d'equipació" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.gain.card1">Equipació</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="+1">
+            <span class="s4-heart-icon">❤</span>
+            <b>+1</b>
+          </span>
+
+          <img src="assets/pedraforca-card-recurs-4.webp" alt="Carta de planificació" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.gain.card2">Planificació</strong>
+          </figcaption>
+        </figure>
+
+        <figure class="s4-play-card s4-highlight-heart">
+          <span class="s4-card-corner-marker s4-marker-right s4-heart-marker" data-energy="+1">
+            <span class="s4-heart-icon">❤</span>
+            <b>+1</b>
+          </span>
+
+          <img src="assets/pedraforca-card-recurs-permanent-2.webp" alt="Carta de recurs permanent" loading="lazy">
+
+          <figcaption>
+            <strong data-i18n="s4.energy.gain.card3">Recursos permanents</strong>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+    <!-- BLOQUE 3 · RECURSOS I FAMÍLIES -->
+    <article class="s4-main-block s4-block-resources">
+<div class="s4-block-copy s4-resources-heading">
+  <span class="s4-step-pill">03</span>
+  <h3 data-i18n="s4.resources.title">Gestió de recursos</h3>
+  <p data-i18n="s4.resources.text">Famílies de recursos</p>
+</div>
+
+      <div class="s4-resource-board" aria-label="Relació entre obstacles, recursos i recursos permanents">
+        <div class="s4-resource-col s4-resource-col-obstacles">
+          <h4 data-i18n="s4.resources.col1">Obstacles</h4>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-event-5.webp" alt="Carta Pas imprevist" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Mapa-Planificacio.PNG" alt=""></span>
+            <p data-i18n="s4.resources.obstacle1">Pas imprevist</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-event-2.webp" alt="Carta Escalada" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/mosqueton.png" alt=""></span>
+            <p data-i18n="s4.resources.obstacle2">Via d'escalada</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-event-12.webp" alt="Carta Material inadequat" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Material-piolets.png" alt=""></span>
+            <p data-i18n="s4.resources.obstacle3">Material inadequat</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-event-3.webp" alt="Carta Deshidratació" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/aigua.png" alt=""></span>
+            <p data-i18n="s4.resources.obstacle4">Deshidratació</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-clima-3.webp" alt="Carta Canvi de temps" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/meteo.png" alt=""></span>
+            <p data-i18n="s4.resources.obstacle5">Temps advers</p>
+          </div>
+        </div>
+
+        <div class="s4-resource-col s4-resource-col-turn">
+          <h4 data-i18n="s4.resources.col2">Resposta d’un torn</h4>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-4.webp" alt="Carta Planificació ruta" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Mapa-Planificacio.PNG" alt=""></span>
+            <p data-i18n="s4.resources.turn1">Planificació ruta</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-3.webp" alt="Carta Material escalada" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/mosqueton.png" alt=""></span>
+            <p data-i18n="s4.resources.turn2">Material escalada</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-2.webp" alt="Carta Material adequat" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Material-piolets.png" alt=""></span>
+            <p data-i18n="s4.resources.turn3">Material adequat</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-1.webp" alt="Carta Beguda Km0" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/aigua.png" alt=""></span>
+            <p data-i18n="s4.resources.turn4">Beguda Km0</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-12.webp" alt="Carta Refugi temporal" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/meteo.png" alt=""></span>
+            <p data-i18n="s4.resources.turn5">Refugi temporal</p>
+          </div>
+        </div>
+
+        <div class="s4-resource-col s4-resource-col-permanent">
+          <h4 data-i18n="s4.resources.col3">Protecció permanent</h4>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-permanent-1.webp" alt="Carta Guia expert" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Mapa-Planificacio.PNG" alt=""></span>
+            <p data-i18n="s4.resources.perm1">Guia expert</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-permanent-5.webp" alt="Carta Centre excursionista" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/mosqueton.png" alt=""></span>
+            <p data-i18n="s4.resources.perm2">Centre excursionista</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-permanent-3.webp" alt="Carta Espònsor" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/Material-piolets.png" alt=""></span>
+            <p data-i18n="s4.resources.perm3">Espònsor</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-permanent-4.webp" alt="Carta Font de la Roca" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/aigua.png" alt=""></span>
+            <p data-i18n="s4.resources.perm4">Font de la Roca</p>
+          </div>
+
+          <div class="s4-resource-item">
+            <img src="assets/pedraforca-card-recurs-permanent-2.webp" alt="Carta Refugi" loading="lazy">
+            <span class="s4-family-icon"><img src="assets/meteo.png" alt=""></span>
+            <p data-i18n="s4.resources.perm5">Refugi</p>
+          </div>
         </div>
       </div>
+    </article>
+
+    <div class="s3-prep-footer s4-footer">
+      <span class="s3-footer-line"></span>
+      <span class="s3-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
+      <span class="s3-footer-line"></span>
     </div>
-  </section>
 
-  <section id="cola-caballo" class="section section-basecamp section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Cascada Cola de Caballo · 1.755 m</p>
-      <h2>Seis alpinistas, seis formas de ascender</h2>
-      <p class="section-intro">
-        El juego incluye 6 cartas de alpinistas específicos, cada una con propiedades asimétricas que cambian
-        la forma de jugar: resistencia, eficiencia energética, reacción al clima, capacidad de protección,
-        recuperación o especialización táctica.
-      </p>
+  </div>
+</section>
 
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Perfiles asimétricos</h3>
-          <p>
-            Cada alpinista no es sólo una ilustración: condiciona tu estilo de partida y tus decisiones
-            desde el primer turno.
-          </p>
-        </article>
+<!-- =========================================================
+  SECCIÓ 5 · CANAL VERDET · ACCIONS DE JOC EN CADA TORN
+========================================================= -->
+<section id="lago-helado" class="pedra-section pedra-section-s5 section-torn" data-section>
+  <div class="section-texture s5-texture" aria-hidden="true"></div>
+  <div class="s5-overlay" aria-hidden="true"></div>
 
-        <article class="info-card">
-          <h3>Ventajas propias</h3>
-          <p>
-            Algunos personajes destacan en avance, otros en ahorro de energía, otros en soportar mejor
-            incidentes o en responder al entorno.
-          </p>
-        </article>
+  <div class="pedra-section-inner">
 
-        <article class="info-card">
-          <h3>Partidas variables</h3>
-          <p>
-            Cambiar de alpinista cambia también la experiencia. La montaña es la misma, pero la expedición
-            nunca se afronta igual.
-          </p>
-        </article>
+    <header class="s5-heading">
+      <div class="pedra-kicker-row s5-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="s5.preTitle">Lago Helado · 2.990 m</p>
+        <span class="pedra-kicker-line"></span>
       </div>
 
-      <div class="section-block">
-        <p>
-          Esta asimetría aporta rejugabilidad y refuerza la sensación de expedición real: no todos los perfiles
-          están preparados para resolver la ascensión de la misma manera ni en el mismo momento.
+      <div class="pedra-s2-heading s5-title-block">
+        <h2 data-i18n="s5.title">ACCIONS DE JOC EN CADA TORN</h2>
+        <p data-i18n="s5.subtitle">
+          Seqüència de joc d’una ronda · mode cooperatiu
         </p>
       </div>
+    </header>
+
+    <div class="s5-round-map" aria-label="Seqüència visual d'una ronda de joc cooperativa">
+
+<!-- PAS 1 -->
+<article class="s5-step-card s5-step-small">
+  <span class="s5-step-pin">01</span>
+
+  <figure class="s5-step-preview">
+    <img
+      src="assets/s3-fitxa-temps-rondes.webp"
+      alt="Fitxa negra situada sobre el marcador de rondes del taulell"
+      loading="lazy"
+    >
+  </figure>
+
+  <h3 data-i18n="s5.step1.title">Avança el marcador de temps</h3>
+  <p data-i18n="s5.step1.text">La ronda avança i queda menys marge per assolir el cim.</p>
+</article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+<!-- PAS 2 -->
+<article class="s5-step-card s5-step-small">
+  <span class="s5-step-pin">02</span>
+
+  <figure class="s5-step-preview">
+    <img
+      src="assets/s3-mazo-clima.webp"
+      alt="Mazo de cartes de clima amb una carta superior boca amunt"
+      loading="lazy"
+    >
+  </figure>
+
+  <h3 data-i18n="s5.step2.title">Revela el clima</h3>
+  <p data-i18n="s5.step2.text">El temps afecta tota l’expedició durant aquesta ronda.</p>
+</article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+<!-- PAS 3 -->
+<article class="s5-step-card s5-step-small">
+  <span class="s5-step-pin">03</span>
+
+  <figure class="s5-step-preview">
+    <img
+      src="assets/s3-mazo-events.webp"
+      alt="Mazo de cartes d’esdeveniments amb una carta superior boca amunt"
+      loading="lazy"
+    >
+  </figure>
+
+  <h3 data-i18n="s5.step3.title">Revela esdeveniments</h3>
+  <p data-i18n="s5.step3.text">1 esdeveniment amb 1–2 jugadors. 2 esdeveniments amb 3–4 jugadors.</p>
+</article>
+
+      <span class="s5-flow-arrow" aria-hidden="true"></span>
+
+<!-- PAS 4 -->
+<article class="s5-step-card s5-step-small">
+  <span class="s5-step-pin">04</span>
+
+  <figure class="s5-step-preview">
+    <img
+      src="assets/pedraforca-card-recurs-4.webp"
+      alt="Carta de recurs per desbloquejar un esdeveniment"
+      loading="lazy"
+    >
+  </figure>
+
+  <h3 data-i18n="s5.step4.title">Desbloqueja un event</h3>
+  <p data-i18n="s5.step4.text">Qualsevol alpinista pot gastar recursos o energia per superar-lo.</p>
+</article>
+
+      <!-- PAS 5 · GRAN BLOQUE CENTRAL -->
+      <article class="s5-player-turn-card">
+        <span class="s5-step-pin s5-step-pin-main">05</span>
+
+     <div class="s5-player-heading s5-player-heading-simple">
+  <div>
+    <h3 data-i18n="s5.step5.title">Torn de cada jugador</h3>
+    <p data-i18n="s5.step5.text">
+      Tria una acció principal
+    </p>
+  </div>
+</div>
+
+        <div class="s5-action-list">
+
+          <div class="s5-action-row s5-action-progress">
+            <span class="s5-action-letter">A</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionA.title">Avançar</h4>
+              <p data-i18n="s5.actionA.text">Juga progressió si el clima o els events no bloquegen.</p>
+            </div>
+
+<div class="s5-action-icons s5-action-icons-progress" aria-hidden="true">
+  <img src="assets/icon-montana.svg" alt="">
+  <img src="assets/Pisadas.PNG" alt="">
+  <img src="assets/pedraforca-card-progressio-1.webp" alt="" class="s5-mini-progress-card">
+</div>
+          </div>
+
+          <div class="s5-action-row s5-action-nature">
+            <span class="s5-action-letter">B</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionB.title">Observació de la natura</h4>
+              <p data-i18n="s5.actionB.text">Fauna o flora permeten avançar encara que estiguis bloquejat.</p>
+            </div>
+
+            <div class="s5-action-icons" aria-hidden="true">
+              <img src="assets/Trebol.PNG" alt="">
+              <img src="assets/Carta_Falco_Pelegri.png" alt="">
+            </div>
+          </div>
+
+          <div class="s5-action-row s5-action-rest">
+            <span class="s5-action-letter">C</span>
+
+            <div class="s5-action-copy">
+              <h4 data-i18n="s5.actionC.title">Descansar</h4>
+              <p data-i18n="s5.actionC.text">Descarta 1 carta i recupera +1 energia.</p>
+            </div>
+
+<div class="s5-rest-icons s5-rest-heart-zone" aria-hidden="true">
+  <span class="s5-rest-heart">
+    <span>❤</span>
+    <b>+1</b>
+  </span>
+</div>
+          </div>
+
+        </div>
+
+        <div class="s5-apply-note">
+          <img src="assets/icon-montana.svg" alt="" aria-hidden="true">
+          <p data-i18n="s5.apply.text">
+            Aplica altitud, desgast o recuperació d’energia sobre les teves fitxes del taulell.
+          </p>
+          <span class="s5-energy-heart" aria-hidden="true">❤</span>
+        </div>
+      </article>
+
+      <span class="s5-flow-arrow s5-arrow-final" aria-hidden="true"></span>
+
+      <!-- PAS 6 -->
+      <article class="s5-step-card s5-step-small s5-step-final">
+        <span class="s5-step-pin">06</span>
+
+<figure class="s5-step-preview s5-hand-preview">
+  <img src="assets/s3-ma-6-cartes.png" alt="" loading="lazy">
+</figure>
+
+        <h3 data-i18n="s5.step6.title">Reposa la mà</h3>
+        <p data-i18n="s5.step6.text">Roba cartes fins a tornar a tenir-ne 6 a la mà.</p>
+      </article>
+
     </div>
-  </section>
 
-  <section id="clavijas" class="section section-first-rope section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Clavijas · 1.825 m</p>
-      <h2>Clima variable, eventos y cómo contrarrestarlos</h2>
-      <p class="section-intro">
-        La montaña cambia turno a turno. El clima afecta a todos los jugadores y los eventos introducen
-        bloqueos, riesgos o penalizaciones que obligan a reaccionar con el material adecuado.
-      </p>
-
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Cartas de clima</h3>
-          <p>
-            Representan condiciones favorables o adversas que modifican el ritmo de ascensión, la eficiencia
-            del avance o la seguridad de la expedición.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Cartas de evento</h3>
-          <p>
-            Introducen obstáculos concretos: problemas en ruta, incidentes, pasos delicados o situaciones
-            que frenan tu progresión si no los resuelves.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Equipación y escudos</h3>
-          <p>
-            Puedes responder con cartas de equipación de uso táctico o con escudos, que son equipaciones
-            permanentes y te ofrecen protección continuada frente a ciertos riesgos.
-          </p>
-        </article>
-      </div>
-
-      <div class="info-grid cols-2">
-        <article class="info-card">
-          <h3>Leer la montaña</h3>
-          <p>
-            No siempre gana quien más avanza, sino quien interpreta mejor cuándo protegerse, cuándo gastar
-            recursos y cuándo reservar cartas para un problema mayor.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Contrarrestar bien importa</h3>
-          <p>
-            Parte de la estrategia está en construir una mano útil y anticipar qué amenaza merece respuesta
-            inmediata y cuál puede esperar un turno más.
-          </p>
-        </article>
-      </div>
+    <div class="s3-prep-footer s5-footer">
+      <span class="s3-footer-line"></span>
+      <span class="s3-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
+      <span class="s3-footer-line"></span>
     </div>
-  </section>
 
-  <section id="goriz" class="section section-technical section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Refugio de Góriz · 2.200 m</p>
-      <h2>Energía, desgaste y gestión real del riesgo</h2>
-      <p class="section-intro">
-        La energía es uno de los ejes del juego. Avanzar, resistir, protegerse o recuperarse tiene coste, y
-        una mala gestión puede arruinar la ascensión en el momento decisivo.
-      </p>
+  </div>
+</section>
 
-      <div class="info-grid cols-2">
-        <article class="info-card">
-          <h3>Cómo se gana y se pierde energía</h3>
-          <p>
-            La energía fluctúa durante la partida por el esfuerzo de avance, por determinados climas, eventos,
-            cartas jugadas y por decisiones tácticas del propio jugador.
-          </p>
-        </article>
+<!-- =========================================================
+  SECCIÓ 6 · ATAC A CIM · FI DE LA PARTIDA
+========================================================= -->
+<section id="escupidera" class="pedra-section pedra-section-s6 section-final-partida" data-section>
+  <div class="section-texture s6-texture" aria-hidden="true"></div>
+  <div class="s6p-overlay" aria-hidden="true"></div>
 
-        <article class="info-card">
-          <h3>Riesgo acumulativo</h3>
-          <p>
-            Forzar demasiado la expedición puede darte ventaja a corto plazo, pero te deja mucho más expuesto
-            en la parte alta de la montaña.
-          </p>
-        </article>
+  <div class="pedra-section-inner">
+
+    <header class="s6p-heading">
+      <div class="pedra-kicker-row s6-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="pedra-kicker-icon" />
+        <p class="pedra-kicker" data-i18n="s6.kicker">ATAC A CIM · CRESTA AÈRIA · 3.200 m</p>
+        <span class="pedra-kicker-line"></span>
       </div>
 
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Primera vez a 0 energía</h3>
-          <p>
-            El alpinista recibe una primera carta de lesión. La ascensión continúa, pero ya no lo haces en
-            las mismas condiciones.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Segunda vez a 0 energía</h3>
-          <p>
-            Recibes una segunda carta de lesión y además pierdes cartas de mano, reflejando deterioro físico,
-            pérdida de control y empeoramiento de la situación.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Tercera vez a 0 energía</h3>
-          <p>
-            Se produce un accidente grave y ese alpinista no puede continuar la ascensión. La gestión del
-            riesgo deja de ser teórica y pasa a decidir la partida.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="lago-helado" class="section section-summit-attack section-rich" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Lago Helado · 2.990 m</p>
-      <h2>Reglas básicas y núcleo mecánico del juego</h2>
-      <p class="section-intro">
-        Aquí se concentra la lógica del sistema: orden de turno, revelado de clima y eventos, gestión de mano,
-        avance en altitud, resolución de efectos y reposición.
-      </p>
-
-      <div class="info-grid cols-3">
-        <article class="info-card">
-          <h3>Secuencia de turno</h3>
-          <p>
-            La partida alterna información abierta y decisiones tácticas: aparece el entorno, se resuelven
-            amenazas y cada jugador decide cómo responder.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Mecánicas principales</h3>
-          <p>
-            Gestión de energía, gestión de mano, progresión por altitud, control del riesgo, protección mediante
-            material y adaptación al estado cambiante de la montaña.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Curva de tensión</h3>
-          <p>
-            La dificultad no es lineal. A medida que asciendes, cada error pesa más y cada recurso guardado
-            puede convertirse en decisivo.
-          </p>
-        </article>
-      </div>
-
-      <div class="button-row">
-        <a href="assets/instrucciones-objetivo-monte-perdido.pdf" class="button button-primary" target="_blank" rel="noopener noreferrer">
-          Descargar instrucciones en PDF
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="escupidera" class="section section-top section-standard" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Ataque a cumbre · Escupidera · 3.200 m</p>
-      <h2>Cómo se gana la partida</h2>
-
-      <div class="info-grid cols-2">
-        <article class="info-card">
-          <h3>Modo competitivo</h3>
-          <p>
-            Gana quien culmina la ascensión cumpliendo las condiciones de victoria antes que los demás, o quien
-            demuestra mejor rendimiento estratégico en la resolución final de la partida.
-          </p>
-        </article>
-
-        <article class="info-card">
-          <h3>Modo cooperativo</h3>
-          <p>
-            Los jugadores forman una expedición. La victoria depende de alcanzar juntos el objetivo común y
-            gestionar de forma colectiva los riesgos, recursos y crisis de la montaña.
-          </p>
-        </article>
-      </div>
-
-      <div class="section-block">
-        <p>
-          El tramo final exige leer bien el momento de atacar la cima: precipitarse puede dejarte sin energía;
-          esperar demasiado puede dar ventaja al rival o hacer fracasar a toda la expedición.
+      <div class="pedra-s2-heading s6p-title-block">
+        <h2 data-i18n="s6.title">FI DE LA PARTIDA</h2>
+        <p data-i18n="s6.lead">
+          La partida acaba quan s’assoleix el cim o quan s’esgota el temps d’ascensió.
         </p>
       </div>
+    </header>
+
+    <div class="s6p-grid">
+
+      <!-- BLOQUE 1 · MODO COMPETITIVO -->
+      <article class="s6p-mode-card s6p-mode-card--competitive">
+        <div class="s6p-mode-header">
+          <div class="s6p-mode-number">01</div>
+
+          <div class="s6p-mode-copy">
+            <p class="s6p-mode-eyebrow" data-i18n="s6.competitive.eyebrow">Mode competitiu</p>
+            <h3 data-i18n="s6.competitive.title">Guanya qui arriba primer al cim</h3>
+            <p class="s6p-mode-text" data-i18n="s6.competitive.text">
+              En el mode competitiu, la partida finalitza quan un jugador arriba al cim del Monte Perdido.
+            </p>
+          </div>
+        </div>
+
+        <div class="s6p-styles">
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-sprint.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style1">Sprint Running</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-cross.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style2">Trail Running</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-sky.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.competitive.style3">Sky Running</span>
+          </div>
+        </div>
+
+        <div class="s6p-visuals">
+          <figure class="s6p-visual-card">
+            <img
+              src="assets/s4-alpinista-runner.webp"
+              alt="Carta alpinista runner"
+              loading="lazy"
+            >
+          </figure>
+
+          <figure class="s6p-visual-board">
+            <img
+              src="assets/s4-tablero-pedraforca.webp"
+              alt="Taulell del joc amb una fitxa a la línia de meta"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+<a
+  href="assets/instrucciones-objetivo-monte-perdido.pdf"
+  class="s6p-download-button"
+  download
+>
+  <span class="s6p-download-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 3v11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5 19h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+  </span>
+  <span data-i18n="s6.download.competitive">Descarrega les instruccions del mode competitiu</span>
+</a>
+      </article>
+
+      <!-- BLOQUE 2 · MODO COOPERATIVO -->
+      <article class="s6p-mode-card s6p-mode-card--cooperative">
+        <div class="s6p-mode-header">
+          <div class="s6p-mode-number">02</div>
+
+          <div class="s6p-mode-copy">
+            <p class="s6p-mode-eyebrow" data-i18n="s6.cooperative.eyebrow">Mode cooperatiu</p>
+            <h3 data-i18n="s6.cooperative.title">Tota la cordada ha d’arribar al cim</h3>
+            <p class="s6p-mode-text" data-i18n="s6.cooperative.text">
+              En el mode cooperatiu, cal que tots els jugadors arribin al cim abans que s’esgoti el comptador de temps.
+            </p>
+          </div>
+        </div>
+
+        <div class="s6p-styles">
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-solo.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style1">Estil Solo</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-alpino.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style2">Estil alpí</span>
+          </div>
+
+          <div class="s6p-style-chip">
+            <span class="s6p-style-icon">
+              <img src="assets/s3-icon-clasico.webp" alt="" loading="lazy">
+            </span>
+            <span data-i18n="s6.cooperative.style3">Estil clàssic</span>
+          </div>
+        </div>
+
+        <div class="s6p-visuals">
+          <figure class="s6p-visual-card">
+            <img
+              src="assets/pedraforca-card-event-8.webp"
+              alt="Carta d'un grup de muntanyers"
+              loading="lazy"
+            >
+          </figure>
+
+          <figure class="s6p-visual-board">
+            <img
+              src="assets/taulell_pedraforca_fitxes_final.webp"
+              alt="Taulell amb tres fitxes a la línia de meta"
+              loading="lazy"
+            >
+          </figure>
+        </div>
+
+<a
+  href="assets/instrucciones-objetivo-monte-perdido.pdf"
+  class="s6p-download-button s6p-download-button--cooperative"
+  download
+>
+  <span class="s6p-download-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M12 3v11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      <path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5 19h14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+  </span>
+  <span data-i18n="s6.download.cooperative">Descarrega les instruccions del mode cooperatiu</span>
+</a>
+      </article>
+
     </div>
-  </section>
 
-  <section id="cumbre" class="section section-top section-compact" data-section>
-    <div class="container section-inner">
-      <p class="section-kicker">Cumbre · 3.355 m</p>
-      <h2>Consigue Objetivo Monte Perdido 3.355</h2>
-      <p class="section-intro">
-        Un juego de cartas de montaña diseñado en los Pirineos, con identidad territorial, tensión estratégica
-        y una experiencia de ascensión pensada para jugarse una y otra vez.
+    <div class="s6p-footer-note">
+      <span class="s6p-footer-icon" aria-hidden="true">
+        <svg viewBox="0 0 96 48">
+          <path d="M6 42 L31 12 L46 31 L58 19 L90 42 Z"></path>
+        </svg>
+      </span>
+      <p data-i18n="s6.footer">
+        El cim no és només arribar-hi: és gestionar bé l’energia, el temps i les decisions finals.
       </p>
+    </div>
 
-      <div class="button-row">
-        <a href="#" class="button button-primary">Comprar juego</a>
-        <a href="index.html#productos" class="button button-secondary">Ver otros juegos</a>
+  </div>
+</section>
+
+<!-- =========================================================
+  SECCIÓ 7 · CIM - COMPRA
+========================================================= -->
+
+<section id="cumbre" class="section section-top section-s7-buy s7-pedraforca-final" data-section data-altitude="3355">
+  <div class="section-texture topo-lines topo-lines-light"></div>
+
+  <div class="container section-inner s7-inner">
+
+    <header class="s7-header">
+      <div class="s7-kicker-row">
+        <img src="assets/icon-montana.svg" alt="" class="s7-kicker-icon">
+        <p class="s7-kicker" data-i18n="buy.kicker">CIM - 2.506 M.</p>
+        <span class="s7-kicker-line"></span>
+      </div>
+
+      <h2 class="s7-title" data-i18n="buy.title">
+        DOS JOCS, DUES ASCENSIONS ÚNIQUES.
+      </h2>
+    </header>
+
+    <div class="s7-horizontal-scroll">
+      <div class="s7-games-grid">
+
+        <!-- PEDRAFORCA -->
+        <article class="s7-game-card s7-game-card-pedra">
+          <div class="s7-panel-grid">
+
+            <div class="s7-game-copy">
+              <p class="s7-game-prefix" data-i18n="buy.pf.prefix">Objectiu</p>
+              <h3 class="s7-game-name" data-i18n="buy.pf.name">Monte Perdido</h3>
+              <p class="s7-game-alt" data-i18n="buy.pf.alt">3.355 m</p>
+              <div class="s7-title-divider"></div>
+              <p class="s7-game-text" data-i18n="buy.pf.text">
+                Escalada tècnica i aventura en una de les icones de Catalunya.
+              </p>
+            </div>
+
+            <div class="s7-product-stage s7-product-stage-pedra">
+              <img
+                src="assets/Joc_Taula_Pedraforca.png"
+                alt="Caixa Objetivo Monte Perdido 3.355 m"
+                class="s7-box-image s7-box-image-pedra"
+              >
+
+              <div class="s7-card-fan s7-card-fan-pedra" aria-label="Cartes d'Objetivo Monte Perdido">
+                <img
+                  src="assets/Carta_joc_de_taula_Canal.png"
+                  alt="Carta Escalada - Via Estasen"
+                  class="s7-sample-card s7-card-1"
+                >
+                <img
+                  src="assets/Carta_joc_de_taula_Refugi_Estassen.png"
+                  alt="Carta Refugi Lluís Estasen"
+                  class="s7-sample-card s7-card-2"
+                >
+                <img
+                  src="assets/Carta_joc_de_taula_Alpinista.png"
+                  alt="Carta alpinista expert"
+                  class="s7-sample-card s7-card-3"
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <div class="s7-features">
+            <div class="s7-feature">
+              <span class="s7-age-box">+8</span>
+              <span data-i18n="buy.common.age">ANYS</span>
+            </div>
+
+            <div class="s7-feature">
+              <span class="s7-clock-icon" aria-hidden="true"></span>
+              <span>
+                <strong data-i18n="buy.common.timeMain">15–25</strong>
+                <small data-i18n="buy.common.timeSub">MIN</small>
+              </span>
+            </div>
+
+            <div class="s7-feature">
+              <span class="s7-players-icon" aria-hidden="true">
+                <span></span><span></span>
+              </span>
+              <span>
+                <strong data-i18n="buy.common.playersMain">1–4</strong>
+                <small data-i18n="buy.common.playersSub">JUGADORS</small>
+              </span>
+            </div>
+          </div>
+
+          <div class="s7-button-divider"></div>
+
+          <div class="s7-actions">
+            <a href="#cumbrer" class="s7-button s7-button-primary">
+              <span data-i18n="buy.cta.buy">COMPRAR</span>
+              <span class="s7-cart-icon" aria-hidden="true">🛒</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- MONTE PERDIDO -->
+        <article class="s7-game-card s7-game-card-monte">
+          <div class="s7-panel-grid">
+
+            <div class="s7-game-copy">
+              <p class="s7-game-prefix" data-i18n="buy.mp.prefix">Objetivo</p>
+              <h3 class="s7-game-name" data-i18n="buy.mp.name">Monte Perdido</h3>
+              <p class="s7-game-alt" data-i18n="buy.mp.alt">3.355 m</p>
+              <div class="s7-title-divider"></div>
+              <p class="s7-game-text" data-i18n="buy.mp.text">
+                L'expedició definitiva al Parc Nacional d'Ordesa.
+              </p>
+            </div>
+
+            <div class="s7-product-stage s7-product-stage-monte">
+              <img
+                src="assets/Juego_mesa_Monte_Perdido.png"
+                alt="Caja Objetivo Monte Perdido 3.355 m"
+                class="s7-box-image s7-box-image-monte"
+              >
+
+              <div class="s7-card-fan s7-card-fan-monte" aria-label="Cartes d'Objetivo Monte Perdido">
+                <img
+                  src="assets/Carta_Objectivo_M.Perdido_Clima2.png"
+                  alt="Carta Viento huracanado"
+                  class="s7-sample-card s7-card-1"
+                >
+                <img
+                  src="assets/Carta_juego_de_mesa_Mapa.png"
+                  alt="Carta Mapa"
+                  class="s7-sample-card s7-card-2"
+                >
+                <img
+                  src="assets/Carta_juego_de_mesa_Quebrantahuesos.png"
+                  alt="Carta Quebrantahuesos"
+                  class="s7-sample-card s7-card-3"
+                >
+              </div>
+            </div>
+
+          </div>
+
+          <div class="s7-features">
+            <div class="s7-feature">
+              <span class="s7-age-box">+8</span>
+              <span data-i18n="buy.common.age">ANYS</span>
+            </div>
+
+            <div class="s7-feature">
+              <span class="s7-clock-icon" aria-hidden="true"></span>
+              <span>
+                <strong data-i18n="buy.common.timeMain">15–25</strong>
+                <small data-i18n="buy.common.timeSub">MIN</small>
+              </span>
+            </div>
+
+            <div class="s7-feature">
+              <span class="s7-players-icon" aria-hidden="true">
+                <span></span><span></span>
+              </span>
+              <span>
+                <strong data-i18n="buy.common.playersMain">1–4</strong>
+                <small data-i18n="buy.common.playersSub">JUGADORS</small>
+              </span>
+            </div>
+          </div>
+
+          <div class="s7-button-divider"></div>
+
+          <div class="s7-actions">
+            <a href="objetivo-monte-perdido.html#cumbrer" class="s7-button s7-button-primary">
+              <span data-i18n="buy.cta.buy">COMPRAR</span>
+              <span class="s7-cart-icon" aria-hidden="true">🛒</span>
+            </a>
+          </div>
+        </article>
+
       </div>
     </div>
-  </section>
 
-</main>
+  </div>
+</section>
+  
+ 
+  <!-- BLOQUE INICIAL MOCKUPS PEDRAFORCA -->
+<section class="mockup-sequence">
+  <div class="mockup-container">
 
+    <img src="assets/Joc_cartes_alpinisme_Pedraforca.png" alt="Mockup 0 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S1.png" alt="Mockup 1 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S2.png" alt="Mockup 2 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S3.png" alt="Mockup 3 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S4.png" alt="Mockup 4 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S5.png" alt="Mockup 5 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S6.png" alt="Mockup 6 Monte Perdido" class="mockup-image" />
+    <img src="assets/Joc_Taula_Pedraforca_S7.png" alt="Mockup 7 Monte Perdido" class="mockup-image" />
+
+  </div>
+</section>
+
+ </main>
+  
+<!-- SECCIÓ FOOTER -->
+  
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
       <img src="assets/logo-play-summit-games.png" alt="Play Summit Games" class="footer-logo" />
-      <div>
-        <div class="footer-brand-subtitle">Juegos diseñados en los Pirineos</div>
-      </div>
+      <div><div class="footer-brand-subtitle" data-i18n="brand.subtitle">Jocs disenyats als Pirineus</div></div>
     </div>
 
     <div class="footer-links">
-      <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" aria-label="Instagram">
+      <a href="https://www.instagram.com/playsummitgames/" target="_blank" rel="noopener noreferrer" class="footer-link-icon" data-i18n-aria="footer.instagram.aria" aria-label="Instagram">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="18" height="18" rx="5"></rect>
           <circle cx="12" cy="12" r="4"></circle>
           <circle cx="17.5" cy="6.5" r="1"></circle>
         </svg>
-        <span>@playsummitgames</span>
+        <span data-i18n="footer.instagram">@playsummitgames</span>
       </a>
 
-      <a href="mailto:info@playsummitgames.es" class="footer-link-icon" aria-label="Correo electrónico">
+      <a href="mailto:info@playsummitgames.es" class="footer-link-icon" data-i18n-aria="footer.email.aria" aria-label="Correo electrónico">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
           <path d="M4 6h16v12H4z"></path>
           <path d="M4 7l8 6 8-6"></path>
         </svg>
-        <span>info@playsummitgames.es</span>
+        <span data-i18n="footer.email">info@playsummitgames.es</span>
       </a>
     </div>
   </div>
 </footer>
 
+  <script>
+(function () {
+  const body = document.body;
+  const sections = Array.from(document.querySelectorAll('[data-section]'));
+
+  function sectionKey(section) {
+    if (section.id === 'torla') return 's1';
+    if (section.id === 'cola-caballo') return 's2';
+    if (section.id === 'clavijas') return 's3';
+    if (section.id === 'goriz') return 's4';
+    if (section.id === 'lago-helado') return 's5';
+    if (section.id === 'escupidera') return 's6';
+    if (section.id === 'cumbre') return 's7';
+    return '';
+  }
+
+  function updateHeaderTheme() {
+    const probeY = window.innerHeight * 0.32;
+    let current = 's1';
+
+    for (const section of sections) {
+      const key = sectionKey(section);
+      if (!key) continue;
+
+      const rect = section.getBoundingClientRect();
+
+      if (rect.top <= probeY && rect.bottom >= probeY) {
+        current = key;
+        break;
+      }
+    }
+
+    body.dataset.currentSection = current;
+  }
+
+  updateHeaderTheme();
+  window.addEventListener('scroll', updateHeaderTheme, { passive: true });
+  window.addEventListener('resize', updateHeaderTheme);
+})();
+</script>
+  
+<script src="translations-monte.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
