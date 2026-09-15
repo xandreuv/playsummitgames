@@ -830,7 +830,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 /* =========================================================
-   SECCIÃ“N 2 Â· GÃ’SOL Â· COMPONENTES DEL JUEGO
+   SECCION 2 Â· COLA DE CABALLO COMPONENTES DEL JUEGO
 ========================================================= */
 
 .pedra-s2 {
@@ -846,7 +846,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pedraforca-s2-bg.webp");
+  background-image: url("assets/textura-Cola-de-Caballo.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
