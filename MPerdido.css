@@ -1,5 +1,5 @@
 /* =========================================================
-   LANDING OBJECTIU PEDRAFORCA Â· CSS ESPECÃFICO
+   LANDING OBJECTIVO MONTE PERDIDO· CSS ESPECÃFICO
    Este archivo debe cargarse despuÃ©s de styles.css
 ========================================================= */
 
@@ -66,7 +66,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/pedraforca-s1-bg.webp");
+  background-image: url("assets/textura-Torla-bg.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -137,7 +137,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 }
 
 
-/* PretÃ­tulo naranja comÃºn para esta landing */
+/* PretÃitulo naranja comun para esta landing */
 .pedra-kicker-row {
   display: flex;
   align-items: center;
