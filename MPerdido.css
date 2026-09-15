@@ -1398,7 +1398,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
 .pedra-section-s3 .section-texture.s3-texture {
   position: absolute;
   inset: 0;
-  background-image: url("assets/s3-textura-refugi-lluis-estasen.webp");
+  background-image: url("assets/textura-clavijas-Soaso.jfif");
   background-size: cover;
   background-position: center;
   opacity: 0.42;
@@ -1855,7 +1855,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/s4-textura-tartera-pedraforca.webp");
+  background-image: url("assets/textura-refugio-Goriz.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.56;
@@ -2700,7 +2700,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url("assets/s5-textura-canal-verdet.webp");
+  background-image: url("assets/textura-Lago-helado.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.86;
@@ -3590,7 +3590,7 @@ body[data-page="pedraforca"] .main-nav a:first-child::after {
   position: absolute;
   inset: 0;
   z-index: -3;
-  background-image: url("assets/pedraforca-s6-cresta-aeria-textura.webp");
+  background-image: url("assets/textura-escupidera.jpg");
   background-size: cover;
   background-position: center center;
   opacity: 0.46;
