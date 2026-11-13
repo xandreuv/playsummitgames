@@ -150,15 +150,7 @@ body[data-page="monte"] .main-nav a:first-child::after {
   width: 42px;
   height: 30px;
   object-fit: contain;
-  filter:
-    brightness(0)
-    saturate(100%)
-    invert(48%)
-    sepia(95%)
-    saturate(2234%)
-    hue-rotate(9deg)
-    brightness(95%)
-    contrast(98%);
+   filter: none;
 }
 
 .pedra-kicker {
