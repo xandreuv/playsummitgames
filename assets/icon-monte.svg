@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 50">
+  
+  <!-- CAPA TRASERA (cordillera secundaria) -->
+  <path 
+    d="M10 38 
+       L35 20 
+       L55 32 
+       L70 18 
+       L95 38 Z"
+    fill="#5FA6C0"
+    opacity="0.35"/>
+
+  <!-- CAPA PRINCIPAL -->
+  <path 
+    d="M10 40 
+       L40 15 
+       L65 30 
+       L85 8 
+       L120 40 
+       L105 32 
+       L85 18 
+       L65 42 
+       L40 25 
+       L25 38 Z"
+    fill="#247B9D"/>
+
+  <!-- ARISTA IZQUIERDA -->
+  <path 
+    d="M40 15 L65 30 L55 26"
+    fill="#155D79"
+    opacity="0.70"/>
+
+  <!-- ARISTA CENTRAL -->
+  <path 
+    d="M85 8 L65 30 L75 22"
+    fill="#155D79"
+    opacity="0.70"/>
+
+  <!-- ARISTA DERECHA -->
+  <path 
+    d="M85 18 L105 32 L95 26"
+    fill="#155D79"
+    opacity="0.70"/>
+
+  <!-- LUZ / NIEVE -->
+  <path 
+    d="M82 10 L75 18 L85 16 Z"
+    fill="#ffffff"
+    opacity="0.45"/>
+
+</svg>
